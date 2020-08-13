@@ -10,6 +10,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
+app.get('',(req,res)=>{
+    res.send('Welcome');
+});
+
 app.get('/getWidgetDropdown',(req,res)=>{
     axios.get('http://104.40.75.137:9003/assets/data/data.json').then((response)=>{
         console.log(response.data.length);

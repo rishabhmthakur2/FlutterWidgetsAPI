@@ -1,8 +1,9 @@
 var express = require('express');
+var cors = require('cors');
 const axios = require('axios').default;
 
 var app = express();
-
+app.use(cors());
 var port = process.env.PORT || 3000;
 
 var bodyParser = require('body-parser')

@@ -1,0 +1,95 @@
+{
+    "widgets" : [
+    {
+    "id": 1,
+    "name": "DropdownButton",
+    "paramaters": {
+        "itemsList": "List<String>",
+        "hintText": "String",
+        "listType": "String",
+        "fillColor": "Color",
+        "borderRadius": "Number",
+        "width": "Number",
+        "textColor": "Color",
+        "itemsBgColor": "Color",
+        "shadowColor": "Color",
+        "shadowBlurRadius": "Number",
+        "shadowSpreadRadius": "Number"
+        }   
+    },
+{
+    "id": 2,
+    "name": "FloatingActionButton",
+    "paramaters": {
+        "child": "Widget",
+        "foregroundColor": "Color",
+        "backgroundColor": "Color",
+        "mini": "Boolean",
+        "hoverColor":"Color"
+    }
+},
+{
+    "id": 3,
+    "name": "Textfield",
+    "paramaters": {
+        "maxLength": "Number",
+        "obsecureText": "Boolean",
+        "maxLengthEnforced": "Boolean",
+        "hintText": "String",
+        "labelText": "String",
+        "prefixIcon": "Icon",
+        "filled": "Boolean",
+        "fillColor": "Colors",
+        "borderRadius": "Number",
+        "borderSide": "Color",
+        "cursorColor": "Color",
+        "cursorWidth": "Number",
+        "expands": "Boolean",
+        "maxLines": "Number",
+        "readOnly": "Boolean",
+        "showCursor": "Boolean",
+        "textColor": "Color"
+    }
+},
+{
+    "id": 4,
+    "name": "Composite Card",
+    "parameters": {
+        "flexColumn1": "Number",
+        "flexColumn2": "Number",
+        "cardColor": "Color",
+        "rightHandWidgets": "List<Widgets>",
+        "leftHandWidgets": "List<Widgets>"
+    }   
+},
+{
+    "id": 5,
+    "name": "Flip Card",
+    "definitions": {
+        "title": "String",
+        "subtitle": "String",
+        "containerHeight": "Number",
+        "containerWidth": "Number",
+        "shadowColor": "Color", 
+        "blurRadius": "Number",
+        "shadowOffset": "Number",
+        "borderRadius": "Number",
+        "backgroundColor": "Color",
+        "textColor1": "Color",
+        "fontSize1": "Number",
+        "textColor2": "Color",
+        "fontSize": "Number",
+        "textColor3": "Color",
+        "fontSize3": "Number",
+        "btnText": "String",
+        "btnTextColor": "Color",
+        "btnColor": "Color",
+        "margin1": "Number",
+        "padding1": "Number",
+        "imgHeight": "Number",
+        "imgWidth": "Number",
+        "imgPath": "String"
+    }   
+}
+]
+}

@@ -42,9 +42,10 @@ app.get('/getWidgetParamaters?:id', async (req, res) => {
   let widgetArray = widgets.widgets;
   try {
     const result = await widgetArray.find((widget) => widget.id == id);
-    res.status(200).json(result.paramaters)
+    console.log(result.paramaters);
+    res.status(200).json(result.paramaters);
   } catch (error) {
-    res.status(400).send(error)
+    res.status(404).send('Not Found');
   }
 });
 

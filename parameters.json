@@ -54,7 +54,7 @@
 {
     "id": 21,
     "name": "CompositeCard",
-    "parameters": {
+    "paramaters": {
         "flexColumn1": "Number",
         "flexColumn2": "Number",
         "cardColor": "Color",
@@ -65,7 +65,7 @@
 {
     "id": 22,
     "name": "FlipCard",
-    "definitions": {
+    "paramaters": {
         "title": "String",
         "subtitle": "String",
         "containerHeight": "Number",

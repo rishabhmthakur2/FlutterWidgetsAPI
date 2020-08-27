@@ -92,11 +92,11 @@ let getWidgets = (widgetId, paramValues) =>
         definitions: `
             List<CustomcompositeCardParameters> listcards = []; 
             CustomcompositeCardParameters card1 = new CustomcompositeCardParameters(
-            flexColumn1: ${flexColumn1},
-            flexColumn2: ${flexColumn2},
-            cardColor: ${cardColor},
-            rightHandWidgets: ${rightHandWidgets},
-            leftHandWidgets: ${leftHandWidgets},
+            flexColumn1: ${paramValues.flexColumn1},
+            flexColumn2: ${paramValues.flexColumn2},
+            cardColor: ${paramValues.cardColor},
+            rightHandWidgets: ${paramValues.rightHandWidgets},
+            leftHandWidgets: ${paramValues.leftHandWidgets},
             ); 
             listcards.add(card1);
         `,
@@ -113,47 +113,46 @@ let getWidgets = (widgetId, paramValues) =>
           print(sText);
           } 
           MaterialCardData FlipObj1 = new MaterialCardData( 
-          title: ${title}, 
-          subtitle: ${leftHandWidgets},
-          containerHeight: ${containerHeight},
-          containerWidth: ${containerWidth},
+          title: ${paramValues.title}, 
+          subtitle: ${paramValues.leftHandWidgets},
+          containerHeight: ${paramValues.containerHeight},
+          containerWidth: ${paramValues.containerWidth},
           containerDecoration: BoxDecoration( 
           boxShadow: 
           [ BoxShadow( 
-          color: Colors.${shadowColor}, blurRadius: ${blurRadius}, 
-          offset: ${shadowOffset}),
+          color: Colors.${paramValues.shadowColor}, blurRadius: ${paramValues.blurRadius}, 
+          offset: ${paramValues.shadowOffset}),
           ], 
-          borderRadius: BorderRadius.circular(${borderRadius}), 
-          color: Colors.${backgroundColor}, ), 
+          borderRadius: BorderRadius.circular(${paramValues.borderRadius}), 
+          color: Colors.${paramValues.backgroundColor}, ), 
           textStyle1: TextStyle( 
-          color: Colors.${textColor1}, 
-          fontSize:${fontSize1}, 
+          color: Colors.${paramValues.textColor1}, 
+          fontSize:${paramValues.fontSize1}, 
           fontWeight: FontWeight.bold, 
           ), 
           textStyle2: TextStyle( 
-          color: Colors.${textColor2}, 
-          fontSize: ${fontSize2}, 
+          color: Colors.${paramValues.textColor2}, 
+          fontSize: ${paramValues.fontSize2}, 
           ), 
           textStyle3: TextStyle( 
-          color: Colors.${textColor3},
-          fontSize: ${fontSize3}, 
+          color: Colors.${paramValues.textColor3},
+          fontSize: ${paramValues.fontSize3}, 
           ), 
-          btnText:${btnText}, 
-          btnTextColor: Colors.${btnTextColor}, 
-          btnColor: Colors.${btnColor}, 
-          margin1: ${margin1}, 
-          padding1: ${padding1},
-          imgHeight: ${imgHeight},
-          imgWidth: ${imgWidth},
+          btnText:${paramValues.btnText}, 
+          btnTextColor: Colors.${paramValues.btnTextColor}, 
+          btnColor: Colors.${paramValues.btnColor}, 
+          margin1: ${paramValues.margin1}, 
+          padding1: ${paramValues.padding1},
+          imgHeight: ${paramValues.imgHeight},
+          imgWidth: ${paramValues.imgWidth},
           imgType: \"Network\",
-          imgPath: ${imgPath},
+          imgPath: ${paramValues.imgPath},
           );
       `,
       },
     ]
     for (i of widgetList) {
-      console.log(i);
-      if (i.id === widgetId) {
+      if (i.id == widgetId) {
         resolve({
           imports: i.imports,
           call: i.call,

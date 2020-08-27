@@ -50,19 +50,27 @@ app.get('/getWidgetParamaters?:id', async (req, res) => {
 });
 
 app.post('/submitWidgetParams', async (req, res) => {
-  let id = req.body.id
-  let paramsValue = req.body.params
+  let idArray = req.body.id;
+  let paramsValueArray = req.body.params;
   try {
-    let data = await getWidgets(id, paramsValue)
+    // let data = await getWidgets(id, paramsValue);
+    console.log(data);
     const data0 = "import 'package:flutter/material.dart';\n"
     const data2 =
       '\nvoid main() => runApp(BoilerPlate());\nclass BoilerPlate extends StatefulWidget \n{ \n@override \n_BoilerPlate createState() => _BoilerPlate();\n}\nclass _BoilerPlate extends State<BoilerPlate> {\n @override\n  Widget build(BuildContext context) { \n'
     const data4 =
       '\nreturn MaterialApp(\ndebugShowCheckedModeBanner: false,\nhome: Scaffold(\nbody: Padding(\npadding: const EdgeInsets.all(20.0),\nchild: Padding(\npadding: const EdgeInsets.all(25.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\n'
     const data6 = '\n ],),)),),),);}}  '
-    let data1 = data.imports
-    let data3 = data.definitions
-    let data5 = data.call
+    let data1 = [];
+    let data3 = [];
+    let data5 = [];
+    // let data1 = data.imports
+    // let data3 = data.definitions
+    // let data5 = data.call
+    for (let i =0; i < idArray.length; i++){
+      let data = await getWidgets(idArray[i], paramsValueArray[i]);
+
+    }
 
     try {
       let clearFile = () =>
@@ -153,10 +161,10 @@ app.post('/submitWidgetParams', async (req, res) => {
         res.status(200).send('Execution Started')
       })
     } catch (error) {
-      res.status(400).send(error)
+      res.status(400).send('Not Found Internal')
     }
   } catch (error) {
-    res.status(400).send(error)
+    res.status(400).send('Not Found External')
   }
 })
 

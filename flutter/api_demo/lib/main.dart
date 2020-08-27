@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
 import 'package:rapid_widgets_library/custom-floatingActionButton.dart';
+import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
+import 'package:rapid_widgets_library/custom-dropdownButton.dart';
 void main() => runApp(BoilerPlate());
 class BoilerPlate extends StatefulWidget 
 { 
@@ -23,6 +25,25 @@ class _BoilerPlate extends State<BoilerPlate> {
                   hoverColor: Colors.red,
                   );
               
+
+              DropDownParameters dropdownObject = DropDownParameters(
+              itemsList: ['One', 'Two'],
+              hintText: 'Hint,
+              listType: Text,
+              fillColor: Colors.red,
+              borderRadius: 20,
+              width: 10,
+              textColor: Colors.blue,
+              itemsBgColor: Colors.black,
+              shadowColor: Colors.black,
+              shadowBlurRadius: 10,
+              shadowSpreadRadius: black,
+              ); 
+              onSelect(int i,String s){ 
+              print(i); 
+              print(s); 
+              }
+          
 return MaterialApp(
 debugShowCheckedModeBanner: false,
 home: Scaffold(
@@ -34,4 +55,5 @@ child: SingleChildScrollView(
 child: Column(
 children: <Widget>[
 customFloatingActionButton(btnFloatObject, onFloatButtonPress),
+CustomDropdownButton(dropdownObject,onSelect),
  ],),)),),),);}}  

@@ -11,26 +11,17 @@ class _BoilerPlate extends State<BoilerPlate> {
  @override
   Widget build(BuildContext context) { 
 
-                  onFloatButtonPress(bool b){ 
-
-                  print(b); 
-
+                  onFloatButtonPress(bool b){
+                  print(b);
                   } 
 
                   Floatingactionbuttonparam btnFloatObject = Floatingactionbuttonparam(
-
-                  child: Widget,
-
-                  foregroundColor: Colors.Red,
-
-                  backgroundColor: Colors.Black,
-
-                  mini: true,
-
+                  child: Icon(Icons.list),
+                  foregroundColor: Colors.green,
+                  backgroundColor: Colors.blue,
+                  mini: false,
                   shape: CircleBorder(),
-
-                  hoverColor: Colors.Blue,
-
+                  hoverColor: Colors.red,
                   );
               
 return MaterialApp(

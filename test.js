@@ -7,16 +7,16 @@ let getWidgets = (widgetName, paramValues) => new Promise((resolve, reject)=>{
             "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-floatingActionButton.dart';",
           call: 'customFloatingActionButton(btnFloatObject, onFloatButtonPress),',
           definitions: `
-                  onFloatButtonPress(bool b){ \n
-                  print(b); \n
+                  onFloatButtonPress(bool b){
+                  print(b);
                   } \n
-                  Floatingactionbuttonparam btnFloatObject = Floatingactionbuttonparam(\n
-                  child: ${paramValues.child},\n
-                  foregroundColor: Colors.${paramValues.foregroundColor},\n
-                  backgroundColor: Colors.${paramValues.backgroundColor},\n
-                  mini: ${paramValues.mini},\n
-                  shape: CircleBorder(),\n
-                  hoverColor: Colors.${paramValues.hoverColor},\n
+                  Floatingactionbuttonparam btnFloatObject = Floatingactionbuttonparam(
+                  child: ${paramValues.child},
+                  foregroundColor: Colors.${paramValues.foregroundColor},
+                  backgroundColor: Colors.${paramValues.backgroundColor},
+                  mini: ${paramValues.mini},
+                  shape: CircleBorder(),
+                  hoverColor: Colors.${paramValues.hoverColor},
                   );
               `,
         },
@@ -157,6 +157,7 @@ let getWidgets = (widgetName, paramValues) => new Promise((resolve, reject)=>{
             });
           }
       }
+      reject('Widget by that name not found')
 });
 
 module.exports = getWidgets

@@ -92,11 +92,11 @@ let getWidgets = (widgetId, paramValues) =>
         definitions: `
             List<CustomcompositeCardParameters> listcards = []; 
             CustomcompositeCardParameters card1 = new CustomcompositeCardParameters(
-            flexColumn1: ${flexColumn1},
-            flexColumn2: ${flexColumn2},
-            cardColor: ${cardColor},
-            rightHandWidgets: ${rightHandWidgets},
-            leftHandWidgets: ${leftHandWidgets},
+            flexColumn1: ${paramValues.flexColumn1},
+            flexColumn2: ${paramValues.flexColumn2},
+            cardColor: ${paramValues.cardColor},
+            rightHandWidgets: ${paramValues.rightHandWidgets},
+            leftHandWidgets: ${paramValues.leftHandWidgets},
             ); 
             listcards.add(card1);
         `,
@@ -113,40 +113,40 @@ let getWidgets = (widgetId, paramValues) =>
           print(sText);
           } 
           MaterialCardData FlipObj1 = new MaterialCardData( 
-          title: ${title}, 
-          subtitle: ${leftHandWidgets},
-          containerHeight: ${containerHeight},
-          containerWidth: ${containerWidth},
+          title: ${paramValues.title}, 
+          subtitle: ${paramValues.leftHandWidgets},
+          containerHeight: ${paramValues.containerHeight},
+          containerWidth: ${paramValues.containerWidth},
           containerDecoration: BoxDecoration( 
           boxShadow: 
           [ BoxShadow( 
-          color: Colors.${shadowColor}, blurRadius: ${blurRadius}, 
-          offset: ${shadowOffset}),
+          color: Colors.${paramValues.shadowColor}, blurRadius: ${paramValues.blurRadius}, 
+          offset: ${paramValues.shadowOffset}),
           ], 
-          borderRadius: BorderRadius.circular(${borderRadius}), 
-          color: Colors.${backgroundColor}, ), 
+          borderRadius: BorderRadius.circular(${paramValues.borderRadius}), 
+          color: Colors.${paramValues.backgroundColor}, ), 
           textStyle1: TextStyle( 
-          color: Colors.${textColor1}, 
-          fontSize:${fontSize1}, 
+          color: Colors.${paramValues.textColor1}, 
+          fontSize:${paramValues.fontSize1}, 
           fontWeight: FontWeight.bold, 
           ), 
           textStyle2: TextStyle( 
-          color: Colors.${textColor2}, 
-          fontSize: ${fontSize2}, 
+          color: Colors.${paramValues.textColor2}, 
+          fontSize: ${paramValues.fontSize2}, 
           ), 
           textStyle3: TextStyle( 
-          color: Colors.${textColor3},
-          fontSize: ${fontSize3}, 
+          color: Colors.${paramValues.textColor3},
+          fontSize: ${paramValues.fontSize3}, 
           ), 
-          btnText:${btnText}, 
-          btnTextColor: Colors.${btnTextColor}, 
-          btnColor: Colors.${btnColor}, 
-          margin1: ${margin1}, 
-          padding1: ${padding1},
-          imgHeight: ${imgHeight},
-          imgWidth: ${imgWidth},
+          btnText:${paramValues.btnText}, 
+          btnTextColor: Colors.${paramValues.btnTextColor}, 
+          btnColor: Colors.${paramValues.btnColor}, 
+          margin1: ${paramValues.margin1}, 
+          padding1: ${paramValues.padding1},
+          imgHeight: ${paramValues.imgHeight},
+          imgWidth: ${paramValues.imgWidth},
           imgType: \"Network\",
-          imgPath: ${imgPath},
+          imgPath: ${paramValues.imgPath},
           );
       `,
       },
@@ -157,25 +157,25 @@ let getWidgets = (widgetId, paramValues) =>
         call: "appBar:customAppBar(appBarIcons,paramobject),",
         definitions: `
             AppBarParameters paramobject = new AppBarParameters(
-            elevation: ${elevation}, 
-            bottomOpacity: ${bottomOpacity},
-            toolbarOpacity: ${toolbarOpacity},
-            titleSpacing: ${titleSpacing},
-            centerTitle: ${centerTitle},
-            automaticallyImplyLeading: ${automaticallyImplyLeading},
-            title: Text(${title}));
+            elevation: ${paramValues.elevation}, 
+            bottomOpacity: ${paramValues.bottomOpacity},
+            toolbarOpacity: ${paramValues.toolbarOpacity},
+            titleSpacing: ${paramValues.titleSpacing},
+            centerTitle: ${paramValues.centerTitle},
+            automaticallyImplyLeading: ${paramValues.automaticallyImplyLeading},
+            title: Text(${paramValues.title}));
             List<Widget> appBarIcons = [ 
             IconButton( 
             icon:  
-            Icon(Icons.${icon1}), 
+            Icon(Icons.${paramValues.icon1}), 
             onPressed: () {}, 
             ), 
             IconButton( ",
-            icon:  Icon(Icons.${icon2}), ",
+            icon:  Icon(Icons.${paramValues.icon2}), ",
             onPressed: () {}, ",
             ), 
             IconButton( 
-            icon:  Icon(Icons.${icon3}), 
+            icon:  Icon(Icons.${paramValues.icon3}), 
             onPressed: () {}, 
             ), ];
         `
@@ -188,28 +188,28 @@ let getWidgets = (widgetId, paramValues) =>
       definitions: `
           List<BottomNavigationBarItem> bottomnavitems = []; 
           BottomNavigationBarItem bottomnavitem1= new BottomNavigationBarItem( 
-          icon: Icon(Icons.${icon1}),
-          title: Text(${title1},style: TextStyle(fontSize: 12)),
+          icon: Icon(Icons.${paramValues.icon1}),
+          title: Text(${paramValues.title1},style: TextStyle(fontSize: 12)),
           ); 
           BottomNavigationBarItem bottomnavitem2= new BottomNavigationBarItem( 
-          icon: Icon(Icons.${icon2}),
-          title: Text(${title2},style: TextStyle(fontSize: 12)),
+          icon: Icon(Icons.${paramValues.icon2}),
+          title: Text(${paramValues.title2},style: TextStyle(fontSize: 12)),
           ); 
           BottomNavigationBarItem bottomnavitem3= new BottomNavigationBarItem( 
-          icon: Icon(Icons.${icon3}),
-          title: Text(${title3},style: TextStyle(fontSize: 12),),
+          icon: Icon(Icons.${paramValues.icon3}),
+          title: Text(${paramValues.title3},style: TextStyle(fontSize: 12),),
           ); 
           bottomnavitems.add(bottomnavitem1); 
           bottomnavitems.add(bottomnavitem2); 
           bottomnavitems.add(bottomnavitem3); 
           BottomNavBarParameters param = new BottomNavBarParameters(
           items: bottomnavitems, 
-          selectedItemColor: Colors.${selectedItemColor}, 
-          backgroundColor: Colors.${backgroundColor}, 
-          unselectedItemColor: Colors.${unselectedItemColor}, 
-          showUnselectedLabels: ${showUnselectedLabels}, 
-          showSelectedLabels: ${showSelectedLabels}, 
-          selectedIconTheme: IconThemeData(color: Colors.${selectedIconTheme}));
+          selectedItemColor: Colors.${paramValues.selectedItemColor}, 
+          backgroundColor: Colors.${paramValues.backgroundColor}, 
+          unselectedItemColor: Colors.${paramValues.unselectedItemColor}, 
+          showUnselectedLabels: ${paramValues.showUnselectedLabels}, 
+          showSelectedLabels: ${paramValues.showSelectedLabels}, 
+          selectedIconTheme: IconThemeData(color: Colors.${paramValues.selectedIconTheme}));
       `
   },
     ]

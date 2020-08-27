@@ -90,6 +90,45 @@
         "imgWidth": "Number",
         "imgPath": "String"
     }   
+},
+{
+    "id": 0,
+    "name": "Appbar",
+    "imports": "import 'package:rapid_widgets_library/widget-classesUsed.dart';\n import 'package:rapid_widgets_library/custom-appBar.dart';",
+    "call": "appBar:customAppBar(appBarIcons,paramobject),",
+    "paramaters": {
+        "elevation": "Number",
+        "bottomOpacity": "Number",
+        "toolbarOpacity": "Number",
+        "titleSpacing": "Number",
+        "centerTitle": "Number",
+        "automaticallyImplyLeading": "Number",
+        "title": "String",
+        "icon1": "Icon",
+        "icon2": "Icon",
+        "icon3": "Icon"
+    }
+},
+{
+    "id": 1,
+    "name": "Bottom Navigation Bar",
+    "imports": "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-bottomnavbar.dart';",
+    "call": "bottomNavigationBar: BottomNavBar(param),",
+    "definitions": {
+        "icon1": "Icon",
+        "title1": "String",
+        "icon2": "Icon",
+        "title2": "String",
+        "icon3": "Icon",
+        "title3": "String",
+        "selectedItemColor": "Color",
+        "backgroundColor": "Color",
+        "unselectedItemColor": "Color",
+        "showUnselectedLabels": "Boolean",
+        "showSelectedLabels": "Boolean",
+        "selectedIconTheme": "Color"
+    }
 }
+
 ]
 }

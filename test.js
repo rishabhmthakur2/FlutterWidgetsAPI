@@ -10,7 +10,7 @@ let getWidgets = (widgetId, paramValues) =>
         definitions: `
                   onFloatButtonPress(bool b){
                   print(b);
-                  } \n
+                  }
                   Floatingactionbuttonparam btnFloatObject = Floatingactionbuttonparam(
                   child: ${paramValues.child},
                   foregroundColor: Colors.${paramValues.foregroundColor},
@@ -31,7 +31,7 @@ let getWidgets = (widgetId, paramValues) =>
         definitions: `
             onTextSubmit(String sText) { 
             print(sText); 
-            } 
+            }
             TextFieldParameters finalTextObj = new TextFieldParameters( 
             maxLength: ${paramValues.maxLength}, 
             obsecureText: ${paramValues.obsecureText},
@@ -42,7 +42,7 @@ let getWidgets = (widgetId, paramValues) =>
             prefixIcon: Icon(Icons.${paramValues.prefixIcon}),
             filled: ${paramValues.filled}, 
             fillColor: Colors.${paramValues.fillColor}, 
-            counterText: \"\", 
+            counterText: "", 
             border: OutlineInputBorder( 
             borderRadius: BorderRadius.circular(${paramValues.borderRadius}), 
             borderSide: BorderSide( color: Colors.${paramValues.borderColor})), 

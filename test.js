@@ -150,6 +150,68 @@ let getWidgets = (widgetId, paramValues) =>
           );
       `,
       },
+      {
+        id: 0,
+        name: "Appbar",
+        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart';\n import 'package:rapid_widgets_library/custom-appBar.dart';",
+        call: "appBar:customAppBar(appBarIcons,paramobject),",
+        definitions: `
+            AppBarParameters paramobject = new AppBarParameters(
+            elevation: ${paramValues.elevation}, 
+            bottomOpacity: ${paramValues.bottomOpacity},
+            toolbarOpacity: ${paramValues.toolbarOpacity},
+            titleSpacing: ${paramValues.titleSpacing},
+            centerTitle: ${paramValues.centerTitle},
+            automaticallyImplyLeading: ${paramValues.automaticallyImplyLeading},
+            title: Text(${paramValues.title}));
+            List<Widget> appBarIcons = [ 
+            IconButton( 
+            icon:  
+            Icon(Icons.${paramValues.icon1}), 
+            onPressed: () {}, 
+            ), 
+            IconButton( ",
+            icon:  Icon(Icons.${paramValues.icon2}), ",
+            onPressed: () {}, ",
+            ), 
+            IconButton( 
+            icon:  Icon(Icons.${paramValues.icon3}), 
+            onPressed: () {}, 
+            ), ];
+        `
+    },
+    {
+      id: 1,
+      name: "Bottom Navigation Bar",
+      imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-bottomnavbar.dart';",
+      call: "bottomNavigationBar: BottomNavBar(param),",
+      definitions: `
+          List<BottomNavigationBarItem> bottomnavitems = []; 
+          BottomNavigationBarItem bottomnavitem1= new BottomNavigationBarItem( 
+          icon: Icon(Icons.${paramValues.icon1}),
+          title: Text(${paramValues.title1},style: TextStyle(fontSize: 12)),
+          ); 
+          BottomNavigationBarItem bottomnavitem2= new BottomNavigationBarItem( 
+          icon: Icon(Icons.${paramValues.icon2}),
+          title: Text(${paramValues.title2},style: TextStyle(fontSize: 12)),
+          ); 
+          BottomNavigationBarItem bottomnavitem3= new BottomNavigationBarItem( 
+          icon: Icon(Icons.${paramValues.icon3}),
+          title: Text(${paramValues.title3},style: TextStyle(fontSize: 12),),
+          ); 
+          bottomnavitems.add(bottomnavitem1); 
+          bottomnavitems.add(bottomnavitem2); 
+          bottomnavitems.add(bottomnavitem3); 
+          BottomNavBarParameters param = new BottomNavBarParameters(
+          items: bottomnavitems, 
+          selectedItemColor: Colors.${paramValues.selectedItemColor}, 
+          backgroundColor: Colors.${paramValues.backgroundColor}, 
+          unselectedItemColor: Colors.${paramValues.unselectedItemColor}, 
+          showUnselectedLabels: ${paramValues.showUnselectedLabels}, 
+          showSelectedLabels: ${paramValues.showSelectedLabels}, 
+          selectedIconTheme: IconThemeData(color: Colors.${paramValues.selectedIconTheme}));
+      `
+  },
     ]
     for (i of widgetList) {
       if (i.id == widgetId) {

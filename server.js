@@ -38,128 +38,138 @@ app.get('/getWidgetDropdown', (req, res) => {
 })
 
 app.get('/getWidgetParamaters?:id', async (req, res) => {
-  let id = req.query.id;
-  let widgetArray = widgets.widgets;
+  let id = req.query.id
+  let widgetArray = widgets.widgets
   try {
-    const result = await widgetArray.find((widget) => widget.id == id);
-    console.log(result.paramaters);
-    res.status(200).json(result.paramaters);
+    const result = await widgetArray.find((widget) => widget.id == id)
+    console.log(result.paramaters)
+    res.status(200).json(result.paramaters)
   } catch (error) {
-    res.status(404).send('Not Found');
+    res.status(404).send('Not Found')
   }
-});
+})
 
 app.post('/submitWidgetParams', async (req, res) => {
-  let idArray = req.body.id;
-  let paramsValueArray = req.body.params;
+  let idArray = req.body.id
+  let paramsValueArray = req.body.params
   try {
     // let data = await getWidgets(id, paramsValue);
-    console.log(data);
     const data0 = "import 'package:flutter/material.dart';\n"
     const data2 =
       '\nvoid main() => runApp(BoilerPlate());\nclass BoilerPlate extends StatefulWidget \n{ \n@override \n_BoilerPlate createState() => _BoilerPlate();\n}\nclass _BoilerPlate extends State<BoilerPlate> {\n @override\n  Widget build(BuildContext context) { \n'
     const data4 =
       '\nreturn MaterialApp(\ndebugShowCheckedModeBanner: false,\nhome: Scaffold(\nbody: Padding(\npadding: const EdgeInsets.all(20.0),\nchild: Padding(\npadding: const EdgeInsets.all(25.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\n'
     const data6 = '\n ],),)),),),);}}  '
-    let data1 = [];
-    let data3 = [];
-    let data5 = [];
+    let data1 = []
+    let data3 = []
+    let data5 = []
     // let data1 = data.imports
     // let data3 = data.definitions
     // let data5 = data.call
-    for (let i =0; i < idArray.length; i++){
-      let data = await getWidgets(idArray[i], paramsValueArray[i]);
-
-    }
+    let dataMap = new Promise(async (resolve, reject) => {
+      for (let i = 0; i < idArray.length; i++) {
+        let data = await getWidgets(idArray[i], paramsValueArray[i])
+        data1.push(data.imports)
+        data3.push(data.definitions)
+        data5.push(data.call)
+      }
+      resolve('Data added to arrays')
+    })
 
     try {
-      let clearFile = () =>
-        new Promise(async (resolve, reject) => {
-          await fs.truncate('./flutter/api_demo/lib/main.dart', 0, function () {
-            resolve('File cleared')
-          })
-        })
+      dataMap.then(() => {
+        let clearFile = () =>
+          new Promise(async (resolve, reject) => {
+            await fs.truncate(
+              './flutter/api_demo/lib/main.dart',
+              0,
+              function () {
+                resolve('File cleared')
+              },
+            )
+          });
 
-      clearFile().then(() => {
-        fs.appendFileSync(
-          './flutter/api_demo/lib/main.dart',
-          data0,
-          'utf8',
-          // callback function
-          function (err) {
-            if (err) throw err
-            // if no error
-            console.log('Data is appended to file successfully.')
-          },
-        )
-        fs.appendFileSync(
-          './flutter/api_demo/lib/main.dart',
-          data1,
-          'utf8',
-          // callback function
-          function (err) {
-            if (err) throw err
-            // if no error
-            console.log('Data is appended to file successfully.')
-          },
-        )
-        fs.appendFileSync(
-          './flutter/api_demo/lib/main.dart',
-          data2,
-          'utf8',
-          // callback function
-          function (err) {
-            if (err) throw err
-            // if no error
-            console.log('Data is appended to file successfully.')
-          },
-        )
-        fs.appendFileSync(
-          './flutter/api_demo/lib/main.dart',
-          data3,
-          'utf8',
-          // callback function
-          function (err) {
-            if (err) throw err
-            // if no error
-            console.log('Data is appended to file successfully.')
-          },
-        )
-        fs.appendFileSync(
-          './flutter/api_demo/lib/main.dart',
-          data4,
-          'utf8',
-          // callback function
-          function (err) {
-            if (err) throw err
-            // if no error
-            console.log('Data is appended to file successfully.')
-          },
-        )
-        fs.appendFileSync(
-          './flutter/api_demo/lib/main.dart',
-          data5,
-          'utf8',
-          // callback function
-          function (err) {
-            if (err) throw err
-            // if no error
-            console.log('Data is appended to file successfully.')
-          },
-        )
-        fs.appendFileSync(
-          './flutter/api_demo/lib/main.dart',
-          data6,
-          'utf8',
-          // callback function
-          function (err) {
-            if (err) throw err
-            // if no error
-            console.log('Data is appended to file successfully.')
-          },
-        )
-        res.status(200).send('Execution Started')
-      })
+        clearFile().then(() => {
+          fs.appendFileSync(
+            './flutter/api_demo/lib/main.dart',
+            data0,
+            'utf8',
+            // callback function
+            function (err) {
+              if (err) throw err
+              // if no error
+              console.log('Data is appended to file successfully.')
+            },
+          )
+          fs.appendFileSync(
+            './flutter/api_demo/lib/main.dart',
+            data1.join("\n"),
+            'utf8',
+            // callback function
+            function (err) {
+              if (err) throw err
+              // if no error
+              console.log('Data is appended to file successfully.')
+            },
+          )
+          fs.appendFileSync(
+            './flutter/api_demo/lib/main.dart',
+            data2,
+            'utf8',
+            // callback function
+            function (err) {
+              if (err) throw err
+              // if no error
+              console.log('Data is appended to file successfully.')
+            },
+          )
+          fs.appendFileSync(
+            './flutter/api_demo/lib/main.dart',
+            data3.join("\n"),
+            'utf8',
+            // callback function
+            function (err) {
+              if (err) throw err
+              // if no error
+              console.log('Data is appended to file successfully.')
+            },
+          )
+          fs.appendFileSync(
+            './flutter/api_demo/lib/main.dart',
+            data4,
+            'utf8',
+            // callback function
+            function (err) {
+              if (err) throw err
+              // if no error
+              console.log('Data is appended to file successfully.')
+            },
+          )
+          fs.appendFileSync(
+            './flutter/api_demo/lib/main.dart',
+            data5.join("\n"),
+            'utf8',
+            // callback function
+            function (err) {
+              if (err) throw err
+              // if no error
+              console.log('Data is appended to file successfully.')
+            },
+          )
+          fs.appendFileSync(
+            './flutter/api_demo/lib/main.dart',
+            data6,
+            'utf8',
+            // callback function
+            function (err) {
+              if (err) throw err
+              // if no error
+              console.log('Data is appended to file successfully.')
+            },
+          )
+          res.status(200).send('Execution Started')
+        });
+      });
     } catch (error) {
       res.status(400).send('Not Found Internal')
     }

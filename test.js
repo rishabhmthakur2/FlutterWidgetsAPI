@@ -65,9 +65,9 @@ let getWidgets = (widgetId, paramValues) =>
         call: 'CustomDropdownButton(dropdownObject,onSelect),',
         definitions: `
               DropDownParameters dropdownObject = DropDownParameters(
-              itemsList: ${paramValues.itemList},
+              itemsList: ${paramValues.itemsList},
               hintText: ${paramValues.hintText},
-              listType: ${paramValues.lsitType},
+              listType: ${paramValues.listType},
               fillColor: Colors.${paramValues.fillColor},
               borderRadius: ${paramValues.borderRadius},
               width: ${paramValues.width},

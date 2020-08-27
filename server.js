@@ -24,140 +24,141 @@ app.get('/getWidgetDropdown', (req, res) => {
   axios
     .get('http://104.40.75.137:9003/assets/data/data.json')
     .then((response) => {
-      var widgetNames = [];
+      var widgetNames = []
       for (let i = 0; i < response.data.length; i++) {
         for (let j = 0; j < response.data[i].widgetsContent.length; j++) {
           widgetNames.push({
             id: response.data[i].widgetsContent[j].id,
             name: response.data[i].widgetsContent[j].widgetsName,
-          });
+          })
         }
       }
-      res.send(widgetNames);
-    });
+      res.send(widgetNames)
+    })
 })
 
-app.get('/getWidgetParamaters?:widgetName', async (req, res) => {
-  let widgetName = req.query.widgetName;
+app.get('/getWidgetParamaters?:id', async (req, res) => {
+  let id = req.query.id;
   let widgetArray = widgets.widgets;
   try {
-    const result = await widgetArray.find((widget) => widget.name == widgetName);
-    res.status(200).json(result.paramaters);
+    const result = await widgetArray.find((widget) => widget.id == id);
+    res.status(200).json(result.paramaters)
   } catch (error) {
-    res.status(400).send(error);
+    res.status(400).send(error)
   }
 });
 
 app.post('/submitWidgetParams', async (req, res) => {
-  let widgetName = req.body.widgetName;
-  let paramsValue = req.body.params;
-  try{
-  let data = await getWidgets(widgetName, paramsValue);
-  const data0 = "import 'package:flutter/material.dart';\n";
-  const data2 =
-    '\nvoid main() => runApp(BoilerPlate());\nclass BoilerPlate extends StatefulWidget \n{ \n@override \n_BoilerPlate createState() => _BoilerPlate();\n}\nclass _BoilerPlate extends State<BoilerPlate> {\n @override\n  Widget build(BuildContext context) { \n';
-  const data4 =
-    '\nreturn MaterialApp(\ndebugShowCheckedModeBanner: false,\nhome: Scaffold(\nbody: Padding(\npadding: const EdgeInsets.all(20.0),\nchild: Padding(\npadding: const EdgeInsets.all(25.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\n';
-  const data6 = '\n ],),)),),),);}}  ';
-  let data1 = data.imports;
-  let data3 = data.definitions;
-  let data5 = data.call;
+  let id = req.body.id
+  let paramsValue = req.body.params
+  try {
+    let data = await getWidgets(id, paramsValue)
+    const data0 = "import 'package:flutter/material.dart';\n"
+    const data2 =
+      '\nvoid main() => runApp(BoilerPlate());\nclass BoilerPlate extends StatefulWidget \n{ \n@override \n_BoilerPlate createState() => _BoilerPlate();\n}\nclass _BoilerPlate extends State<BoilerPlate> {\n @override\n  Widget build(BuildContext context) { \n'
+    const data4 =
+      '\nreturn MaterialApp(\ndebugShowCheckedModeBanner: false,\nhome: Scaffold(\nbody: Padding(\npadding: const EdgeInsets.all(20.0),\nchild: Padding(\npadding: const EdgeInsets.all(25.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\n'
+    const data6 = '\n ],),)),),),);}}  '
+    let data1 = data.imports
+    let data3 = data.definitions
+    let data5 = data.call
 
-  try{
-      let clearFile = () => new Promise(async (resolve, reject)=>{
-        await fs.truncate('./flutter/api_demo/lib/main.dart', 0, function () {
-        resolve('File cleared');
-      });
-      });
-      
-      clearFile().then(()=>{
+    try {
+      let clearFile = () =>
+        new Promise(async (resolve, reject) => {
+          await fs.truncate('./flutter/api_demo/lib/main.dart', 0, function () {
+            resolve('File cleared')
+          })
+        })
+
+      clearFile().then(() => {
         fs.appendFileSync(
-            './flutter/api_demo/lib/main.dart',
-            data0,
-            'utf8',
-            // callback function
-            function (err) {
-              if (err) throw err
-              // if no error
-              console.log('Data is appended to file successfully.')
-            },
-          );
-          fs.appendFileSync(
-            './flutter/api_demo/lib/main.dart',
-            data1,
-            'utf8',
-            // callback function
-            function (err) {
-              if (err) throw err
-              // if no error
-              console.log('Data is appended to file successfully.')
-            },
-          );
-          fs.appendFileSync(
-            './flutter/api_demo/lib/main.dart',
-            data2,
-            'utf8',
-            // callback function
-            function (err) {
-              if (err) throw err
-              // if no error
-              console.log('Data is appended to file successfully.')
-            },
-          );
-          fs.appendFileSync(
-            './flutter/api_demo/lib/main.dart',
-            data3,
-            'utf8',
-            // callback function
-            function (err) {
-              if (err) throw err
-              // if no error
-              console.log('Data is appended to file successfully.')
-            },
-          );
-          fs.appendFileSync(
-            './flutter/api_demo/lib/main.dart',
-            data4,
-            'utf8',
-            // callback function
-            function (err) {
-              if (err) throw err
-              // if no error
-              console.log('Data is appended to file successfully.')
-            },
-          );
-          fs.appendFileSync(
-            './flutter/api_demo/lib/main.dart',
-            data5,
-            'utf8',
-            // callback function
-            function (err) {
-              if (err) throw err
-              // if no error
-              console.log('Data is appended to file successfully.')
-            },
-          );
-          fs.appendFileSync(
-            './flutter/api_demo/lib/main.dart',
-            data6,
-            'utf8',
-            // callback function
-            function (err) {
-              if (err) throw err
-              // if no error
-              console.log('Data is appended to file successfully.')
-            },
-          );
-          res.status(200).send('Execution Started');
-      }); 
-  } catch (error){
-      res.status(400).send(error);
-  }  
-  } catch(error){
-      res.status(400).send(error);
+          './flutter/api_demo/lib/main.dart',
+          data0,
+          'utf8',
+          // callback function
+          function (err) {
+            if (err) throw err
+            // if no error
+            console.log('Data is appended to file successfully.')
+          },
+        )
+        fs.appendFileSync(
+          './flutter/api_demo/lib/main.dart',
+          data1,
+          'utf8',
+          // callback function
+          function (err) {
+            if (err) throw err
+            // if no error
+            console.log('Data is appended to file successfully.')
+          },
+        )
+        fs.appendFileSync(
+          './flutter/api_demo/lib/main.dart',
+          data2,
+          'utf8',
+          // callback function
+          function (err) {
+            if (err) throw err
+            // if no error
+            console.log('Data is appended to file successfully.')
+          },
+        )
+        fs.appendFileSync(
+          './flutter/api_demo/lib/main.dart',
+          data3,
+          'utf8',
+          // callback function
+          function (err) {
+            if (err) throw err
+            // if no error
+            console.log('Data is appended to file successfully.')
+          },
+        )
+        fs.appendFileSync(
+          './flutter/api_demo/lib/main.dart',
+          data4,
+          'utf8',
+          // callback function
+          function (err) {
+            if (err) throw err
+            // if no error
+            console.log('Data is appended to file successfully.')
+          },
+        )
+        fs.appendFileSync(
+          './flutter/api_demo/lib/main.dart',
+          data5,
+          'utf8',
+          // callback function
+          function (err) {
+            if (err) throw err
+            // if no error
+            console.log('Data is appended to file successfully.')
+          },
+        )
+        fs.appendFileSync(
+          './flutter/api_demo/lib/main.dart',
+          data6,
+          'utf8',
+          // callback function
+          function (err) {
+            if (err) throw err
+            // if no error
+            console.log('Data is appended to file successfully.')
+          },
+        )
+        res.status(200).send('Execution Started')
+      })
+    } catch (error) {
+      res.status(400).send(error)
+    }
+  } catch (error) {
+    res.status(400).send(error)
   }
-});
+})
 
 app.listen(port, () => {
-  console.log('Listening on port:' + port);
+  console.log('Listening on port:' + port)
 })

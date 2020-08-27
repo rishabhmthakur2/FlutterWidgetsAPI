@@ -1,12 +1,13 @@
-let getWidgets = (widgetName, paramValues) => new Promise((resolve, reject)=>{
+let getWidgets = (widgetId, paramValues) =>
+  new Promise((resolve, reject) => {
     let widgetList = [
-        {
-          id: 10,
-          name: 'FloatingActionButton',
-          imports:
-            "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-floatingActionButton.dart';",
-          call: 'customFloatingActionButton(btnFloatObject, onFloatButtonPress),',
-          definitions: `
+      {
+        id: 10,
+        name: 'FloatingActionButton',
+        imports:
+          "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-floatingActionButton.dart';",
+        call: 'customFloatingActionButton(btnFloatObject, onFloatButtonPress),',
+        definitions: `
                   onFloatButtonPress(bool b){
                   print(b);
                   } \n
@@ -19,13 +20,15 @@ let getWidgets = (widgetName, paramValues) => new Promise((resolve, reject)=>{
                   hoverColor: Colors.${paramValues.hoverColor},
                   );
               `,
-        },
-        {
-          id: 15,
-          name: 'Textfield',
-          imports: "import 'dart:ui'; \nimport 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-textField.dart';",
-          call: "CustomTextField(params: finalTextObj, callbackTextfield: onTextSubmit),",
-          definitions: `
+      },
+      {
+        id: 15,
+        name: 'Textfield',
+        imports:
+          "import 'dart:ui'; \nimport 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-textField.dart';",
+        call:
+          'CustomTextField(params: finalTextObj, callbackTextfield: onTextSubmit),',
+        definitions: `
             onTextSubmit(String sText) { 
             print(sText); 
             } 
@@ -53,13 +56,14 @@ let getWidgets = (widgetName, paramValues) => new Promise((resolve, reject)=>{
             style: TextStyle(color: Colors.${paramValues.textColor}),
             );
         `,
-        },
-        {
-          id: 8,
-          name: "DropdownButton",
-          imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-dropdownButton.dart';",
-          call: "CustomDropdownButton(dropdownObject,onSelect),",
-          definitions: `
+      },
+      {
+        id: 8,
+        name: 'DropdownButton',
+        imports:
+          "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-dropdownButton.dart';",
+        call: 'CustomDropdownButton(dropdownObject,onSelect),',
+        definitions: `
               DropDownParameters dropdownObject = DropDownParameters(
               itemsList: ${paramValues.itemList},
               hintText: ${paramValues.hintText},
@@ -81,9 +85,10 @@ let getWidgets = (widgetName, paramValues) => new Promise((resolve, reject)=>{
       },
       {
         id: 21,
-        name: "Composite Card",
-        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-compositeCard.dart';",
-        call: "compositeCard(listcards),",
+        name: 'CompositeCard',
+        imports:
+          "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-compositeCard.dart';",
+        call: 'compositeCard(listcards),',
         definitions: `
             List<CustomcompositeCardParameters> listcards = []; 
             CustomcompositeCardParameters card1 = new CustomcompositeCardParameters(
@@ -94,14 +99,15 @@ let getWidgets = (widgetName, paramValues) => new Promise((resolve, reject)=>{
             leftHandWidgets: ${leftHandWidgets},
             ); 
             listcards.add(card1);
-        `
-    },
-    {
-      id: 22,
-      name: "Flip Card",
-      imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-flipcard.dart';",
-      call: "customFlipCardWidget(FlipObj1, onclickFlipCardBtn),",
-      definitions: `
+        `,
+      },
+      {
+        id: 22,
+        name: 'Flip Card',
+        imports:
+          "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-flipcard.dart';",
+        call: 'customFlipCardWidget(FlipObj1, onclickFlipCardBtn),',
+        definitions: `
           onclickFlipCardBtn(int nIndex, String sText) {
           print(nIndex);
           print(sText);
@@ -142,22 +148,20 @@ let getWidgets = (widgetName, paramValues) => new Promise((resolve, reject)=>{
           imgType: \"Network\",
           imgPath: ${imgPath},
           );
-      `
-  },
-
-
-
-      ];
-      for (i of widgetList){
-          if (i.name == widgetName){
-            resolve({
-                imports: i.imports,
-                call: i.call,
-                definitions: i.definitions
-            });
-          }
+      `,
+      },
+    ]
+    for (i of widgetList) {
+      console.log(i);
+      if (i.id === widgetId) {
+        resolve({
+          imports: i.imports,
+          call: i.call,
+          definitions: i.definitions,
+        });
       }
-      reject('Widget by that name not found')
-});
+    }
+    reject('Widget by that name not found');
+  });
 
-module.exports = getWidgets
+module.exports = getWidgets;

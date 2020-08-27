@@ -1,7 +1,7 @@
 {
     "widgets" : [
     {
-    "id": 1,
+    "id": 8,
     "name": "DropdownButton",
     "paramaters": {
         "itemsList": "List<String>",
@@ -18,7 +18,7 @@
         }   
     },
 {
-    "id": 2,
+    "id": 10,
     "name": "FloatingActionButton",
     "paramaters": {
         "child": "Widget",
@@ -29,7 +29,7 @@
     }
 },
 {
-    "id": 3,
+    "id": 15,
     "name": "Textfield",
     "paramaters": {
         "maxLength": "Number",
@@ -52,8 +52,8 @@
     }
 },
 {
-    "id": 4,
-    "name": "Composite Card",
+    "id": 21,
+    "name": "CompositeCard",
     "parameters": {
         "flexColumn1": "Number",
         "flexColumn2": "Number",
@@ -63,8 +63,8 @@
     }   
 },
 {
-    "id": 5,
-    "name": "Flip Card",
+    "id": 22,
+    "name": "FlipCard",
     "definitions": {
         "title": "String",
         "subtitle": "String",

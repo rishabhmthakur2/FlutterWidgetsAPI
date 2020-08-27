@@ -128,7 +128,65 @@
         "showSelectedLabels": "Boolean",
         "selectedIconTheme": "Color"
     }
+},
+{
+    "id": 2,
+    "name": "Drawer",
+    "imports": "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-drawer.dart';",
+    "call": "drawer: CustomDrawer(drawerList,onclickDrawer,user1),",
+    "definitions": {
+        "icon1":"Icon",
+        "text1":"String",
+        "icon2":"Icon",
+        "text2":"String",
+        "icon3":"Icon",
+        "text3":"String",
+        "icon4":"Icon",
+        "text4":"String",
+        "subtitle": "String",
+        "title": "String",
+        "imageType":"String",
+        "imagepath":"String",
+        "headerColor":"Color"
+        }
+},
+{
+    "id": 3,
+    "name": "SliverAppbar",
+    "imports": "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-sliverAppBar.dart';",
+    "call": "CustomScrollView( \nslivers: <Widget>[ \ncustomSliverAppBar(sliverProducts, params), \nSliverList( delegate: SliverChildListDelegate( \n<Widget>[ \nContainer(height: 1200.0), \n], \n), \n), \n], \n),",
+    "definitions": {
+
+        "automaticallyImplyLeading": "Boolean",
+        "backgroundColor":"Color",
+        "expandedHeight": "Number",
+        "elevation":"Number",
+        "titleSpacing":"Number",
+        "centerTitle":"Boolean",
+        "stretch":"Boolean",
+        "snap":"Boolean",
+        "pinned":"Boolean",
+        "floating":"Boolean",
+        "title":"String",        
+        "sliverProducts":"List<Widget>"
+       
+        }
+},
+{
+    "id": 4,
+    "name": "Tab Bar",
+    "imports": "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-tab-bar.dart';",
+    "call": "showTabBar(TabBarParameters(tablist: tabs),onTap),",
+    "definitions": {
+        "text1":"String",
+        "icon1":"Icon",
+        "text2":"String",
+        "icon2":"Icon"
+       
+
+    }
 }
+
 
 ]
 }

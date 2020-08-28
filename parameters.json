@@ -21,7 +21,7 @@
     "id": 10,
     "name": "FloatingActionButton",
     "paramaters": {
-        "child": "Widget",
+        "icon": "Icon",
         "foregroundColor": "Color",
         "backgroundColor": "Color",
         "mini": "Boolean",

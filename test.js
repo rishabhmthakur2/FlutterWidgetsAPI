@@ -12,7 +12,7 @@ let getWidgets = (widgetId, paramValues) =>
                   print(b);
                   }
                   Floatingactionbuttonparam btnFloatObject = Floatingactionbuttonparam(
-                  child: ${paramValues.child},
+                  child: Icon(Icons.${paramValues.icon}),
                   foregroundColor: Colors.${paramValues.foregroundColor},
                   backgroundColor: Colors.${paramValues.backgroundColor},
                   mini: ${paramValues.mini},

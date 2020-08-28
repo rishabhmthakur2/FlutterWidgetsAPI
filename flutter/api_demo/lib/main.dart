@@ -28,8 +28,8 @@ class _BoilerPlate extends State<BoilerPlate> {
 
               DropDownParameters dropdownObject = DropDownParameters(
               itemsList: ['One', 'Two'],
-              hintText: 'Hint,
-              listType: Text,
+              hintText: 'Hint',
+              listType: 'Text',
               fillColor: Colors.red,
               borderRadius: 20,
               width: 10,

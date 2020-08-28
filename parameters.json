@@ -94,8 +94,6 @@
 {
     "id": 0,
     "name": "Appbar",
-    "imports": "import 'package:rapid_widgets_library/widget-classesUsed.dart';\n import 'package:rapid_widgets_library/custom-appBar.dart';",
-    "call": "appBar:customAppBar(appBarIcons,paramobject),",
     "paramaters": {
         "elevation": "Number",
         "bottomOpacity": "Number",
@@ -112,8 +110,6 @@
 {
     "id": 1,
     "name": "Bottom Navigation Bar",
-    "imports": "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-bottomnavbar.dart';",
-    "call": "bottomNavigationBar: BottomNavBar(param),",
     "definitions": {
         "icon1": "Icon",
         "title1": "String",
@@ -128,7 +124,60 @@
         "showSelectedLabels": "Boolean",
         "selectedIconTheme": "Color"
     }
+},
+{
+    "id": 2,
+    "name": "Drawer",
+    "definitions": {
+        "icon1":"Icon",
+        "text1":"String",
+        "icon2":"Icon",
+        "text2":"String",
+        "icon3":"Icon",
+        "text3":"String",
+        "icon4":"Icon",
+        "text4":"String",
+        "subtitle": "String",
+        "title": "String",
+        "imagepath":"String",
+        "headerColor":"Color"
+        }
+},
+{
+    "id": 3,
+    "name": "SliverAppbar",
+    "definitions": {
+
+        "automaticallyImplyLeading": "Boolean",
+        "backgroundColor":"Color",
+        "expandedHeight": "Number",
+        "elevation":"Number",
+        "titleSpacing":"Number",
+        "centerTitle":"Boolean",
+        "stretch":"Boolean",
+        "snap":"Boolean",
+        "pinned":"Boolean",
+        "floating":"Boolean",
+        "title":"String",        
+        "icon1":"Icon",
+        "icon2":"Icon",
+        "icon3":"Icon"
+       
+        }
+},
+{
+    "id": 4,
+    "name": "Tab Bar",
+    "definitions": {
+        "text1":"String",
+        "icon1":"Icon",
+        "text2":"String",
+        "icon2":"Icon"
+       
+
+    }
 }
+
 
 ]
 }

@@ -212,6 +212,72 @@ let getWidgets = (widgetId, paramValues) =>
           selectedIconTheme: IconThemeData(color: Colors.${paramValues.selectedIconTheme}));
       `
   },
+  {
+    id: 2,
+    name: "Drawer",
+    imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-drawer.dart';",
+    call: "drawer: CustomDrawer(drawerList,onclickDrawer,user1),",
+    definitions: `
+        List<DrawerListItems> drawerList = [ 
+        DrawerListItems(Icon(Icons.${paramValues.icon1}),
+        Text(${paramValues.text1})), 
+        DrawerListItems(Icon(Icons.${paramValues.icon2}), 
+        Text(${paramValues.text2})), 
+        DrawerListItems(Icon(Icons.${paramValues.icon3}), 
+        Text(${paramValues.text3})), 
+        DrawerListItems(Icon(Icons.${paramValues.icon4}), 
+        Text(${paramValues.text4})), 
+        ]; 
+        DrawerHeaderParameters user1= new DrawerHeaderParameters(
+        subtitle: ${paramValues.subtitle},
+        title: ${paramValues.title},
+        imageType: \"Network\",
+        imagepath:${paramValues.imagepath},
+        headerColor:Colors.${paramValues.headerColor},
+        ); 
+        onclickDrawer(int nIndex) 
+        { 
+        print(nIndex); 
+        }
+    `
+},
+ {
+        id: 3,
+        name: "SliverAppbar",
+        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-sliverAppBar.dart';",
+        call: "CustomScrollView( \nslivers: <Widget>[ \ncustomSliverAppBar(sliverProducts, params), \nSliverList( delegate: SliverChildListDelegate( \n<Widget>[ \nContainer(height: 1200.0), \n], \n), \n), \n], \n),",
+        definitions: `
+            SliverAppBarParameters params = new SliverAppBarParameters(
+            automaticallyImplyLeading: ${paramValues.automaticallyImplyLeading}, 
+            backgroundColor: Colors.${paramValues.backgroundColor}, 
+            expandedHeight: ${paramValues.expandedHeight}, 
+            elevation: ${paramValues.elevation}, 
+            titleSpacing: ${paramValues.titleSpacing}, 
+            centerTitle: ${paramValues.centerTitle}, 
+            stretch: ${paramValues.stretch}, 
+            snap: ${paramValues.snap}, 
+            pinned: ${paramValues.pinned}, 
+            floating: ${paramValues.floating},
+            title:Text(${paramValues.title})
+            ); 
+            List<Widget> sliverProducts = [ 
+            IconButton( 
+            icon:  Icon(Icons.${paramValues.icon1}), 
+            onPressed: () {}, 
+            ), 
+            IconButton( 
+            icon:  Icon(Icons.${paramValues.icon2}), 
+            onPressed: () {}, 
+            ), 
+            IconButton( 
+            icon:  Icon(Icons.${paramValues.icon3}), 
+            onPressed: () {}, 
+            ), 
+            ];
+        `
+    },
+      
+
     ]
     for (i of widgetList) {
       if (i.id == widgetId) {

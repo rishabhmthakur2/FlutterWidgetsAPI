@@ -35,9 +35,9 @@ class _BoilerPlate extends State<BoilerPlate> {
               width: 10,
               textColor: Colors.blue,
               itemsBgColor: Colors.black,
-              shadowColor: Colors.blue,
+              shadowColor: Colors.black,
               shadowBlurRadius: 10,
-              shadowSpreadRadius: black,
+              shadowSpreadRadius: 5,
               ); 
               onSelect(int i,String s){ 
               print(i); 

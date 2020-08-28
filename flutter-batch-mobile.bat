@@ -1,7 +1,7 @@
 @echo off
 echo  Welcome to Flutter
 
-cd D:\Cms\Backend\flutter-cms\flutter\demo
+cd D:\Cms\NewAPI\FlutterWidgetsAPI\flutter\api_demo
 flutter run
-cd D:\Cms\Backend\flutter-cms\flutter\demo\android && ./gradlew clean && pause>nul
+cd D:\Cms\NewAPI\FlutterWidgetsAPI\flutter\api_demo\android && ./gradlew clean && pause>nul
 @pause

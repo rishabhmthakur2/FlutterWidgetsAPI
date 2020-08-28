@@ -75,7 +75,7 @@ let getWidgets = (widgetId, paramValues) =>
               itemsBgColor: Colors.${paramValues.itemsBgColor},
               shadowColor: Colors.${paramValues.shadowColor},
               shadowBlurRadius: ${paramValues.shadowBlurRadius},
-              shadowSpreadRadius: ${paramValues.itemsBgColor},
+              shadowSpreadRadius: ${paramValues.shadowSpreadRadius},
               ); 
               onSelect(int i,String s){ 
               print(i); 

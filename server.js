@@ -152,7 +152,7 @@ app.post('/submitWidgetParams', async (req, res) => {
           );
           fs.appendFileSync(
             './flutter/api_demo/lib/main.dart',
-            data5.join("\n"),
+            data5.join("\nSizedBox(height:20),\n"),
             'utf8',
             // callback function
             function (err) {

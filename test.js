@@ -45,7 +45,7 @@ let getWidgets = (widgetId, paramValues) =>
             counterText: "", 
             border: OutlineInputBorder( 
             borderRadius: BorderRadius.circular(${paramValues.borderRadius}), 
-            borderSide: BorderSide( color: Colors.${paramValues.borderColor})), 
+            borderSide: BorderSide( color: Colors.${paramValues.borderSide})), 
             ), 
             cursorColor: Colors.${paramValues.cursorColor}, 
             cursorWidth: ${paramValues.cursorWidth}, 
@@ -114,7 +114,7 @@ let getWidgets = (widgetId, paramValues) =>
           } 
           MaterialCardData FlipObj1 = new MaterialCardData( 
           title: ${paramValues.title}, 
-          subtitle: ${paramValues.leftHandWidgets},
+          subtitle: ${paramValues.subtitle},
           containerHeight: ${paramValues.containerHeight},
           containerWidth: ${paramValues.containerWidth},
           containerDecoration: BoxDecoration( 

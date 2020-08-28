@@ -6,6 +6,7 @@ const getWidgets = require('./test');
 const fs = require('fs');
 const batMobile = require.resolve('./flutter-batch-mobile.bat');
 const batWeb = require.resolve('./flutter-batch-web.bat');
+const { exec } = require('child_process');
 
 var app = express();
 app.use(cors());

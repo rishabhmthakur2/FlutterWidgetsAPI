@@ -4,8 +4,8 @@ const axios = require('axios').default;
 const widgets = require('./parameters.json');
 const getWidgets = require('./test');
 const fs = require('fs');
-const batMobile = require.resolve('../../flutter-batch-mobile.bat');
-const batWeb = require.resolve('../../flutter-batch-web.bat');
+const batMobile = require.resolve('./flutter-batch-mobile.bat');
+const batWeb = require.resolve('./flutter-batch-web.bat');
 
 var app = express();
 app.use(cors());

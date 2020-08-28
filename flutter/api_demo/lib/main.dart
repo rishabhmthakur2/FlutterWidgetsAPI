@@ -35,7 +35,7 @@ class _BoilerPlate extends State<BoilerPlate> {
               width: 10,
               textColor: Colors.blue,
               itemsBgColor: Colors.black,
-              shadowColor: Colors.black,
+              shadowColor: Colors.blue,
               shadowBlurRadius: 10,
               shadowSpreadRadius: black,
               ); 

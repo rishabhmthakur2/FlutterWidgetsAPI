@@ -1,24 +1,28 @@
-var express = require('express')
-var cors = require('cors')
-const axios = require('axios').default
-const widgets = require('./parameters.json')
-const getWidgets = require('./test')
-const fs = require('fs')
+var express = require('express');
+var cors = require('cors');
+const axios = require('axios').default;
+const widgets = require('./parameters.json');
+const getWidgets = require('./test');
+const fs = require('fs');
+const batMobile = require.resolve('../../flutter-batch-mobile.bat');
+const batWeb = require.resolve('../../flutter-batch-web.bat');
 
-var app = express()
-app.use(cors())
-var port = process.env.PORT || 3000
+var app = express();
+app.use(cors());
+var port = process.env.PORT || 3000;
 
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 app.get('', (req, res) => {
-  res.send('Welcome')
-})
+  res.send('Welcome');
+});
+
+let outputPlatform;
 
 app.get('/getWidgetDropdown', (req, res) => {
   axios
@@ -41,17 +45,17 @@ app.get('/getWidgetParamaters?:id', async (req, res) => {
   let id = req.query.id
   let widgetArray = widgets.widgets
   try {
-    const result = await widgetArray.find((widget) => widget.id == id)
-    console.log(result.paramaters)
-    res.status(200).json(result.paramaters)
+    const result = await widgetArray.find((widget) => widget.id == id);
+    res.status(200).json(result.paramaters);
   } catch (error) {
     res.status(404).send('Not Found')
   }
 })
 
 app.post('/submitWidgetParams', async (req, res) => {
-  let idArray = req.body.id
-  let paramsValueArray = req.body.params
+  outputPlatform = req.body.outputPlatform;
+  let idArray = req.body.id;
+  let paramsValueArray = req.body.params;
   try {
     // let data = await getWidgets(id, paramsValue);
     const data0 = "import 'package:flutter/material.dart';\n"
@@ -100,7 +104,7 @@ app.post('/submitWidgetParams', async (req, res) => {
               // if no error
               console.log('Data is appended to file successfully.')
             },
-          )
+          );
           fs.appendFileSync(
             './flutter/api_demo/lib/main.dart',
             data1.join("\n"),
@@ -111,7 +115,7 @@ app.post('/submitWidgetParams', async (req, res) => {
               // if no error
               console.log('Data is appended to file successfully.')
             },
-          )
+          );
           fs.appendFileSync(
             './flutter/api_demo/lib/main.dart',
             data2,
@@ -122,7 +126,7 @@ app.post('/submitWidgetParams', async (req, res) => {
               // if no error
               console.log('Data is appended to file successfully.')
             },
-          )
+          );
           fs.appendFileSync(
             './flutter/api_demo/lib/main.dart',
             data3.join("\n"),
@@ -133,7 +137,7 @@ app.post('/submitWidgetParams', async (req, res) => {
               // if no error
               console.log('Data is appended to file successfully.')
             },
-          )
+          );
           fs.appendFileSync(
             './flutter/api_demo/lib/main.dart',
             data4,
@@ -144,7 +148,7 @@ app.post('/submitWidgetParams', async (req, res) => {
               // if no error
               console.log('Data is appended to file successfully.')
             },
-          )
+          );
           fs.appendFileSync(
             './flutter/api_demo/lib/main.dart',
             data5.join("\n"),
@@ -155,7 +159,7 @@ app.post('/submitWidgetParams', async (req, res) => {
               // if no error
               console.log('Data is appended to file successfully.')
             },
-          )
+          );
           fs.appendFileSync(
             './flutter/api_demo/lib/main.dart',
             data6,
@@ -166,8 +170,28 @@ app.post('/submitWidgetParams', async (req, res) => {
               // if no error
               console.log('Data is appended to file successfully.')
             },
-          )
-          res.status(200).send('Execution Started')
+          );
+          if (outputPlatform == 0){
+            exec(batMobile, (err, stdout, stderr) => {
+                if (err) {
+                    console.error(err);
+                    return err;
+                }
+                console.log(stdout, "{BATCH OUTPUT}");
+                return stdout;
+            });
+        }
+        else{
+            exec(batWeb, (err, stdout, stderr) => {
+                if (err) {
+                    console.error(err);
+                    return err;
+                }
+                console.log(stdout, "{BATCH OUTPUT}");
+                return stdout;
+            });
+        }
+          res.status(200).send('Execution Started');
         });
       });
     } catch (error) {

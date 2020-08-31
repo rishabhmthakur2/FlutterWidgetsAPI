@@ -1,5 +1,6 @@
 let getWidgets = (widgetId, paramValues) =>
   new Promise((resolve, reject) => {
+    console.log(paramValues);
     let widgetList = [
       {
         id: 10,
@@ -276,10 +277,6 @@ let getWidgets = (widgetId, paramValues) =>
             ];
         `
     },
-
-      
-      
-
     ]
     for (i of widgetList) {
       if (i.id == widgetId) {

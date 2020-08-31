@@ -152,41 +152,11 @@ let getWidgets = (widgetId, paramValues) =>
       `,
       },
       {
-        id: 0,
-        name: "Appbar",
-        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart';\n import 'package:rapid_widgets_library/custom-appBar.dart';",
-        call: "appBar:customAppBar(appBarIcons,paramobject),",
+        id: 1,
+        name: "Bottom Navigation Bar",
+        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-bottomnavbar.dart';",
+        call: "bottomNavigationBar: BottomNavBar(param),",
         definitions: `
-            AppBarParameters paramobject = new AppBarParameters(
-            elevation: ${paramValues.elevation}, 
-            bottomOpacity: ${paramValues.bottomOpacity},
-            toolbarOpacity: ${paramValues.toolbarOpacity},
-            titleSpacing: ${paramValues.titleSpacing},
-            centerTitle: ${paramValues.centerTitle},
-            automaticallyImplyLeading: ${paramValues.automaticallyImplyLeading},
-            title: Text(${paramValues.title}));
-            List<Widget> appBarIcons = [ 
-            IconButton( 
-            icon:  
-            Icon(Icons.${paramValues.icon1}), 
-            onPressed: () {}, 
-            ), 
-            IconButton( ",
-            icon:  Icon(Icons.${paramValues.icon2}), ",
-            onPressed: () {}, ",
-            ), 
-            IconButton( 
-            icon:  Icon(Icons.${paramValues.icon3}), 
-            onPressed: () {}, 
-            ), ];
-        `
-    },
-    {
-      id: 1,
-      name: "Bottom Navigation Bar",
-      imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-bottomnavbar.dart';",
-      call: "bottomNavigationBar: BottomNavBar(param),",
-      definitions: `
           List<BottomNavigationBarItem> bottomnavitems = []; 
           BottomNavigationBarItem bottomnavitem1= new BottomNavigationBarItem( 
           icon: Icon(Icons.${paramValues.icon1}),
@@ -212,13 +182,13 @@ let getWidgets = (widgetId, paramValues) =>
           showSelectedLabels: ${paramValues.showSelectedLabels}, 
           selectedIconTheme: IconThemeData(color: Colors.${paramValues.selectedIconTheme}));
       `
-  },
-  {
-    id: 2,
-    name: "Drawer",
-    imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-drawer.dart';",
-    call: "drawer: CustomDrawer(drawerList,onclickDrawer,user1),",
-    definitions: `
+      },
+      {
+        id: 2,
+        name: "Drawer",
+        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-drawer.dart';",
+        call: "drawer: CustomDrawer(drawerList,onclickDrawer,user1),",
+        definitions: `
         List<DrawerListItems> drawerList = [ 
         DrawerListItems(Icon(Icons.${paramValues.icon1}),
         Text(${paramValues.text1})), 
@@ -241,8 +211,8 @@ let getWidgets = (widgetId, paramValues) =>
         print(nIndex); 
         }
     `
-},
- {
+      },
+      {
         id: 3,
         name: "SliverAppbar",
         imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-sliverAppBar.dart';",
@@ -276,13 +246,13 @@ let getWidgets = (widgetId, paramValues) =>
             ), 
             ];
         `
-    },
-    {
-      id: 9,
-      name: "FlatButton",
-      imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-flatButton.dart';",
-      call: "customFlatButton(buttonFlatObject, onFlatButtonPress, onFlatButtonLongPress),",
-      definitions: `
+      },
+      {
+        id: 9,
+        name: "FlatButton",
+        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-flatButton.dart';",
+        call: "customFlatButton(buttonFlatObject, onFlatButtonPress, onFlatButtonLongPress),",
+        definitions: `
           onFlatButtonPress(bool b){ 
           print(b); 
           } 
@@ -301,13 +271,13 @@ let getWidgets = (widgetId, paramValues) =>
           splashColor: Colors.${paramValues.splashColor}
           );
       `
-  },
-  {
-    id: 14,
-    name: "Switch",
-    imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom_switch.dart';",
-    call: "CustomSwitch(param: finalSwitchObj, callbackSwitch: onSwitchTap),",
-    definitions: `
+      },
+      {
+        id: 14,
+        name: "Switch",
+        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom_switch.dart';",
+        call: "CustomSwitch(param: finalSwitchObj, callbackSwitch: onSwitchTap),",
+        definitions: `
         onSwitchTap(bool sBool) { 
         print(sBool); 
         } 
@@ -317,13 +287,13 @@ let getWidgets = (widgetId, paramValues) =>
         activeTrackColor: Colors.${paramValues.activeTrackColor}
         );
     `
-},
-{
-  id: 24,
-  name: "Transparent Card",
-  imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-TransparentCard.dart';",
-  call: "imageCardWidget(ImageObj1, onclickImageCardBtn),",
-  definitions: `
+      },
+      {
+        id: 24,
+        name: "Transparent Card",
+        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-TransparentCard.dart';",
+        call: "imageCardWidget(ImageObj1, onclickImageCardBtn),",
+        definitions: `
       onclickImageCardBtn(int nIndex, String sText) {
       print(nIndex);
       print(sText);
@@ -347,13 +317,13 @@ let getWidgets = (widgetId, paramValues) =>
       imgPath: ${paramValues.imgPath}
       );
   `
-},
-{
-  id: 46,
-  name: "Custom ListTile",
-  imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-listTileWithImage.dart';",
-  call: "customListTile(listData, tileParameters, onListTapped),",
-  definitions: `
+      },
+      {
+        id: 46,
+        name: "Custom ListTile",
+        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-listTileWithImage.dart';",
+        call: "customListTile(listData, tileParameters, onListTapped),",
+        definitions: `
       List<CustomTileData> listData = [ 
       CustomTileData( 
       leading: Icon(Icons.${paramValues.leading1}), 
@@ -394,7 +364,66 @@ let getWidgets = (widgetId, paramValues) =>
       print(title); 
       }
   `
-},
+      },
+      {
+        id: 100,
+        name: "Appbar",
+        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart';\n import 'package:rapid_widgets_library/custom-appBar.dart';",
+        call: "appBar:customAppBar(appBarIcons,paramobject),",
+        definitions: `
+      AppBarParameters paramobject = new AppBarParameters(
+      elevation: 5.0,
+      bottomOpacity: 1.0,
+      toolbarOpacity: 1.0,
+      titleSpacing: 1.0,
+      centerTitle: true,
+      automaticallyImplyLeading: true,
+      title: Text('Appbar'));
+      List<Widget> appBarIcons = [
+      IconButton(
+      icon:
+      Icon(Icons.search),
+      onPressed: () {},
+      ),
+      IconButton(
+      icon:  Icon(Icons.help),
+      onPressed: () {},
+      ),
+      IconButton(
+      icon:  Icon(Icons.verified_user),
+      onPressed: () {}, 
+      ), ];
+ `
+      },
+      {
+        id: 0,
+        name: "Appbar",
+        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart';\n import 'package:rapid_widgets_library/custom-appBar.dart';",
+        call: "appBar:customAppBar(appBarIcons,paramobject),",
+        definitions: `
+        AppBarParameters paramobject = new AppBarParameters(
+          elevation: ${paramValues.elevation},
+          bottomOpacity: ${paramValues.bottomOpacity},
+          toolbarOpacity: ${paramValues.toolbarOpacity},
+          titleSpacing: ${paramValues.titleSpacing},
+          centerTitle: ${paramValues.centerTitle},
+          automaticallyImplyLeading: ${paramValues.automaticallyImplyLeading},
+          title: Text('${paramValues.title}'));
+          List<Widget> appBarIcons = [
+          IconButton(
+          icon:
+          Icon(Icons.${paramValues.icon1}),
+          onPressed: () {},
+          ),
+          IconButton(
+          icon:  Icon(Icons.${paramValues.icon2}),
+          onPressed: () {},
+          ),
+          IconButton(
+          icon:  Icon(Icons.${paramValues.icon3}),
+          onPressed: () {}, 
+          ), ];`
+      }
     ]
     for (i of widgetList) {
       if (i.id == widgetId) {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'dart:ui';
 import 'package:rapid_widgets_library/widget-classesUsed.dart';
+import 'package:rapid_widgets_library/custom-appBar.dart';
+import 'dart:ui';
 import 'package:rapid_widgets_library/custom-textField.dart';
 import 'package:rapid_widgets_library/custom-dropdownButton.dart';
 
@@ -14,6 +15,29 @@ class BoilerPlate extends StatefulWidget {
 class _BoilerPlate extends State<BoilerPlate> {
   @override
   Widget build(BuildContext context) {
+    AppBarParameters paramobject = new AppBarParameters(
+        elevation: 15,
+        bottomOpacity: 10,
+        toolbarOpacity: 10,
+        titleSpacing: 10,
+        centerTitle: false,
+        automaticallyImplyLeading: false,
+        title: Text('Title'));
+    List<Widget> appBarIcons = [
+      IconButton(
+        icon: Icon(Icons.search),
+        onPressed: () {},
+      ),
+      IconButton(
+        icon: Icon(Icons.home),
+        onPressed: () {},
+      ),
+      IconButton(
+        icon: Icon(Icons.list),
+        onPressed: () {},
+      ),
+    ];
+
     onTextSubmit(String sText) {
       print(sText);
     }
@@ -42,28 +66,28 @@ class _BoilerPlate extends State<BoilerPlate> {
       style: TextStyle(color: Colors.black),
     );
 
-              DropDownParameters dropdownObject = DropDownParameters(
-              itemsList: ['One', 'Two'],
-              hintText: 'Hint',
-              listType: 'Text',
-              fillColor: Colors.grey,
-              borderRadius: 20,
-              width: 200,
-              textColor: Colors.blue,
-              itemsBgColor: Colors.black,
-              shadowColor: Colors.black,
-              shadowBlurRadius: 10,
-              shadowSpreadRadius: 5,
-              ); 
-              onSelect(int i,String s){ 
-              print(i); 
-              print(s); 
-              }
-          
+    DropDownParameters dropdownObject = DropDownParameters(
+      itemsList: ['One', 'Two'],
+      hintText: 'test',
+      listType: 'test',
+      fillColor: Colors.grey,
+      borderRadius: 20,
+      width: 200,
+      textColor: Colors.blue,
+      itemsBgColor: Colors.black,
+      shadowColor: Colors.black,
+      shadowBlurRadius: 10,
+      shadowSpreadRadius: 5,
+    );
+    onSelect(int i, String s) {
+      print(i);
+      print(s);
+    }
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: customAppBar(appBarIcons, paramobject),
         body: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Padding(

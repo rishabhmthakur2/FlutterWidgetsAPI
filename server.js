@@ -68,12 +68,10 @@ app.get('/getWidgetParamaters?:id', async (req, res) => {
 })
 
 app.post('/submitWidgetParams', async (req, res) => {
-  let outputPlatform = req.body.outputPlatform;
   let templateHandler = req.body.templateUsed;
-  let widgetsObject = req.body.widgets;
   let execute;
   if (templateHandler == 0) {
-    execute = plainColumnTemplate(outputPlatform, widgetsObject);
+    execute = plainColumnTemplate(req);
     try {
       execute.then((data) => {
         res.status(200).send(data);

@@ -78,7 +78,7 @@
         "textColor1": "Color",
         "fontSize1": "Number",
         "textColor2": "Color",
-        "fontSize": "Number",
+        "fontSize2": "Number",
         "textColor3": "Color",
         "fontSize3": "Number",
         "btnText": "String",
@@ -110,7 +110,7 @@
 {
     "id": 1,
     "name": "Bottom Navigation Bar",
-    "definitions": {
+    "paramaters": {
         "icon1": "Icon",
         "title1": "String",
         "icon2": "Icon",
@@ -128,7 +128,7 @@
 {
     "id": 2,
     "name": "Drawer",
-    "definitions": {
+    "paramaters": {
         "icon1":"Icon",
         "text1":"String",
         "icon2":"Icon",
@@ -146,7 +146,7 @@
 {
     "id": 3,
     "name": "SliverAppbar",
-    "definitions": {
+    "paramaters": {
 
         "automaticallyImplyLeading": "Boolean",
         "backgroundColor":"Color",
@@ -168,7 +168,7 @@
 {
     "id": 4,
     "name": "Tab Bar",
-    "definitions": {
+    "paramaters": {
         "text1":"String",
         "icon1":"Icon",
         "text2":"String",

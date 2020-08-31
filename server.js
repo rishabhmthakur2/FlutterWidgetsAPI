@@ -16,6 +16,7 @@ var bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
+// parse application/json
 app.use(bodyParser.json());
 
 app.get('', (req, res) => {
@@ -151,7 +152,7 @@ app.post('/submitWidgetParams', async (req, res) => {
           );
           fs.appendFileSync(
             './flutter/api_demo/lib/main.dart',
-            data5.join("\nSizedBox(height: 20),\n"),
+            data5.join("\nSizedBox(height:20),\n"),
             'utf8',
             // callback function
             function (err) {

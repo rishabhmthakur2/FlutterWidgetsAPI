@@ -166,18 +166,74 @@
         }
 },
 {
-    "id": 4,
-    "name": "Tab Bar",
+    "id": 9,
+    "name": "FlatButton",
     "paramaters": {
-        "text1":"String",
-        "icon1":"Icon",
-        "text2":"String",
-        "icon2":"Icon"
-       
-
+        "text":"String",
+        "btnColor":"Color",
+        "textColor":"Color",
+        "hoverColor": "Color",
+        "width": "Number",
+        "focusColor": "Color",
+        "height":"Number",
+        "highlightColor": "Color",
+        "splashColor": "Color"
+        
+    }
+},
+{
+    "id": 14,
+    "name": "Switch",
+    "paramaters": {
+        "inactiveTrackColor": "Color",
+        "activeColor":"Color",
+        "activeTrackColor":"Color"
+    }
+},
+{
+    "id": 24,
+    "name": "Transparent Card",
+    "paramaters": {
+        "title": "String",
+        "subtitle": "String",
+        "containerHeight": "Number",
+        "textcolor1": "Color",
+        "fontSize1":"Number",
+        "textcolor2": "Color",
+        "fontSize2": "Number",
+        "imgHeight": "Number",
+        "imgWidth": "Number",
+        "imgPath":"String" 
+    }
+},
+{
+    "id": 46,
+    "name": "Custom ListTile",
+    "paramaters": {
+        "leading1": "Icon",
+        "title1": "String",
+        "subtitle1":"String",
+        "trailingTopText1": "String",
+        "trailingBottomText1": "String",
+        "selected1":"Boolean",
+        "leading2": "Icon",
+        "title2": "String",
+        "subtitle2":"String",
+        "trailingTopText2": "String",
+        "trailingBottomText2": "String",
+        "selected2": "Boolean",
+        "leading3": "Icon",
+        "title3": "String",
+        "subtitle3":"String",
+        "trailingTopText3": "String",
+        "trailingBottomText3": "String",
+        "selected3":"Boolean",
+        "dense":"Boolean" ,
+        "isThreeLine": "Boolean",
+        "fontSize": "Number"
+        
     }
 }
-
 
 ]
 }

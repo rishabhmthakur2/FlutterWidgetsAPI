@@ -48,7 +48,7 @@ class _BoilerPlate extends State<BoilerPlate> {
               itemsList: ['One', 'Two'],
               hintText: 'Hint',
               listType: 'Text',
-              fillColor: Colors.red,
+              fillColor: Colors.grey,
               borderRadius: 20,
               width: 200,
               textColor: Colors.blue,

@@ -20,7 +20,7 @@ app.get('', (req, res) => {
 });
 
 
-app.get('/getWidgetDropdown', (req, res) => {
+/* app.get('/getWidgetDropdown', (req, res) => {
   axios
     .get('http://104.40.75.137:9003/assets/data/data.json')
     .then((response) => {
@@ -36,6 +36,25 @@ app.get('/getWidgetDropdown', (req, res) => {
       res.send(widgetNames)
     })
 })
+ */
+
+
+app.get('/getWidgetDropdown', async (req, res) => {
+  let widgetsAll = widgets.widgets
+  var nameWidgets = []
+  try{
+    for(let i=0; i< widgetsAll.length; i++){
+      nameWidgets.push({
+        id: widgetsAll[i].id,
+        name: widgetsAll[i].name
+      })
+    }
+    res.send(nameWidgets)
+  }catch{
+    res.status(404).send('Not Found')
+  }
+})
+
 
 app.get('/getWidgetParamaters?:id', async (req, res) => {
   let id = req.query.id

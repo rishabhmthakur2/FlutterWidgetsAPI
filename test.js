@@ -277,6 +277,124 @@ let getWidgets = (widgetId, paramValues) =>
             ];
         `
     },
+    {
+      id: 9,
+      name: "FlatButton",
+      imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-flatButton.dart';",
+      call: "customFlatButton(buttonFlatObject, onFlatButtonPress, onFlatButtonLongPress),",
+      definitions: `
+          onFlatButtonPress(bool b){ 
+          print(b); 
+          } 
+          onFlatButtonLongPress(bool b){ 
+          print(b); 
+          } 
+          FlatButtonParameters buttonFlatObject = FlatButtonParameters(
+          child:Text('${paramValues.text}'),
+          color:Colors.${paramValues.btnColor},
+          textColor:Colors.${paramValues.textColor},
+          hoverColor: Colors.${paramValues.hoverColor},
+          width: ${paramValues.width},
+          focusColor: Colors.${paramValues.focusColor},
+          height: ${paramValues.height},
+          highlightColor: Colors.${paramValues.highlightColor},
+          splashColor: Colors.${paramValues.splashColor}
+          );
+      `
+  },
+  {
+    id: 14,
+    name: "Switch",
+    imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom_switch.dart';",
+    call: "CustomSwitch(param: finalSwitchObj, callbackSwitch: onSwitchTap),",
+    definitions: `
+        onSwitchTap(bool sBool) { 
+        print(sBool); 
+        } 
+        SwitchParameters finalSwitchObj = new SwitchParameters(
+        inactiveTrackColor: Colors.${paramValues.inactiveTrackColor}, 
+        activeColor: Colors.${paramValues.activeColor}, 
+        activeTrackColor: Colors.${paramValues.activeTrackColor}
+        );
+    `
+},
+{
+  id: 24,
+  name: "Transparent Card",
+  imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-TransparentCard.dart';",
+  call: "imageCardWidget(ImageObj1, onclickImageCardBtn),",
+  definitions: `
+      onclickImageCardBtn(int nIndex, String sText) {
+      print(nIndex);
+      print(sText);
+      } 
+      MaterialCardData ImageObj1 = new MaterialCardData( 
+      title:'${paramValues.title}' , 
+      subtitle: '${paramValues.subtitle}', 
+      containerHeight: ${paramValues.containerHeight},
+      textStyle1: TextStyle( 
+      color: Colors.${paramValues.textcolor1}, 
+      fontSize: ${paramValues.fontSize1}, 
+      fontWeight: FontWeight.bold, 
+      ), 
+      textStyle2: TextStyle( 
+      color: Colors.${paramValues.textcolor2}, 
+      fontSize: ${paramValues.fontSize2}, 
+      ), 
+      imgHeight: ${paramValues.imgHeight}, 
+      imgWidth: ${paramValues.imgWidth},
+      imgType: \"Network\",
+      imgPath: ${paramValues.imgPath}
+      );
+  `
+},
+{
+  id: 46,
+  name: "Custom ListTile",
+  imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-listTileWithImage.dart';",
+  call: "customListTile(listData, tileParameters, onListTapped),",
+  definitions: `
+      List<CustomTileData> listData = [ 
+      CustomTileData( 
+      leading: Icon(Icons.${paramValues.leading1}), 
+      title: ${paramValues.title1}, 
+      subtitle: ${paramValues.subtitle1}, 
+      trailingTopText: ${paramValues.trailingTopText1}, 
+      trailingBottomText: ${paramValues.trailingBottomText1}, 
+      enabled: true,
+      selected: ${paramValues.selected1}
+      ), 
+      CustomTileData( 
+      leading: Icon(Icons.${paramValues.leading2}),
+      title: ${paramValues.title2}, 
+      subtitle: ${paramValues.subtitle2}, 
+      trailingTopText:${paramValues.trailingTopText2},
+      trailingBottomText:${paramValues.trailingBottomText2},
+      enabled: true,
+      selected: ${paramValues.selected2}
+      ), 
+      CustomTileData( 
+        leading: Icon(Icons.${paramValues.leading3}),
+        title: ${paramValues.title3}, 
+        subtitle: ${paramValues.subtitle3}, 
+        trailingTopText:${paramValues.trailingTopText3},
+        trailingBottomText:${paramValues.trailingBottomText3},
+        enabled: true,
+        selected: ${paramValues.selected3}
+      ) 
+      ];
+      CustomListTileParameters tileParameters = new CustomListTileParameters( 
+      dense: ${paramValues.dense}, 
+      isThreeLine: ${paramValues.isThreeLine}, 
+      fontWeight: FontWeight.bold,
+      fontSize: ${paramValues.fontSize},
+      );
+      onListTapped(int index, String title) { 
+      print(index); 
+      print(title); 
+      }
+  `
+},
     ]
     for (i of widgetList) {
       if (i.id == widgetId) {

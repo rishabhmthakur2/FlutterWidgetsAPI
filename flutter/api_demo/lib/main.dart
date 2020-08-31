@@ -42,23 +42,24 @@ class _BoilerPlate extends State<BoilerPlate> {
       style: TextStyle(color: Colors.black),
     );
 
-    DropDownParameters dropdownObject = DropDownParameters(
-      itemsList: ['One', 'Two'],
-      hintText: 'Hint',
-      listType: 'Text',
-      fillColor: Colors.grey,
-      borderRadius: 20,
-      width: 200,
-      textColor: Colors.blue,
-      itemsBgColor: Colors.black,
-      shadowColor: Colors.black,
-      shadowBlurRadius: 10,
-      shadowSpreadRadius: 5,
-    );
-    onSelect(int i, String s) {
-      print(i);
-      print(s);
-    }
+              DropDownParameters dropdownObject = DropDownParameters(
+              itemsList: ['One', 'Two'],
+              hintText: 'Hint',
+              listType: 'Text',
+              fillColor: Colors.grey,
+              borderRadius: 20,
+              width: 200,
+              textColor: Colors.blue,
+              itemsBgColor: Colors.black,
+              shadowColor: Colors.black,
+              shadowBlurRadius: 10,
+              shadowSpreadRadius: 5,
+              ); 
+              onSelect(int i,String s){ 
+              print(i); 
+              print(s); 
+              }
+          
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,

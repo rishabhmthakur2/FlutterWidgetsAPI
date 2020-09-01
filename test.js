@@ -1,6 +1,6 @@
 let getWidgets = (widgetId, paramValues) =>
   new Promise((resolve, reject) => {
-    console.log(paramValues);
+   // console.log(paramValues);
     let widgetList = [
       {
         id: 10,
@@ -183,35 +183,7 @@ let getWidgets = (widgetId, paramValues) =>
           selectedIconTheme: IconThemeData(color: Colors.${paramValues.selectedIconTheme}));
       `
       },
-      {
-        id: 2,
-        name: "Drawer",
-        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-drawer.dart';",
-        call: "drawer: CustomDrawer(drawerList,onclickDrawer,user1),",
-        definitions: `
-        List<DrawerListItems> drawerList = [ 
-        DrawerListItems(Icon(Icons.${paramValues.icon1}),
-        Text(${paramValues.text1})), 
-        DrawerListItems(Icon(Icons.${paramValues.icon2}), 
-        Text(${paramValues.text2})), 
-        DrawerListItems(Icon(Icons.${paramValues.icon3}), 
-        Text(${paramValues.text3})), 
-        DrawerListItems(Icon(Icons.${paramValues.icon4}), 
-        Text(${paramValues.text4})), 
-        ]; 
-        DrawerHeaderParameters user1= new DrawerHeaderParameters(
-        subtitle: ${paramValues.subtitle},
-        title: ${paramValues.title},
-        imageType: \"Network\",
-        imagepath:${paramValues.imagepath},
-        headerColor:Colors.${paramValues.headerColor},
-        ); 
-        onclickDrawer(int nIndex) 
-        { 
-        print(nIndex); 
-        }
-    `
-      },
+      
       {
         id: 3,
         name: "SliverAppbar",
@@ -396,6 +368,35 @@ let getWidgets = (widgetId, paramValues) =>
  `
       },
       {
+        id: 102,
+        name: "Drawer",
+        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-drawer.dart';",
+        call: "drawer: CustomDrawer(drawerList,onclickDrawer,user1),",
+        definitions: `
+            List<DrawerListItems> drawerList = [ 
+            DrawerListItems(Icon(Icons.account_circle), 
+            Text(\"Account details\")), 
+            DrawerListItems(Icon(Icons.history), 
+            Text(\"Order History\")), 
+            DrawerListItems(Icon(Icons.account_balance_wallet), 
+            Text(\"Wallet\")), 
+            DrawerListItems(Icon(Icons.cancel), 
+            Text(\"Logout\")), 
+            ]; 
+            DrawerHeaderParameters user1= new DrawerHeaderParameters(
+            subtitle: 'abc@xyz.com',
+            title: 'Account Name',
+            imageType: \"Network\",
+            imagepath:'https://lunawood.com/wp-content/uploads/2018/02/placeholder-image.png' ,
+            headerColor:Colors.white"
+            ); 
+            onclickDrawer(int nIndex) 
+            { 
+            print(nIndex); 
+            }
+        `
+    },
+      {
         id: 0,
         name: "Appbar",
         imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart';\n import 'package:rapid_widgets_library/custom-appBar.dart';",
@@ -423,7 +424,36 @@ let getWidgets = (widgetId, paramValues) =>
           icon:  Icon(Icons.${paramValues.icon3}),
           onPressed: () {}, 
           ), ];`
-      }
+      },
+      {
+        id: 2,
+        name: "Drawer",
+        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-drawer.dart';",
+        call: "drawer: CustomDrawer(drawerList,onclickDrawer,user1),",
+        definitions: `
+        List<DrawerListItems> drawerList = [ 
+        DrawerListItems(Icon(Icons.${paramValues.icon1}),
+        Text(${paramValues.text1})), 
+        DrawerListItems(Icon(Icons.${paramValues.icon2}), 
+        Text(${paramValues.text2})), 
+        DrawerListItems(Icon(Icons.${paramValues.icon3}), 
+        Text(${paramValues.text3})), 
+        DrawerListItems(Icon(Icons.${paramValues.icon4}), 
+        Text(${paramValues.text4})), 
+        ]; 
+        DrawerHeaderParameters user1= new DrawerHeaderParameters(
+        subtitle: ${paramValues.subtitle},
+        title: ${paramValues.title},
+        imageType: \"Network\",
+        imagepath:${paramValues.imagepath},
+        headerColor:Colors.${paramValues.headerColor},
+        ); 
+        onclickDrawer(int nIndex) 
+        { 
+        print(nIndex); 
+        }
+    `
+      },
     ]
     for (i of widgetList) {
       if (i.id == widgetId) {

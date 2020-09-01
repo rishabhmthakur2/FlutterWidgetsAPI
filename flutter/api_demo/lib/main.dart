@@ -100,19 +100,21 @@ Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
 Expanded(flex: 1,child:CustomTextField(params: finalTextObj, callbackTextfield: onTextSubmit),),
+Expanded(flex: 1,child:Container()),
+],),
+),
+Padding(
+padding: const EdgeInsets.all(25.0),
+child: Row(children: [
+Expanded(flex: 1,child:Container()),
+Expanded(flex: 1,child:Container()),
+],),
+),
+Padding(
+padding: const EdgeInsets.all(25.0),
+child: Row(children: [
+Expanded(flex: 1,child:Container()),
 Expanded(flex: 1,child:CustomDropdownButton(dropdownObject,onSelect),),
-],),
-),
-Padding(
-padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-Expanded(flex: 1,child:Container()),
-],),
-),
-Padding(
-padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-Expanded(flex: 1,child:Container()),
  ],),
 ),
 ], 

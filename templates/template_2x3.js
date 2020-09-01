@@ -47,32 +47,72 @@ let template_2x3 = (req) => new Promise(async (resolve, reject) => {
       '\nreturn MaterialApp(\ndebugShowCheckedModeBanner: false,\nhome: Scaffold(\n' + appbarCall + '\nbody: Padding(\npadding: const EdgeInsets.all(20.0),\nchild: Padding(\npadding: const EdgeInsets.all(25.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ['
     //const data6 = '\n ],),)),),),);}}  '
 
+    let topleft = "Container()"
+    let topright = "Container()"
+    let middleleft = "Container()"
+    let middleright = "Container()"
+    let bottomright = "Container()"
+    let bottomleft = "Container()"
 
 
     let dataMap = new Promise(async (resolve, reject) => {
-      for (let i = 0; i < widgetsObject.length; i++) {
-        console.log(widgetsObject[i].widgetId);
-        let data = await getWidgets(widgetsObject[i].widgetId, widgetsObject[i].parameters);
-        data1.push(data.imports);
-        data3.push(data.definitions);
-        data5.push(data.call);
-      }
+        for (let i = 0; i < widgetsObject.length; i++) {
+            console.log(widgetsObject[i].location);
+            if (widgetsObject[i].location == "topleft") {
+              console.log("hello");
+              let data = await getWidgets(widgetsObject[i].widgetId, widgetsObject[i].parameters);
+              data1.push(data.imports);
+              data3.push(data.definitions);
+              topleft = data.call;
+            }
+            if (widgetsObject[i].location == "topright") {
+              let data = await getWidgets(widgetsObject[i].widgetId, widgetsObject[i].parameters);
+              data1.push(data.imports);
+              data3.push(data.definitions);
+              topright = data.call;
+            }
+            if (widgetsObject[i].location == "middleleft") {
+              let data = await getWidgets(widgetsObject[i].widgetId, widgetsObject[i].parameters);
+              data1.push(data.imports);
+              data3.push(data.definitions);
+              middleleft = data.call;
+            }
+            if (widgetsObject[i].location == "middleright") {
+              let data = await getWidgets(widgetsObject[i].widgetId, widgetsObject[i].parameters);
+              data1.push(data.imports);
+              data3.push(data.definitions);
+              middleright = data.call;
+            }
+            if (widgetsObject[i].location == "bottomleft") {
+                let data = await getWidgets(widgetsObject[i].widgetId, widgetsObject[i].parameters);
+                data1.push(data.imports);
+                data3.push(data.definitions);
+                bottomleft = data.call;
+              }
+              if (widgetsObject[i].location == "bottomright") {
+                let data = await getWidgets(widgetsObject[i].widgetId, widgetsObject[i].parameters);
+                data1.push(data.imports);
+                data3.push(data.definitions);
+                bottomright = data.call;
+              }
+          }
       resolve('Data added to arrays');
     });
 
-    let data6 = "\nExpanded(flex: 1,child:" + data5[0] + "),"; //Widget1 call
-    let data7 = "\nExpanded(flex: 1,child:" + data5[1] + "),"; //Widget2 call
-    let data8 = "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: [";
-    let data9 = "\nExpanded(flex: 1,child:" + data5[2] + "),"; //Widget3 call
-    let data10 = "\nExpanded(flex: 1,child:" + data5[3] + "),"; //Widget4 call
-    let data11 = "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: [";
-    let data12 = "\nExpanded(flex: 1,child:" + data5[4] + "),"; //Widget6 call
-    let data13 = "\nExpanded(flex: 1,child:" + data5[5] + "),"; //Widget3 call
-    let data14 = "\n ],),\n),\n], \n)  \n))); \n} \n}";
-
+    
 
     try {
       dataMap.then(() => {
+        let data6 = "\nExpanded(flex: 1,child:" + topleft + "),"; //Widget1 call
+        let data7 = "\nExpanded(flex: 1,child:" + topright + "),"; //Widget2 call
+        let data8 = "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: [";
+        let data9 = "\nExpanded(flex: 1,child:" + middleleft + "),"; //Widget3 call
+        let data10 = "\nExpanded(flex: 1,child:" + middleright + "),"; //Widget4 call
+        let data11 = "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: [";
+        let data12 = "\nExpanded(flex: 1,child:" + bottomleft + "),"; //Widget6 call
+        let data13 = "\nExpanded(flex: 1,child:" + bottomright + "),"; //Widget3 call
+        let data14 = "\n ],),\n),\n], \n)  \n))))); \n} \n}";
+    
         let clearFile = () =>
           new Promise(async (resolve, reject) => {
             await fs.truncate(

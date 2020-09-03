@@ -122,7 +122,7 @@ let getWidgets = (widgetId, paramValues) =>
           boxShadow: 
           [ BoxShadow( 
           color: Colors.${paramValues.shadowColor}, blurRadius: ${paramValues.blurRadius}, 
-          offset: ${paramValues.shadowOffset}),
+          offset: Offset.zero),
           ], 
           borderRadius: BorderRadius.circular(${paramValues.borderRadius}), 
           color: Colors.${paramValues.backgroundColor}, ), 

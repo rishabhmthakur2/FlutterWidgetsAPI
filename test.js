@@ -433,13 +433,13 @@ let getWidgets = (widgetId, paramValues) =>
         definitions: `
         List<DrawerListItems> drawerList = [ 
         DrawerListItems(Icon(Icons.${paramValues.icon1}),
-        Text('${paramValues.text1})'), 
+        Text('${paramValues.text1}')), 
         DrawerListItems(Icon(Icons.${paramValues.icon2}), 
-        Text('${paramValues.text2})'), 
+        Text('${paramValues.text2}')), 
         DrawerListItems(Icon(Icons.${paramValues.icon3}), 
-        Text('${paramValues.text3})'), 
+        Text('${paramValues.text3}')), 
         DrawerListItems(Icon(Icons.${paramValues.icon4}), 
-        Text('${paramValues.text4})'), 
+        Text('${paramValues.text4}')), 
         ]; 
         DrawerHeaderParameters user1= new DrawerHeaderParameters(
         subtitle: '${paramValues.subtitle}',

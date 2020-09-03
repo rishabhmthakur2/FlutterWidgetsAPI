@@ -36,7 +36,7 @@ let template_2_1_1 = (req) => new Promise(async (resolve, reject) => {
       drawerCall = drawerdata.call;
     }
     if (req.body.drawer) {
-      let drawerdata = await getWidgets(2, req.body.appbarParams);
+      let drawerdata = await getWidgets(2, req.body.drawerParams);
       data1.push(drawerdata.imports);
       data3.push(drawerdata.definitions);
       drawerCall = drawerdata.call;

@@ -67,8 +67,8 @@ let getWidgets = (widgetId, paramValues) =>
         definitions: `
               DropDownParameters dropdownObject = DropDownParameters(
               itemsList: ${paramValues.itemsList},
-              hintText: ${paramValues.hintText},
-              listType: ${paramValues.listType},
+              hintText: '${paramValues.hintText}',
+              listType: '${paramValues.listType}',
               fillColor: Colors.${paramValues.fillColor},
               borderRadius: ${paramValues.borderRadius},
               width: ${paramValues.width},
@@ -286,7 +286,7 @@ let getWidgets = (widgetId, paramValues) =>
       imgHeight: ${paramValues.imgHeight}, 
       imgWidth: ${paramValues.imgWidth},
       imgType: \"Network\",
-      imgPath: ${paramValues.imgPath}
+      imgPath: '${paramValues.imgPath}'
       );
   `
       },

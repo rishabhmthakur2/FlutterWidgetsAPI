@@ -21,31 +21,31 @@ let template_2_1_1 = (req) => new Promise(async (resolve, reject) => {
       data1.push(data.imports);
       data3.push(data.definitions);
       appbarCall = data.call;
-    } else {
-     // console.log(req.body.appbarParams);
+    }
+    if (req.body.appbar){
+      console.log(req.body.appbarParams);
       let data = await getWidgets(0, req.body.appbarParams);
       data1.push(data.imports);
       data3.push(data.definitions);
       appbarCall = data.call;
     }
-    /* if (!req.body.drawer) {
+    if (!req.body.drawer) {
       let drawerdata = await getWidgets(102, {});
       data1.push(drawerdata.imports);
       data3.push(drawerdata.definitions);
       drawerCall = drawerdata.call;
-    } else {
+    }
+    if (req.body.drawer) {
       let drawerdata = await getWidgets(2, req.body.appbarParams);
       data1.push(drawerdata.imports);
       data3.push(drawerdata.definitions);
       drawerCall = drawerdata.call;
-    } */
-    // let data = await getWidgets(id, paramsValue);
-    const data0 = "import 'package:flutter/material.dart';\n"
+    }
+    const data0 = "import 'package:flutter/material.dart';\nimport 'package:rapid_widgets_library/widget-classesUsed.dart';\n"
     const data2 =
       '\nvoid main() => runApp(BoilerPlate());\nclass BoilerPlate extends StatefulWidget \n{ \n@override \n_BoilerPlate createState() => _BoilerPlate();\n}\nclass _BoilerPlate extends State<BoilerPlate> {\n @override\n  Widget build(BuildContext context) { \n'
     const data4 =
-      '\nreturn MaterialApp(\ndebugShowCheckedModeBanner: false,\nhome: Scaffold(\n' + appbarCall + '\nbody: Padding(\npadding: const EdgeInsets.all(20.0),\nchild: Padding(\npadding: const EdgeInsets.all(25.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ['
-    //const data6 = '\n ],),)),),),);}}  '
+      '\nreturn MaterialApp(\ndebugShowCheckedModeBanner: false,\nhome: Scaffold(\n' + appbarCall + '\n'+ drawerCall + '\nbody: Padding(\npadding: const EdgeInsets.all(20.0),\nchild: Padding(\npadding: const EdgeInsets.all(25.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ['
 
     let topleft = "Container()"
     let topright = "Container()"

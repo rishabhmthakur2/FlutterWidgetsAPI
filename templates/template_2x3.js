@@ -40,7 +40,7 @@ let template_2x3 = (req) => new Promise(async (resolve, reject) => {
         drawerCall = drawerdata.call;
       } */
     // let data = await getWidgets(id, paramsValue);
-    const data0 = "import 'package:flutter/material.dart';\n"
+    const data0 = "import 'package:flutter/material.dart';\nimport 'package:rapid_widgets_library/widget-classesUsed.dart';\n"
     const data2 =
       '\nvoid main() => runApp(BoilerPlate());\nclass BoilerPlate extends StatefulWidget \n{ \n@override \n_BoilerPlate createState() => _BoilerPlate();\n}\nclass _BoilerPlate extends State<BoilerPlate> {\n @override\n  Widget build(BuildContext context) { \n'
     const data4 =

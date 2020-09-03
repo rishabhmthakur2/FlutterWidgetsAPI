@@ -6,7 +6,7 @@ let getWidgets = (widgetId, paramValues) =>
         id: 10,
         name: 'FloatingActionButton',
         imports:
-          "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-floatingActionButton.dart';",
+          "import 'package:rapid_widgets_library/custom-floatingActionButton.dart';",
         call: 'customFloatingActionButton(btnFloatObject, onFloatButtonPress),',
         definitions: `
                   onFloatButtonPress(bool b){
@@ -26,7 +26,7 @@ let getWidgets = (widgetId, paramValues) =>
         id: 15,
         name: 'Textfield',
         imports:
-          "import 'dart:ui'; \nimport 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-textField.dart';",
+          "import 'dart:ui'; \nimport 'package:rapid_widgets_library/custom-textField.dart';",
         call:
           'CustomTextField(params: finalTextObj, callbackTextfield: onTextSubmit),',
         definitions: `
@@ -62,7 +62,7 @@ let getWidgets = (widgetId, paramValues) =>
         id: 8,
         name: 'DropdownButton',
         imports:
-          "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-dropdownButton.dart';",
+          "import 'package:rapid_widgets_library/custom-dropdownButton.dart';",
         call: 'CustomDropdownButton(dropdownObject,onSelect),',
         definitions: `
               DropDownParameters dropdownObject = DropDownParameters(
@@ -88,7 +88,7 @@ let getWidgets = (widgetId, paramValues) =>
         id: 21,
         name: 'CompositeCard',
         imports:
-          "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-compositeCard.dart';",
+          "import 'package:rapid_widgets_library/custom-compositeCard.dart';",
         call: 'compositeCard(listcards),',
         definitions: `
             List<CustomcompositeCardParameters> listcards = []; 
@@ -106,7 +106,7 @@ let getWidgets = (widgetId, paramValues) =>
         id: 22,
         name: 'Flip Card',
         imports:
-          "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-flipcard.dart';",
+          "import 'package:rapid_widgets_library/custom-flipcard.dart';",
         call: 'customFlipCardWidget(FlipObj1, onclickFlipCardBtn),',
         definitions: `
           onclickFlipCardBtn(int nIndex, String sText) {
@@ -114,8 +114,8 @@ let getWidgets = (widgetId, paramValues) =>
           print(sText);
           } 
           MaterialCardData FlipObj1 = new MaterialCardData( 
-          title: ${paramValues.title}, 
-          subtitle: ${paramValues.subtitle},
+          title: '${paramValues.title}', 
+          subtitle: '${paramValues.subtitle}',
           containerHeight: ${paramValues.containerHeight},
           containerWidth: ${paramValues.containerWidth},
           containerDecoration: BoxDecoration( 
@@ -139,7 +139,7 @@ let getWidgets = (widgetId, paramValues) =>
           color: Colors.${paramValues.textColor3},
           fontSize: ${paramValues.fontSize3}, 
           ), 
-          btnText:${paramValues.btnText}, 
+          btnText: '${paramValues.btnText}', 
           btnTextColor: Colors.${paramValues.btnTextColor}, 
           btnColor: Colors.${paramValues.btnColor}, 
           margin1: ${paramValues.margin1}, 
@@ -147,28 +147,28 @@ let getWidgets = (widgetId, paramValues) =>
           imgHeight: ${paramValues.imgHeight},
           imgWidth: ${paramValues.imgWidth},
           imgType: \"Network\",
-          imgPath: ${paramValues.imgPath},
+          imgPath: '${paramValues.imgPath}',
           );
       `,
       },
       {
         id: 1,
         name: "Bottom Navigation Bar",
-        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-bottomnavbar.dart';",
+        imports: "import 'package:rapid_widgets_library/custom-bottomnavbar.dart';",
         call: "bottomNavigationBar: BottomNavBar(param),",
         definitions: `
           List<BottomNavigationBarItem> bottomnavitems = []; 
           BottomNavigationBarItem bottomnavitem1= new BottomNavigationBarItem( 
           icon: Icon(Icons.${paramValues.icon1}),
-          title: Text(${paramValues.title1},style: TextStyle(fontSize: 12)),
+          title: Text('${paramValues.title1}',style: TextStyle(fontSize: 12)),
           ); 
           BottomNavigationBarItem bottomnavitem2= new BottomNavigationBarItem( 
           icon: Icon(Icons.${paramValues.icon2}),
-          title: Text(${paramValues.title2},style: TextStyle(fontSize: 12)),
+          title: Text('${paramValues.title2}',style: TextStyle(fontSize: 12)),
           ); 
           BottomNavigationBarItem bottomnavitem3= new BottomNavigationBarItem( 
           icon: Icon(Icons.${paramValues.icon3}),
-          title: Text(${paramValues.title3},style: TextStyle(fontSize: 12),),
+          title: Text('${paramValues.title3}',style: TextStyle(fontSize: 12),),
           ); 
           bottomnavitems.add(bottomnavitem1); 
           bottomnavitems.add(bottomnavitem2); 
@@ -187,7 +187,7 @@ let getWidgets = (widgetId, paramValues) =>
       {
         id: 3,
         name: "SliverAppbar",
-        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-sliverAppBar.dart';",
+        imports: "import 'package:rapid_widgets_library/custom-sliverAppBar.dart';",
         call: "CustomScrollView( \nslivers: <Widget>[ \ncustomSliverAppBar(sliverProducts, params), \nSliverList( delegate: SliverChildListDelegate( \n<Widget>[ \nContainer(height: 1200.0), \n], \n), \n), \n], \n),",
         definitions: `
             SliverAppBarParameters params = new SliverAppBarParameters(
@@ -201,7 +201,7 @@ let getWidgets = (widgetId, paramValues) =>
             snap: ${paramValues.snap}, 
             pinned: ${paramValues.pinned}, 
             floating: ${paramValues.floating},
-            title:Text(${paramValues.title})
+            title:Text('${paramValues.title}')
             ); 
             List<Widget> sliverProducts = [ 
             IconButton( 
@@ -222,7 +222,7 @@ let getWidgets = (widgetId, paramValues) =>
       {
         id: 9,
         name: "FlatButton",
-        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-flatButton.dart';",
+        imports: "import 'package:rapid_widgets_library/custom-flatButton.dart';",
         call: "customFlatButton(buttonFlatObject, onFlatButtonPress, onFlatButtonLongPress),",
         definitions: `
           onFlatButtonPress(bool b){ 
@@ -247,7 +247,7 @@ let getWidgets = (widgetId, paramValues) =>
       {
         id: 14,
         name: "Switch",
-        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom_switch.dart';",
+        imports: "import 'package:rapid_widgets_library/custom_switch.dart';",
         call: "CustomSwitch(param: finalSwitchObj, callbackSwitch: onSwitchTap),",
         definitions: `
         onSwitchTap(bool sBool) { 
@@ -263,7 +263,7 @@ let getWidgets = (widgetId, paramValues) =>
       {
         id: 24,
         name: "Transparent Card",
-        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-TransparentCard.dart';",
+        imports: "import 'package:rapid_widgets_library/custom-TransparentCard.dart';",
         call: "imageCardWidget(ImageObj1, onclickImageCardBtn),",
         definitions: `
       onclickImageCardBtn(int nIndex, String sText) {
@@ -293,34 +293,34 @@ let getWidgets = (widgetId, paramValues) =>
       {
         id: 46,
         name: "Custom ListTile",
-        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-listTileWithImage.dart';",
+        imports: "import 'package:rapid_widgets_library/custom-listTileWithImage.dart';",
         call: "customListTile(listData, tileParameters, onListTapped),",
         definitions: `
       List<CustomTileData> listData = [ 
       CustomTileData( 
       leading: Icon(Icons.${paramValues.leading1}), 
-      title: ${paramValues.title1}, 
-      subtitle: ${paramValues.subtitle1}, 
-      trailingTopText: ${paramValues.trailingTopText1}, 
-      trailingBottomText: ${paramValues.trailingBottomText1}, 
+      title: '${paramValues.title1}', 
+      subtitle: '${paramValues.subtitle1}', 
+      trailingTopText: '${paramValues.trailingTopText1}', 
+      trailingBottomText: '${paramValues.trailingBottomText1}', 
       enabled: true,
       selected: ${paramValues.selected1}
       ), 
       CustomTileData( 
       leading: Icon(Icons.${paramValues.leading2}),
-      title: ${paramValues.title2}, 
-      subtitle: ${paramValues.subtitle2}, 
-      trailingTopText:${paramValues.trailingTopText2},
-      trailingBottomText:${paramValues.trailingBottomText2},
+      title: '${paramValues.title2}', 
+      subtitle: '${paramValues.subtitle2}', 
+      trailingTopText:'${paramValues.trailingTopText2}',
+      trailingBottomText:'${paramValues.trailingBottomText2}',
       enabled: true,
       selected: ${paramValues.selected2}
       ), 
       CustomTileData( 
         leading: Icon(Icons.${paramValues.leading3}),
-        title: ${paramValues.title3}, 
-        subtitle: ${paramValues.subtitle3}, 
-        trailingTopText:${paramValues.trailingTopText3},
-        trailingBottomText:${paramValues.trailingBottomText3},
+        title: '${paramValues.title3}', 
+        subtitle: '${paramValues.subtitle3}', 
+        trailingTopText: '${paramValues.trailingTopText3}',
+        trailingBottomText: '${paramValues.trailingBottomText3}',
         enabled: true,
         selected: ${paramValues.selected3}
       ) 
@@ -340,7 +340,7 @@ let getWidgets = (widgetId, paramValues) =>
       {
         id: 100,
         name: "Appbar",
-        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart';\n import 'package:rapid_widgets_library/custom-appBar.dart';",
+        imports: "import 'package:rapid_widgets_library/custom-appBar.dart';",
         call: "appBar:customAppBar(appBarIcons,paramobject),",
         definitions: `
       AppBarParameters paramobject = new AppBarParameters(
@@ -370,25 +370,25 @@ let getWidgets = (widgetId, paramValues) =>
       {
         id: 102,
         name: "Drawer",
-        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-drawer.dart';",
+        imports: "import 'package:rapid_widgets_library/custom-drawer.dart';",
         call: "drawer: CustomDrawer(drawerList,onclickDrawer,user1),",
         definitions: `
             List<DrawerListItems> drawerList = [ 
             DrawerListItems(Icon(Icons.account_circle), 
-            Text(\"Account details\")), 
+            Text("Account details")), 
             DrawerListItems(Icon(Icons.history), 
-            Text(\"Order History\")), 
+            Text("Order History")), 
             DrawerListItems(Icon(Icons.account_balance_wallet), 
-            Text(\"Wallet\")), 
+            Text("Wallet")), 
             DrawerListItems(Icon(Icons.cancel), 
-            Text(\"Logout\")), 
+            Text("Logout")), 
             ]; 
             DrawerHeaderParameters user1= new DrawerHeaderParameters(
             subtitle: 'abc@xyz.com',
             title: 'Account Name',
-            imageType: \"Network\",
+            imageType: "Network",
             imagepath:'https://lunawood.com/wp-content/uploads/2018/02/placeholder-image.png' ,
-            headerColor:Colors.white"
+            headerColor:Colors.white
             ); 
             onclickDrawer(int nIndex) 
             { 
@@ -399,7 +399,7 @@ let getWidgets = (widgetId, paramValues) =>
       {
         id: 0,
         name: "Appbar",
-        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart';\n import 'package:rapid_widgets_library/custom-appBar.dart';",
+        imports: "import 'package:rapid_widgets_library/custom-appBar.dart';",
         call: "appBar:customAppBar(appBarIcons,paramobject),",
         definitions: `
         AppBarParameters paramobject = new AppBarParameters(
@@ -428,22 +428,22 @@ let getWidgets = (widgetId, paramValues) =>
       {
         id: 2,
         name: "Drawer",
-        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-drawer.dart';",
+        imports: "import 'package:rapid_widgets_library/custom-drawer.dart';",
         call: "drawer: CustomDrawer(drawerList,onclickDrawer,user1),",
         definitions: `
         List<DrawerListItems> drawerList = [ 
         DrawerListItems(Icon(Icons.${paramValues.icon1}),
-        Text(${paramValues.text1})), 
+        Text('${paramValues.text1})'), 
         DrawerListItems(Icon(Icons.${paramValues.icon2}), 
-        Text(${paramValues.text2})), 
+        Text('${paramValues.text2})'), 
         DrawerListItems(Icon(Icons.${paramValues.icon3}), 
-        Text(${paramValues.text3})), 
+        Text('${paramValues.text3})'), 
         DrawerListItems(Icon(Icons.${paramValues.icon4}), 
-        Text(${paramValues.text4})), 
+        Text('${paramValues.text4})'), 
         ]; 
         DrawerHeaderParameters user1= new DrawerHeaderParameters(
-        subtitle: ${paramValues.subtitle},
-        title: ${paramValues.title},
+        subtitle: '${paramValues.subtitle}',
+        title: '${paramValues.title}',
         imageType: \"Network\",
         imagepath:${paramValues.imagepath},
         headerColor:Colors.${paramValues.headerColor},

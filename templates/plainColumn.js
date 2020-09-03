@@ -20,27 +20,27 @@ let plainColumnTemplate = (req) => new Promise(async (resolve, reject) => {
       data3.push(data.definitions);
       appbarCall = data.call;
     }
-    else{
+    if (req.body.appbar){
       console.log(req.body.appbarParams);
       let data = await getWidgets(0, req.body.appbarParams);
       data1.push(data.imports);
       data3.push(data.definitions);
       appbarCall = data.call;
     }
-    /* if (!req.body.drawer) {
+    if (!req.body.drawer) {
       let drawerdata = await getWidgets(102, {});
       data1.push(drawerdata.imports);
       data3.push(drawerdata.definitions);
       drawerCall = drawerdata.call;
     }
-    else{
+    if (req.body.drawer) {
       let drawerdata = await getWidgets(2, req.body.appbarParams);
       data1.push(drawerdata.imports);
       data3.push(drawerdata.definitions);
       drawerCall = drawerdata.call;
-    } */
+    }
     // let data = await getWidgets(id, paramsValue);
-    const data0 = "import 'package:flutter/material.dart';\n"
+    const data0 = "import 'package:flutter/material.dart';\n import 'package:rapid_widgets_library/widget-classesUsed.dart';\n"
     const data2 =
       '\nvoid main() => runApp(BoilerPlate());\nclass BoilerPlate extends StatefulWidget \n{ \n@override \n_BoilerPlate createState() => _BoilerPlate();\n}\nclass _BoilerPlate extends State<BoilerPlate> {\n @override\n  Widget build(BuildContext context) { \n'
     const data4 =

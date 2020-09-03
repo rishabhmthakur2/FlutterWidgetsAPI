@@ -445,7 +445,7 @@ let getWidgets = (widgetId, paramValues) =>
         subtitle: '${paramValues.subtitle}',
         title: '${paramValues.title}',
         imageType: \"Network\",
-        imagepath:${paramValues.imagepath},
+        imagepath: '${paramValues.imagepath}',
         headerColor:Colors.${paramValues.headerColor},
         ); 
         onclickDrawer(int nIndex) 

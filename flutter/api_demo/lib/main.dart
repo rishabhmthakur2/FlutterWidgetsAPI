@@ -17,9 +17,9 @@ class _BoilerPlate extends State<BoilerPlate> {
 
         AppBarParameters paramobject = new AppBarParameters(
           elevation: 15,
-          bottomOpacity: 10,
-          toolbarOpacity: 10,
-          titleSpacing: 10,
+          bottomOpacity: 0.5,
+          toolbarOpacity: 0.5,
+          titleSpacing: 0.5,
           centerTitle: false,
           automaticallyImplyLeading: false,
           title: Text('Title'));

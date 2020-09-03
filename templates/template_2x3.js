@@ -3,6 +3,7 @@ const fs = require('fs');
 const batMobile = require.resolve('../flutter-batch-mobile.bat');
 const batWeb = require.resolve('../flutter-batch-web.bat');
 const { exec } = require('child_process');
+const { pCloudy } = require('../pcloudy');
 
 let template_2x3 = (req) => new Promise(async (resolve, reject) => {
   let outputPlatform = req.body.outputPlatform;
@@ -280,24 +281,34 @@ let template_2x3 = (req) => new Promise(async (resolve, reject) => {
             },
           );
           if (outputPlatform == 0) {
-            exec(batMobile, (err, stdout, stderr) => {
-              if (err) {
-                console.error(err);
-                return err;
-              }
-              console.log(stdout, "{BATCH OUTPUT}");
-              return stdout;
-            });
-          }
-          else {
-            exec(batWeb, (err, stdout, stderr) => {
-              if (err) {
-                console.error(err);
-                return err;
-              }
-              console.log(stdout, "{BATCH OUTPUT}");
-              return stdout;
-            });
+            try {
+              exec(batMobile, (err, stdout, stderr) => {
+                if (err) {
+                  console.error(err);
+                  return;
+                }
+                  console.log(stdout);
+                  pCloudy();
+              });
+            } catch (error) {
+              return error;
+            }
+          } else {
+            console.log('Executing Bat File');
+            try {
+              exec(batWeb, (err, stdout, stderr) => {
+                if (err) {
+                  console.error(err);
+                  return stderr;
+                }
+                else {
+                  console.log(stdout, `${stdout}`);
+                  return stdout;
+                }
+              });
+            } catch (error) {
+              return error;
+            }
           }
           resolve('Execution Started');
         });

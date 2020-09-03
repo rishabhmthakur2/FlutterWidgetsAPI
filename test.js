@@ -38,8 +38,8 @@ let getWidgets = (widgetId, paramValues) =>
             obsecureText: ${paramValues.obsecureText},
             maxLengthEnforced: ${paramValues.maxLengthEnforced}, 
             decoration: InputDecoration(
-            hintText: ${paramValues.hintText},
-            labelText: ${paramValues.labelText}, 
+            hintText: '${paramValues.hintText}',
+            labelText: '${paramValues.labelText}', 
             prefixIcon: Icon(Icons.${paramValues.prefixIcon}),
             filled: ${paramValues.filled}, 
             fillColor: Colors.${paramValues.fillColor}, 

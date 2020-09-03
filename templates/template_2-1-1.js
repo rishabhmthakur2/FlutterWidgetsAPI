@@ -2,8 +2,9 @@ const getWidgets = require('../test');
 const fs = require('fs');
 const batMobile = require.resolve('../flutter-batch-mobile.bat');
 const batWeb = require.resolve('../flutter-batch-web.bat');
+const { pCloudy } = require('../pcloudy');
 const {
-  exec
+  exec, execSync
 } = require('child_process');
 
 let template_2_1_1 = (req) => new Promise(async (resolve, reject) => {
@@ -22,8 +23,7 @@ let template_2_1_1 = (req) => new Promise(async (resolve, reject) => {
       data3.push(data.definitions);
       appbarCall = data.call;
     }
-    if (req.body.appbar){
-      console.log(req.body.appbarParams);
+    if (req.body.appbar) {
       let data = await getWidgets(0, req.body.appbarParams);
       data1.push(data.imports);
       data3.push(data.definitions);
@@ -45,7 +45,7 @@ let template_2_1_1 = (req) => new Promise(async (resolve, reject) => {
     const data2 =
       '\nvoid main() => runApp(BoilerPlate());\nclass BoilerPlate extends StatefulWidget \n{ \n@override \n_BoilerPlate createState() => _BoilerPlate();\n}\nclass _BoilerPlate extends State<BoilerPlate> {\n @override\n  Widget build(BuildContext context) { \n'
     const data4 =
-      '\nreturn MaterialApp(\ndebugShowCheckedModeBanner: false,\nhome: Scaffold(\n' + appbarCall + '\n'+ drawerCall + '\nbody: Padding(\npadding: const EdgeInsets.all(20.0),\nchild: Padding(\npadding: const EdgeInsets.all(25.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ['
+      '\nreturn MaterialApp(\ndebugShowCheckedModeBanner: false,\nhome: Scaffold(\n' + appbarCall + '\n' + drawerCall + '\nbody: Padding(\npadding: const EdgeInsets.all(20.0),\nchild: Padding(\npadding: const EdgeInsets.all(25.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ['
 
     let topleft = "Container()"
     let topright = "Container()"
@@ -54,9 +54,7 @@ let template_2_1_1 = (req) => new Promise(async (resolve, reject) => {
 
     let dataMap = new Promise(async (resolve, reject) => {
       for (let i = 0; i < widgetsObject.length; i++) {
-        console.log(widgetsObject[i].location);
         if (widgetsObject[i].location == "topleft") {
-          console.log("hello");
           let data = await getWidgets(widgetsObject[i].widgetId, widgetsObject[i].parameters);
           data1.push(data.imports);
           data3.push(data.definitions);
@@ -241,25 +239,36 @@ let template_2_1_1 = (req) => new Promise(async (resolve, reject) => {
             },
           );
           if (outputPlatform == 0) {
-            exec(batMobile, (err, stdout, stderr) => {
-              if (err) {
-                console.error(err);
-                return err;
-              }
-              console.log(stdout, "{BATCH OUTPUT}");
-              return stdout;
-            });
+            try {
+              exec(batMobile, (err, stdout, stderr) => {
+                if (err) {
+                  console.error(err);
+                  return;
+                }
+                  console.log(stdout);
+                  pCloudy();
+              });
+            } catch (error) {
+              return error;
+            }
           } else {
-            exec(batWeb, (err, stdout, stderr) => {
-              if (err) {
-                console.error(err);
-                return err;
-              }
-              console.log(stdout, "{BATCH OUTPUT}");
-              return stdout;
-            });
+            console.log('Executing Bat File');
+            try {
+              exec(batWeb, (err, stdout, stderr) => {
+                if (err) {
+                  console.error(err);
+                  return stderr;
+                }
+                else {
+                  console.log(stdout, `${stdout}`);
+                  return stdout;
+                }
+              });
+            } catch (error) {
+              return error;
+            }
           }
-          resolve('Execution Started');
+          resolve('Processing App Execution');
         });
       });
     } catch (error) {

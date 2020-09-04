@@ -26,17 +26,18 @@ app.get('/getWidgetDropdown', async (req, res) => {
   var nameWidgets = []
   try{
     for(let i=0; i< widgetsAll.length; i++){
-      nameWidgets.push({
-        id: widgetsAll[i].id,
-        name: widgetsAll[i].name
-      })
+      if(widgetsAll[i].id > 3){
+        nameWidgets.push({
+          id: widgetsAll[i].id,
+          name: widgetsAll[i].name
+        })
+      }
     }
     res.send(nameWidgets)
   }catch{
     res.status(404).send('Not Found')
   }
-})
-
+});
 
 app.get('/getWidgetParamaters?:id', async (req, res) => {
   let id = req.query.id

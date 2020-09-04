@@ -233,22 +233,6 @@
         "fontSize": "Number"
         
     }
-},
-{
-    "id": 0,
-    "name": "Appbar",
-    "definitions": {
-        "elevation": "Number",
-        "bottomOpacity": "Number",
-        "toolbarOpacity": "Number",
-        "titleSpacing": "Number",
-        "centerTitle": "Boolean",
-        "automaticallyImplyLeading": "Boolean",
-        "title": "String",
-        "icon1": "Icon",
-        "icon2":  "Icon",
-        "icon3":  "Icon"
-    }
 }
 ]
 }

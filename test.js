@@ -1,6 +1,6 @@
 let getWidgets = (widgetId, paramValues) =>
   new Promise((resolve, reject) => {
-   // console.log(paramValues);
+    // console.log(paramValues);
     let widgetList = [
       {
         id: 10,
@@ -183,7 +183,7 @@ let getWidgets = (widgetId, paramValues) =>
           selectedIconTheme: IconThemeData(color: Colors.${paramValues.selectedIconTheme}));
       `
       },
-      
+
       {
         id: 3,
         name: "SliverAppbar",
@@ -343,28 +343,24 @@ let getWidgets = (widgetId, paramValues) =>
         imports: "import 'package:rapid_widgets_library/custom-appBar.dart';",
         call: "appBar:customAppBar(appBarIcons,paramobject),",
         definitions: `
-      AppBarParameters paramobject = new AppBarParameters(
-      elevation: 5.0,
-      bottomOpacity: 1.0,
-      toolbarOpacity: 1.0,
-      titleSpacing: 1.0,
-      centerTitle: true,
-      automaticallyImplyLeading: true,
-      title: Text('Appbar'));
-      List<Widget> appBarIcons = [
-      IconButton(
-      icon:
-      Icon(Icons.search),
-      onPressed: () {},
-      ),
-      IconButton(
-      icon:  Icon(Icons.help),
-      onPressed: () {},
-      ),
-      IconButton(
-      icon:  Icon(Icons.verified_user),
-      onPressed: () {}, 
-      ), ];
+        AppBarParameters paramobject = new AppBarParameters(
+        elevation: 5.0,
+        bottomOpacity: 1.0,
+        toolbarOpacity: 1.0,
+        titleSpacing: 1.0,
+        centerTitle: true,
+        automaticallyImplyLeading: true,
+        title: Text('Appbar'));
+        List<Widget> appBarIcons = [
+        IconButton(
+        icon:
+        Icon(Icons.search),
+        onPressed: () {},
+        ),
+        IconButton(
+        icon:  Icon(Icons.help),
+        onPressed: () {},
+        )];
  `
       },
       {
@@ -395,7 +391,7 @@ let getWidgets = (widgetId, paramValues) =>
             print(nIndex); 
             }
         `
-    },
+      },
       {
         id: 0,
         name: "Appbar",

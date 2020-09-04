@@ -1,4 +1,4 @@
-let getWidgets = (widgetId, paramValues) =>
+let getWidgets = (widgetId, paramValues, counter) =>
   new Promise((resolve, reject) => {
     // console.log(paramValues);
     let widgetList = [
@@ -7,12 +7,12 @@ let getWidgets = (widgetId, paramValues) =>
         name: 'FloatingActionButton',
         imports:
           "import 'package:rapid_widgets_library/custom-floatingActionButton.dart';",
-        call: 'customFloatingActionButton(btnFloatObject, onFloatButtonPress),',
+        call: `customFloatingActionButton(btnFloatObject${counter}, onFloatButtonPress${counter}),`,
         definitions: `
-                  onFloatButtonPress(bool b){
+                  onFloatButtonPress${counter} (bool b){
                   print(b);
                   }
-                  Floatingactionbuttonparam btnFloatObject = Floatingactionbuttonparam(
+                  Floatingactionbuttonparam btnFloatObject${counter} = Floatingactionbuttonparam(
                   child: Icon(Icons.${paramValues.icon}),
                   foregroundColor: Colors.${paramValues.foregroundColor},
                   backgroundColor: Colors.${paramValues.backgroundColor},
@@ -28,12 +28,12 @@ let getWidgets = (widgetId, paramValues) =>
         imports:
           "import 'dart:ui'; \nimport 'package:rapid_widgets_library/custom-textField.dart';",
         call:
-          'CustomTextField(params: finalTextObj, callbackTextfield: onTextSubmit),',
+          `CustomTextField(params: finalTextObj${counter}, callbackTextfield: onTextSubmit${counter}),`,
         definitions: `
-            onTextSubmit(String sText) { 
+            onTextSubmit${counter} (String sText) { 
             print(sText); 
             }
-            TextFieldParameters finalTextObj = new TextFieldParameters( 
+            TextFieldParameters finalTextObj${counter} = new TextFieldParameters( 
             maxLength: ${paramValues.maxLength}, 
             obsecureText: ${paramValues.obsecureText},
             maxLengthEnforced: ${paramValues.maxLengthEnforced}, 
@@ -63,9 +63,9 @@ let getWidgets = (widgetId, paramValues) =>
         name: 'DropdownButton',
         imports:
           "import 'package:rapid_widgets_library/custom-dropdownButton.dart';",
-        call: 'CustomDropdownButton(dropdownObject,onSelect),',
+        call: `CustomDropdownButton(dropdownObject${counter},onSelect${counter}),`,
         definitions: `
-              DropDownParameters dropdownObject = DropDownParameters(
+              DropDownParameters dropdownObject${counter} = DropDownParameters(
               itemsList: ${paramValues.itemsList},
               hintText: '${paramValues.hintText}',
               listType: '${paramValues.listType}',
@@ -78,7 +78,7 @@ let getWidgets = (widgetId, paramValues) =>
               shadowBlurRadius: ${paramValues.shadowBlurRadius},
               shadowSpreadRadius: ${paramValues.shadowSpreadRadius},
               ); 
-              onSelect(int i,String s){ 
+              onSelect${counter} (int i,String s){ 
               print(i); 
               print(s); 
               }
@@ -89,9 +89,9 @@ let getWidgets = (widgetId, paramValues) =>
         name: 'CompositeCard',
         imports:
           "import 'package:rapid_widgets_library/custom-compositeCard.dart';",
-        call: 'compositeCard(listcards),',
+        call: `compositeCard(listcards${counter}),`,
         definitions: `
-            List<CustomcompositeCardParameters> listcards = []; 
+            List<CustomcompositeCardParameters> listcards${counter} = []; 
             CustomcompositeCardParameters card1 = new CustomcompositeCardParameters(
             flexColumn1: ${paramValues.flexColumn1},
             flexColumn2: ${paramValues.flexColumn2},
@@ -99,7 +99,7 @@ let getWidgets = (widgetId, paramValues) =>
             rightHandWidgets: ${paramValues.rightHandWidgets},
             leftHandWidgets: ${paramValues.leftHandWidgets},
             ); 
-            listcards.add(card1);
+            listcards${counter}.add(card1);
         `,
       },
       {
@@ -107,13 +107,13 @@ let getWidgets = (widgetId, paramValues) =>
         name: 'Flip Card',
         imports:
           "import 'package:rapid_widgets_library/custom-flipcard.dart';",
-        call: 'customFlipCardWidget(FlipObj1, onclickFlipCardBtn),',
+        call: `customFlipCardWidget(FlipObj1${counter}, onclickFlipCardBtn${counter}),`,
         definitions: `
-          onclickFlipCardBtn(int nIndex, String sText) {
+          onclickFlipCardBtn${counter} (int nIndex, String sText) {
           print(nIndex);
           print(sText);
           } 
-          MaterialCardData FlipObj1 = new MaterialCardData( 
+          MaterialCardData FlipObj1${counter} = new MaterialCardData( 
           title: '${paramValues.title}', 
           subtitle: '${paramValues.subtitle}',
           containerHeight: ${paramValues.containerHeight},
@@ -223,15 +223,15 @@ let getWidgets = (widgetId, paramValues) =>
         id: 9,
         name: "FlatButton",
         imports: "import 'package:rapid_widgets_library/custom-flatButton.dart';",
-        call: "customFlatButton(buttonFlatObject, onFlatButtonPress, onFlatButtonLongPress),",
+        call: `customFlatButton(buttonFlatObject${counter}, onFlatButtonPress${counter}, onFlatButtonLongPress${counter}),`,
         definitions: `
-          onFlatButtonPress(bool b){ 
+          onFlatButtonPress${counter} (bool b){ 
           print(b); 
           } 
-          onFlatButtonLongPress(bool b){ 
+          onFlatButtonLongPress${counter} (bool b){ 
           print(b); 
           } 
-          FlatButtonParameters buttonFlatObject = FlatButtonParameters(
+          FlatButtonParameters buttonFlatObject${counter} = FlatButtonParameters(
           child:Text('${paramValues.text}'),
           color:Colors.${paramValues.btnColor},
           textColor:Colors.${paramValues.textColor},
@@ -248,12 +248,12 @@ let getWidgets = (widgetId, paramValues) =>
         id: 14,
         name: "Switch",
         imports: "import 'package:rapid_widgets_library/custom_switch.dart';",
-        call: "CustomSwitch(param: finalSwitchObj, callbackSwitch: onSwitchTap),",
+        call: `CustomSwitch(param: finalSwitchObj${counter}, callbackSwitch: onSwitchTap${counter}),`,
         definitions: `
-        onSwitchTap(bool sBool) { 
+        onSwitchTap${counter} (bool sBool) { 
         print(sBool); 
         } 
-        SwitchParameters finalSwitchObj = new SwitchParameters(
+        SwitchParameters finalSwitchObj${counter} = new SwitchParameters(
         inactiveTrackColor: Colors.${paramValues.inactiveTrackColor}, 
         activeColor: Colors.${paramValues.activeColor}, 
         activeTrackColor: Colors.${paramValues.activeTrackColor}
@@ -264,13 +264,13 @@ let getWidgets = (widgetId, paramValues) =>
         id: 24,
         name: "Transparent Card",
         imports: "import 'package:rapid_widgets_library/custom-TransparentCard.dart';",
-        call: "imageCardWidget(ImageObj1, onclickImageCardBtn),",
+        call: `imageCardWidget(ImageObj1${counter}, onclickImageCardBtn${counter}),`,
         definitions: `
-      onclickImageCardBtn(int nIndex, String sText) {
+      onclickImageCardBtn${counter} (int nIndex, String sText) {
       print(nIndex);
       print(sText);
       } 
-      MaterialCardData ImageObj1 = new MaterialCardData( 
+      MaterialCardData ImageObj1${counter} = new MaterialCardData( 
       title:'${paramValues.title}' , 
       subtitle: '${paramValues.subtitle}', 
       containerHeight: ${paramValues.containerHeight},
@@ -294,9 +294,9 @@ let getWidgets = (widgetId, paramValues) =>
         id: 46,
         name: "Custom ListTile",
         imports: "import 'package:rapid_widgets_library/custom-listTileWithImage.dart';",
-        call: "customListTile(listData, tileParameters, onListTapped),",
+        call: `customListTile(listData${counter}, tileParameters${counter}, onListTapped${counter}),`,
         definitions: `
-      List<CustomTileData> listData = [ 
+      List<CustomTileData> listData${counter} = [ 
       CustomTileData( 
       leading: Icon(Icons.${paramValues.leading1}), 
       title: '${paramValues.title1}', 
@@ -325,13 +325,13 @@ let getWidgets = (widgetId, paramValues) =>
         selected: ${paramValues.selected3}
       ) 
       ];
-      CustomListTileParameters tileParameters = new CustomListTileParameters( 
+      CustomListTileParameters tileParameters${counter} = new CustomListTileParameters( 
       dense: ${paramValues.dense}, 
       isThreeLine: ${paramValues.isThreeLine}, 
       fontWeight: FontWeight.bold,
       fontSize: ${paramValues.fontSize},
       );
-      onListTapped(int index, String title) { 
+      onListTapped${counter} (int index, String title) { 
       print(index); 
       print(title); 
       }

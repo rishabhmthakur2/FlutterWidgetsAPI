@@ -51,6 +51,7 @@ app.get('/getWidgetParamaters?:id', async (req, res) => {
 })
 
 app.post('/submitWidgetParams', async (req, res) => {
+  req.setTimeout(0);
   let templateHandler = req.body.templateUsed;
   let execute;
   if (templateHandler == 0) {
@@ -85,6 +86,6 @@ app.post('/submitWidgetParams', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
+var server = app.listen(port, () => {
   console.log('Listening on port:' + port)
-})
+});

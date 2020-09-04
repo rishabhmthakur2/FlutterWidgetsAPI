@@ -16,26 +16,25 @@ let template_2x3 = (req) => new Promise(async (resolve, reject) => {
   let data5 = [];
   try {
     if (!req.body.appbar) {
-      let data = await getWidgets(100, {});
+      let data = await getWidgets(100, {}, 0);
       data1.push(data.imports);
       data3.push(data.definitions);
       appbarCall = data.call;
     }
     else{
-      console.log(req.body.appbarParams);
-      let data = await getWidgets(0, req.body.appbarParams);
+      let data = await getWidgets(0, req.body.appbarParams, 0);
       data1.push(data.imports);
       data3.push(data.definitions);
       appbarCall = data.call;
     }
     if (!req.body.drawer) {
-      let drawerdata = await getWidgets(102, {});
+      let drawerdata = await getWidgets(102, {}, 0);
       data1.push(drawerdata.imports);
       data3.push(drawerdata.definitions);
       drawerCall = drawerdata.call;
     }
     if (req.body.drawer) {
-      let drawerdata = await getWidgets(2, req.body.drawerParams);
+      let drawerdata = await getWidgets(2, req.body.drawerParams, 0);
       data1.push(drawerdata.imports);
       data3.push(drawerdata.definitions);
       drawerCall = drawerdata.call;
@@ -58,40 +57,38 @@ let template_2x3 = (req) => new Promise(async (resolve, reject) => {
 
     let dataMap = new Promise(async (resolve, reject) => {
         for (let i = 0; i < widgetsObject.length; i++) {
-            console.log(widgetsObject[i].location);
             if (widgetsObject[i].location == "topleft") {
-              console.log("hello");
-              let data = await getWidgets(widgetsObject[i].widgetId, widgetsObject[i].parameters);
+              let data = await getWidgets(widgetsObject[i].widgetId, widgetsObject[i].parameters, i);
               data1.push(data.imports);
               data3.push(data.definitions);
               topleft = data.call;
             }
             if (widgetsObject[i].location == "topright") {
-              let data = await getWidgets(widgetsObject[i].widgetId, widgetsObject[i].parameters);
+              let data = await getWidgets(widgetsObject[i].widgetId, widgetsObject[i].parameters, i);
               data1.push(data.imports);
               data3.push(data.definitions);
               topright = data.call;
             }
             if (widgetsObject[i].location == "middleleft") {
-              let data = await getWidgets(widgetsObject[i].widgetId, widgetsObject[i].parameters);
+              let data = await getWidgets(widgetsObject[i].widgetId, widgetsObject[i].parameters, i);
               data1.push(data.imports);
               data3.push(data.definitions);
               middleleft = data.call;
             }
             if (widgetsObject[i].location == "middleright") {
-              let data = await getWidgets(widgetsObject[i].widgetId, widgetsObject[i].parameters);
+              let data = await getWidgets(widgetsObject[i].widgetId, widgetsObject[i].parameters, i);
               data1.push(data.imports);
               data3.push(data.definitions);
               middleright = data.call;
             }
             if (widgetsObject[i].location == "bottomleft") {
-                let data = await getWidgets(widgetsObject[i].widgetId, widgetsObject[i].parameters);
+                let data = await getWidgets(widgetsObject[i].widgetId, widgetsObject[i].parameters, i);
                 data1.push(data.imports);
                 data3.push(data.definitions);
                 bottomleft = data.call;
               }
               if (widgetsObject[i].location == "bottomright") {
-                let data = await getWidgets(widgetsObject[i].widgetId, widgetsObject[i].parameters);
+                let data = await getWidgets(widgetsObject[i].widgetId, widgetsObject[i].parameters, i);
                 data1.push(data.imports);
                 data3.push(data.definitions);
                 bottomright = data.call;
@@ -287,8 +284,11 @@ let template_2x3 = (req) => new Promise(async (resolve, reject) => {
                   console.error(err);
                   return;
                 }
-                  console.log(stdout);
-                  pCloudy();
+                console.log(stdout);
+                let test = pCloudy();
+                test.then((data) => {
+                  resolve(data);
+                })
               });
             } catch (error) {
               return error;
@@ -302,6 +302,7 @@ let template_2x3 = (req) => new Promise(async (resolve, reject) => {
                   return stderr;
                 }
                 else {
+                  resolve('App exec started');
                   console.log(stdout, `${stdout}`);
                   return stdout;
                 }
@@ -310,7 +311,6 @@ let template_2x3 = (req) => new Promise(async (resolve, reject) => {
               return error;
             }
           }
-          resolve('Execution Started');
         });
       });
     } catch (error) {

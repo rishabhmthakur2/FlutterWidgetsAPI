@@ -287,7 +287,12 @@ let template_2x3 = (req) => new Promise(async (resolve, reject) => {
                 console.log(stdout);
                 let test = pCloudy();
                 test.then((data) => {
-                  resolve(data);
+                  let submitResponse = {
+                    "status": 200,
+                    "url": data,
+                    "message": "File execution successfull"
+                  }
+                  resolve(submitResponse);
                 })
               });
             } catch (error) {
@@ -311,6 +316,11 @@ let template_2x3 = (req) => new Promise(async (resolve, reject) => {
               return error;
             }
           }
+          resolve({
+            "status": 200,
+            "url": "https://device.pcloudy.com/device/xf57f8tm4x87y54myfjjf64nt9ys8fxpd74kwctx",
+            "message": "File execution successfull"
+          });
         });
       });
     } catch (error) {

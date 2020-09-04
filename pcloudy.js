@@ -16,7 +16,7 @@ let pCloudy = () => new Promise(async(resolve, reject)=>{
         authToken = authData.data.result.token;
         console.log(authToken);
         var data = new FormData();
-        data.append('file', fs.createReadStream('/Users/rishabht970/Desktop/FlutterWorkshop/FlutterWidgetsAPI/flutter/api_demo/build/app/outputs/flutter-apk/app-release.apk'));
+        data.append('file', fs.createReadStream('./flutter/api_demo/build/app/outputs/flutter-apk/app-release.apk'));
         data.append('source_type', 'raw');
         data.append('token', 'nct59n9ytfzr3mhn57rpb4tn');
         data.append('filter', 'all');

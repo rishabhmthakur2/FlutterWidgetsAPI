@@ -1,9 +1,9 @@
 {
-    "widgets" : [
+  "widgets": [
     {
-    "id": 8,
-    "name": "DropdownButton",
-    "definitions": {
+      "id": 8,
+      "name": "DropdownButton",
+      "definitions": {
         "itemsList": "List<String>",
         "hintText": "String",
         "listType": "String",
@@ -15,23 +15,23 @@
         "shadowColor": "Color",
         "shadowBlurRadius": "Number",
         "shadowSpreadRadius": "Number"
-        }   
+      }
     },
-{
-    "id": 10,
-    "name": "FloatingActionButton",
-    "definitions": {
+    {
+      "id": 10,
+      "name": "FloatingActionButton",
+      "definitions": {
         "icon": "Icon",
         "foregroundColor": "Color",
         "backgroundColor": "Color",
         "mini": "Boolean",
-        "hoverColor":"Color"
-    }
-},
-{
-    "id": 15,
-    "name": "Textfield",
-    "definitions": {
+        "hoverColor": "Color"
+      }
+    },
+    {
+      "id": 15,
+      "name": "Textfield",
+      "definitions": {
         "maxLength": "Number",
         "obsecureText": "Boolean",
         "maxLengthEnforced": "Boolean",
@@ -49,28 +49,28 @@
         "readOnly": "Boolean",
         "showCursor": "Boolean",
         "textColor": "Color"
-    }
-},
-{
-    "id": 21,
-    "name": "CompositeCard",
-    "definitions": {
+      }
+    },
+    {
+      "id": 21,
+      "name": "CompositeCard",
+      "definitions": {
         "flexColumn1": "Number",
         "flexColumn2": "Number",
         "cardColor": "Color",
         "rightHandWidgets": "List<Widgets>",
         "leftHandWidgets": "List<Widgets>"
-    }   
-},
-{
-    "id": 22,
-    "name": "FlipCard",
-    "definitions": {
+      }
+    },
+    {
+      "id": 22,
+      "name": "FlipCard",
+      "definitions": {
         "title": "String",
         "subtitle": "String",
         "containerHeight": "Number",
         "containerWidth": "Number",
-        "shadowColor": "Color", 
+        "shadowColor": "Color",
         "blurRadius": "Number",
         "shadowOffset": "Number",
         "borderRadius": "Number",
@@ -89,12 +89,12 @@
         "imgHeight": "Number",
         "imgWidth": "Number",
         "imgPath": "String"
-    }   
-},
-{
-    "id": 0,
-    "name": "Appbar",
-    "definitions": {
+      }
+    },
+    {
+      "id": 0,
+      "name": "Appbar",
+      "definitions": {
         "elevation": "Number",
         "bottomOpacity": "Number",
         "toolbarOpacity": "Number",
@@ -105,12 +105,12 @@
         "icon1": "Icon",
         "icon2": "Icon",
         "icon3": "Icon"
-    }
-},
-{
-    "id": 1,
-    "name": "Bottom Navigation Bar",
-    "definitions": {
+      }
+    },
+    {
+      "id": 1,
+      "name": "Bottom Navigation Bar",
+      "definitions": {
         "icon1": "Icon",
         "title1": "String",
         "icon2": "Icon",
@@ -123,116 +123,121 @@
         "showUnselectedLabels": "Boolean",
         "showSelectedLabels": "Boolean",
         "selectedIconTheme": "Color"
-    }
-},
-{
-    "id": 2,
-    "name": "Drawer",
-    "definitions": {
-        "icon1":"Icon",
-        "text1":"String",
-        "icon2":"Icon",
-        "text2":"String",
-        "icon3":"Icon",
-        "text3":"String",
-        "icon4":"Icon",
-        "text4":"String",
+      }
+    },
+    {
+      "id": 2,
+      "name": "Drawer",
+      "definitions": {
+        "icon1": "Icon",
+        "text1": "String",
+        "icon2": "Icon",
+        "text2": "String",
+        "icon3": "Icon",
+        "text3": "String",
+        "icon4": "Icon",
+        "text4": "String",
         "subtitle": "String",
         "title": "String",
-        "imagepath":"String",
-        "headerColor":"Color"
-        }
-},
-{
-    "id": 3,
-    "name": "SliverAppbar",
-    "definitions": {
-
+        "imagepath": "String",
+        "headerColor": "Color"
+      }
+    },
+    {
+      "id": 3,
+      "name": "SliverAppbar",
+      "definitions": {
         "automaticallyImplyLeading": "Boolean",
-        "backgroundColor":"Color",
+        "backgroundColor": "Color",
         "expandedHeight": "Number",
-        "elevation":"Number",
-        "titleSpacing":"Number",
-        "centerTitle":"Boolean",
-        "stretch":"Boolean",
-        "snap":"Boolean",
-        "pinned":"Boolean",
-        "floating":"Boolean",
-        "title":"String",        
-        "icon1":"Icon",
-        "icon2":"Icon",
-        "icon3":"Icon"
-       
-        }
-},
-{
-    "id": 9,
-    "name": "FlatButton",
-    "definitions": {
-        "text":"String",
-        "btnColor":"Color",
-        "textColor":"Color",
+        "elevation": "Number",
+        "titleSpacing": "Number",
+        "centerTitle": "Boolean",
+        "stretch": "Boolean",
+        "snap": "Boolean",
+        "pinned": "Boolean",
+        "floating": "Boolean",
+        "title": "String",
+        "icon1": "Icon",
+        "icon2": "Icon",
+        "icon3": "Icon"
+      }
+    },
+    {
+      "id": 9,
+      "name": "FlatButton",
+      "definitions": {
+        "text": "String",
+        "btnColor": "Color",
+        "textColor": "Color",
         "hoverColor": "Color",
         "width": "Number",
         "focusColor": "Color",
-        "height":"Number",
+        "height": "Number",
         "highlightColor": "Color",
         "splashColor": "Color"
-        
-    }
-},
-{
-    "id": 14,
-    "name": "Switch",
-    "definitions": {
+      }
+    },
+    {
+      "id": 14,
+      "name": "Switch",
+      "definitions": {
         "inactiveTrackColor": "Color",
-        "activeColor":"Color",
-        "activeTrackColor":"Color"
-    }
-},
-{
-    "id": 24,
-    "name": "Transparent Card",
-    "definitions": {
+        "activeColor": "Color",
+        "activeTrackColor": "Color"
+      }
+    },
+    {
+      "id": 24,
+      "name": "Transparent Card",
+      "definitions": {
         "title": "String",
         "subtitle": "String",
         "containerHeight": "Number",
         "textcolor1": "Color",
-        "fontSize1":"Number",
+        "fontSize1": "Number",
         "textcolor2": "Color",
         "fontSize2": "Number",
         "imgHeight": "Number",
         "imgWidth": "Number",
-        "imgPath":"String" 
-    }
-},
-{
-    "id": 46,
-    "name": "Custom ListTile",
-    "definitions": {
+        "imgPath": "String"
+      }
+    },
+    {
+      "id": 41,
+      "name": "Image",
+      "definitions": {
+        "src": "String",
+        "width": "Number",
+        "height": "Number"
+      }
+    },
+    {
+      "id": 46,
+      "name": "Custom ListTile",
+      "definitions": {
         "leading1": "Icon",
         "title1": "String",
-        "subtitle1":"String",
+        "subtitle1": "String",
         "trailingTopText1": "String",
         "trailingBottomText1": "String",
-        "selected1":"Boolean",
+        "selected1": "Boolean",
         "leading2": "Icon",
         "title2": "String",
-        "subtitle2":"String",
+        "subtitle2": "String",
         "trailingTopText2": "String",
         "trailingBottomText2": "String",
         "selected2": "Boolean",
         "leading3": "Icon",
         "title3": "String",
-        "subtitle3":"String",
+        "subtitle3": "String",
         "trailingTopText3": "String",
         "trailingBottomText3": "String",
-        "selected3":"Boolean",
-        "dense":"Boolean" ,
+        "selected3": "Boolean",
+        "dense": "Boolean",
         "isThreeLine": "Boolean",
         "fontSize": "Number"
-        
+      }
     }
-}
-]
+  ]
 }

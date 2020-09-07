@@ -5,6 +5,7 @@ const widgets = require('./parameters.json');
 const { plainColumnTemplate } = require('./templates/plainColumn');
 const { template_2_1_1 } = require('./templates/template_2-1-1');
 const { template_2x3 } = require('./templates/template_2x3');
+const { loginTemplate } = require('./templates/login-template');
 
 var app = express();
 app.use(cors());
@@ -76,6 +77,16 @@ app.post('/submitWidgetParams', async (req, res) => {
   }
   else if (templateHandler == 2) {
     execute = template_2x3(req);
+    try {
+      execute.then((data) => {
+        res.status(200).send(data);
+      });
+    } catch (error) {
+      res.status(400).send(error);
+    }
+  }
+  else if (templateHandler == 4) {
+    execute = loginTemplate(req);
     try {
       execute.then((data) => {
         res.status(200).send(data);

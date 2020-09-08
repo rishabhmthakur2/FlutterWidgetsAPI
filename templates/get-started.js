@@ -7,7 +7,7 @@ const {
   exec, execSync
 } = require('child_process');
 
-let loginTemplate = (req) => new Promise(async (resolve, reject) => {
+let getStartedTemplate = (req) => new Promise(async (resolve, reject) => {
   let outputPlatform = req.body.outputPlatform;
   let widgetsObject = req.body.widgets;
   let appbarCall;
@@ -103,7 +103,7 @@ let loginTemplate = (req) => new Promise(async (resolve, reject) => {
         let clearFile = () =>
           new Promise(async (resolve, reject) => {
             await fs.truncate(
-              './flutter/api_demo/lib/page2.dart',
+              './flutter/api_demo/lib/page1.dart',
               0,
               function () {
                 resolve('File cleared')
@@ -113,7 +113,7 @@ let loginTemplate = (req) => new Promise(async (resolve, reject) => {
 
         clearFile().then(() => {
           fs.appendFileSync(
-            './flutter/api_demo/lib/page2.dart',
+            './flutter/api_demo/lib/page1.dart',
             data0,
             'utf8',
             // callback function
@@ -124,7 +124,7 @@ let loginTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page2.dart',
+            './flutter/api_demo/lib/page1.dart',
             data1.join("\n"),
             'utf8',
             // callback function
@@ -135,7 +135,7 @@ let loginTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page2.dart',
+            './flutter/api_demo/lib/page1.dart',
             data2,
             'utf8',
             // callback function
@@ -146,7 +146,7 @@ let loginTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page2.dart',
+            './flutter/api_demo/lib/page1.dart',
             data3.join("\n"),
             'utf8',
             // callback function
@@ -157,7 +157,7 @@ let loginTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page2.dart',
+            './flutter/api_demo/lib/page1.dart',
             data4,
             'utf8',
             // callback function
@@ -168,7 +168,7 @@ let loginTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page2.dart',
+            './flutter/api_demo/lib/page1.dart',
             data6,
             'utf8',
             // callback function
@@ -179,7 +179,7 @@ let loginTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page2.dart',
+            './flutter/api_demo/lib/page1.dart',
             data7,
             'utf8',
             // callback function
@@ -190,7 +190,7 @@ let loginTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page2.dart',
+            './flutter/api_demo/lib/page1.dart',
             data8,
             'utf8',
             // callback function
@@ -201,7 +201,7 @@ let loginTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page2.dart',
+            './flutter/api_demo/lib/page1.dart',
             data9,
             'utf8',
             // callback function
@@ -212,7 +212,7 @@ let loginTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page2.dart',
+            './flutter/api_demo/lib/page1.dart',
             data10,
             'utf8',
             // callback function
@@ -223,7 +223,7 @@ let loginTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page2.dart',
+            './flutter/api_demo/lib/page1.dart',
             data11,
             'utf8',
             // callback function
@@ -234,7 +234,7 @@ let loginTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page2.dart',
+            './flutter/api_demo/lib/page1.dart',
             data12,
             'utf8',
             // callback function
@@ -245,7 +245,7 @@ let loginTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page2.dart',
+            './flutter/api_demo/lib/page1.dart',
             data13,
             'utf8',
             // callback function
@@ -256,7 +256,7 @@ let loginTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page2.dart',
+            './flutter/api_demo/lib/page1.dart',
             data14,
             'utf8',
             // callback function
@@ -267,7 +267,7 @@ let loginTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page2.dart',
+            './flutter/api_demo/lib/page1.dart',
             data15,
             'utf8',
             // callback function
@@ -327,5 +327,5 @@ let loginTemplate = (req) => new Promise(async (resolve, reject) => {
 });
 
 module.exports = {
-  loginTemplate
+  getStartedTemplate
 };

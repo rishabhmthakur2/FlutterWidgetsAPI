@@ -1,6 +1,5 @@
 {
-  "widgets": [
-    {
+  "widgets": [{
       "id": 8,
       "name": "DropdownButton",
       "definitions": {
@@ -210,6 +209,17 @@
         "src": "String",
         "width": "Number",
         "height": "Number"
+      }
+    },
+    {
+      "id": 71,
+      "name": "Text",
+      "definitions": {
+        "data": "String",
+        "fontSize": "Number",
+        "color": "Color",
+        "fontFamily": "String",
+        "fontWeight": "String"
       }
     },
     {

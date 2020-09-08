@@ -1,12 +1,10 @@
 let getWidgets = (widgetId, paramValues, counter) =>
   new Promise((resolve, reject) => {
     // console.log(paramValues);
-    let widgetList = [
-      {
+    let widgetList = [{
         id: 10,
         name: "FloatingActionButton",
-        imports:
-          "import 'package:rapid_widgets_library/custom-floatingActionButton.dart';",
+        imports: "import 'package:rapid_widgets_library/custom-floatingActionButton.dart';",
         call: `customFloatingActionButton(btnFloatObject${counter}, onFloatButtonPress${counter}),`,
         definitions: `
                   onFloatButtonPress${counter} (bool b){
@@ -25,8 +23,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
       {
         id: 15,
         name: "Textfield",
-        imports:
-          "import 'dart:ui'; \nimport 'package:rapid_widgets_library/custom-textField.dart';",
+        imports: "import 'dart:ui'; \nimport 'package:rapid_widgets_library/custom-textField.dart';",
         call: `CustomTextField(params: finalTextObj${counter}, callbackTextfield: onTextSubmit${counter}),`,
         definitions: `
             onTextSubmit${counter} (String sText) { 
@@ -60,8 +57,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
       {
         id: 8,
         name: "DropdownButton",
-        imports:
-          "import 'package:rapid_widgets_library/custom-dropdownButton.dart';",
+        imports: "import 'package:rapid_widgets_library/custom-dropdownButton.dart';",
         call: `CustomDropdownButton(dropdownObject${counter},onSelect${counter}),`,
         definitions: `
               DropDownParameters dropdownObject${counter} = DropDownParameters(
@@ -86,8 +82,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
       {
         id: 21,
         name: "CompositeCard",
-        imports:
-          "import 'package:rapid_widgets_library/custom-compositeCard.dart';",
+        imports: "import 'package:rapid_widgets_library/custom-compositeCard.dart';",
         call: `compositeCard(listcards${counter}),`,
         definitions: `
             List<CustomcompositeCardParameters> listcards${counter} = []; 
@@ -152,8 +147,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
       {
         id: 1,
         name: "Bottom Navigation Bar",
-        imports:
-          "import 'package:rapid_widgets_library/custom-bottomnavbar.dart';",
+        imports: "import 'package:rapid_widgets_library/custom-bottomnavbar.dart';",
         call: "bottomNavigationBar: BottomNavBar(param),",
         definitions: `
           List<BottomNavigationBarItem> bottomnavitems = []; 
@@ -186,10 +180,8 @@ let getWidgets = (widgetId, paramValues, counter) =>
       {
         id: 3,
         name: "SliverAppbar",
-        imports:
-          "import 'package:rapid_widgets_library/custom-sliverAppBar.dart';",
-        call:
-          "CustomScrollView( \nslivers: <Widget>[ \ncustomSliverAppBar(sliverProducts, params), \nSliverList( delegate: SliverChildListDelegate( \n<Widget>[ \nContainer(height: 1200.0), \n], \n), \n), \n], \n),",
+        imports: "import 'package:rapid_widgets_library/custom-sliverAppBar.dart';",
+        call: "CustomScrollView( \nslivers: <Widget>[ \ncustomSliverAppBar(sliverProducts, params), \nSliverList( delegate: SliverChildListDelegate( \n<Widget>[ \nContainer(height: 1200.0), \n], \n), \n), \n], \n),",
         definitions: `
             SliverAppBarParameters params = new SliverAppBarParameters(
             automaticallyImplyLeading: ${paramValues.automaticallyImplyLeading}, 
@@ -223,8 +215,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
       {
         id: 9,
         name: "FlatButton",
-        imports:
-          "import 'package:rapid_widgets_library/custom-flatButton.dart';",
+        imports: "import 'package:rapid_widgets_library/custom-flatButton.dart';",
         call: `customFlatButton(buttonFlatObject${counter}, onFlatButtonPress${counter}, onFlatButtonLongPress${counter}),`,
         definitions: `
           onFlatButtonPress${counter} (bool b){ 
@@ -265,8 +256,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
       {
         id: 24,
         name: "Transparent Card",
-        imports:
-          "import 'package:rapid_widgets_library/custom-TransparentCard.dart';",
+        imports: "import 'package:rapid_widgets_library/custom-TransparentCard.dart';",
         call: `imageCardWidget(ImageObj1${counter}, onclickImageCardBtn${counter}),`,
         definitions: `
       onclickImageCardBtn${counter} (int nIndex, String sText) {
@@ -294,23 +284,38 @@ let getWidgets = (widgetId, paramValues, counter) =>
   `
       },
       {
+        id: 71,
+        name: "Text",
+        imports: "import 'package:rapid_widgets_library/custom-text.dart';",
+        call: `customText(textparam${counter})`,
+        definitions: `
+        TextParameters textparam${counter} = new TextParameters(
+          data: '${paramValues.data}',
+          fontSize: ${paramValues.fontSize},
+          color: Colors.${paramValues.color},
+          fontStyle: FontStyle.normal,
+          fontFamily: '${paramValues.fontFamily}',
+          fontWeight: FontWeight.${paramValues.fontWeight},
+        );
+         `
+      },
+      {
         id: 41,
         name: "Image",
         imports: "import 'package:rapid_widgets_library/custom-image.dart';",
-        call: `CustomImage(data: ImageObj1),`,
-        definitions: `onclick(String sText) { print(sText); }
-        CustomImageContents ImageObj1 = new CustomImageContents(
-        src:'http://miro.medium.com/max/3840/1*88vrIIpPfApKYwQeWw32xg.png',
-         semanticLabel: 'Random Network', imageType: 'Network', height: 200, width: 200);
-         CustomImageContents ImageObj2 = new CustomImageContents(
-        src:'images/rest1.jpeg', semanticLabel: 'Asset Restaurant',
-         imageType: 'Asset', height: 200, width: 800, filterQuality: FilterQuality.high );`
+        call: `CustomImage(data: ImageObj1${counter}),`,
+        definitions: `onclick${counter}(String sText) { print(sText); }
+        CustomImageContents ImageObj1${counter} = new CustomImageContents(
+        src:'${paramValues.src}',
+         semanticLabel: 'Random Network', 
+         imageType: 'Network', 
+         height: ${paramValues.height}, width: ${paramValues.width});
+         `
       },
       {
         id: 46,
         name: "Custom ListTile",
-        imports:
-          "import 'package:rapid_widgets_library/custom-listTileWithImage.dart';",
+        imports: "import 'package:rapid_widgets_library/custom-listTileWithImage.dart';",
         call: `customListTile(listData${counter}, tileParameters${counter}, onListTapped${counter}),`,
         definitions: `
       List<CustomTileData> listData${counter} = [ 

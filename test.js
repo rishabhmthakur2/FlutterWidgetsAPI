@@ -220,6 +220,8 @@ let getWidgets = (widgetId, paramValues, counter) =>
         definitions: `
           onFlatButtonPress${counter} (bool b){ 
           print(b); 
+         
+
           } 
           onFlatButtonLongPress${counter} (bool b){ 
           print(b); 
@@ -234,6 +236,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
           height: ${paramValues.height},
           highlightColor: Colors.${paramValues.highlightColor},
           splashColor: Colors.${paramValues.splashColor}
+
           );
       `
       },
@@ -413,6 +416,37 @@ let getWidgets = (widgetId, paramValues, counter) =>
             print(nIndex); 
             }
         `
+      },
+      {
+        id: 72,
+        name: "RoutingFlatButton",
+        imports: `import 'package:rapid_widgets_library/custom-flatButton.dart';\nimport 'page+${paramValues.onPressed}.dart';`,
+        call: `customFlatButton(buttonFlatObject${counter}, onFlatButtonPress${counter}, onFlatButtonLongPress${counter}),`,
+        definitions: `
+          onFlatButtonPress${counter} (bool b){ 
+          print(b); 
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+                builder: (context) => Page${paramValues.onPressed}()));
+
+          } 
+          onFlatButtonLongPress${counter} (bool b){ 
+          print(b); 
+          } 
+          FlatButtonParameters buttonFlatObject${counter} = FlatButtonParameters(
+          child:Text('${paramValues.text}'),
+          color:Colors.${paramValues.btnColor},
+          textColor:Colors.${paramValues.textColor},
+          hoverColor: Colors.${paramValues.hoverColor},
+          width: ${paramValues.width},
+          focusColor: Colors.${paramValues.focusColor},
+          height: ${paramValues.height},
+          highlightColor: Colors.${paramValues.highlightColor},
+          splashColor: Colors.${paramValues.splashColor}
+
+          );
+      `
       },
       {
         id: 0,

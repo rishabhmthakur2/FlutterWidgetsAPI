@@ -505,7 +505,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
         print(nIndex); 
         }
     `
-      }
+      },
       {
               id: 21,
               name: "Composite Card",
@@ -556,10 +556,10 @@ let getWidgets = (widgetId, paramValues, counter) =>
                               SizedBox(height: 46,),
                               Row(
                                 children: <Widget>[
-                                  Text('`$'+'${paramValues.newPrice}',
+                                  Text('${paramValues.newPrice}',
                                   style: TextStyle(fontSize: 20.0, color: Color(0xff707070)),),
                                   SizedBox(width: 10,),
-                                  Text('`$'+'${paramValues.oldPrice}',
+                                  Text('${paramValues.oldPrice}',
                                   style: TextStyle(color: Color(0xffD93954), decoration: TextDecoration.lineThrough,fontSize: 20.0),),
                                 ],
                               )
@@ -575,7 +575,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
                 id: 5,
                 name: "TabBar View",
                 imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-tab-bar-view.dart';",
-                call: `showTabBarView(TabBarViewParameters(listTabs:tabviews, backgroundColor: Colors.white,labelColor: Color(0xff707070),boxColor: Colors.white,borderColor: Color(0xffD93954),unselectedLabelColor: Color(0xff707070),boxShadowColor: Colors.white,),TabBarViewCallback),`,
+                call: "showTabBarView(TabBarViewParameters(listTabs:tabviews, backgroundColor: Colors.white,labelColor: Color(0xff707070),boxColor: Colors.white,borderColor: Color(0xffD93954),unselectedLabelColor: Color(0xff707070),boxShadowColor: Colors.white,),TabBarViewCallback),",
                 definitions: `
                 List<TabBarProducts> tabviews = [];
                     TabBarProducts tabview1= new TabBarProducts(

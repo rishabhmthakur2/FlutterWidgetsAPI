@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rapid_widgets_library/widget-classesUsed.dart';
 import 'package:rapid_widgets_library/custom-appBar.dart';
+import 'package:rapid_widgets_library/custom-bottomnavbar.dart';
 import 'package:rapid_widgets_library/custom-drawer.dart';
 import 'dart:ui'; 
 import 'package:rapid_widgets_library/custom-textField.dart';
@@ -39,6 +40,32 @@ class _BoilerPlate extends State<BoilerPlate> {
           icon:  Icon(Icons.list),
           onPressed: () {}, 
           ), ];
+
+          List<BottomNavigationBarItem> bottomnavitems = []; 
+          BottomNavigationBarItem bottomnavitem1= new BottomNavigationBarItem( 
+          icon: Icon(Icons.home),
+          title: Text('Home',style: TextStyle(fontSize: 12)),
+          ); 
+          BottomNavigationBarItem bottomnavitem2= new BottomNavigationBarItem( 
+          icon: Icon(Icons.phone),
+          title: Text('Contact',style: TextStyle(fontSize: 12)),
+          ); 
+          BottomNavigationBarItem bottomnavitem3= new BottomNavigationBarItem( 
+          icon: Icon(Icons.email),
+          title: Text('email',style: TextStyle(fontSize: 12),),
+          ); 
+          bottomnavitems.add(bottomnavitem1); 
+          bottomnavitems.add(bottomnavitem2); 
+          bottomnavitems.add(bottomnavitem3); 
+          BottomNavBarParameters param = new BottomNavBarParameters(
+          items: bottomnavitems, 
+          selectedItemColor: Colors.red, 
+          backgroundColor: Colors.green, 
+          unselectedItemColor: Colors.yellow, 
+          showUnselectedLabels: true, 
+          showSelectedLabels: false, 
+          selectedIconTheme: IconThemeData(color: Colors.blue));
+      
 
             List<DrawerListItems> drawerList = [ 
             DrawerListItems(Icon(Icons.account_circle), 
@@ -142,6 +169,7 @@ debugShowCheckedModeBanner: false,
 home: Scaffold(
 appBar:customAppBar(appBarIcons,paramobject),
 drawer: CustomDrawer(drawerList,onclickDrawer,user1),
+bottomNavigationBar: BottomNavBar(param),
 body: Padding(
 padding: const EdgeInsets.all(20.0),
 child: Padding(

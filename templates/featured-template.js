@@ -27,15 +27,15 @@ let featuredTemplate = req =>
         data3.push(data.definitions);
         appbarCall = data.call;
       }
-      if (!req.body.bottomNavBarCall) {
+      if (!req.body.bottomNavBar) {
         let btmnavdata = await getWidgets(101, {}, 0);
-        data1.push(data.imports);
-        data3.push(data.definitions);
+        data1.push(btmnavdata.imports);
+        data3.push(btmnavdata.definitions);
         bottomNavBarCall = btmnavdata.call;
       } else {
         let btmnavdata = await getWidgets(1, req.body.bottomNavParams, 0);
-        data1.push(data.imports);
-        data3.push(data.definitions);
+        data1.push(btmnavdata.imports);
+        data3.push(btmnavdata.definitions);
         bottomNavBarCall = btmnavdata.call;
       }
       if (!req.body.drawer) {

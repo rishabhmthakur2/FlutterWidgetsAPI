@@ -389,6 +389,43 @@ let getWidgets = (widgetId, paramValues, counter) =>
  `
       },
       {
+              id: 101,
+              name: "Bottom Navigation Bar",
+              imports: "import 'package:rapid_widgets_library/custom-bottomnavbar.dart';",
+              call: "bottomNavigationBar: BottomNavBar(param),",
+              definitions: `
+                  List<BottomNavigationBarItem> bottomnavitems = [];
+                  BottomNavigationBarItem bottomnavitem1= new BottomNavigationBarItem(
+                    icon: Image.network('http://104.40.75.137:9003/assets/cms/bottomnav_home.png',height: 20,width: 20,),
+                    title: Text('Home',style: TextStyle(fontSize: 14)),
+                  );
+                  BottomNavigationBarItem bottomnavitem2= new BottomNavigationBarItem(
+                    icon: Image.network('http://104.40.75.137:9003/assets/cms/bottomnav_bookmark.png',height: 20,width: 20,),
+                    title: Text('Bookmark',style: TextStyle(fontSize: 14)),
+                  );
+                  BottomNavigationBarItem bottomnavitem3= new BottomNavigationBarItem(
+                    icon: Icon(Icons.search,color: Colors.black,size: 20,),
+                    title: Text('Search',style: TextStyle(fontSize: 14),),
+                  );
+                  BottomNavigationBarItem bottomnavitem4= new BottomNavigationBarItem(
+                    icon: Image.network('http://104.40.75.137:9003/assets/cms/bottomnav_profile.png',height: 20,width: 20,),
+                    title: Text('Profile',style: TextStyle(fontSize: 14),),
+                  );
+                  bottomnavitems.add(bottomnavitem1);
+                  bottomnavitems.add(bottomnavitem2);
+                  bottomnavitems.add(bottomnavitem3);
+                  bottomnavitems.add(bottomnavitem4);
+                  BottomNavBarParameters param = new BottomNavBarParameters(
+                      items: bottomnavitems,
+                      selectedItemColor: Colors.black,
+                      unselectedItemColor: Colors.black,
+                      backgroundColor: Color(0xffF9F9F9),
+                      showUnselectedLabels: true,
+                      showSelectedLabels: true,
+                  );
+            `
+            },
+      {
         id: 102,
         name: "Drawer",
         imports: "import 'package:rapid_widgets_library/custom-drawer.dart';",

@@ -4,7 +4,8 @@ import 'package:rapid_widgets_library/custom-appBar.dart';
 import 'package:rapid_widgets_library/custom-drawer.dart';
 import 'dart:ui'; 
 import 'package:rapid_widgets_library/custom-textField.dart';
-import 'package:rapid_widgets_library/custom-dropdownButton.dart';
+import 'dart:ui'; 
+import 'package:rapid_widgets_library/custom-textField.dart';
 void main() => runApp(BoilerPlate());
 class BoilerPlate extends StatefulWidget 
 { 
@@ -89,24 +90,33 @@ class _BoilerPlate extends State<BoilerPlate> {
             );
         
 
-              DropDownParameters dropdownObject1 = DropDownParameters(
-              itemsList: ['One', 'Two'],
-              hintText: ''test'',
-              listType: ''test'',
-              fillColor: Colors.grey,
-              borderRadius: 20,
-              width: 200,
-              textColor: Colors.blue,
-              itemsBgColor: Colors.black,
-              shadowColor: Colors.black,
-              shadowBlurRadius: 10,
-              shadowSpreadRadius: 5,
-              ); 
-              onSelect1 (int i,String s){ 
-              print(i); 
-              print(s); 
-              }
-          
+            onTextSubmit1 (String sText) { 
+            print(sText); 
+            }
+            TextFieldParameters finalTextObj1 = new TextFieldParameters( 
+            maxLength: 100, 
+            obsecureText: false,
+            maxLengthEnforced: true, 
+            decoration: InputDecoration(
+            hintText: ''hint'',
+            labelText: ''labelText'', 
+            prefixIcon: Icon(Icons.search),
+            filled: true, 
+            fillColor: Colors.white, 
+            counterText: "", 
+            border: OutlineInputBorder( 
+            borderRadius: BorderRadius.circular(20), 
+            borderSide: BorderSide( color: Colors.black)), 
+            ), 
+            cursorColor: Colors.black, 
+            cursorWidth: 2, 
+            expands: false, 
+            maxLines: 1, 
+            readOnly: false, 
+            showCursor: true, 
+            style: TextStyle(color: Colors.black),
+            );
+        
 return MaterialApp(
 debugShowCheckedModeBanner: false,
 home: Scaffold(
@@ -122,38 +132,19 @@ children: <Widget>[
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
+Expanded(flex: 1,child:Container()),
+],),
+),
+Padding(
+padding: const EdgeInsets.all(25.0),
+child: Row(children: [
 Expanded(flex: 1,child:CustomTextField(params: finalTextObj0, callbackTextfield: onTextSubmit0),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:Container()),
-],),
-),
-Padding(
-padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-Expanded(flex: 1,child:Container()),
-],),
-),
-Padding(
-padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-Expanded(flex: 1,child:Container()),
-],),
-),
-Padding(
-padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-Expanded(flex: 1,child:Container()),
-Expanded(flex: 1,child:Container()),
-],),
-),
-Padding(
-padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-Expanded(flex: 1,child:CustomDropdownButton(dropdownObject1,onSelect1),),
+Expanded(flex: 1,child:CustomTextField(params: finalTextObj1, callbackTextfield: onTextSubmit1),),
 Expanded(flex: 1,child:Container()),
  ],),
 ),

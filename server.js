@@ -9,6 +9,7 @@ const { loginTemplate } = require('./templates/login-template');
 const { welcomeTemplate } = require('./templates/welcome-template');
 const { homeTemplate } = require('./templates/home-template');
 const { getStartedTemplate } = require('./templates/get-started');
+const { featuredTemplate } = require('./templates/featured-template');
 
 var app = express();
 app.use(cors());
@@ -120,6 +121,16 @@ app.post('/submitWidgetParams', async (req, res) => {
   }
   else if (templateHandler == 6) {
     execute = getStartedTemplate(req);
+    try {
+      execute.then((data) => {
+        res.status(200).send(data);
+      });
+    } catch (error) {
+      res.status(400).send(error);
+    }
+  }
+  else if (templateHandler == 7) {
+    execute = featuredTemplate(req);
     try {
       execute.then((data) => {
         res.status(200).send(data);

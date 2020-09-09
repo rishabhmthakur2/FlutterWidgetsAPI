@@ -6,6 +6,7 @@ import 'dart:ui';
 import 'package:rapid_widgets_library/custom-textField.dart';
 import 'dart:ui'; 
 import 'package:rapid_widgets_library/custom-textField.dart';
+import 'package:rapid_widgets_library/custom-dropdownButton.dart';
 void main() => runApp(BoilerPlate());
 class BoilerPlate extends StatefulWidget 
 { 
@@ -70,8 +71,8 @@ class _BoilerPlate extends State<BoilerPlate> {
             obsecureText: false,
             maxLengthEnforced: true, 
             decoration: InputDecoration(
-            hintText: ''hint'',
-            labelText: ''labelText'', 
+            hintText: 'hint',
+            labelText: 'labelText', 
             prefixIcon: Icon(Icons.search),
             filled: true, 
             fillColor: Colors.white, 
@@ -98,8 +99,8 @@ class _BoilerPlate extends State<BoilerPlate> {
             obsecureText: false,
             maxLengthEnforced: true, 
             decoration: InputDecoration(
-            hintText: ''hint'',
-            labelText: ''labelText'', 
+            hintText: 'hint',
+            labelText: 'labelText', 
             prefixIcon: Icon(Icons.search),
             filled: true, 
             fillColor: Colors.white, 
@@ -117,6 +118,25 @@ class _BoilerPlate extends State<BoilerPlate> {
             style: TextStyle(color: Colors.black),
             );
         
+
+              DropDownParameters dropdownObject2 = DropDownParameters(
+              itemsList: ['One', 'Two'],
+              hintText: 'test',
+              listType: 'test',
+              fillColor: Colors.grey,
+              borderRadius: 20,
+              width: 200,
+              textColor: Colors.blue,
+              itemsBgColor: Colors.black,
+              shadowColor: Colors.black,
+              shadowBlurRadius: 10,
+              shadowSpreadRadius: 5,
+              ); 
+              onSelect2 (int i,String s){ 
+              print(i); 
+              print(s); 
+              }
+          
 return MaterialApp(
 debugShowCheckedModeBanner: false,
 home: Scaffold(
@@ -144,12 +164,6 @@ Expanded(flex: 1,child:Container()),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:Container()),
-],),
-),
-Padding(
-padding: const EdgeInsets.all(25.0),
-child: Row(children: [
 Expanded(flex: 1,child:CustomTextField(params: finalTextObj1, callbackTextfield: onTextSubmit1),),
 ],),
 ),
@@ -157,6 +171,53 @@ Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
 Expanded(flex: 1,child:Container()),
+],),
+),
+Padding(
+padding: const EdgeInsets.all(25.0),
+child: Row(children: [
+Expanded(flex: 1,child:Container()),
+],),
+),
+Padding(
+padding: const EdgeInsets.all(25.0),
+child: Row(children: [
+Expanded(flex: 1,child:Container()),
+],),
+),
+Padding(
+padding: const EdgeInsets.all(25.0),
+child: Row(children: [
+Expanded(flex: 1,child:Container()),
+],),
+),
+Padding(
+padding: const EdgeInsets.all(25.0),
+child: Row(children: [
+Expanded(flex: 1,child:Container()),
+],),
+),
+Padding(
+padding: const EdgeInsets.all(25.0),
+child: Row(children: [
+Expanded(flex: 1,child:Container()),
+],),
+),
+Padding(
+padding: const EdgeInsets.all(25.0),
+child: Row(children: [
+Expanded(flex: 1,child:Container()),
+],),
+),
+Padding(
+padding: const EdgeInsets.all(25.0),
+child: Row(children: [
+Expanded(flex: 1,child:CustomDropdownButton(dropdownObject2,onSelect2),),
+],),
+),
+Padding(
+padding: const EdgeInsets.all(25.0),
+child: Row(children: [
  ],),
 ),
 ], 

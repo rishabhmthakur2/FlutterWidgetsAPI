@@ -49,6 +49,7 @@ let welcomeTemplate = req =>
 
       let top = "Container()";
       let middle = "Container()";
+      let middle1 = "Container()";
       let bottomleft = "Container()";
       let bottomright = "Container()";
 
@@ -73,6 +74,16 @@ let welcomeTemplate = req =>
             data1.push(data.imports);
             data3.push(data.definitions);
             middle = data.call;
+          }
+          if (widgetsObject[i].location == "middle1") {
+            let data = await getWidgets(
+              widgetsObject[i].widgetId,
+              widgetsObject[i].parameters,
+              i
+            );
+            data1.push(data.imports);
+            data3.push(data.definitions);
+            middle1 = data.call;
           }
           if (widgetsObject[i].location == "bottomleft") {
             let data = await getWidgets(
@@ -106,9 +117,12 @@ let welcomeTemplate = req =>
           let data8 = "\nExpanded(flex: 1,child:" + middle + "),"; //Widget3 call
           let data9 =
             "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: [";
-          let data10 = "\nExpanded(flex: 1,child:" + bottomleft + "),"; //Widget6 call
-          let data11 = "\nExpanded(flex: 1,child:" + bottomright + "),";
-          let data12 = "\n ],),\n),\n], \n)  \n))))); \n} \n}";
+          let data10 = "\nExpanded(flex: 1,child:" + middle1 + "),"; //Widget3 call
+          let data11 =
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: [";
+          let data12 = "\nExpanded(flex: 1,child:" + bottomleft + "),"; //Widget6 call
+          let data13 = "\nExpanded(flex: 1,child:" + bottomright + "),";
+          let data14 = "\n ],),\n),\n], \n)  \n))))); \n} \n}";
           let clearFile = () =>
             new Promise(async (resolve, reject) => {
               await fs.truncate(
@@ -245,6 +259,28 @@ let welcomeTemplate = req =>
             fs.appendFileSync(
               "./flutter/api_demo/lib/main.dart",
               data12,
+              "utf8",
+              // callback function
+              function(err) {
+                if (err) throw err;
+                // if no error
+                console.log("Data is appended to file successfully.");
+              }
+            );
+            fs.appendFileSync(
+              "./flutter/api_demo/lib/main.dart",
+              data13,
+              "utf8",
+              // callback function
+              function(err) {
+                if (err) throw err;
+                // if no error
+                console.log("Data is appended to file successfully.");
+              }
+            );
+            fs.appendFileSync(
+              "./flutter/api_demo/lib/main.dart",
+              data14,
               "utf8",
               // callback function
               function(err) {

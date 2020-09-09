@@ -175,6 +175,7 @@
         "height": "Number",
         "highlightColor": "Color",
         "splashColor": "Color"
+        
       }
     },
     {
@@ -223,6 +224,23 @@
       }
     },
     {
+        "id": 72,
+        "name": "RoutingFlatButton",
+        "definitions": {
+          "text": "String",
+          "btnColor": "Color",
+          "textColor": "Color",
+          "hoverColor": "Color",
+          "width": "Number",
+          "focusColor": "Color",
+          "height": "Number",
+          "highlightColor": "Color",
+          "splashColor": "Color",
+          "onPressed":"String"
+          
+        }
+      },
+    {
       "id": 46,
       "name": "Custom ListTile",
       "definitions": {
@@ -247,6 +265,27 @@
         "dense": "Boolean",
         "isThreeLine": "Boolean",
         "fontSize": "Number"
+      }
+    },
+    {
+      "id": 21,
+      "name": "CompositeCard",
+      "definitions": {
+        "title": "String",
+        "subtitle": "String",
+        "oldPrice": "String",
+        "newPrice": "String",
+        "imgPath": "String"
+      }
+    },
+    {
+      "id": 5,
+      "name": "TabBar View",
+      "definitions": {
+        "title1": "String",
+        "title2": "String",
+        "title3": "String",
+        "title4": "String"
       }
     }
   ]

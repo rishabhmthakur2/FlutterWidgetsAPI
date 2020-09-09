@@ -506,6 +506,107 @@ let getWidgets = (widgetId, paramValues, counter) =>
         }
     `
       }
+      {
+              id: 21,
+              name: "Composite Card",
+              imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-compositeCard.dart';",
+              call: `compositeCard(listcards),`,
+              definitions: `
+              List<CustomcompositeCardParameters> listcards = [];
+                  CustomcompositeCardParameters card1 = new CustomcompositeCardParameters(
+                      flexColumn1: 6,
+                      flexColumn2: 4,
+                      cardColor: Colors.white,
+                      rightHandWidgets: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 18.0, bottom: 20.5),
+                          child: Column(
+                            children: <Widget>[
+                              Align(
+                                  alignment: Alignment.centerRight,
+                                  child: Image.network('${paramValues.imgPath}',height: 102,width: 65,)
+                              ),
+                              SizedBox(height: 19,),
+                              Container(
+                                height: 41,
+                                width: 123,
+                                child: FlatButton(child: Text('Add to Cart',
+                                  style: TextStyle(color: Colors.white, fontSize: 16, fontFamily: 'Segoe UI'),),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(21.0)),
+                                  disabledColor: Color(0xffD93954),),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                      leftHandWidgets: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 13.0, bottom: 20.5),
+                          child: Column(
+                            children: <Widget>[
+                              Text('${paramValues.title}',textAlign: TextAlign.left,
+                              style: TextStyle(fontSize: 20,color: Color(0xff707070)),),
+                              SizedBox(height: 4,),
+                              Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text('${paramValues.subtitle}',
+                                  style: TextStyle(fontSize: 14.0,color: Color(0xff707070)),),
+                              ),
+                              SizedBox(height: 46,),
+                              Row(
+                                children: <Widget>[
+                                  Text('`$'+'${paramValues.newPrice}',
+                                  style: TextStyle(fontSize: 20.0, color: Color(0xff707070)),),
+                                  SizedBox(width: 10,),
+                                  Text('`$'+'${paramValues.oldPrice}',
+                                  style: TextStyle(color: Color(0xffD93954), decoration: TextDecoration.lineThrough,fontSize: 20.0),),
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                  );
+                  listcards.add(card1);
+              `
+            },
+              {
+                id: 5,
+                name: "TabBar View",
+                imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-tab-bar-view.dart';",
+                call: `showTabBarView(TabBarViewParameters(listTabs:tabviews, backgroundColor: Colors.white,labelColor: Color(0xff707070),boxColor: Colors.white,borderColor: Color(0xffD93954),unselectedLabelColor: Color(0xff707070),boxShadowColor: Colors.white,),TabBarViewCallback),`,
+                definitions: `
+                List<TabBarProducts> tabviews = [];
+                    TabBarProducts tabview1= new TabBarProducts(
+                        '${paramValues.title1}',
+                        Icon(Icons.fastfood, color: Colors.transparent,),
+                        Container()
+                    );
+                    TabBarProducts tabview2= new TabBarProducts(
+                        '${paramValues.title2}',
+                        Icon(Icons.fastfood, color: Colors.transparent,),
+                        Container(height: 0, width: 0,)
+                    );
+                    TabBarProducts tabview3= new TabBarProducts(
+                        '${paramValues.title3}',
+                        Icon(Icons.fastfood, color: Colors.transparent,),
+                        Container(height: 0, width: 0,)
+                    );
+                    TabBarProducts tabview4 = new TabBarProducts(
+                        '${paramValues.title4}',
+                        Icon(Icons.ac_unit,color: Colors.transparent,),
+                        Container(height: 0, width: 0,)
+                    );
+                    tabviews.add(tabview1);
+                    tabviews.add(tabview2);
+                    tabviews.add(tabview3);
+                    tabviews.add(tabview4);
+                    TabBarViewCallback(int tabprint) {
+                      print(tabprint);
+                    }
+            `
+              }
     ];
     for (i of widgetList) {
       if (i.id == widgetId) {

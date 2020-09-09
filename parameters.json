@@ -266,6 +266,27 @@
         "isThreeLine": "Boolean",
         "fontSize": "Number"
       }
+    },
+    {
+      "id": 21,
+      "name": "CompositeCard",
+      "definitions": {
+        "title": "String",
+        "subtitle": "String",
+        "oldPrice": "String",
+        "newPrice": "String",
+        "imgPath": "String"
+      }
+    },
+    {
+      "id": 5,
+      "name": "TabBar View",
+      "definitions": {
+        "title1": "String",
+        "title2": "String",
+        "title3": "String",
+        "title4": "String"
+      }
     }
   ]
 }

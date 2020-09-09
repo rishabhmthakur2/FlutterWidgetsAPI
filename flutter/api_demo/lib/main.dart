@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:rapid_widgets_library/widget-classesUsed.dart';
 import 'package:rapid_widgets_library/custom-appBar.dart';
 import 'package:rapid_widgets_library/custom-drawer.dart';
-import 'dart:ui'; 
-import 'package:rapid_widgets_library/custom-textField.dart';
-import 'dart:ui'; 
-import 'package:rapid_widgets_library/custom-textField.dart';
+import 'package:rapid_widgets_library/custom-image.dart';
+import 'package:rapid_widgets_library/custom-text.dart';
+import 'package:rapid_widgets_library/custom-text.dart';
+import 'package:rapid_widgets_library/custom-flatButton.dart';
+import 'page+1.dart';
+import 'package:rapid_widgets_library/custom-flatButton.dart';
+import 'page+1.dart';
 void main() => runApp(BoilerPlate());
 class BoilerPlate extends StatefulWidget 
 { 
@@ -17,27 +20,24 @@ class _BoilerPlate extends State<BoilerPlate> {
   Widget build(BuildContext context) { 
 
         AppBarParameters paramobject = new AppBarParameters(
-          elevation: 15,
-          bottomOpacity: 10,
-          toolbarOpacity: 10,
-          titleSpacing: 10,
-          centerTitle: false,
-          automaticallyImplyLeading: false,
-          title: Text('Title'));
-          List<Widget> appBarIcons = [
-          IconButton(
-          icon:
-          Icon(Icons.search),
-          onPressed: () {},
-          ),
-          IconButton(
-          icon:  Icon(Icons.home),
-          onPressed: () {},
-          ),
-          IconButton(
-          icon:  Icon(Icons.list),
-          onPressed: () {}, 
-          ), ];
+        elevation: 5.0,
+        bottomOpacity: 1.0,
+        toolbarOpacity: 1.0,
+        titleSpacing: 1.0,
+        centerTitle: true,
+        automaticallyImplyLeading: true,
+        title: Text('Appbar'));
+        List<Widget> appBarIcons = [
+        IconButton(
+        icon:
+        Icon(Icons.search),
+        onPressed: () {},
+        ),
+        IconButton(
+        icon:  Icon(Icons.help),
+        onPressed: () {},
+        )];
+ 
 
             List<DrawerListItems> drawerList = [ 
             DrawerListItems(Icon(Icons.account_circle), 
@@ -61,67 +61,86 @@ class _BoilerPlate extends State<BoilerPlate> {
             print(nIndex); 
             }
         
+onclick0(String sText) { print(sText); }
+        CustomImageContents ImageObj10 = new CustomImageContents(
+        src:'imagepathtemplate1',
+         semanticLabel: 'Random Network', 
+         imageType: 'Network', 
+         height: 250, width: 200);
+         
 
-            onTextSubmit0 (String sText) { 
-            print(sText); 
-            }
-            TextFieldParameters finalTextObj0 = new TextFieldParameters( 
-            maxLength: 100, 
-            obsecureText: false,
-            maxLengthEnforced: true, 
-            decoration: InputDecoration(
-            hintText: ''hint'',
-            labelText: ''labelText'', 
-            prefixIcon: Icon(Icons.search),
-            filled: true, 
-            fillColor: Colors.white, 
-            counterText: "", 
-            border: OutlineInputBorder( 
-            borderRadius: BorderRadius.circular(20), 
-            borderSide: BorderSide( color: Colors.black)), 
-            ), 
-            cursorColor: Colors.black, 
-            cursorWidth: 2, 
-            expands: false, 
-            maxLines: 1, 
-            readOnly: false, 
-            showCursor: true, 
-            style: TextStyle(color: Colors.black),
-            );
-        
+        TextParameters textparam1 = new TextParameters(
+          data: 'Title page 1',
+          fontSize: 16,
+          color: Colors.black,
+          fontStyle: FontStyle.normal,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.bold,
+        );
+         
 
-            onTextSubmit1 (String sText) { 
-            print(sText); 
-            }
-            TextFieldParameters finalTextObj1 = new TextFieldParameters( 
-            maxLength: 100, 
-            obsecureText: false,
-            maxLengthEnforced: true, 
-            decoration: InputDecoration(
-            hintText: ''hint'',
-            labelText: ''labelText'', 
-            prefixIcon: Icon(Icons.search),
-            filled: true, 
-            fillColor: Colors.white, 
-            counterText: "", 
-            border: OutlineInputBorder( 
-            borderRadius: BorderRadius.circular(20), 
-            borderSide: BorderSide( color: Colors.black)), 
-            ), 
-            cursorColor: Colors.black, 
-            cursorWidth: 2, 
-            expands: false, 
-            maxLines: 1, 
-            readOnly: false, 
-            showCursor: true, 
-            style: TextStyle(color: Colors.black),
-            );
-        
+        TextParameters textparam2 = new TextParameters(
+          data: 'Subtitle page 1',
+          fontSize: 14,
+          color: Colors.red,
+          fontStyle: FontStyle.normal,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.bold,
+        );
+         
+
+          onFlatButtonPress3 (bool b){ 
+          print(b); 
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+                builder: (context) => Page1()));
+
+          } 
+          onFlatButtonLongPress3 (bool b){ 
+          print(b); 
+          } 
+          FlatButtonParameters buttonFlatObject3 = FlatButtonParameters(
+          child:Text('skip'),
+          color:Colors.yellow,
+          textColor:Colors.black,
+          hoverColor: Colors.yellow,
+          width: 150,
+          focusColor: Colors.yellow,
+          height: 40,
+          highlightColor: Colors.yellow,
+          splashColor: Colors.yellow
+
+          );
+      
+
+          onFlatButtonPress4 (bool b){ 
+          print(b); 
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+                builder: (context) => Page1()));
+
+          } 
+          onFlatButtonLongPress4 (bool b){ 
+          print(b); 
+          } 
+          FlatButtonParameters buttonFlatObject4 = FlatButtonParameters(
+          child:Text('View'),
+          color:Colors.red,
+          textColor:Colors.white,
+          hoverColor: Colors.red,
+          width: 100,
+          focusColor: Colors.red,
+          height: 40,
+          highlightColor: Colors.red,
+          splashColor: Colors.red
+
+          );
+      
 return MaterialApp(
 debugShowCheckedModeBanner: false,
 home: Scaffold(
-appBar:customAppBar(appBarIcons,paramobject),
-drawer: CustomDrawer(drawerList,onclickDrawer,user1),
 body: Padding(
 padding: const EdgeInsets.all(20.0),
 child: Padding(
@@ -132,20 +151,26 @@ children: <Widget>[
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:Container()),
+Expanded(flex: 1,child:CustomImage(data: ImageObj10),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:CustomTextField(params: finalTextObj0, callbackTextfield: onTextSubmit0),),
+Expanded(flex: 1,child:customText(textparam1)),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:CustomTextField(params: finalTextObj1, callbackTextfield: onTextSubmit1),),
-Expanded(flex: 1,child:Container()),
+Expanded(flex: 1,child:customText(textparam2)),
+],),
+),
+Padding(
+padding: const EdgeInsets.all(25.0),
+child: Row(children: [
+Expanded(flex: 1,child:customFlatButton(buttonFlatObject3, onFlatButtonPress3, onFlatButtonLongPress3),),
+Expanded(flex: 1,child:customFlatButton(buttonFlatObject4, onFlatButtonPress4, onFlatButtonLongPress4),),
  ],),
 ),
 ], 

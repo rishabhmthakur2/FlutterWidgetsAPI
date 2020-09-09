@@ -457,7 +457,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
       {
         id: 72,
         name: "RoutingFlatButton",
-        imports: `import 'package:rapid_widgets_library/custom-flatButton.dart';\nimport 'page+${paramValues.onPressed}.dart';`,
+        imports: `import 'package:rapid_widgets_library/custom-flatButton.dart';\nimport 'page${paramValues.onPressed}.dart';`,
         call: `customFlatButton(buttonFlatObject${counter}, onFlatButtonPress${counter}, onFlatButtonLongPress${counter}),`,
         definitions: `
           onFlatButtonPress${counter} (bool b){ 

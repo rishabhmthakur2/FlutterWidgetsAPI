@@ -544,7 +544,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
     `
       },
       {
-              id: 21,
+              id: 121,
               name: "Composite Card",
               imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-compositeCard.dart';",
               call: `compositeCard(listcards),`,

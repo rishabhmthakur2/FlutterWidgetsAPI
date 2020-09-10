@@ -268,7 +268,7 @@
       }
     },
     {
-      "id": 21,
+      "id": 121,
       "name": "CompositeCard",
       "definitions": {
         "title": "String",

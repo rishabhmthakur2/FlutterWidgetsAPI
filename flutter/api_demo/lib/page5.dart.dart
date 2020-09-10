@@ -6,8 +6,10 @@ import 'package:rapid_widgets_library/custom-flatButton.dart';
 import 'page2.dart';
 import 'package:rapid_widgets_library/custom-flatButton.dart';
 import 'page3.dart';
-void main() => runApp(Page2());
-class Page2 extends StatelessWidget {
+import 'package:rapid_widgets_library/custom-text.dart';
+import 'package:rapid_widgets_library/custom-text.dart';
+void main() => runApp(Page5());
+class Page5 extends StatelessWidget {
 @override
 Widget build(BuildContext context) {
 return MaterialApp(
@@ -114,6 +116,26 @@ class _BoilerPlate extends State<BoilerPlate> {
 
           );
       
+
+        TextParameters textparam4 = new TextParameters(
+          data: 'page5',
+          fontSize: 12,
+          color: Colors.red,
+          fontStyle: FontStyle.normal,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.bold,
+        );
+         
+
+        TextParameters textparam5 = new TextParameters(
+          data: 'page6',
+          fontSize: 12,
+          color: Colors.black,
+          fontStyle: FontStyle.normal,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.bold,
+        );
+         
 return MaterialApp(
 debugShowCheckedModeBanner: false,
 home: Scaffold(
@@ -133,7 +155,7 @@ Expanded(flex: 1,child:Container()),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:Container()),
+Expanded(flex: 1,child:customText(textparam5)),
 ],),
 ),
 Padding(

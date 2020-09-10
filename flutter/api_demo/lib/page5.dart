@@ -3,12 +3,15 @@ import 'package:rapid_widgets_library/widget-classesUsed.dart';
 import 'package:rapid_widgets_library/custom-appBar.dart';
 import 'package:rapid_widgets_library/custom-bottomnavbar.dart';
 import 'package:rapid_widgets_library/custom-drawer.dart';
-import 'dart:ui'; 
-import 'package:rapid_widgets_library/custom-textField.dart';
-import 'dart:ui'; 
-import 'package:rapid_widgets_library/custom-textField.dart';
-import 'package:rapid_widgets_library/custom-dropdownButton.dart';
-void main() => runApp(BoilerPlate());
+import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
+import 'package:rapid_widgets_library/custom-compositeCard.dart';
+void main() => runApp(Page3());
+class Page3 extends StatelessWidget {
+@override
+Widget build(BuildContext context) {
+return MaterialApp(
+home: BoilerPlate());
+}}
 class BoilerPlate extends StatefulWidget 
 { 
 @override 
@@ -19,27 +22,24 @@ class _BoilerPlate extends State<BoilerPlate> {
   Widget build(BuildContext context) { 
 
         AppBarParameters paramobject = new AppBarParameters(
-          elevation: 15,
-          bottomOpacity: 10,
-          toolbarOpacity: 10,
-          titleSpacing: 10,
-          centerTitle: false,
-          automaticallyImplyLeading: false,
-          title: Text('Title'));
-          List<Widget> appBarIcons = [
-          IconButton(
-          icon:
-          Icon(Icons.search),
-          onPressed: () {},
-          ),
-          IconButton(
-          icon:  Icon(Icons.home),
-          onPressed: () {},
-          ),
-          IconButton(
-          icon:  Icon(Icons.list),
-          onPressed: () {}, 
-          ), ];
+        elevation: 5.0,
+        bottomOpacity: 1.0,
+        toolbarOpacity: 1.0,
+        titleSpacing: 1.0,
+        centerTitle: true,
+        automaticallyImplyLeading: true,
+        title: Text('Appbar'));
+        List<Widget> appBarIcons = [
+        IconButton(
+        icon:
+        Icon(Icons.search),
+        onPressed: () {},
+        ),
+        IconButton(
+        icon:  Icon(Icons.help),
+        onPressed: () {},
+        )];
+ 
 
                   List<BottomNavigationBarItem> bottomnavitems = [];
                   BottomNavigationBarItem bottomnavitem1= new BottomNavigationBarItem(
@@ -95,80 +95,64 @@ class _BoilerPlate extends State<BoilerPlate> {
             }
         
 
-            onTextSubmit0 (String sText) { 
-            print(sText); 
-            }
-            TextFieldParameters finalTextObj0 = new TextFieldParameters( 
-            maxLength: 100, 
-            obsecureText: false,
-            maxLengthEnforced: true, 
-            decoration: InputDecoration(
-            hintText: 'hint',
-            labelText: 'labelText', 
-            prefixIcon: Icon(Icons.search),
-            filled: true, 
-            fillColor: Colors.white, 
-            counterText: "", 
-            border: OutlineInputBorder( 
-            borderRadius: BorderRadius.circular(20), 
-            borderSide: BorderSide( color: Colors.black)), 
-            ), 
-            cursorColor: Colors.black, 
-            cursorWidth: 2, 
-            expands: false, 
-            maxLines: 1, 
-            readOnly: false, 
-            showCursor: true, 
-            style: TextStyle(color: Colors.black),
-            );
-        
-
-            onTextSubmit1 (String sText) { 
-            print(sText); 
-            }
-            TextFieldParameters finalTextObj1 = new TextFieldParameters( 
-            maxLength: 100, 
-            obsecureText: false,
-            maxLengthEnforced: true, 
-            decoration: InputDecoration(
-            hintText: 'hint',
-            labelText: 'labelText', 
-            prefixIcon: Icon(Icons.search),
-            filled: true, 
-            fillColor: Colors.white, 
-            counterText: "", 
-            border: OutlineInputBorder( 
-            borderRadius: BorderRadius.circular(20), 
-            borderSide: BorderSide( color: Colors.black)), 
-            ), 
-            cursorColor: Colors.black, 
-            cursorWidth: 2, 
-            expands: false, 
-            maxLines: 1, 
-            readOnly: false, 
-            showCursor: true, 
-            style: TextStyle(color: Colors.black),
-            );
-        
-
-              DropDownParameters dropdownObject2 = DropDownParameters(
-              itemsList: ['One', 'Two'],
-              hintText: 'test',
-              listType: 'test',
-              fillColor: Colors.grey,
-              borderRadius: 20,
-              width: 200,
-              textColor: Colors.blue,
-              itemsBgColor: Colors.black,
-              shadowColor: Colors.black,
-              shadowBlurRadius: 10,
-              shadowSpreadRadius: 5,
-              ); 
-              onSelect2 (int i,String s){ 
-              print(i); 
-              print(s); 
-              }
-          
+              List<CustomcompositeCardParameters> listcards3 = [];
+                  CustomcompositeCardParameters card13 = new CustomcompositeCardParameters(
+                      flexColumn1: 6,
+                      flexColumn2: 4,
+                      cardColor: Colors.white,
+                      rightHandWidgets: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 18.0, bottom: 20.5),
+                          child: Column(
+                            children: <Widget>[
+                              Align(
+                                  alignment: Alignment.centerRight,
+                                  child: Image.network('http://104.40.75.137:9003/assets/cms/image3.png',height: 102,width: 65,)
+                              ),
+                              SizedBox(height: 19,),
+                              Container(
+                                height: 41,
+                                width: 123,
+                                child: FlatButton(child: Text('Add to Cart',
+                                  style: TextStyle(color: Colors.white, fontSize: 16, fontFamily: 'Segoe UI'),),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(21.0)),
+                                  disabledColor: Color(0xffD93954),),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                      leftHandWidgets: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 13.0, bottom: 20.5),
+                          child: Column(
+                            children: <Widget>[
+                              Text('title1',textAlign: TextAlign.left,
+                              style: TextStyle(fontSize: 20,color: Color(0xff707070)),),
+                              SizedBox(height: 4,),
+                              Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text('subtitle1',
+                                  style: TextStyle(fontSize: 14.0,color: Color(0xff707070)),),
+                              ),
+                              SizedBox(height: 46,),
+                              Row(
+                                children: <Widget>[
+                                  Text('2',
+                                  style: TextStyle(fontSize: 20.0, color: Color(0xff707070)),),
+                                  SizedBox(width: 10,),
+                                  Text('3',
+                                  style: TextStyle(color: Color(0xffD93954), decoration: TextDecoration.lineThrough,fontSize: 20.0),),
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                  );
+                  listcards3.add(card13);
+              
 return MaterialApp(
 debugShowCheckedModeBanner: false,
 home: Scaffold(
@@ -185,25 +169,13 @@ children: <Widget>[
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:CustomTextField(params: finalTextObj0, callbackTextfield: onTextSubmit0),),
-],),
-),
-Padding(
-padding: const EdgeInsets.all(25.0),
-child: Row(children: [
 Expanded(flex: 1,child:Container()),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:CustomTextField(params: finalTextObj1, callbackTextfield: onTextSubmit1),),
-],),
-),
-Padding(
-padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-Expanded(flex: 1,child:Container()),
+Expanded(flex: 1,child:compositeCard(listcards3),),
 ],),
 ),
 Padding(
@@ -245,7 +217,19 @@ Expanded(flex: 1,child:Container()),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:CustomDropdownButton(dropdownObject2,onSelect2),),
+Expanded(flex: 1,child:Container()),
+],),
+),
+Padding(
+padding: const EdgeInsets.all(25.0),
+child: Row(children: [
+Expanded(flex: 1,child:Container()),
+],),
+),
+Padding(
+padding: const EdgeInsets.all(25.0),
+child: Row(children: [
+Expanded(flex: 1,child:Container()),
 ],),
 ),
 Padding(

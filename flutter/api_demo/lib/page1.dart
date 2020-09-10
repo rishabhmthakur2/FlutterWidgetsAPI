@@ -2,12 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:rapid_widgets_library/widget-classesUsed.dart';
 import 'package:rapid_widgets_library/custom-appBar.dart';
 import 'package:rapid_widgets_library/custom-drawer.dart';
-import 'package:rapid_widgets_library/custom-image.dart';
-import 'package:rapid_widgets_library/custom-text.dart';
-import 'package:rapid_widgets_library/custom-text.dart';
-import 'package:rapid_widgets_library/custom-image.dart';
-import 'package:rapid_widgets_library/custom-text.dart';
-import 'package:rapid_widgets_library/custom-text.dart';
+import 'package:rapid_widgets_library/custom-flatButton.dart';
+import 'page2.dart';
 void main() => runApp(Page1());
 class Page1 extends StatelessWidget {
 @override
@@ -66,60 +62,31 @@ class _BoilerPlate extends State<BoilerPlate> {
             print(nIndex); 
             }
         
-onclick0(String sText) { print(sText); }
-        CustomImageContents ImageObj10 = new CustomImageContents(
-        src:'http://104.40.75.137:9003/assets/cms/image5.png',
-         semanticLabel: 'Random Network', 
-         imageType: 'Network', 
-         height: 160, width: 180);
-         
 
-        TextParameters textparam1 = new TextParameters(
-          data: 'Title',
-          fontSize: 18,
-          color: Colors.pink,
-          fontStyle: FontStyle.normal,
-          fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
-        );
-         
+          onFlatButtonPress1 (bool b){ 
+          print(b); 
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+                builder: (context) => Page2()));
 
-        TextParameters textparam2 = new TextParameters(
-          data: 'subTitle',
-          fontSize: 14,
-          color: Colors.pink,
-          fontStyle: FontStyle.normal,
-          fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
-        );
-         
-onclick5(String sText) { print(sText); }
-        CustomImageContents ImageObj15 = new CustomImageContents(
-        src:'http://104.40.75.137:9003/assets/cms/image5.png',
-         semanticLabel: 'Random Network', 
-         imageType: 'Network', 
-         height: 150, width: 180);
-         
+          } 
+          onFlatButtonLongPress1 (bool b){ 
+          print(b); 
+          } 
+          FlatButtonParameters buttonFlatObject1 = FlatButtonParameters(
+          child:Text('next'),
+          color:Colors.red,
+          textColor:Colors.white,
+          hoverColor: Colors.red,
+          width: 100,
+          focusColor: Colors.red,
+          height: 50,
+          highlightColor: Colors.red,
+          splashColor: Colors.red
 
-        TextParameters textparam6 = new TextParameters(
-          data: 'title1',
-          fontSize: 16,
-          color: Colors.pink,
-          fontStyle: FontStyle.normal,
-          fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
-        );
-         
-
-        TextParameters textparam7 = new TextParameters(
-          data: 'title2',
-          fontSize: 16,
-          color: Colors.yellow,
-          fontStyle: FontStyle.normal,
-          fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
-        );
-         
+          );
+      
 return MaterialApp(
 debugShowCheckedModeBanner: false,
 home: Scaffold(
@@ -133,19 +100,13 @@ children: <Widget>[
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-SizedBox(height:30),Expanded(flex: 1,child:CustomImage(data: ImageObj15),),
+SizedBox(height:30),Expanded(flex: 1,child:Container()),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-SizedBox(height:30),Expanded(flex: 1,child:customText(textparam6)),
-],),
-),
-Padding(
-padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-SizedBox(height:30),Expanded(flex: 1,child:customText(textparam7)),
+SizedBox(height:30),Expanded(flex: 1,child:Container()),
 ],),
 ),
 Padding(
@@ -158,6 +119,12 @@ Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
 SizedBox(height:30),Expanded(flex: 1,child:Container()),
+],),
+),
+Padding(
+padding: const EdgeInsets.all(25.0),
+child: Row(children: [
+SizedBox(height:30),Expanded(flex: 1,child:customFlatButton(buttonFlatObject1, onFlatButtonPress1, onFlatButtonLongPress1),),
  ],),
 ),
 ], 

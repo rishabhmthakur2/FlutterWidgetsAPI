@@ -2,11 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:rapid_widgets_library/widget-classesUsed.dart';
 import 'package:rapid_widgets_library/custom-appBar.dart';
 import 'package:rapid_widgets_library/custom-drawer.dart';
-import 'package:rapid_widgets_library/custom-image.dart';
-import 'package:rapid_widgets_library/custom-text.dart';
-import 'package:rapid_widgets_library/custom-text.dart';
-import 'package:rapid_widgets_library/custom-flatButton.dart';
-import 'page1.dart';
 import 'package:rapid_widgets_library/custom-flatButton.dart';
 import 'page1.dart';
 void main() => runApp(MyApp());
@@ -67,35 +62,8 @@ class _BoilerPlate extends State<BoilerPlate> {
             print(nIndex); 
             }
         
-onclick0(String sText) { print(sText); }
-        CustomImageContents ImageObj10 = new CustomImageContents(
-        src:'http://104.40.75.137:9003/assets/cms/image5.png',
-         semanticLabel: 'Random Network', 
-         imageType: 'Network', 
-         height: 160, width: 180);
-         
 
-        TextParameters textparam1 = new TextParameters(
-          data: 'Title',
-          fontSize: 18,
-          color: Colors.pink,
-          fontStyle: FontStyle.normal,
-          fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
-        );
-         
-
-        TextParameters textparam2 = new TextParameters(
-          data: 'subTitle',
-          fontSize: 14,
-          color: Colors.pink,
-          fontStyle: FontStyle.normal,
-          fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
-        );
-         
-
-          onFlatButtonPress3 (bool b){ 
+          onFlatButtonPress0 (bool b){ 
           print(b); 
           Navigator.pushReplacement(
             context,
@@ -103,42 +71,17 @@ onclick0(String sText) { print(sText); }
                 builder: (context) => Page1()));
 
           } 
-          onFlatButtonLongPress3 (bool b){ 
+          onFlatButtonLongPress0 (bool b){ 
           print(b); 
           } 
-          FlatButtonParameters buttonFlatObject3 = FlatButtonParameters(
-          child:Text('Start'),
-          color:Colors.white,
-          textColor:Colors.pink,
+          FlatButtonParameters buttonFlatObject0 = FlatButtonParameters(
+          child:Text('next'),
+          color:Colors.yellow,
+          textColor:Colors.black,
           hoverColor: Colors.yellow,
-          width: 150,
+          width: 80,
           focusColor: Colors.yellow,
-          height: 50,
-          highlightColor: Colors.yellow,
-          splashColor: Colors.yellow
-
-          );
-      
-
-          onFlatButtonPress4 (bool b){ 
-          print(b); 
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-                builder: (context) => Page1()));
-
-          } 
-          onFlatButtonLongPress4 (bool b){ 
-          print(b); 
-          } 
-          FlatButtonParameters buttonFlatObject4 = FlatButtonParameters(
-          child:Text('End'),
-          color:Colors.white,
-          textColor:Colors.pink,
-          hoverColor: Colors.yellow,
-          width: 150,
-          focusColor: Colors.yellow,
-          height: 50,
+          height: 40,
           highlightColor: Colors.yellow,
           splashColor: Colors.yellow
 
@@ -157,26 +100,26 @@ children: <Widget>[
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-SizedBox(height:30),Expanded(flex: 1,child:CustomImage(data: ImageObj10),),
+SizedBox(height:30),Expanded(flex: 1,child:Container()),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-SizedBox(height:30),Expanded(flex: 1,child:customText(textparam1)),
+SizedBox(height:30),Expanded(flex: 1,child:Container()),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-SizedBox(height:30),Expanded(flex: 1,child:customText(textparam2)),
+SizedBox(height:30),Expanded(flex: 1,child:Container()),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(15.0),
 child: Row(children: [
-SizedBox(height:50),Expanded(flex: 1,child:customFlatButton(buttonFlatObject3, onFlatButtonPress3, onFlatButtonLongPress3),),SizedBox(width:30),
-Expanded(flex: 1,child:customFlatButton(buttonFlatObject4, onFlatButtonPress4, onFlatButtonLongPress4),),
+SizedBox(height:50),Expanded(flex: 1,child:customFlatButton(buttonFlatObject0, onFlatButtonPress0, onFlatButtonLongPress0),),SizedBox(width:30),
+Expanded(flex: 1,child:Container()),
  ],),
 ),
 ], 

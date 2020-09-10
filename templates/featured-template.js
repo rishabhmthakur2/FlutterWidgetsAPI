@@ -54,7 +54,7 @@ let featuredTemplate = req =>
       const data0 =
         "import 'package:flutter/material.dart';\nimport 'package:rapid_widgets_library/widget-classesUsed.dart';\n";
       const data2 =
-        "\nvoid main() => runApp(BoilerPlate());\nclass BoilerPlate extends StatefulWidget \n{ \n@override \n_BoilerPlate createState() => _BoilerPlate();\n}\nclass _BoilerPlate extends State<BoilerPlate> {\n @override\n  Widget build(BuildContext context) { \n";
+        "\nvoid main() => runApp(Page3());\nclass Page3 extends StatelessWidget {\n@override\nWidget build(BuildContext context) {\nreturn MaterialApp(\nhome: BoilerPlate());\n}}\nclass BoilerPlate extends StatefulWidget \n{ \n@override \n_BoilerPlate createState() => _BoilerPlate();\n}\nclass _BoilerPlate extends State<BoilerPlate> {\n @override\n  Widget build(BuildContext context) { \n";
       const data4 =
         "\nreturn MaterialApp(\ndebugShowCheckedModeBanner: false,\nhome: Scaffold(\n" +
         appbarCall +
@@ -233,7 +233,7 @@ let featuredTemplate = req =>
           let clearFile = () =>
             new Promise(async (resolve, reject) => {
               await fs.truncate(
-                "./flutter/api_demo/lib/page5.dart",
+                "./flutter/api_demo/lib/page3.dart",
                 0,
                 function() {
                   resolve("File cleared");
@@ -243,7 +243,7 @@ let featuredTemplate = req =>
 
           clearFile().then(() => {
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page5.dart",
+              "./flutter/api_demo/lib/page3.dart",
               data0,
               "utf8",
               // callback function
@@ -254,7 +254,7 @@ let featuredTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page5.dart",
+              "./flutter/api_demo/lib/page3.dart",
               data1.join("\n"),
               "utf8",
               // callback function
@@ -265,7 +265,7 @@ let featuredTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page5.dart",
+              "./flutter/api_demo/lib/page3.dart",
               data2,
               "utf8",
               // callback function
@@ -276,7 +276,7 @@ let featuredTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page5.dart",
+              "./flutter/api_demo/lib/page3.dart",
               data3.join("\n"),
               "utf8",
               // callback function
@@ -287,7 +287,7 @@ let featuredTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page5.dart",
+              "./flutter/api_demo/lib/page3.dart",
               data4,
               "utf8",
               // callback function
@@ -298,7 +298,7 @@ let featuredTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page5.dart",
+              "./flutter/api_demo/lib/page3.dart",
               data6,
               "utf8",
               // callback function
@@ -309,7 +309,7 @@ let featuredTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page5.dart",
+              "./flutter/api_demo/lib/page3.dart",
               data7,
               "utf8",
               // callback function
@@ -320,7 +320,7 @@ let featuredTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page5.dart",
+              "./flutter/api_demo/lib/page3.dart",
               data8,
               "utf8",
               // callback function
@@ -331,7 +331,7 @@ let featuredTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page5.dart",
+              "./flutter/api_demo/lib/page3.dart",
               data9,
               "utf8",
               // callback function
@@ -342,7 +342,7 @@ let featuredTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page5.dart",
+              "./flutter/api_demo/lib/page3.dart",
               data10,
               "utf8",
               // callback function
@@ -353,7 +353,7 @@ let featuredTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page5.dart",
+              "./flutter/api_demo/lib/page3.dart",
               data11,
               "utf8",
               // callback function
@@ -364,7 +364,7 @@ let featuredTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page5.dart",
+              "./flutter/api_demo/lib/page3.dart",
               data12,
               "utf8",
               // callback function
@@ -375,7 +375,7 @@ let featuredTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page5.dart",
+              "./flutter/api_demo/lib/page3.dart",
               data13,
               "utf8",
               // callback function
@@ -386,7 +386,7 @@ let featuredTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page5.dart",
+              "./flutter/api_demo/lib/page3.dart",
               data14,
               "utf8",
               // callback function
@@ -397,7 +397,7 @@ let featuredTemplate = req =>
               }
             );
             fs.appendFileSync(
-                "./flutter/api_demo/lib/page5.dart",
+                "./flutter/api_demo/lib/page3.dart",
                 data15,
                 "utf8",
                 // callback function
@@ -408,7 +408,7 @@ let featuredTemplate = req =>
                 }
               );
               fs.appendFileSync(
-                "./flutter/api_demo/lib/page5.dart",
+                "./flutter/api_demo/lib/page3.dart",
                 data16,
                 "utf8",
                 // callback function
@@ -419,7 +419,7 @@ let featuredTemplate = req =>
                 }
               );
               fs.appendFileSync(
-                "./flutter/api_demo/lib/page5.dart",
+                "./flutter/api_demo/lib/page3.dart",
                 data17,
                 "utf8",
                 // callback function
@@ -430,7 +430,7 @@ let featuredTemplate = req =>
                 }
               );
               fs.appendFileSync(
-                "./flutter/api_demo/lib/page5.dart",
+                "./flutter/api_demo/lib/page3.dart",
                 data18,
                 "utf8",
                 // callback function
@@ -441,7 +441,7 @@ let featuredTemplate = req =>
                 }
               );
               fs.appendFileSync(
-                "./flutter/api_demo/lib/page5.dart",
+                "./flutter/api_demo/lib/page3.dart",
                 data19,
                 "utf8",
                 // callback function
@@ -452,7 +452,7 @@ let featuredTemplate = req =>
                 }
               );
               fs.appendFileSync(
-                "./flutter/api_demo/lib/page5.dart",
+                "./flutter/api_demo/lib/page3.dart",
                 data20,
                 "utf8",
                 // callback function
@@ -463,7 +463,7 @@ let featuredTemplate = req =>
                 }
               );
               fs.appendFileSync(
-                "./flutter/api_demo/lib/page5.dart",
+                "./flutter/api_demo/lib/page3.dart",
                 data21,
                 "utf8",
                 // callback function
@@ -474,7 +474,7 @@ let featuredTemplate = req =>
                 }
               );
               fs.appendFileSync(
-                "./flutter/api_demo/lib/page5.dart",
+                "./flutter/api_demo/lib/page3.dart",
                 data22,
                 "utf8",
                 // callback function
@@ -485,7 +485,7 @@ let featuredTemplate = req =>
                 }
               );
               fs.appendFileSync(
-                "./flutter/api_demo/lib/page5.dart",
+                "./flutter/api_demo/lib/page3.dart",
                 data23,
                 "utf8",
                 // callback function
@@ -496,7 +496,7 @@ let featuredTemplate = req =>
                 }
               );
               fs.appendFileSync(
-                "./flutter/api_demo/lib/page5.dart",
+                "./flutter/api_demo/lib/page3.dart",
                 data24,
                 "utf8",
                 // callback function
@@ -507,7 +507,7 @@ let featuredTemplate = req =>
                 }
               );
               fs.appendFileSync(
-                "./flutter/api_demo/lib/page5.dart",
+                "./flutter/api_demo/lib/page3.dart",
                 data25,
                 "utf8",
                 // callback function
@@ -518,7 +518,7 @@ let featuredTemplate = req =>
                 }
               );
               fs.appendFileSync(
-                "./flutter/api_demo/lib/page5.dart",
+                "./flutter/api_demo/lib/page3.dart",
                 data26,
                 "utf8",
                 // callback function
@@ -529,7 +529,7 @@ let featuredTemplate = req =>
                 }
               );
               fs.appendFileSync(
-                "./flutter/api_demo/lib/page5.dart",
+                "./flutter/api_demo/lib/page3.dart",
                 data27,
                 "utf8",
                 // callback function
@@ -540,7 +540,7 @@ let featuredTemplate = req =>
                 }
               );
               fs.appendFileSync(
-                "./flutter/api_demo/lib/page5.dart",
+                "./flutter/api_demo/lib/page3.dart",
                 data28,
                 "utf8",
                 // callback function

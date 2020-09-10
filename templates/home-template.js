@@ -43,7 +43,7 @@ let homeTemplate = req =>
       const data0 =
         "import 'package:flutter/material.dart';\nimport 'package:rapid_widgets_library/widget-classesUsed.dart';\n";
       const data2 =
-        "\nvoid main() => runApp(BoilerPlate());\nclass BoilerPlate extends StatefulWidget \n{ \n@override \n_BoilerPlate createState() => _BoilerPlate();\n}\nclass _BoilerPlate extends State<BoilerPlate> {\n @override\n  Widget build(BuildContext context) { \n";
+        "\nvoid main() => runApp(Page4());\nclass Page4 extends StatelessWidget {\n@override\nWidget build(BuildContext context) {\nreturn MaterialApp(\nhome: BoilerPlate());\n}}\nclass BoilerPlate extends StatefulWidget \n{ \n@override \n_BoilerPlate createState() => _BoilerPlate();\n}\nclass _BoilerPlate extends State<BoilerPlate>{\n @override\n  Widget build(BuildContext context) { \n";
       const data4 =
         "\nreturn MaterialApp(\ndebugShowCheckedModeBanner: false,\nhome: Scaffold(\n" +
         appbarCall +
@@ -171,7 +171,7 @@ let homeTemplate = req =>
           let clearFile = () =>
             new Promise(async (resolve, reject) => {
               await fs.truncate(
-                "./flutter/api_demo/lib/page3.dart",
+                "./flutter/api_demo/lib/page4.dart",
                 0,
                 function() {
                   resolve("File cleared");
@@ -181,7 +181,7 @@ let homeTemplate = req =>
 
           clearFile().then(() => {
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page3.dart",
+              "./flutter/api_demo/lib/page4.dart",
               data0,
               "utf8",
               // callback function
@@ -192,7 +192,7 @@ let homeTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page3.dart",
+              "./flutter/api_demo/lib/page4.dart",
               data1.join("\n"),
               "utf8",
               // callback function
@@ -203,7 +203,7 @@ let homeTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page3.dart",
+              "./flutter/api_demo/lib/page4.dart",
               data2,
               "utf8",
               // callback function
@@ -214,7 +214,7 @@ let homeTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page3.dart",
+              "./flutter/api_demo/lib/page4.dart",
               data3.join("\n"),
               "utf8",
               // callback function
@@ -225,7 +225,7 @@ let homeTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page3.dart",
+              "./flutter/api_demo/lib/page4.dart",
               data4,
               "utf8",
               // callback function
@@ -236,7 +236,7 @@ let homeTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page3.dart",
+              "./flutter/api_demo/lib/page4.dart",
               data6,
               "utf8",
               // callback function
@@ -247,7 +247,7 @@ let homeTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page3.dart",
+              "./flutter/api_demo/lib/page4.dart",
               data7,
               "utf8",
               // callback function
@@ -258,7 +258,7 @@ let homeTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page3.dart",
+              "./flutter/api_demo/lib/page4.dart",
               data8,
               "utf8",
               // callback function
@@ -269,7 +269,7 @@ let homeTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page3.dart",
+              "./flutter/api_demo/lib/page4.dart",
               data9,
               "utf8",
               // callback function
@@ -280,7 +280,7 @@ let homeTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page3.dart",
+              "./flutter/api_demo/lib/page4.dart",
               data10,
               "utf8",
               // callback function
@@ -291,7 +291,7 @@ let homeTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page3.dart",
+              "./flutter/api_demo/lib/page4.dart",
               data11,
               "utf8",
               // callback function
@@ -302,7 +302,7 @@ let homeTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page3.dart",
+              "./flutter/api_demo/lib/page4.dart",
               data12,
               "utf8",
               // callback function
@@ -313,7 +313,7 @@ let homeTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page3.dart",
+              "./flutter/api_demo/lib/page4.dart",
               data13,
               "utf8",
               // callback function
@@ -324,7 +324,7 @@ let homeTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page3.dart",
+              "./flutter/api_demo/lib/page4.dart",
               data14,
               "utf8",
               // callback function
@@ -335,7 +335,7 @@ let homeTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page3.dart",
+              "./flutter/api_demo/lib/page4.dart",
               data15,
               "utf8",
               // callback function
@@ -346,7 +346,7 @@ let homeTemplate = req =>
               }
             );
             fs.appendFileSync(
-              "./flutter/api_demo/lib/page3.dart",
+              "./flutter/api_demo/lib/page4.dart",
               data16,
               "utf8",
               // callback function
@@ -357,7 +357,7 @@ let homeTemplate = req =>
               }
             );
             fs.appendFileSync(
-                "./flutter/api_demo/lib/page3.dart",
+                "./flutter/api_demo/lib/page4.dart",
                 data17,
                 "utf8",
                 // callback function
@@ -368,7 +368,7 @@ let homeTemplate = req =>
                 }
               );
               fs.appendFileSync(
-                "./flutter/api_demo/lib/page3.dart",
+                "./flutter/api_demo/lib/page4.dart",
                 data18,
                 "utf8",
                 // callback function
@@ -379,7 +379,7 @@ let homeTemplate = req =>
                 }
               );
               fs.appendFileSync(
-                "./flutter/api_demo/lib/page3.dart",
+                "./flutter/api_demo/lib/page4.dart",
                 data19,
                 "utf8",
                 // callback function

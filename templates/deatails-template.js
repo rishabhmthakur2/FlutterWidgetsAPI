@@ -43,7 +43,7 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
     }
     const data0 = "import 'package:flutter/material.dart';\nimport 'package:rapid_widgets_library/widget-classesUsed.dart';\n"
     const data2 =
-      '\nvoid main() => runApp(BoilerPlate());\nclass BoilerPlate extends StatefulWidget \n{ \n@override \n_BoilerPlate createState() => _BoilerPlate();\n}\nclass _BoilerPlate extends State<BoilerPlate> {\n @override\n  Widget build(BuildContext context) { \n'
+      '\nvoid main() => runApp(Page5());\nclass Page5 extends StatelessWidget {\n@override\nWidget build(BuildContext context) {\nreturn MaterialApp(\nhome: BoilerPlate());\n}}\nclass BoilerPlate extends StatefulWidget \n{ \n@override \n_BoilerPlate createState() => _BoilerPlate();\n}\nclass _BoilerPlate extends State<BoilerPlate> {\n @override\n  Widget build(BuildContext context) { \n'
     const data4 =
       '\nreturn MaterialApp(\ndebugShowCheckedModeBanner: false,\nhome: Scaffold(\nbody: Padding(\npadding: const EdgeInsets.all(20.0),\nchild: Padding(\npadding: const EdgeInsets.all(25.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ['
 
@@ -103,7 +103,7 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
         let clearFile = () =>
           new Promise(async (resolve, reject) => {
             await fs.truncate(
-              './flutter/api_demo/lib/page6.dart.dart',
+              './flutter/api_demo/lib/page5.dart.dart',
               0,
               function () {
                 resolve('File cleared')
@@ -113,7 +113,7 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
 
         clearFile().then(() => {
           fs.appendFileSync(
-            './flutter/api_demo/lib/page6.dart.dart',
+            './flutter/api_demo/lib/page5.dart.dart',
             data0,
             'utf8',
             // callback function
@@ -124,7 +124,7 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page6.dart.dart',
+            './flutter/api_demo/lib/page5.dart.dart',
             data1.join("\n"),
             'utf8',
             // callback function
@@ -135,7 +135,7 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page6.dart.dart',
+            './flutter/api_demo/lib/page5.dart.dart',
             data2,
             'utf8',
             // callback function
@@ -146,7 +146,7 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page6.dart.dart',
+            './flutter/api_demo/lib/page5.dart.dart',
             data3.join("\n"),
             'utf8',
             // callback function
@@ -157,7 +157,7 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page6.dart.dart',
+            './flutter/api_demo/lib/page5.dart.dart',
             data4,
             'utf8',
             // callback function
@@ -168,7 +168,7 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page6.dart.dart',
+            './flutter/api_demo/lib/page5.dart.dart',
             data6,
             'utf8',
             // callback function
@@ -179,7 +179,7 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page6.dart.dart',
+            './flutter/api_demo/lib/page5.dart.dart',
             data7,
             'utf8',
             // callback function
@@ -190,7 +190,7 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page6.dart.dart',
+            './flutter/api_demo/lib/page5.dart.dart',
             data8,
             'utf8',
             // callback function
@@ -201,7 +201,7 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page6.dart.dart',
+            './flutter/api_demo/lib/page5.dart.dart',
             data9,
             'utf8',
             // callback function
@@ -212,7 +212,7 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page6.dart.dart',
+            './flutter/api_demo/lib/page5.dart.dart',
             data10,
             'utf8',
             // callback function
@@ -223,7 +223,7 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page6.dart.dart',
+            './flutter/api_demo/lib/page5.dart.dart',
             data11,
             'utf8',
             // callback function
@@ -234,7 +234,7 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page6.dart.dart',
+            './flutter/api_demo/lib/page5.dart.dart',
             data12,
             'utf8',
             // callback function
@@ -245,7 +245,7 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page6.dart.dart',
+            './flutter/api_demo/lib/page5.dart.dart',
             data13,
             'utf8',
             // callback function
@@ -256,7 +256,7 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page6.dart.dart',
+            './flutter/api_demo/lib/page5.dart.dart',
             data14,
             'utf8',
             // callback function
@@ -267,7 +267,7 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
             },
           );
           fs.appendFileSync(
-            './flutter/api_demo/lib/page6.dart.dart',
+            './flutter/api_demo/lib/page5.dart.dart',
             data15,
             'utf8',
             // callback function

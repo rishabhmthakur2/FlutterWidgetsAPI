@@ -287,6 +287,33 @@
         "title3": "String",
         "title4": "String"
       }
-    }
-  ]
-}
+    },
+    {
+        "id": 200,
+        "name": "Progress Card",
+        "definitions": {
+          "title": "String",
+          "subtitle": "String",
+          "bodyText": "String",
+          "footerText": "String",
+          "linearProgressColor1": "Color",
+          "linearProgressColor2": "Color",
+          "btnText": "String",
+          "linearProgressVal": "Number"
+        }
+      },
+      {
+        "id": 201,
+        "name": "Solid Card",
+        "definitions": {
+          "title": "String",
+          "containerHeight": "Number",
+          "containerWidth": "Number",
+          "imgHeight": "Number",
+          "imgWidth": "Number",
+          "bgColor": "Color",
+          "imgPath": "String"
+        }
+      }
+    ]
+  }

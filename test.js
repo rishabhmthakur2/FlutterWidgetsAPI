@@ -643,8 +643,67 @@ let getWidgets = (widgetId, paramValues, counter) =>
                       print(tabprint);
                     }
             `
-              }
-    ];
+              },
+              {
+                id: 200,
+                name: "Progress Card",
+                imports: "import 'package:rapid_widgets_library/custom-linearProgressIndicator.dart'; \nimport 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-progress-card.dart';",
+                call: "customProgressCard(data, callback),",
+                definitions: `
+                CustomLinearProgressBarParameters linearBarParameters =
+                    new CustomLinearProgressBarParameters(
+                        value: ${paramValues.linearProgressVal},
+                        backgroundColor: Colors.${paramValues.linearProgressColors2},
+                        valueColor: AlwaysStoppedAnimation<Color>(Colors.${paramValues.linearProgressColor1})));
+                    callback(dynamic s, int i) {
+                    }
+                    MaterialCardData data = new MaterialCardData(
+                      title: '${paramValues.title}',
+                      subtitle: '${paramValues.subtitle}',
+                      bodyText: '${paramValues.bodyText}',
+                      footerText: '${paramValues.footerText}',
+                      btnGrpList1: [
+                        FlatButton(
+                          shape: new RoundedRectangleBorder(
+                              borderRadius: new BorderRadius.circular(30.0)),
+                          disabledColor: Color(0xffD93954),
+                          color: Color(0xffD93954),
+                          child: Text(
+                            '${paramValues.btnText}',
+                            style: TextStyle(
+                                fontFamily: 'Segoe UI',
+                                fontSize: 12.0,
+                                color: Colors.white),
+                          ),
+                          onPressed: () {},
+                        )
+                      ],
+                      btnGrpList2: [
+                        customLinearProgressBarIndicator(linearBarParameters),
+                      ]
+                    );
+            `
+              },
+{
+                      id: 201,
+                      name: "Solid Card",
+                      imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-solid-card.dart';",
+                      call: `customSolidCard${counter}(solidParameters${counter}, callbackSolid${counter}),`,
+                      definitions: `
+                      callbackSolid${counter}(dynamic s, int i) {
+                          }
+                          MaterialCardData solidParameters${counter} = new MaterialCardData(
+                            title: '${paramValues.title}',
+                            containerHeight: ${paramValues.containerHeight},
+                            containerWidth: ${paramValues.containerWidth},
+                            imgHeight: ${paramValues.imgHeight},
+                            imgWidth: ${paramValues.imgWidth},
+                            imgPath: '${paramValues.imgPath}',
+                            containerbgColor: Colors.${paramValues.bgColor}
+                          );
+                  `
+                    }
+];
     for (i of widgetList) {
       if (i.id == widgetId) {
         resolve({

@@ -6,9 +6,9 @@ import 'package:rapid_widgets_library/custom-image.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-flatButton.dart';
-import 'page+1.dart';
+import 'page1.dart';
 import 'package:rapid_widgets_library/custom-flatButton.dart';
-import 'page+1.dart';
+import 'page1.dart';
 void main() => runApp(BoilerPlate());
 class BoilerPlate extends StatefulWidget 
 { 
@@ -63,14 +63,14 @@ class _BoilerPlate extends State<BoilerPlate> {
         
 onclick0(String sText) { print(sText); }
         CustomImageContents ImageObj10 = new CustomImageContents(
-        src:'imagepathtemplate1',
+        src:'https://cdn.britannica.com/75/75775-050-1FC4B34B/Colosseum-Rome.jpg',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 250, width: 200);
+         height: 150, width: 150);
          
 
         TextParameters textparam1 = new TextParameters(
-          data: 'Title page 1',
+          data: 'sata1',
           fontSize: 16,
           color: Colors.black,
           fontStyle: FontStyle.normal,
@@ -80,8 +80,8 @@ onclick0(String sText) { print(sText); }
          
 
         TextParameters textparam2 = new TextParameters(
-          data: 'Subtitle page 1',
-          fontSize: 14,
+          data: 'data2',
+          fontSize: 16,
           color: Colors.red,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
@@ -101,13 +101,13 @@ onclick0(String sText) { print(sText); }
           print(b); 
           } 
           FlatButtonParameters buttonFlatObject3 = FlatButtonParameters(
-          child:Text('skip'),
-          color:Colors.yellow,
-          textColor:Colors.black,
-          hoverColor: Colors.yellow,
-          width: 150,
+          child:Text('btn1'),
+          color:Colors.pink,
+          textColor:Colors.white,
+          hoverColor: Colors.grey,
+          width: 120,
           focusColor: Colors.yellow,
-          height: 40,
+          height: 50,
           highlightColor: Colors.yellow,
           splashColor: Colors.yellow
 
@@ -126,15 +126,15 @@ onclick0(String sText) { print(sText); }
           print(b); 
           } 
           FlatButtonParameters buttonFlatObject4 = FlatButtonParameters(
-          child:Text('View'),
-          color:Colors.red,
+          child:Text('btn2'),
+          color:Colors.pink,
           textColor:Colors.white,
-          hoverColor: Colors.red,
-          width: 100,
-          focusColor: Colors.red,
-          height: 40,
-          highlightColor: Colors.red,
-          splashColor: Colors.red
+          hoverColor: Colors.yellow,
+          width: 120,
+          focusColor: Colors.yellow,
+          height: 50,
+          highlightColor: Colors.yellow,
+          splashColor: Colors.yellow
 
           );
       

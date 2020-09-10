@@ -8,13 +8,15 @@ import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-image.dart';
 import 'package:rapid_widgets_library/custom-image.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
-void main() => runApp(Page1());
-class Page1 extends StatefulWidget 
+import 'package:rapid_widgets_library/custom-image.dart';
+import 'package:rapid_widgets_library/custom-text.dart';
+void main() => runApp(BoilerPlate());
+class BoilerPlate extends StatefulWidget 
 { 
 @override 
 _BoilerPlate createState() => _BoilerPlate();
 }
-class _BoilerPlate extends State<Page1> {
+class _BoilerPlate extends State<BoilerPlate> {
  @override
   Widget build(BuildContext context) { 
 
@@ -111,6 +113,23 @@ onclick6(String sText) { print(sText); }
           fontWeight: FontWeight.bold,
         );
          
+onclick8(String sText) { print(sText); }
+        CustomImageContents ImageObj18 = new CustomImageContents(
+        src:'https://cdn.britannica.com/75/75775-050-1FC4B34B/Colosseum-Rome.jpg',
+         semanticLabel: 'Random Network', 
+         imageType: 'Network', 
+         height: 120, width: 120);
+         
+
+        TextParameters textparam9 = new TextParameters(
+          data: 'details',
+          fontSize: 16,
+          color: Colors.red,
+          fontStyle: FontStyle.normal,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.bold,
+        );
+         
 return MaterialApp(
 debugShowCheckedModeBanner: false,
 home: Scaffold(
@@ -124,13 +143,13 @@ children: <Widget>[
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:CustomImage(data: ImageObj16),),
+Expanded(flex: 1,child:CustomImage(data: ImageObj18),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:customText(textparam7)),
+Expanded(flex: 1,child:customText(textparam9)),
 ],),
 ),
 Padding(

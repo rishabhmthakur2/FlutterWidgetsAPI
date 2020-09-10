@@ -62,10 +62,10 @@ let featuredTemplate = req =>
         drawerCall +
         "\n" +
         bottomNavBarCall +
-        "\nbody: Padding(\npadding: const EdgeInsets.all(20.0),\nchild: Padding(\npadding: const EdgeInsets.all(25.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: [";
+        "\nbody: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.only(left:20.0,right:20),\nchild: Row(children: [";
       //const data6 = '\n ],),)),),),);}}  '
 
-      let top = "Container()";
+      //let top = "Container()";
       let card1 = "Container()";
       let card2 = "Container()";
       let card3 = "Container()";
@@ -79,16 +79,16 @@ let featuredTemplate = req =>
 
       let dataMap = new Promise(async (resolve, reject) => {
         for (let i = 0; i < widgetsObject.length; i++) {
-          if (widgetsObject[i].location == "top") {
-            let data = await getWidgets(
-              widgetsObject[i].widgetId,
-              widgetsObject[i].parameters,
-              i
-            );
-            data1.push(data.imports);
-            data3.push(data.definitions);
-            top = data.call;
-          }
+          // if (widgetsObject[i].location == "top") {
+          //   let data = await getWidgets(
+          //     widgetsObject[i].widgetId,
+          //     widgetsObject[i].parameters,
+          //     i
+          //   );
+          //   data1.push(data.imports);
+          //   data3.push(data.definitions);
+          //   top = data.call;
+          // }
           if (widgetsObject[i].location == "card1") {
             let data = await getWidgets(
               widgetsObject[i].widgetId,
@@ -197,19 +197,19 @@ let featuredTemplate = req =>
         dataMap.then(() => {
           let data6 = "\nExpanded(flex: 1,child:" + top + "),"; //Widget1 call
           let data7 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: [";
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:33.0,top:30),\nchild: Row(children: [";
           let data8 = "\nExpanded(flex: 1,child:" + card1 + "),";
           let data9 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ["; //Widget2 call
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:33.0),\nchild: Row(children: ["; //Widget2 call
           let data10 = "\nExpanded(flex: 1,child:" + card2 + "),";
           let data11 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ["; //Widget2 call
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:33.0),\nchild: Row(children: ["; //Widget2 call
           let data12 = "\nExpanded(flex: 1,child:" + card3 + "),";
           let data13 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ["; //Widget2 call
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:33.0),\nchild: Row(children: ["; //Widget2 call
           let data14 = "\nExpanded(flex: 1,child:" + card4 + "),";
           let data15 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ["; //Widget2 call
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(0.0),\nchild: Row(children: ["; //Widget2 call
           let data16 = "\nExpanded(flex: 1,child:" + card5 + "),";
           let data17 =
             "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ["; //Widget2 call

@@ -547,9 +547,9 @@ let getWidgets = (widgetId, paramValues, counter) =>
               id: 121,
               name: "Composite Card",
               imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-compositeCard.dart';",
-              call: `compositeCard(listcards),`,
+              call: `compositeCard(listcards${counter}),`,
               definitions: `
-              List<CustomcompositeCardParameters> listcards = [];
+              List<CustomcompositeCardParameters> listcards${counter} = [];
                   CustomcompositeCardParameters card1 = new CustomcompositeCardParameters(
                       flexColumn1: 6,
                       flexColumn2: 4,
@@ -605,7 +605,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
                         ),
                       ],
                   );
-                  listcards.add(card1);
+                  listcards${counter}.add(card1);
               `
             },
               {

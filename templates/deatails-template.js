@@ -285,15 +285,6 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
                   return;
                 }
                 console.log(stdout);
-                // let test = pCloudy();
-                // test.then((data) => {
-                //   let submitResponse = {
-                //     "status": 200,
-                //     "url": data,
-                //     "message": "File execution successfull"
-                //   }
-                //   resolve(submitResponse);
-                // })
               });
             } catch (error) {
               return error;

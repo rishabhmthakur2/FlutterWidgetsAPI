@@ -550,7 +550,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
               call: `compositeCard(listcards${counter}),`,
               definitions: `
               List<CustomcompositeCardParameters> listcards${counter} = [];
-                  CustomcompositeCardParameters card1 = new CustomcompositeCardParameters(
+                  CustomcompositeCardParameters card1${counter} = new CustomcompositeCardParameters(
                       flexColumn1: 6,
                       flexColumn2: 4,
                       cardColor: Colors.white,
@@ -605,7 +605,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
                         ),
                       ],
                   );
-                  listcards${counter}.add(card1);
+                  listcards${counter}.add(card1)${counter};
               `
             },
               {

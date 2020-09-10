@@ -605,7 +605,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
                         ),
                       ],
                   );
-                  listcards${counter}.add(card1)${counter};
+                  listcards${counter}.add(card1${counter});
               `
             },
               {

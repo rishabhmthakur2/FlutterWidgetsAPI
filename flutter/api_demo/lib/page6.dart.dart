@@ -8,6 +8,7 @@ import 'package:rapid_widgets_library/custom-flatButton.dart';
 import 'page3.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
+<<<<<<< HEAD
 void main() => runApp(Page5());
 class Page5 extends StatelessWidget {
 @override
@@ -15,6 +16,12 @@ Widget build(BuildContext context) {
 return MaterialApp(
 home: BoilerPlate());
 }}
+=======
+import 'package:rapid_widgets_library/custom-image.dart';
+import 'package:rapid_widgets_library/custom-text.dart';
+import 'package:rapid_widgets_library/custom-image.dart';
+void main() => runApp(BoilerPlate());
+>>>>>>> 8b9dbe34c029a158ed4b0ca12f35e6a9819ee01f
 class BoilerPlate extends StatefulWidget 
 { 
 @override 
@@ -66,6 +73,7 @@ class _BoilerPlate extends State<BoilerPlate> {
             print(nIndex); 
             }
         
+<<<<<<< HEAD
 
           onFlatButtonPress1 (bool b){ 
           print(b); 
@@ -119,23 +127,74 @@ class _BoilerPlate extends State<BoilerPlate> {
 
         TextParameters textparam4 = new TextParameters(
           data: 'page5',
+=======
+onclick0(String sText) { print(sText); }
+        CustomImageContents ImageObj10 = new CustomImageContents(
+        src:'http://104.40.75.137:9003/assets/cms/image5.png',
+         semanticLabel: 'Random Network', 
+         imageType: 'Network', 
+         height: 170, width: 180);
+         
+
+        TextParameters textparam1 = new TextParameters(
+          data: 'Title',
+          fontSize: 18,
+          color: Colors.pink,
+          fontStyle: FontStyle.normal,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.bold,
+          textAlign: TextAlign.undefined
+        );
+         
+
+        TextParameters textparam2 = new TextParameters(
+          data: 'Subtitle',
+>>>>>>> 8b9dbe34c029a158ed4b0ca12f35e6a9819ee01f
           fontSize: 14,
           color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
+<<<<<<< HEAD
         );
          
 
         TextParameters textparam5 = new TextParameters(
           data: 'page6',
           fontSize: 14,
+=======
+          textAlign: TextAlign.undefined
+        );
+         
+onclick4(String sText) { print(sText); }
+        CustomImageContents ImageObj14 = new CustomImageContents(
+        src:'http://104.40.75.137:9003/assets/cms/image5.png',
+         semanticLabel: 'Random Network', 
+         imageType: 'Network', 
+         height: 150, width: 160);
+         
+
+        TextParameters textparam5 = new TextParameters(
+          data: 'text',
+          fontSize: 16,
+>>>>>>> 8b9dbe34c029a158ed4b0ca12f35e6a9819ee01f
           color: Colors.red,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
+          textAlign: TextAlign.undefined
         );
          
+<<<<<<< HEAD
+=======
+onclick6(String sText) { print(sText); }
+        CustomImageContents ImageObj16 = new CustomImageContents(
+        src:'http://104.40.75.137:9003/assets/cms/image5.png',
+         semanticLabel: 'Random Network', 
+         imageType: 'Network', 
+         height: 150, width: 180);
+         
+>>>>>>> 8b9dbe34c029a158ed4b0ca12f35e6a9819ee01f
 return MaterialApp(
 debugShowCheckedModeBanner: false,
 home: Scaffold(
@@ -149,7 +208,11 @@ children: <Widget>[
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
+<<<<<<< HEAD
 Expanded(flex: 1,child:Container()),
+=======
+Expanded(flex: 1,child:CustomImage(data: ImageObj16),),
+>>>>>>> 8b9dbe34c029a158ed4b0ca12f35e6a9819ee01f
 ],),
 ),
 Padding(
@@ -161,7 +224,11 @@ Expanded(flex: 1,child:customText(textparam5)),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
+<<<<<<< HEAD
 Expanded(flex: 1,child:Container()),
+=======
+Expanded(flex: 1,child:customText(textparam2)),
+>>>>>>> 8b9dbe34c029a158ed4b0ca12f35e6a9819ee01f
 ],),
 ),
 Padding(

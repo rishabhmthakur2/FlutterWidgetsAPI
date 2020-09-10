@@ -220,7 +220,8 @@
         "fontSize": "Number",
         "color": "Color",
         "fontFamily": "String",
-        "fontWeight": "String"
+        "fontWeight": "String",
+        "textAlign" :"String"
       }
     },
     {

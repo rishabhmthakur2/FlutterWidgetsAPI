@@ -2,8 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:rapid_widgets_library/widget-classesUsed.dart';
 import 'package:rapid_widgets_library/custom-appBar.dart';
 import 'package:rapid_widgets_library/custom-drawer.dart';
+<<<<<<< HEAD
 import 'package:rapid_widgets_library/custom-flatButton.dart';
 import 'page2.dart';
+=======
+import 'package:rapid_widgets_library/custom-image.dart';
+import 'package:rapid_widgets_library/custom-text.dart';
+import 'package:rapid_widgets_library/custom-text.dart';
+import 'package:rapid_widgets_library/custom-image.dart';
+import 'package:rapid_widgets_library/custom-text.dart';
+>>>>>>> 8b9dbe34c029a158ed4b0ca12f35e6a9819ee01f
 void main() => runApp(Page1());
 class Page1 extends StatelessWidget {
 @override
@@ -62,6 +70,7 @@ class _BoilerPlate extends State<BoilerPlate> {
             print(nIndex); 
             }
         
+<<<<<<< HEAD
 
           onFlatButtonPress1 (bool b){ 
           print(b); 
@@ -87,6 +96,55 @@ class _BoilerPlate extends State<BoilerPlate> {
 
           );
       
+=======
+onclick0(String sText) { print(sText); }
+        CustomImageContents ImageObj10 = new CustomImageContents(
+        src:'http://104.40.75.137:9003/assets/cms/image5.png',
+         semanticLabel: 'Random Network', 
+         imageType: 'Network', 
+         height: 170, width: 180);
+         
+
+        TextParameters textparam1 = new TextParameters(
+          data: 'Title',
+          fontSize: 18,
+          color: Colors.pink,
+          fontStyle: FontStyle.normal,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.bold,
+          textAlign: TextAlign.undefined
+        );
+         
+
+        TextParameters textparam2 = new TextParameters(
+          data: 'Subtitle',
+          fontSize: 14,
+          color: Colors.black,
+          fontStyle: FontStyle.normal,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.bold,
+          textAlign: TextAlign.undefined
+        );
+         
+onclick4(String sText) { print(sText); }
+        CustomImageContents ImageObj14 = new CustomImageContents(
+        src:'http://104.40.75.137:9003/assets/cms/image5.png',
+         semanticLabel: 'Random Network', 
+         imageType: 'Network', 
+         height: 150, width: 160);
+         
+
+        TextParameters textparam5 = new TextParameters(
+          data: 'text',
+          fontSize: 16,
+          color: Colors.red,
+          fontStyle: FontStyle.normal,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.bold,
+          textAlign: TextAlign.undefined
+        );
+         
+>>>>>>> 8b9dbe34c029a158ed4b0ca12f35e6a9819ee01f
 return MaterialApp(
 debugShowCheckedModeBanner: false,
 home: Scaffold(
@@ -99,32 +157,52 @@ child: Column(
 children: <Widget>[
 Padding(
 padding: const EdgeInsets.all(25.0),
+<<<<<<< HEAD
 child: Row(children: [
 SizedBox(height:30),Expanded(flex: 1,child:Container()),
+=======
+child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
+SizedBox(height:40),Expanded(flex: 1,child:CustomImage(data: ImageObj14),),
+>>>>>>> 8b9dbe34c029a158ed4b0ca12f35e6a9819ee01f
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
+<<<<<<< HEAD
 child: Row(children: [
 SizedBox(height:30),Expanded(flex: 1,child:Container()),
+=======
+child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
+SizedBox(height:35),Expanded(flex: 1,child:customText(textparam5)),
+>>>>>>> 8b9dbe34c029a158ed4b0ca12f35e6a9819ee01f
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
+<<<<<<< HEAD
 child: Row(children: [
 SizedBox(height:30),Expanded(flex: 1,child:Container()),
+=======
+child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
+SizedBox(height:20),Expanded(flex: 1,child:customText(textparam2)),
+>>>>>>> 8b9dbe34c029a158ed4b0ca12f35e6a9819ee01f
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-SizedBox(height:30),Expanded(flex: 1,child:Container()),
+child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
+SizedBox(height:20),Expanded(flex: 1,child:Container()),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
+<<<<<<< HEAD
 child: Row(children: [
 SizedBox(height:30),Expanded(flex: 1,child:customFlatButton(buttonFlatObject1, onFlatButtonPress1, onFlatButtonLongPress1),),
+=======
+child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
+SizedBox(height:80),Expanded(flex: 1,child:Container()),
+>>>>>>> 8b9dbe34c029a158ed4b0ca12f35e6a9819ee01f
  ],),
 ),
 ], 

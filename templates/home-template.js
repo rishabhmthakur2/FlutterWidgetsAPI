@@ -49,7 +49,7 @@ let homeTemplate = req =>
         appbarCall +
         "\n" +
         drawerCall +
-        "\nbody: Padding(\npadding: const EdgeInsets.all(20.0),\nchild: Padding(\npadding: const EdgeInsets.all(25.0),\nchild: SingleChildScrollView(\nchild: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: [";
+        "\nbody: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.all(0.0),\nchild: Row(children: [";
 
       let topImage = "Container()";
       let middleHeading = "Container()";
@@ -150,20 +150,20 @@ let homeTemplate = req =>
         dataMap.then(() => {
           let data6 = "\nExpanded(flex: 1,child:" + topImage + "),"; //Widget1 call
           let data7 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: [";
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(30.0),\nchild: Row(children: [";
           let data8 = "\nExpanded(flex: 1,child:" + middleHeading + "),"; //Widget3 call
           let data9 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: [";
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(left:30,right:30,bottom:30),\nchild: Row(children: [";
           let data10 = "\nExpanded(flex: 1,child:" + middleCard + "),";
           let data11 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ["; //Widget6 call
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(left:30,right:30,bottom:30),\nchild: Row(children: ["; //Widget6 call
           let data12 = "\nExpanded(flex: 1,child:" + bottomHeading + "),";
           let data13 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: [";
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(left:30,right:30,bottom:30),\nchild: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: [";
           let data14 = "\nExpanded(flex: 1,child:" + gridCard1 + "),"; //Widget1 call
           let data15 = "\nExpanded(flex: 1,child:" + gridCard2 + "),"; //Widget1 call
           let data16 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: [";
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(left:30,right:30,bottom:30),\nchild: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: [";
           let data17 = "\nExpanded(flex: 1,child:" + gridCard3 + "),"; //Widget1 call
           let data18 = "\nExpanded(flex: 1,child:" + gridCard4 + "),"; //Widget1 call
           let data19 = "\n ],),\n),\n], \n)  \n))))); \n} \n}";

@@ -45,7 +45,7 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
     const data2 =
       '\nvoid main() => runApp(Page5());\nclass Page5 extends StatelessWidget {\n@override\nWidget build(BuildContext context) {\nreturn MaterialApp(\nhome: BoilerPlate());\n}}\nclass BoilerPlate extends StatefulWidget \n{ \n@override \n_BoilerPlate createState() => _BoilerPlate();\n}\nclass _BoilerPlate extends State<BoilerPlate> {\n @override\n  Widget build(BuildContext context) { \n'
     const data4 =
-      '\nreturn MaterialApp(\ndebugShowCheckedModeBanner: false,\nhome: Scaffold(\nbody: Padding(\npadding: const EdgeInsets.all(20.0),\nchild: Padding(\npadding: const EdgeInsets.all(25.0),\nchild: SingleChildScrollView(\nchild: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ['
+      '\nreturn MaterialApp(\ndebugShowCheckedModeBanner: false,\nhome: Scaffold(\nbody: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: Padding(\npadding: const EdgeInsets.all(30.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ['
 
     let top = "Container()"
     let middle = "Container()"
@@ -91,13 +91,13 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
     try {
       dataMap.then(() => {
         let data6 = "\nExpanded(flex: 1,child:" + top + "),"; //Widget1 call
-        let data7 = "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: [";
+        let data7 = "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(top:30,bottom:30),\nchild: Row(children: [";
         let data8 = "\nExpanded(flex: 1,child:" + middle + "),"; //Widget3 call
-        let data9 = "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: [";
+        let data9 = "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:30),\nchild: Row(children: [";
         let data10 = "\nExpanded(flex: 1,child:" + middle1 + "),";
-        let data11 = "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: [";
+        let data11 = "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:30),\nchild: Row(children: [";
         let data12 = "\nExpanded(flex: 1,child:" + middle2 + "),";
-        let data13 = "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: [";
+        let data13 = "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:30),\nchild: Row(children: [";
         let data14 = "\nExpanded(flex: 1,child:" + bottom + "),"; //Widget6 call
         let data15 = "\n ],),\n),\n], \n)  \n))))); \n} \n}";
         let clearFile = () =>

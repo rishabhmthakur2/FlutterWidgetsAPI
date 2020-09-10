@@ -299,7 +299,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
           fontStyle: FontStyle.normal,
           fontFamily: '${paramValues.fontFamily}',
           fontWeight: FontWeight.${paramValues.fontWeight},
-          textAlign: TextAlign.${paramValues.center}
+          textAlign: TextAlign.${paramValues.textAlign}
         );
          `
       },

@@ -7,7 +7,6 @@ import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-image.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
-import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-image.dart';
 void main() => runApp(BoilerPlate());
 class BoilerPlate extends StatefulWidget 
@@ -66,7 +65,7 @@ onclick0(String sText) { print(sText); }
         src:'http://104.40.75.137:9003/assets/cms/image5.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 160, width: 180);
+         height: 170, width: 180);
          
 
         TextParameters textparam1 = new TextParameters(
@@ -76,47 +75,40 @@ onclick0(String sText) { print(sText); }
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
+          textAlign: TextAlign.undefined
         );
          
 
         TextParameters textparam2 = new TextParameters(
-          data: 'subTitle',
+          data: 'Subtitle',
           fontSize: 14,
-          color: Colors.pink,
+          color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
+          textAlign: TextAlign.undefined
         );
          
-onclick5(String sText) { print(sText); }
-        CustomImageContents ImageObj15 = new CustomImageContents(
+onclick4(String sText) { print(sText); }
+        CustomImageContents ImageObj14 = new CustomImageContents(
         src:'http://104.40.75.137:9003/assets/cms/image5.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 150, width: 180);
+         height: 150, width: 160);
          
 
-        TextParameters textparam6 = new TextParameters(
-          data: 'title1',
+        TextParameters textparam5 = new TextParameters(
+          data: 'text',
           fontSize: 16,
-          color: Colors.pink,
+          color: Colors.red,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
+          textAlign: TextAlign.undefined
         );
          
-
-        TextParameters textparam7 = new TextParameters(
-          data: 'title2',
-          fontSize: 16,
-          color: Colors.yellow,
-          fontStyle: FontStyle.normal,
-          fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
-        );
-         
-onclick8(String sText) { print(sText); }
-        CustomImageContents ImageObj18 = new CustomImageContents(
+onclick6(String sText) { print(sText); }
+        CustomImageContents ImageObj16 = new CustomImageContents(
         src:'http://104.40.75.137:9003/assets/cms/image5.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
@@ -135,19 +127,19 @@ children: <Widget>[
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:CustomImage(data: ImageObj18),),
+Expanded(flex: 1,child:CustomImage(data: ImageObj16),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:customText(textparam6)),
+Expanded(flex: 1,child:customText(textparam5)),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:customText(textparam7)),
+Expanded(flex: 1,child:customText(textparam2)),
 ],),
 ),
 Padding(

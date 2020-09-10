@@ -7,8 +7,6 @@ import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-flatButton.dart';
 import 'page1.dart';
-import 'package:rapid_widgets_library/custom-flatButton.dart';
-import 'page1.dart';
 void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
 @override
@@ -72,7 +70,7 @@ onclick0(String sText) { print(sText); }
         src:'http://104.40.75.137:9003/assets/cms/image5.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 160, width: 180);
+         height: 170, width: 180);
          
 
         TextParameters textparam1 = new TextParameters(
@@ -82,16 +80,18 @@ onclick0(String sText) { print(sText); }
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
+          textAlign: TextAlign.undefined
         );
          
 
         TextParameters textparam2 = new TextParameters(
-          data: 'subTitle',
+          data: 'Subtitle',
           fontSize: 14,
-          color: Colors.pink,
+          color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
+          textAlign: TextAlign.undefined
         );
          
 
@@ -111,34 +111,9 @@ onclick0(String sText) { print(sText); }
           color:Colors.white,
           textColor:Colors.pink,
           hoverColor: Colors.yellow,
-          width: 150,
+          width: 100,
           focusColor: Colors.yellow,
-          height: 50,
-          highlightColor: Colors.yellow,
-          splashColor: Colors.yellow
-
-          );
-      
-
-          onFlatButtonPress4 (bool b){ 
-          print(b); 
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-                builder: (context) => Page1()));
-
-          } 
-          onFlatButtonLongPress4 (bool b){ 
-          print(b); 
-          } 
-          FlatButtonParameters buttonFlatObject4 = FlatButtonParameters(
-          child:Text('End'),
-          color:Colors.white,
-          textColor:Colors.pink,
-          hoverColor: Colors.yellow,
-          width: 150,
-          focusColor: Colors.yellow,
-          height: 50,
+          height: 45,
           highlightColor: Colors.yellow,
           splashColor: Colors.yellow
 
@@ -148,35 +123,35 @@ return MaterialApp(
 debugShowCheckedModeBanner: false,
 home: Scaffold(
 body: Padding(
-padding: const EdgeInsets.all(20.0),
+padding: const EdgeInsets.all(5.0),
 child: Padding(
-padding: const EdgeInsets.all(25.0),
+padding: const EdgeInsets.all(5.0),
 child: SingleChildScrollView(
 child: Column(
 children: <Widget>[
 Padding(
-padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-SizedBox(height:30),Expanded(flex: 1,child:CustomImage(data: ImageObj10),),
+padding: const EdgeInsets.only(top:65.0,left: 25.0,right: 25.0),
+child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
+SizedBox(height:40),Expanded(flex: 1,child:CustomImage(data: ImageObj10),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-SizedBox(height:30),Expanded(flex: 1,child:customText(textparam1)),
+child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
+SizedBox(height:35),Expanded(flex: 1,child:customText(textparam1)),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-SizedBox(height:30),Expanded(flex: 1,child:customText(textparam2)),
+child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
+SizedBox(height:20),Expanded(flex: 1,child:customText(textparam2)),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(15.0),
-child: Row(children: [
-SizedBox(height:50),Expanded(flex: 1,child:customFlatButton(buttonFlatObject3, onFlatButtonPress3, onFlatButtonLongPress3),),SizedBox(width:30),
-Expanded(flex: 1,child:customFlatButton(buttonFlatObject4, onFlatButtonPress4, onFlatButtonLongPress4),),
+child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
+SizedBox(height:200),Expanded(flex: 1,child:customFlatButton(buttonFlatObject3, onFlatButtonPress3, onFlatButtonLongPress3),),SizedBox(width:30),
+Expanded(flex: 1,child:Container()),
  ],),
 ),
 ], 

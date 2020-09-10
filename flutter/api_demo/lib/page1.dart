@@ -7,7 +7,6 @@ import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-image.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
-import 'package:rapid_widgets_library/custom-text.dart';
 void main() => runApp(Page1());
 class Page1 extends StatelessWidget {
 @override
@@ -71,7 +70,7 @@ onclick0(String sText) { print(sText); }
         src:'http://104.40.75.137:9003/assets/cms/image5.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 160, width: 180);
+         height: 170, width: 180);
          
 
         TextParameters textparam1 = new TextParameters(
@@ -81,43 +80,36 @@ onclick0(String sText) { print(sText); }
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
+          textAlign: TextAlign.undefined
         );
          
 
         TextParameters textparam2 = new TextParameters(
-          data: 'subTitle',
+          data: 'Subtitle',
           fontSize: 14,
-          color: Colors.pink,
+          color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
+          textAlign: TextAlign.undefined
         );
          
-onclick5(String sText) { print(sText); }
-        CustomImageContents ImageObj15 = new CustomImageContents(
+onclick4(String sText) { print(sText); }
+        CustomImageContents ImageObj14 = new CustomImageContents(
         src:'http://104.40.75.137:9003/assets/cms/image5.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 150, width: 180);
+         height: 150, width: 160);
          
 
-        TextParameters textparam6 = new TextParameters(
-          data: 'title1',
+        TextParameters textparam5 = new TextParameters(
+          data: 'text',
           fontSize: 16,
-          color: Colors.pink,
+          color: Colors.red,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
-        );
-         
-
-        TextParameters textparam7 = new TextParameters(
-          data: 'title2',
-          fontSize: 16,
-          color: Colors.yellow,
-          fontStyle: FontStyle.normal,
-          fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
+          textAlign: TextAlign.undefined
         );
          
 return MaterialApp(
@@ -132,32 +124,32 @@ child: Column(
 children: <Widget>[
 Padding(
 padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-SizedBox(height:30),Expanded(flex: 1,child:CustomImage(data: ImageObj15),),
+child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
+SizedBox(height:40),Expanded(flex: 1,child:CustomImage(data: ImageObj14),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-SizedBox(height:30),Expanded(flex: 1,child:customText(textparam6)),
+child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
+SizedBox(height:35),Expanded(flex: 1,child:customText(textparam5)),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-SizedBox(height:30),Expanded(flex: 1,child:customText(textparam7)),
+child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
+SizedBox(height:20),Expanded(flex: 1,child:customText(textparam2)),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-SizedBox(height:30),Expanded(flex: 1,child:Container()),
+child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
+SizedBox(height:20),Expanded(flex: 1,child:Container()),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-SizedBox(height:30),Expanded(flex: 1,child:Container()),
+child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
+SizedBox(height:80),Expanded(flex: 1,child:Container()),
  ],),
 ),
 ], 

@@ -6,7 +6,7 @@ import 'package:rapid_widgets_library/custom-image.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-flatButton.dart';
-import 'page+3.dart';
+import 'page3.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
 void main() => runApp(BoilerPlate());
 class BoilerPlate extends StatefulWidget 
@@ -90,10 +90,10 @@ onclick0(String sText) { print(sText); }
 
           onFlatButtonPress3 (bool b){ 
           print(b); 
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-                builder: (context) => Page3()));
+          // Navigator.pushReplacement(
+          //   context,
+          //   MaterialPageRoute(
+          //       builder: (context) => Page3()));
 
           } 
           onFlatButtonLongPress3 (bool b){ 

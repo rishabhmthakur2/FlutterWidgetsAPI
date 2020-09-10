@@ -67,10 +67,10 @@ class _BoilerPlate extends State<BoilerPlate> {
         
 onclick0(String sText) { print(sText); }
         CustomImageContents ImageObj10 = new CustomImageContents(
-        src:'http://104.40.75.137:9003/assets/cms/image5.png',
+        src:'http://104.40.75.137:9003/assets/cms/image1.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 170, width: 180);
+         height: 150, width: 180);
          
 
         TextParameters textparam1 = new TextParameters(
@@ -80,18 +80,18 @@ onclick0(String sText) { print(sText); }
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
-          textAlign: TextAlign.undefined
+          textAlign: TextAlign.center
         );
          
 
         TextParameters textparam2 = new TextParameters(
-          data: 'Subtitle',
+          data: 'Title2dgrfbhfbfgbfbf fbgfghrfhthtghfhrfr',
           fontSize: 14,
-          color: Colors.black,
+          color: Colors.pink,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
-          textAlign: TextAlign.undefined
+          textAlign: TextAlign.center
         );
          
 
@@ -132,19 +132,19 @@ children: <Widget>[
 Padding(
 padding: const EdgeInsets.only(top:65.0,left: 25.0,right: 25.0),
 child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
-SizedBox(height:40),Expanded(flex: 1,child:CustomImage(data: ImageObj10),),
+SizedBox(height:80),Expanded(flex: 1,child:CustomImage(data: ImageObj10),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
-SizedBox(height:35),Expanded(flex: 1,child:customText(textparam1)),
+SizedBox(height:65),Expanded(flex: 1,child:customText(textparam1)),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
-SizedBox(height:20),Expanded(flex: 1,child:customText(textparam2)),
+SizedBox(height:5),Expanded(flex: 1,child:customText(textparam2)),
 ],),
 ),
 Padding(

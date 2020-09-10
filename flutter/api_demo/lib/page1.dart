@@ -6,7 +6,6 @@ import 'package:rapid_widgets_library/custom-image.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-image.dart';
-import 'package:rapid_widgets_library/custom-text.dart';
 void main() => runApp(Page1());
 class Page1 extends StatelessWidget {
 @override
@@ -67,10 +66,10 @@ class _BoilerPlate extends State<BoilerPlate> {
         
 onclick0(String sText) { print(sText); }
         CustomImageContents ImageObj10 = new CustomImageContents(
-        src:'http://104.40.75.137:9003/assets/cms/image5.png',
+        src:'http://104.40.75.137:9003/assets/cms/image1.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 170, width: 180);
+         height: 150, width: 180);
          
 
         TextParameters textparam1 = new TextParameters(
@@ -80,37 +79,26 @@ onclick0(String sText) { print(sText); }
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
-          textAlign: TextAlign.undefined
+          textAlign: TextAlign.center
         );
          
 
         TextParameters textparam2 = new TextParameters(
-          data: 'Subtitle',
+          data: 'Title2dgrfbhfbfgbfbf fbgfghrfhthtghfhrfr',
           fontSize: 14,
-          color: Colors.black,
+          color: Colors.pink,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
-          textAlign: TextAlign.undefined
+          textAlign: TextAlign.center
         );
          
 onclick4(String sText) { print(sText); }
         CustomImageContents ImageObj14 = new CustomImageContents(
-        src:'http://104.40.75.137:9003/assets/cms/image5.png',
+        src:'http://104.40.75.137:9003/assets/cms/image1.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 150, width: 160);
-         
-
-        TextParameters textparam5 = new TextParameters(
-          data: 'text',
-          fontSize: 16,
-          color: Colors.red,
-          fontStyle: FontStyle.normal,
-          fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
-          textAlign: TextAlign.undefined
-        );
+         height: 150, width: 180);
          
 return MaterialApp(
 debugShowCheckedModeBanner: false,
@@ -131,7 +119,7 @@ SizedBox(height:40),Expanded(flex: 1,child:CustomImage(data: ImageObj14),),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
-SizedBox(height:35),Expanded(flex: 1,child:customText(textparam5)),
+SizedBox(height:35),Expanded(flex: 1,child:customText(textparam1)),
 ],),
 ),
 Padding(

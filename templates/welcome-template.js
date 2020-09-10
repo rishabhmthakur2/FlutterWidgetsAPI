@@ -111,13 +111,13 @@ let welcomeTemplate = req =>
 
       try {
         dataMap.then(() => {
-          let data6 = "\nSizedBox(height:40),Expanded(flex: 1,child:" + top + "),"; //Widget1 call
+          let data6 = "\nSizedBox(height:80),Expanded(flex: 1,child:" + top + "),"; //Widget1 call
           let data7 =
             "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(mainAxisAlignment: MainAxisAlignment.center,children: [";
-          let data8 = "\nSizedBox(height:35),Expanded(flex: 1,child:" + middle + "),"; //Widget3 call
+          let data8 = "\nSizedBox(height:65),Expanded(flex: 1,child:" + middle + "),"; //Widget3 call
           let data9 =
             "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(mainAxisAlignment: MainAxisAlignment.center,children: [";
-          let data10 = "\nSizedBox(height:20),Expanded(flex: 1,child:" + middle1 + "),"; //Widget3 call
+          let data10 = "\nSizedBox(height:5),Expanded(flex: 1,child:" + middle1 + "),"; //Widget3 call
           let data11 =
             "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(15.0),\nchild: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [";
           let data12 = "\nSizedBox(height:200),Expanded(flex: 1,child:" + bottomleft + "),SizedBox(width:30),"; //Widget6 call

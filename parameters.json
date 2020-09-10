@@ -301,6 +301,19 @@
         "btnText": "String",
         "linearProgressVal": "Number"
       }
+    },
+    {
+      "id": 201,
+      "name": "Solid Card",
+      "definitions": {
+        "title": "String",
+        "containerHeight": "Number",
+        "containerWidth": "Number",
+        "imgHeight": "Number",
+        "imgWidth": "Number",
+        "bgColor": "Color",
+        "imgPath": "String"
+      }
     }
   ]
 }

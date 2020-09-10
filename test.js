@@ -648,7 +648,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
                        id: 200,
                        name: "Progress Card",
                        imports: "import 'package:rapid_widgets_library/custom-linearProgressIndicator.dart'; \nimport 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-progress-card.dart';",
-                       call: "customProgressCard(data, callback)",
+                       call: "customProgressCard(data, callback),",
                        definitions: `
                        CustomLinearProgressBarParameters linearBarParameters =
                            new CustomLinearProgressBarParameters(
@@ -684,6 +684,25 @@ let getWidgets = (widgetId, paramValues, counter) =>
                            );
                    `
                      }
+      {
+                             id: 201,
+                             name: "Solid Card",
+                             imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-solid-card.dart';",
+                             call: "customSolidCard(solidParameters, callbackSolid),",
+                             definitions: `
+                             callbackSolid(dynamic s, int i) {
+                                 }
+                                 MaterialCardData solidParameters = new MaterialCardData(
+                                   title: '${paramValues.title}',
+                                   containerHeight: ${paramValues.containerHeight},
+                                   containerWidth: ${paramValues.containerWidth},
+                                   imgHeight: ${paramValues.imgHeight},
+                                   imgWidth: ${paramValues.imgWidth},
+                                   imgPath: '${paramValues.imgPath}',
+                                   containerbgColor: Colors.${paramValues.bgColor}
+                                 );
+                         `
+                           }
     ];
     for (i of widgetList) {
       if (i.id == widgetId) {

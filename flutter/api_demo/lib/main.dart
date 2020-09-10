@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:rapid_widgets_library/widget-classesUsed.dart';
 import 'package:rapid_widgets_library/custom-appBar.dart';
-import 'package:rapid_widgets_library/custom-bottomnavbar.dart';
 import 'package:rapid_widgets_library/custom-drawer.dart';
-import 'dart:ui'; 
-import 'package:rapid_widgets_library/custom-textField.dart';
-import 'dart:ui'; 
-import 'package:rapid_widgets_library/custom-textField.dart';
-import 'package:rapid_widgets_library/custom-dropdownButton.dart';
+import 'package:rapid_widgets_library/custom-image.dart';
+import 'package:rapid_widgets_library/custom-text.dart';
+import 'package:rapid_widgets_library/custom-text.dart';
+import 'package:rapid_widgets_library/custom-flatButton.dart';
+import 'page1.dart';
+import 'package:rapid_widgets_library/custom-flatButton.dart';
+import 'page1.dart';
 void main() => runApp(BoilerPlate());
 class BoilerPlate extends StatefulWidget 
 { 
@@ -19,58 +20,24 @@ class _BoilerPlate extends State<BoilerPlate> {
   Widget build(BuildContext context) { 
 
         AppBarParameters paramobject = new AppBarParameters(
-          elevation: 15,
-          bottomOpacity: 10,
-          toolbarOpacity: 10,
-          titleSpacing: 10,
-          centerTitle: false,
-          automaticallyImplyLeading: false,
-          title: Text('Title'));
-          List<Widget> appBarIcons = [
-          IconButton(
-          icon:
-          Icon(Icons.search),
-          onPressed: () {},
-          ),
-          IconButton(
-          icon:  Icon(Icons.home),
-          onPressed: () {},
-          ),
-          IconButton(
-          icon:  Icon(Icons.list),
-          onPressed: () {}, 
-          ), ];
-
-                  List<BottomNavigationBarItem> bottomnavitems = [];
-                  BottomNavigationBarItem bottomnavitem1= new BottomNavigationBarItem(
-                    icon: Image.network('http://104.40.75.137:9003/assets/cms/bottomnav_home.png',height: 20,width: 20,),
-                    title: Text('Home',style: TextStyle(fontSize: 14)),
-                  );
-                  BottomNavigationBarItem bottomnavitem2= new BottomNavigationBarItem(
-                    icon: Image.network('http://104.40.75.137:9003/assets/cms/bottomnav_bookmark.png',height: 20,width: 20,),
-                    title: Text('Bookmark',style: TextStyle(fontSize: 14)),
-                  );
-                  BottomNavigationBarItem bottomnavitem3= new BottomNavigationBarItem(
-                    icon: Icon(Icons.search,color: Colors.black,size: 20,),
-                    title: Text('Search',style: TextStyle(fontSize: 14),),
-                  );
-                  BottomNavigationBarItem bottomnavitem4= new BottomNavigationBarItem(
-                    icon: Image.network('http://104.40.75.137:9003/assets/cms/bottomnav_profile.png',height: 20,width: 20,),
-                    title: Text('Profile',style: TextStyle(fontSize: 14),),
-                  );
-                  bottomnavitems.add(bottomnavitem1);
-                  bottomnavitems.add(bottomnavitem2);
-                  bottomnavitems.add(bottomnavitem3);
-                  bottomnavitems.add(bottomnavitem4);
-                  BottomNavBarParameters param = new BottomNavBarParameters(
-                      items: bottomnavitems,
-                      selectedItemColor: Colors.black,
-                      unselectedItemColor: Colors.black,
-                      backgroundColor: Color(0xffF9F9F9),
-                      showUnselectedLabels: true,
-                      showSelectedLabels: true,
-                  );
-            
+        elevation: 5.0,
+        bottomOpacity: 1.0,
+        toolbarOpacity: 1.0,
+        titleSpacing: 1.0,
+        centerTitle: true,
+        automaticallyImplyLeading: true,
+        title: Text('Appbar'));
+        List<Widget> appBarIcons = [
+        IconButton(
+        icon:
+        Icon(Icons.search),
+        onPressed: () {},
+        ),
+        IconButton(
+        icon:  Icon(Icons.help),
+        onPressed: () {},
+        )];
+ 
 
             List<DrawerListItems> drawerList = [ 
             DrawerListItems(Icon(Icons.account_circle), 
@@ -94,87 +61,86 @@ class _BoilerPlate extends State<BoilerPlate> {
             print(nIndex); 
             }
         
+onclick0(String sText) { print(sText); }
+        CustomImageContents ImageObj10 = new CustomImageContents(
+        src:'https://cdn.britannica.com/75/75775-050-1FC4B34B/Colosseum-Rome.jpg',
+         semanticLabel: 'Random Network', 
+         imageType: 'Network', 
+         height: 150, width: 150);
+         
 
-            onTextSubmit0 (String sText) { 
-            print(sText); 
-            }
-            TextFieldParameters finalTextObj0 = new TextFieldParameters( 
-            maxLength: 100, 
-            obsecureText: false,
-            maxLengthEnforced: true, 
-            decoration: InputDecoration(
-            hintText: 'hint',
-            labelText: 'labelText', 
-            prefixIcon: Icon(Icons.search),
-            filled: true, 
-            fillColor: Colors.white, 
-            counterText: "", 
-            border: OutlineInputBorder( 
-            borderRadius: BorderRadius.circular(20), 
-            borderSide: BorderSide( color: Colors.black)), 
-            ), 
-            cursorColor: Colors.black, 
-            cursorWidth: 2, 
-            expands: false, 
-            maxLines: 1, 
-            readOnly: false, 
-            showCursor: true, 
-            style: TextStyle(color: Colors.black),
-            );
-        
+        TextParameters textparam1 = new TextParameters(
+          data: 'sata1',
+          fontSize: 16,
+          color: Colors.black,
+          fontStyle: FontStyle.normal,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.bold,
+        );
+         
 
-            onTextSubmit1 (String sText) { 
-            print(sText); 
-            }
-            TextFieldParameters finalTextObj1 = new TextFieldParameters( 
-            maxLength: 100, 
-            obsecureText: false,
-            maxLengthEnforced: true, 
-            decoration: InputDecoration(
-            hintText: 'hint',
-            labelText: 'labelText', 
-            prefixIcon: Icon(Icons.search),
-            filled: true, 
-            fillColor: Colors.white, 
-            counterText: "", 
-            border: OutlineInputBorder( 
-            borderRadius: BorderRadius.circular(20), 
-            borderSide: BorderSide( color: Colors.black)), 
-            ), 
-            cursorColor: Colors.black, 
-            cursorWidth: 2, 
-            expands: false, 
-            maxLines: 1, 
-            readOnly: false, 
-            showCursor: true, 
-            style: TextStyle(color: Colors.black),
-            );
-        
+        TextParameters textparam2 = new TextParameters(
+          data: 'data2',
+          fontSize: 16,
+          color: Colors.red,
+          fontStyle: FontStyle.normal,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.bold,
+        );
+         
 
-              DropDownParameters dropdownObject2 = DropDownParameters(
-              itemsList: ['One', 'Two'],
-              hintText: 'test',
-              listType: 'test',
-              fillColor: Colors.grey,
-              borderRadius: 20,
-              width: 200,
-              textColor: Colors.blue,
-              itemsBgColor: Colors.black,
-              shadowColor: Colors.black,
-              shadowBlurRadius: 10,
-              shadowSpreadRadius: 5,
-              ); 
-              onSelect2 (int i,String s){ 
-              print(i); 
-              print(s); 
-              }
-          
+          onFlatButtonPress3 (bool b){ 
+          print(b); 
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+                builder: (context) => Page1()));
+
+          } 
+          onFlatButtonLongPress3 (bool b){ 
+          print(b); 
+          } 
+          FlatButtonParameters buttonFlatObject3 = FlatButtonParameters(
+          child:Text('btn1'),
+          color:Colors.pink,
+          textColor:Colors.white,
+          hoverColor: Colors.grey,
+          width: 120,
+          focusColor: Colors.yellow,
+          height: 50,
+          highlightColor: Colors.yellow,
+          splashColor: Colors.yellow
+
+          );
+      
+
+          onFlatButtonPress4 (bool b){ 
+          print(b); 
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+                builder: (context) => Page1()));
+
+          } 
+          onFlatButtonLongPress4 (bool b){ 
+          print(b); 
+          } 
+          FlatButtonParameters buttonFlatObject4 = FlatButtonParameters(
+          child:Text('btn2'),
+          color:Colors.pink,
+          textColor:Colors.white,
+          hoverColor: Colors.yellow,
+          width: 120,
+          focusColor: Colors.yellow,
+          height: 50,
+          highlightColor: Colors.yellow,
+          splashColor: Colors.yellow
+
+          );
+      
 return MaterialApp(
 debugShowCheckedModeBanner: false,
 home: Scaffold(
-appBar:customAppBar(appBarIcons,paramobject),
-drawer: CustomDrawer(drawerList,onclickDrawer,user1),
-bottomNavigationBar: BottomNavBar(param),
 body: Padding(
 padding: const EdgeInsets.all(20.0),
 child: Padding(
@@ -185,72 +151,26 @@ children: <Widget>[
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:CustomTextField(params: finalTextObj0, callbackTextfield: onTextSubmit0),),
+Expanded(flex: 1,child:CustomImage(data: ImageObj10),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:Container()),
+Expanded(flex: 1,child:customText(textparam1)),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:CustomTextField(params: finalTextObj1, callbackTextfield: onTextSubmit1),),
+Expanded(flex: 1,child:customText(textparam2)),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:Container()),
-],),
-),
-Padding(
-padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-Expanded(flex: 1,child:Container()),
-],),
-),
-Padding(
-padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-Expanded(flex: 1,child:Container()),
-],),
-),
-Padding(
-padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-Expanded(flex: 1,child:Container()),
-],),
-),
-Padding(
-padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-Expanded(flex: 1,child:Container()),
-],),
-),
-Padding(
-padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-Expanded(flex: 1,child:Container()),
-],),
-),
-Padding(
-padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-Expanded(flex: 1,child:Container()),
-],),
-),
-Padding(
-padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-Expanded(flex: 1,child:CustomDropdownButton(dropdownObject2,onSelect2),),
-],),
-),
-Padding(
-padding: const EdgeInsets.all(25.0),
-child: Row(children: [
+Expanded(flex: 1,child:customFlatButton(buttonFlatObject3, onFlatButtonPress3, onFlatButtonLongPress3),),
+Expanded(flex: 1,child:customFlatButton(buttonFlatObject4, onFlatButtonPress4, onFlatButtonLongPress4),),
  ],),
 ),
 ], 

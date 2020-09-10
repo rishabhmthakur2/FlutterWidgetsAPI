@@ -111,16 +111,16 @@ let welcomeTemplate = req =>
 
       try {
         dataMap.then(() => {
-          let data6 = "\nExpanded(flex: 1,child:" + top + "),"; //Widget1 call
+          let data6 = "\nSizedBox(height:30),Expanded(flex: 1,child:" + top + "),"; //Widget1 call
           let data7 =
             "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: [";
-          let data8 = "\nExpanded(flex: 1,child:" + middle + "),"; //Widget3 call
+          let data8 = "\nSizedBox(height:30),Expanded(flex: 1,child:" + middle + "),"; //Widget3 call
           let data9 =
             "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: [";
-          let data10 = "\nExpanded(flex: 1,child:" + middle1 + "),"; //Widget3 call
+          let data10 = "\nSizedBox(height:30),Expanded(flex: 1,child:" + middle1 + "),"; //Widget3 call
           let data11 =
             "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: [";
-          let data12 = "\nExpanded(flex: 1,child:" + bottomleft + "),"; //Widget6 call
+          let data12 = "\nSizedBox(height:50),Expanded(flex: 1,child:" + bottomleft + "),SizedBox(width:30),"; //Widget6 call
           let data13 = "\nExpanded(flex: 1,child:" + bottomright + "),";
           let data14 = "\n ],),\n),\n], \n)  \n))))); \n} \n}";
           let clearFile = () =>

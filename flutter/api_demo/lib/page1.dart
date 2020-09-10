@@ -6,15 +6,21 @@ import 'package:rapid_widgets_library/custom-image.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-image.dart';
-import 'package:rapid_widgets_library/custom-image.dart';
+import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
 void main() => runApp(Page1());
-class Page1 extends StatefulWidget 
+class Page1 extends StatelessWidget {
+@override
+Widget build(BuildContext context) {
+return MaterialApp(
+home: BoilerPlate());
+}}
+class BoilerPlate extends StatefulWidget 
 { 
 @override 
 _BoilerPlate createState() => _BoilerPlate();
 }
-class _BoilerPlate extends State<Page1> {
+class _BoilerPlate extends State<BoilerPlate> {
  @override
   Widget build(BuildContext context) { 
 
@@ -62,16 +68,16 @@ class _BoilerPlate extends State<Page1> {
         
 onclick0(String sText) { print(sText); }
         CustomImageContents ImageObj10 = new CustomImageContents(
-        src:'https://cdn.britannica.com/75/75775-050-1FC4B34B/Colosseum-Rome.jpg',
+        src:'http://104.40.75.137:9003/assets/cms/image5.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 150, width: 150);
+         height: 160, width: 180);
          
 
         TextParameters textparam1 = new TextParameters(
-          data: 'sata1',
-          fontSize: 16,
-          color: Colors.black,
+          data: 'Title',
+          fontSize: 18,
+          color: Colors.pink,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
@@ -79,9 +85,9 @@ onclick0(String sText) { print(sText); }
          
 
         TextParameters textparam2 = new TextParameters(
-          data: 'data2',
-          fontSize: 16,
-          color: Colors.red,
+          data: 'subTitle',
+          fontSize: 14,
+          color: Colors.pink,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
@@ -89,23 +95,26 @@ onclick0(String sText) { print(sText); }
          
 onclick5(String sText) { print(sText); }
         CustomImageContents ImageObj15 = new CustomImageContents(
-        src:'https://cdn.britannica.com/75/75775-050-1FC4B34B/Colosseum-Rome.jpg',
+        src:'http://104.40.75.137:9003/assets/cms/image5.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 150, width: 150);
+         height: 150, width: 180);
          
-onclick6(String sText) { print(sText); }
-        CustomImageContents ImageObj16 = new CustomImageContents(
-        src:'https://cdn.britannica.com/75/75775-050-1FC4B34B/Colosseum-Rome.jpg',
-         semanticLabel: 'Random Network', 
-         imageType: 'Network', 
-         height: 50, width: 120);
+
+        TextParameters textparam6 = new TextParameters(
+          data: 'title1',
+          fontSize: 16,
+          color: Colors.pink,
+          fontStyle: FontStyle.normal,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.bold,
+        );
          
 
         TextParameters textparam7 = new TextParameters(
-          data: 'get',
+          data: 'title2',
           fontSize: 16,
-          color: Colors.green,
+          color: Colors.yellow,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
@@ -124,31 +133,31 @@ children: <Widget>[
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:CustomImage(data: ImageObj16),),
+SizedBox(height:30),Expanded(flex: 1,child:CustomImage(data: ImageObj15),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:customText(textparam7)),
+SizedBox(height:30),Expanded(flex: 1,child:customText(textparam6)),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:customText(textparam2)),
+SizedBox(height:30),Expanded(flex: 1,child:customText(textparam7)),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:Container()),
+SizedBox(height:30),Expanded(flex: 1,child:Container()),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:Container()),
+SizedBox(height:30),Expanded(flex: 1,child:Container()),
  ],),
 ),
 ], 

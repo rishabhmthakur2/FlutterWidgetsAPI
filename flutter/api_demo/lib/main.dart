@@ -9,7 +9,13 @@ import 'package:rapid_widgets_library/custom-flatButton.dart';
 import 'page1.dart';
 import 'package:rapid_widgets_library/custom-flatButton.dart';
 import 'page1.dart';
-void main() => runApp(BoilerPlate());
+void main() => runApp(MyApp());
+class MyApp extends StatelessWidget {
+@override
+Widget build(BuildContext context) {
+return MaterialApp(
+home: BoilerPlate());
+}}
 class BoilerPlate extends StatefulWidget 
 { 
 @override 
@@ -63,16 +69,16 @@ class _BoilerPlate extends State<BoilerPlate> {
         
 onclick0(String sText) { print(sText); }
         CustomImageContents ImageObj10 = new CustomImageContents(
-        src:'https://cdn.britannica.com/75/75775-050-1FC4B34B/Colosseum-Rome.jpg',
+        src:'http://104.40.75.137:9003/assets/cms/image5.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 150, width: 150);
+         height: 160, width: 180);
          
 
         TextParameters textparam1 = new TextParameters(
-          data: 'sata1',
-          fontSize: 16,
-          color: Colors.black,
+          data: 'Title',
+          fontSize: 18,
+          color: Colors.pink,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
@@ -80,9 +86,9 @@ onclick0(String sText) { print(sText); }
          
 
         TextParameters textparam2 = new TextParameters(
-          data: 'data2',
-          fontSize: 16,
-          color: Colors.red,
+          data: 'subTitle',
+          fontSize: 14,
+          color: Colors.pink,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
@@ -101,11 +107,11 @@ onclick0(String sText) { print(sText); }
           print(b); 
           } 
           FlatButtonParameters buttonFlatObject3 = FlatButtonParameters(
-          child:Text('btn1'),
-          color:Colors.pink,
-          textColor:Colors.white,
-          hoverColor: Colors.grey,
-          width: 120,
+          child:Text('Start'),
+          color:Colors.white,
+          textColor:Colors.pink,
+          hoverColor: Colors.yellow,
+          width: 150,
           focusColor: Colors.yellow,
           height: 50,
           highlightColor: Colors.yellow,
@@ -126,11 +132,11 @@ onclick0(String sText) { print(sText); }
           print(b); 
           } 
           FlatButtonParameters buttonFlatObject4 = FlatButtonParameters(
-          child:Text('btn2'),
-          color:Colors.pink,
-          textColor:Colors.white,
+          child:Text('End'),
+          color:Colors.white,
+          textColor:Colors.pink,
           hoverColor: Colors.yellow,
-          width: 120,
+          width: 150,
           focusColor: Colors.yellow,
           height: 50,
           highlightColor: Colors.yellow,
@@ -151,25 +157,25 @@ children: <Widget>[
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:CustomImage(data: ImageObj10),),
+SizedBox(height:30),Expanded(flex: 1,child:CustomImage(data: ImageObj10),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:customText(textparam1)),
+SizedBox(height:30),Expanded(flex: 1,child:customText(textparam1)),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:customText(textparam2)),
+SizedBox(height:30),Expanded(flex: 1,child:customText(textparam2)),
 ],),
 ),
 Padding(
-padding: const EdgeInsets.all(25.0),
+padding: const EdgeInsets.all(15.0),
 child: Row(children: [
-Expanded(flex: 1,child:customFlatButton(buttonFlatObject3, onFlatButtonPress3, onFlatButtonLongPress3),),
+SizedBox(height:50),Expanded(flex: 1,child:customFlatButton(buttonFlatObject3, onFlatButtonPress3, onFlatButtonLongPress3),),SizedBox(width:30),
 Expanded(flex: 1,child:customFlatButton(buttonFlatObject4, onFlatButtonPress4, onFlatButtonLongPress4),),
  ],),
 ),

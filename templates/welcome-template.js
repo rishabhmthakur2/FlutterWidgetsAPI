@@ -43,7 +43,7 @@ let welcomeTemplate = req =>
       const data0 =
         "import 'package:flutter/material.dart';\nimport 'package:rapid_widgets_library/widget-classesUsed.dart';\n";
       const data2 =
-        "\nvoid main() => runApp(BoilerPlate());\nclass BoilerPlate extends StatefulWidget \n{ \n@override \n_BoilerPlate createState() => _BoilerPlate();\n}\nclass _BoilerPlate extends State<BoilerPlate> {\n @override\n  Widget build(BuildContext context) { \n";
+        "\nvoid main() => runApp(MyApp());\nclass MyApp extends StatelessWidget {\n@override\nWidget build(BuildContext context) {\nreturn MaterialApp(\nhome: BoilerPlate());\n}}\nclass BoilerPlate extends StatefulWidget \n{ \n@override \n_BoilerPlate createState() => _BoilerPlate();\n}\nclass _BoilerPlate extends State<BoilerPlate> {\n @override\n  Widget build(BuildContext context) { \n";
       const data4 =
         "\nreturn MaterialApp(\ndebugShowCheckedModeBanner: false,\nhome: Scaffold(\nbody: Padding(\npadding: const EdgeInsets.all(20.0),\nchild: Padding(\npadding: const EdgeInsets.all(25.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: [";
 
@@ -119,7 +119,7 @@ let welcomeTemplate = req =>
             "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: [";
           let data10 = "\nSizedBox(height:30),Expanded(flex: 1,child:" + middle1 + "),"; //Widget3 call
           let data11 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: [";
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(15.0),\nchild: Row(children: [";
           let data12 = "\nSizedBox(height:50),Expanded(flex: 1,child:" + bottomleft + "),SizedBox(width:30),"; //Widget6 call
           let data13 = "\nExpanded(flex: 1,child:" + bottomright + "),";
           let data14 = "\n ],),\n),\n], \n)  \n))))); \n} \n}";

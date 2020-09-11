@@ -569,7 +569,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
                               Container(
                                 height: 41,
                                 width: 123,
-                                child: FlatButton(color: Color(0xffD93954),child: Text('Add to Cart',
+                                child: FlatButton(color: Color(0xffD93954),child: Text('View',
                                   style: TextStyle(color: Colors.white, fontSize: 13, fontFamily: 'Segoe UI'),),
                                   onPressed: (){ Navigator.pushReplacement(
                                     context,

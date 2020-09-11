@@ -36,7 +36,6 @@
         "maxLengthEnforced": "Boolean",
         "hintText": "String",
         "labelText": "String",
-        "prefixIcon": "Icon",
         "filled": "Boolean",
         "fillColor": "Colors",
         "borderRadius": "Number",

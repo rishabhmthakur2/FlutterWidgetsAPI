@@ -2,13 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:rapid_widgets_library/widget-classesUsed.dart';
 import 'package:rapid_widgets_library/custom-appBar.dart';
 import 'package:rapid_widgets_library/custom-drawer.dart';
-import 'package:rapid_widgets_library/custom-flatButton.dart';
-import 'page2.dart';
-import 'package:rapid_widgets_library/custom-flatButton.dart';
-import 'page3.dart';
 import 'package:rapid_widgets_library/custom-image.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
+import 'package:rapid_widgets_library/custom-flatButton.dart';
+import 'page1.dart';
 void main() => runApp(Page5());
 class Page5 extends StatelessWidget {
 @override
@@ -67,67 +65,17 @@ class _BoilerPlate extends State<BoilerPlate> {
             print(nIndex); 
             }
         
-
-          onFlatButtonPress1 (bool b){ 
-          print(b); 
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-                builder: (context) => Page2()));
-
-          } 
-          onFlatButtonLongPress1 (bool b){ 
-          print(b); 
-          } 
-          FlatButtonParameters buttonFlatObject1 = FlatButtonParameters(
-          child:Text('next'),
-          color:Colors.red,
-          textColor:Colors.white,
-          hoverColor: Colors.red,
-          width: 100,
-          focusColor: Colors.red,
-          height: 40,
-          highlightColor: Colors.red,
-          splashColor: Colors.red
-
-          );
-      
-
-          onFlatButtonPress2 (bool b){ 
-          print(b); 
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-                builder: (context) => Page3()));
-
-          } 
-          onFlatButtonLongPress2 (bool b){ 
-          print(b); 
-          } 
-          FlatButtonParameters buttonFlatObject2 = FlatButtonParameters(
-          child:Text('Login'),
-          color:Colors.red,
-          textColor:Colors.white,
-          hoverColor: Colors.red,
-          width: 150,
-          focusColor: Colors.red,
-          height: 40,
-          highlightColor: Colors.red,
-          splashColor: Colors.red
-
-          );
-      
-onclick7(String sText) { print(sText); }
-        CustomImageContents ImageObj17 = new CustomImageContents(
-        src:'http://104.40.75.137:9003/assets/cms/image3.png',
+onclick0(String sText) { print(sText); }
+        CustomImageContents ImageObj10 = new CustomImageContents(
+        src:'imgpath',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 200, width: 3002);
+         height: 200, width: 300);
          
 
-        TextParameters textparam8 = new TextParameters(
-          data: 'page5',
-          fontSize: 20,
+        TextParameters textparam1 = new TextParameters(
+          data: 'title1',
+          fontSize: 16,
           color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
@@ -136,54 +84,78 @@ onclick7(String sText) { print(sText); }
         );
          
 
-        TextParameters textparam9 = new TextParameters(
-          data: 'page6',
-          fontSize: 15,
+        TextParameters textparam2 = new TextParameters(
+          data: 'body',
+          fontSize: 12,
           color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
-          textAlign: TextAlign.center
+          fontWeight: FontWeight.normal,
+          textAlign: TextAlign.start
         );
          
+
+          onFlatButtonPress3 (bool b){ 
+          print(b); 
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+                builder: (context) => Page1()));
+
+          } 
+          onFlatButtonLongPress3 (bool b){ 
+          print(b); 
+          } 
+          FlatButtonParameters buttonFlatObject3 = FlatButtonParameters(
+          child:Text('Purchase'),
+          color:Colors.red,
+          textColor:Colors.white,
+          hoverColor: Colors.red,
+          width: 300,
+          focusColor: Colors.red,
+          height: 40,
+          highlightColor: Colors.red,
+          splashColor: Colors.red
+
+          );
+      
 return MaterialApp(
 debugShowCheckedModeBanner: false,
 home: Scaffold(
 body: Padding(
-padding: const EdgeInsets.all(20.0),
+padding: const EdgeInsets.all(0.0),
 child: Padding(
-padding: const EdgeInsets.all(25.0),
+padding: const EdgeInsets.all(30.0),
 child: SingleChildScrollView(
-child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+child: Column(
 children: <Widget>[
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:CustomImage(data: ImageObj17),),
+Expanded(flex: 1,child:CustomImage(data: ImageObj10),),
 ],),
 ),
 Padding(
-padding: const EdgeInsets.all(25.0),
+padding: const EdgeInsets.only(top:30,bottom:30),
 child: Row(children: [
-Expanded(flex: 1,child:customText(textparam9)),
+Expanded(flex: 1,child:customText(textparam1)),
 ],),
 ),
 Padding(
-padding: const EdgeInsets.all(25.0),
+padding: const EdgeInsets.only(bottom:30),
 child: Row(children: [
-Expanded(flex: 1,child:Container()),
+Expanded(flex: 1,child:customText(textparam2)),
 ],),
 ),
 Padding(
-padding: const EdgeInsets.all(25.0),
+padding: const EdgeInsets.only(bottom:30),
 child: Row(children: [
-Expanded(flex: 1,child:customFlatButton(buttonFlatObject2, onFlatButtonPress2, onFlatButtonLongPress2),),
 ],),
 ),
 Padding(
-padding: const EdgeInsets.all(25.0),
+padding: const EdgeInsets.only(bottom:30),
 child: Row(children: [
-Expanded(flex: 1,child:customFlatButton(buttonFlatObject1, onFlatButtonPress1, onFlatButtonLongPress1),),
+Expanded(flex: 1,child:customFlatButton(buttonFlatObject3, onFlatButtonPress3, onFlatButtonLongPress3),),
  ],),
 ),
 ], 

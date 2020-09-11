@@ -82,8 +82,8 @@ class _BoilerPlate extends State<BoilerPlate> {
           width: 100,
           focusColor: Colors.yellow,
           height: 40,
-          highlightColor: Colors.red,
-          splashColor: Colors.red
+          highlightColor: Colors.yellow,
+          splashColor: Colors.yellow
 
           );
       

@@ -50,7 +50,7 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
     let top = "Container()"
     let middle = "Container()"
     let middle1 = "Container()"
-    let middle2 = "Container()"
+   // let middle2 = "Container()"
     let bottom = "Container()"
 
     let dataMap = new Promise(async (resolve, reject) => {
@@ -73,12 +73,12 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
           data3.push(data.definitions);
           middle1 = data.call;
         }
-        if (widgetsObject[i].location == "middle2") {
-            let data = await getWidgets(widgetsObject[i].widgetId, widgetsObject[i].parameters, i);
-            data1.push(data.imports);
-            data3.push(data.definitions);
-            middle2 = data.call;
-          }
+        // if (widgetsObject[i].location == "middle2") {
+        //     let data = await getWidgets(widgetsObject[i].widgetId, widgetsObject[i].parameters, i);
+        //     data1.push(data.imports);
+        //     data3.push(data.definitions);
+        //     middle2 = data.call;
+        //   }
         if (widgetsObject[i].location == "bottom") {
           let data = await getWidgets(widgetsObject[i].widgetId, widgetsObject[i].parameters, i);
           data1.push(data.imports);
@@ -96,7 +96,7 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
         let data9 = "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:30),\nchild: Row(children: [";
         let data10 = "\nExpanded(flex: 1,child:" + middle1 + "),";
         let data11 = "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:30),\nchild: Row(children: [";
-        let data12 = "\nExpanded(flex: 1,child:" + middle2 + "),";
+       // let data12 = "\nExpanded(flex: 1,child:" + middle2 + "),";
         let data13 = "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:30),\nchild: Row(children: [";
         let data14 = "\nExpanded(flex: 1,child:" + bottom + "),"; //Widget6 call
         let data15 = "\n ],),\n),\n], \n)  \n))))); \n} \n}";
@@ -233,17 +233,17 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
               console.log('Data is appended to file successfully.')
             },
           );
-          fs.appendFileSync(
-            './flutter/api_demo/lib/page5.dart',
-            data12,
-            'utf8',
-            // callback function
-            function (err) {
-              if (err) throw err
-              // if no error
-              console.log('Data is appended to file successfully.')
-            },
-          );
+          // fs.appendFileSync(
+          //   './flutter/api_demo/lib/page5.dart',
+          //   data12,
+          //   'utf8',
+          //   // callback function
+          //   function (err) {
+          //     if (err) throw err
+          //     // if no error
+          //     console.log('Data is appended to file successfully.')
+          //   },
+          // );
           fs.appendFileSync(
             './flutter/api_demo/lib/page5.dart',
             data13,

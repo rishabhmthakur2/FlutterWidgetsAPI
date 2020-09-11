@@ -160,11 +160,11 @@ let homeTemplate = req =>
           let data12 = "\nExpanded(flex: 1,child:" + bottomHeading + "),";
           let data13 =
             "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(left:30,right:30,bottom:30),\nchild: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: [";
-          let data14 = "\nExpanded(flex: 1,child:" + gridCard1 + "),"; //Widget1 call
+          let data14 = "\nExpanded(flex: 1,child:" + gridCard1 + "),\nSizedBox(width:30),"; //Widget1 call
           let data15 = "\nExpanded(flex: 1,child:" + gridCard2 + "),"; //Widget1 call
           let data16 =
             "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(left:30,right:30,bottom:30),\nchild: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: [";
-          let data17 = "\nExpanded(flex: 1,child:" + gridCard3 + "),"; //Widget1 call
+          let data17 = "\nExpanded(flex: 1,child:" + gridCard3 + "),\nSizedBox(width:30),"; //Widget1 call
           let data18 = "\nExpanded(flex: 1,child:" + gridCard4 + "),"; //Widget1 call
           let data19 = "\n ],),\n),\n], \n)  \n))))); \n} \n}";
 

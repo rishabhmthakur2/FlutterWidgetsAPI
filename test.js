@@ -36,7 +36,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
             decoration: InputDecoration(
             hintText: '${paramValues.hintText}',
             labelText: '${paramValues.labelText}', 
-            prefixIcon: Icon(Icons.${paramValues.prefixIcon}),
+  
             filled: ${paramValues.filled}, 
             fillColor: Colors.${paramValues.fillColor}, 
             counterText: "", 
@@ -557,7 +557,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
                       cardColor: Colors.white,
                       rightHandWidgets: [
                         Padding(
-                          padding: const EdgeInsets.only(right: 18.0, bottom: 20.5),
+                          padding: const EdgeInsets.only(right: 10.0, bottom: 20.5),
                           child: Column(
                             children: <Widget>[
                               Align(
@@ -569,7 +569,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
                                 height: 41,
                                 width: 123,
                                 child: FlatButton(child: Text('Add to Cart',
-                                  style: TextStyle(color: Colors.white, fontSize: 16, fontFamily: 'Segoe UI'),),
+                                  style: TextStyle(color: Colors.white, fontSize: 13, fontFamily: 'Segoe UI'),),
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(21.0)),
                                   disabledColor: Color(0xffD93954),),
@@ -654,8 +654,8 @@ let getWidgets = (widgetId, paramValues, counter) =>
                 CustomLinearProgressBarParameters linearBarParameters =
                     new CustomLinearProgressBarParameters(
                         value: ${paramValues.linearProgressVal},
-                        backgroundColor: Colors.${paramValues.linearProgressColors2},
-                        valueColor: AlwaysStoppedAnimation<Color>(Colors.${paramValues.linearProgressColor1})));
+                        backgroundColor: Colors.${paramValues.linearProgressColor2},
+                        valueColor: AlwaysStoppedAnimation<Color>(Colors.${paramValues.linearProgressColor1}));
                     callback(dynamic s, int i) {
                     }
                     MaterialCardData data = new MaterialCardData(
@@ -689,7 +689,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
                       id: 201,
                       name: "Solid Card",
                       imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-solid-card.dart';",
-                      call: `customSolidCard${counter}(solidParameters${counter}, callbackSolid${counter}),`,
+                      call: `customSolidCard(solidParameters${counter}, callbackSolid${counter}),`,
                       definitions: `
                       callbackSolid${counter}(dynamic s, int i) {
                           }

@@ -704,7 +704,123 @@ let getWidgets = (widgetId, paramValues, counter) =>
                             containerbgColor: Colors.${paramValues.bgColor}
                           );
                   `
-                    }
+                    },
+             {
+                     id: 300,
+                     name: "Appbar",
+                     imports: "import 'package:rapid_widgets_library/custom-appBar.dart'; \nimport 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-tab-bar.dart';",
+                     call: "appBar:customAppBar(appBarIcons,paramobject),",
+                     definitions: `
+                     onTap(int s) {
+                                             print(s);
+                                           }
+                                           List<TabBarList> tabs = [];
+                                           TabBarList tab1 = new TabBarList(
+
+                                               "e-Books",
+                                               Icon(Icons.fastfood,color: Colors.transparent,size: 0,),
+                                           );
+                     TabBarList tab2 = new TabBarList(
+                                               "Video Course",
+                                               Icon(Icons.fastfood,color: Colors.transparent,size: 0,)
+                                           );
+                     TabBarList tab3 = new TabBarList(
+                                               "Audio Books",
+                                               Icon(Icons.fastfood,color: Colors.transparent,size: 0,)
+                                           );
+                     TabBarList tab4 = new TabBarList(
+                                               "My Course",
+                                               Icon(Icons.fastfood,color: Colors.transparent,size: 0,)
+                                           );
+                                           tabs.add(tab1);
+                                           tabs.add(tab2);
+                                           tabs.add(tab3);
+                                           tabs.add(tab4);
+                     AppBarParameters paramobject = new AppBarParameters(
+                           backgroundColor: Colors.white,
+                             elevation: 0,
+                             bottomOpacity: 1.0,
+                             toolbarOpacity: 1.0,
+                             titleSpacing: 1.0,
+                             centerTitle: false,
+                             automaticallyImplyLeading: true,
+                             bottom: PreferredSize(preferredSize:Size.fromHeight(80),child: Container(height:75,child:showTabBar(TabBarParameters(tablist: tabs,backgroundColor: Colors.white,labelColor: Color(0xff707070),boxColor: Colors.white,borderColor: Color(0xffD93954),unselectedLabelColor: Color(0xff707070),boxShadowColor: Colors.white,),onTap,)),),
+                             leading: Icon(Icons.arrow_back, color: Color(0xff707070),),
+                             title: Text('Featured',
+                             style: TextStyle(fontSize: 26, color: Color(0xff707070)),));
+                         List<Widget> appBarIcons = [
+                           IconButton(
+                             icon: Image.network('http://104.40.75.137:9003/assets/cms/cart.png',width: 20,height: 14,),
+                             onPressed: () {},
+                           ),
+                           Padding(
+                             padding: const EdgeInsets.only(right: 30.0),
+                             child: IconButton(
+                               icon: Image.network('http://104.40.75.137:9003/assets/cms/drawer_icon.png',width: 20,height: 14,),
+                               onPressed: () {},
+                             ),
+                           )];
+              `
+                   },
+         {
+                              id: 301,
+                              name: "Appbar",
+                              imports: "import 'package:rapid_widgets_library/custom-appBar.dart';",
+                              call: "appBar:customAppBar(appBarIcons,paramobject),",
+                              definitions: `
+                              AppBarParameters paramobject = new AppBarParameters(
+                                    backgroundColor: Colors.white,
+                                      elevation: 0,
+                                      bottomOpacity: 1.0,
+                                      toolbarOpacity: 1.0,
+                                      titleSpacing: 1.0,
+                                      centerTitle: false,
+                                      automaticallyImplyLeading: true,
+                                      leading: Icon(Icons.arrow_back, color: Color(0xff707070),),
+                                      title: Text('Featured',
+                                      style: TextStyle(fontSize: 26, color: Color(0xff707070)),));
+                                  List<Widget> appBarIcons = [
+                                    IconButton(
+                                      icon: Image.network('http://104.40.75.137:9003/assets/cms/cart.png',width: 20,height: 14,),
+                                      onPressed: () {},
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(right: 30.0),
+                                      child: IconButton(
+                                        icon: Image.network('http://104.40.75.137:9003/assets/cms/drawer_icon.png',width: 20,height: 14,),
+                                        onPressed: () {},
+                                      ),
+                                    )];
+                       `
+                            },
+                            {
+                                         id: 302,
+                                         name: "Appbar",
+                                         imports: "import 'package:rapid_widgets_library/custom-appBar.dart';",
+                                         call: "appBar:customAppBar(appBarIcons,paramobject),",
+                                         definitions: `
+                                         AppBarParameters paramobject = new AppBarParameters(
+                                               backgroundColor: Colors.white,
+                                                 elevation: 0,
+                                                 bottomOpacity: 1.0,
+                                                 toolbarOpacity: 1.0,
+                                                 titleSpacing: 1.0,
+                                                 centerTitle: false,
+                                                 automaticallyImplyLeading: true,
+                                                 leading: Icon(Icons.arrow_back, color: Color(0xff707070),),
+                                                 title: Text('React Fullstack with\nnode/express',
+                                                 style: TextStyle(fontSize: 26, color: Color(0xff707070)),));
+                                             List<Widget> appBarIcons = [
+                                               Padding(
+                                                 padding: const EdgeInsets.only(right: 30.0),
+                                                 child: IconButton(
+                                                   icon: Image.network('http://104.40.75.137:9003/assets/cms/drawer_icon.png',width: 20,height: 14,),
+                                                   onPressed: () {},
+                                                 ),
+                                               )];
+                                  `
+                                       },
+
 ];
     for (i of widgetList) {
       if (i.id == widgetId) {

@@ -18,7 +18,7 @@ let deatailsTemplate = (req) => new Promise(async (resolve, reject) => {
   let data5 = [];
   try {
     if (!req.body.appbar) {
-      let data = await getWidgets(100, {}, 0);
+      let data = await getWidgets(302, {}, 0);
       data1.push(data.imports);
       data3.push(data.definitions);
       appbarCall = data.call;

@@ -62,7 +62,7 @@ let featuredTemplate = req =>
         drawerCall +
         "\n" +
         bottomNavBarCall +
-        "\nbody: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.only(left:20.0,right:20),\nchild: Row(children: [";
+        "\nbackgroundColor: Colors.white,\nbody: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.only(left:20.0,right:20),\nchild: Row(children: [";
       //const data6 = '\n ],),)),),),);}}  '
 
     

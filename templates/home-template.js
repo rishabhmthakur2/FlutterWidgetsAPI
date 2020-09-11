@@ -49,7 +49,7 @@ let homeTemplate = req =>
         appbarCall +
         "\n" +
         drawerCall +
-        "\nbody: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.all(0.0),\nchild: Row(children: [";
+        "\nbackgroundColor: Colors.white,\nbody: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.all(0.0),\nchild: Row(children: [";
 
       let topImage = "Container()";
       let middleHeading = "Container()";

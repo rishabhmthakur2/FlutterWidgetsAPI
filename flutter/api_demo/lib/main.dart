@@ -91,9 +91,9 @@ return MaterialApp(
 debugShowCheckedModeBanner: false,
 home: Scaffold(
 body: Padding(
-padding: const EdgeInsets.all(5.0),
+padding: const EdgeInsets.only(top:20.0,left:5.0,right:5.0,bottom:5.0),
 child: Padding(
-padding: const EdgeInsets.all(5.0),
+padding: const EdgeInsets.only(top:10.0,left:5.0,right:5.0,bottom:5.0),
 child: SingleChildScrollView(
 child: Column(
 children: <Widget>[

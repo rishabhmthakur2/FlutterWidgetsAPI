@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:rapid_widgets_library/widget-classesUsed.dart';
 import 'package:rapid_widgets_library/custom-appBar.dart';
 import 'package:rapid_widgets_library/custom-drawer.dart';
+import 'package:rapid_widgets_library/custom-image.dart';
+import 'package:rapid_widgets_library/custom-text.dart';
+import 'package:rapid_widgets_library/custom-text.dart';
+import 'package:rapid_widgets_library/custom-image.dart';
+import 'package:rapid_widgets_library/custom-text.dart';
+import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-flatButton.dart';
 import 'page2.dart';
 import 'package:rapid_widgets_library/custom-image.dart';
@@ -70,13 +76,24 @@ class _BoilerPlate extends State<BoilerPlate> {
             print(nIndex); 
             }
         
+onclick0(String sText) { print(sText); }
+        CustomImageContents ImageObj10 = new CustomImageContents(
+        src:'http://104.40.75.137:9003/assets/cms/image1.png',
+         semanticLabel: 'Random Network', 
+         imageType: 'Network', 
+         height: 170, width: 180);
+         
 
-          onFlatButtonPress1 (bool b){ 
-          print(b); 
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-                builder: (context) => Page2()));
+        TextParameters textparam1 = new TextParameters(
+          data: 'Web content',
+          fontSize: 20,
+          color: Colors.black,
+          fontStyle: FontStyle.normal,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.bold,
+          textAlign: TextAlign.center
+        );
+         
 
           } 
           onFlatButtonLongPress1 (bool b){ 
@@ -164,7 +181,7 @@ onclick2(String sText) { print(sText); }
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-                builder: (context) => Page3()));
+                builder: (context) => Page2()));
 
           } 
           onFlatButtonLongPress5 (bool b){ 

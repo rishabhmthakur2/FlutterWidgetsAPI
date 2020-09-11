@@ -45,7 +45,7 @@ let welcomeTemplate = req =>
       const data2 =
         "\nvoid main() => runApp(MyApp());\nclass MyApp extends StatelessWidget {\n@override\nWidget build(BuildContext context) {\nreturn MaterialApp(\nhome: BoilerPlate());\n}}\nclass BoilerPlate extends StatefulWidget \n{ \n@override \n_BoilerPlate createState() => _BoilerPlate();\n}\nclass _BoilerPlate extends State<BoilerPlate> {\n @override\n  Widget build(BuildContext context) { \n";
       const data4 =
-        "\nreturn MaterialApp(\ndebugShowCheckedModeBanner: false,\nhome: Scaffold(\nbody: Padding(\npadding: const EdgeInsets.all(5.0),\nchild: Padding(\npadding: const EdgeInsets.all(5.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.only(top:65.0,left: 25.0,right: 25.0),\nchild: Row(mainAxisAlignment: MainAxisAlignment.center,children: [";
+        "\nreturn MaterialApp(\ndebugShowCheckedModeBanner: false,\nhome: Scaffold(\nbackgroundColor: Colors.white,\nbody: Padding(\npadding: const EdgeInsets.only(top:20.0,left:5.0,right:5.0,bottom:5.0),\nchild: Padding(\npadding: const EdgeInsets.only(top:10.0,left:5.0,right:5.0,bottom:5.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.only(top:65.0,left: 25.0,right: 25.0),\nchild: Row(mainAxisAlignment: MainAxisAlignment.center,children: [";
 
       let top = "Container()";
       let middle = "Container()";
@@ -113,13 +113,13 @@ let welcomeTemplate = req =>
         dataMap.then(() => {
           let data6 = "\nSizedBox(height:80),Expanded(flex: 1,child:" + top + "),"; //Widget1 call
           let data7 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(mainAxisAlignment: MainAxisAlignment.center,children: [";
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(top:50.0,left:25.0,right:25.0,bottom:5.0),\nchild: Row(mainAxisAlignment: MainAxisAlignment.center,children: [";
           let data8 = "\nSizedBox(height:65),Expanded(flex: 1,child:" + middle + "),"; //Widget3 call
           let data9 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(mainAxisAlignment: MainAxisAlignment.center,children: [";
-          let data10 = "\nSizedBox(height:5),Expanded(flex: 1,child:" + middle1 + "),"; //Widget3 call
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(15.0),\nchild: Row(mainAxisAlignment: MainAxisAlignment.center,children: [";
+          let data10 = "\nSizedBox(height:0),Expanded(flex: 1,child:" + middle1 + "),"; //Widget3 call
           let data11 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(15.0),\nchild: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [";
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(2.0),\nchild: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [";
           let data12 = "\nSizedBox(height:200),Expanded(flex: 1,child:" + bottomleft + "),SizedBox(width:30),"; //Widget6 call
           let data13 = "\nExpanded(flex: 1,child:" + bottomright + "),";
           let data14 = "\n ],),\n),\n], \n)  \n))))); \n} \n}";

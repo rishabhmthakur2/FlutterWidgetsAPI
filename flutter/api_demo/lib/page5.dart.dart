@@ -12,6 +12,7 @@ import 'package:rapid_widgets_library/custom-flatButton.dart';
 import 'page2.dart';
 import 'package:rapid_widgets_library/custom-image.dart';
 import 'package:rapid_widgets_library/custom-image.dart';
+import 'package:rapid_widgets_library/custom-image.dart';
 void main() => runApp(Page5());
 class Page5 extends StatelessWidget {
 @override
@@ -167,6 +168,13 @@ onclick10(String sText) { print(sText); }
          imageType: 'Network', 
          height: 150, width: 180);
          
+onclick11(String sText) { print(sText); }
+        CustomImageContents ImageObj111 = new CustomImageContents(
+        src:'http://104.40.75.137:9003/assets/cms/image1.png',
+         semanticLabel: 'Random Network', 
+         imageType: 'Network', 
+         height: 150, width: 180);
+         
 return MaterialApp(
 debugShowCheckedModeBanner: false,
 home: Scaffold(
@@ -180,7 +188,7 @@ children: <Widget>[
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:CustomImage(data: ImageObj110),),
+Expanded(flex: 1,child:CustomImage(data: ImageObj111),),
 ],),
 ),
 Padding(

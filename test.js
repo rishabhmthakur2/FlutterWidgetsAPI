@@ -430,7 +430,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
         id: 102,
         name: "Drawer",
         imports: "import 'package:rapid_widgets_library/custom-drawer.dart';",
-        call: "enddrawer: CustomDrawer(drawerList,onclickDrawer,user1),",
+        call: "drawer: CustomDrawer(drawerList,onclickDrawer,user1),",
         definitions: `
             List<DrawerListItems> drawerList = [ 
             DrawerListItems(Icon(Icons.account_circle), 
@@ -500,6 +500,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
           centerTitle: ${paramValues.centerTitle},
           automaticallyImplyLeading: ${paramValues.automaticallyImplyLeading},
           title: Text('${paramValues.title}'));
+          backgroundColor: Colors.${paramValues.backgroundColor},
           List<Widget> appBarIcons = [
           IconButton(
           icon:

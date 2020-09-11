@@ -28,6 +28,17 @@ let deatailsTemplate = req =>
         data3.push(data.definitions);
         appbarCall = data.call;
       }
+      if (!req.body.bottomNavBar) {
+        let btmnavdata = await getWidgets(101, {}, 0);
+        data1.push(btmnavdata.imports);
+        data3.push(btmnavdata.definitions);
+        bottomNavBarCall = btmnavdata.call;
+      } else {
+        let btmnavdata = await getWidgets(1, req.body.bottomNavParams, 0);
+        data1.push(btmnavdata.imports);
+        data3.push(btmnavdata.definitions);
+        bottomNavBarCall = btmnavdata.call;
+      }
       if (!req.body.drawer) {
         let drawerdata = await getWidgets(102, {}, 0);
         data1.push(drawerdata.imports);
@@ -47,7 +58,7 @@ let deatailsTemplate = req =>
       const data4 =
         "\nreturn MaterialApp(\ndebugShowCheckedModeBanner: false,\nhome: Scaffold( \n"+appbarCall +
         
-          "\n" +
+          
           bottomNavBarCall +"\nbackgroundColor: Colors.white,\nbody: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: Padding(\npadding: const EdgeInsets.all(30.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: [";
 
       let top = "Container()";
@@ -308,36 +319,39 @@ let deatailsTemplate = req =>
                     return;
                   }
                   console.log(stdout);
-                  let test = pCloudy();
-                  test.then(data => {
-                    let submitResponse = {
-                      status: 200,
-                      url: data,
-                      message: "File execution successfull"
-                    };
-                    resolve(submitResponse);
-                  });
+                  // let test = pCloudy();
+                  // test.then(data => {
+                  //   let submitResponse = {
+                  //     status: 200,
+                  //     url: data,
+                  //     message: "File execution successfull"
+                  //   };
+                  //   resolve(submitResponse);
+                  // }
+             //   );
                 });
               } catch (error) {
                 return error;
               }
-            } else {
-              console.log("Executing Bat File");
-              try {
-                exec(batWeb, (err, stdout, stderr) => {
-                  if (err) {
-                    console.error(err);
-                    return stderr;
-                  } else {
-                    resolve("App exec started");
-                    console.log(stdout, `${stdout}`);
-                    return stdout;
-                  }
-                });
-              } catch (error) {
-                return error;
-              }
-            }
+            } 
+            //else 
+            //{
+              // console.log("Executing Bat File");
+              // try {
+              //   exec(batWeb, (err, stdout, stderr) => {
+              //     if (err) {
+              //       console.error(err);
+              //       return stderr;
+              //     } else {
+              //       resolve("App exec started");
+              //       console.log(stdout, `${stdout}`);
+              //       return stdout;
+              //     }
+              //   });
+              // } catch (error) {
+              //   return error;
+              // }
+            //}
           });
         });
       } catch (error) {

@@ -548,7 +548,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
       {
               id: 121,
               name: "Composite Card",
-              imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-compositeCard.dart';",
+              imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-compositeCard.dart';\nimport 'page5.dart';",
               call: `compositeCard(listcards${counter}),`,
               definitions: `
               List<CustomcompositeCardParameters> listcards${counter} = [];
@@ -571,6 +571,10 @@ let getWidgets = (widgetId, paramValues, counter) =>
                                 width: 123,
                                 child: FlatButton(child: Text('Add to Cart',
                                   style: TextStyle(color: Colors.white, fontSize: 13, fontFamily: 'Segoe UI'),),
+                                  onPressed: (){ Navigator.pushReplacement(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Page5()));},
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(21.0)),
                                   disabledColor: Color(0xffD93954),),
@@ -796,7 +800,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
                             {
                                          id: 302,
                                          name: "Appbar",
-                                         imports: "import 'package:rapid_widgets_library/custom-appBar.dart';",
+                                         imports: "import 'package:rapid_widgets_library/custom-appBar.dart';\nimport 'page4.dart';",
                                          call: "appBar:customAppBar(appBarIcons,paramobject),",
                                          definitions: `
                                          AppBarParameters paramobject = new AppBarParameters(
@@ -807,8 +811,14 @@ let getWidgets = (widgetId, paramValues, counter) =>
                                                  titleSpacing: 1.0,
                                                  centerTitle: false,
                                                  automaticallyImplyLeading: true,
-                                                 leading: Icon(Icons.arrow_back, color: Color(0xff707070),),
-                                                 title: Text('React Fullstack with\nnode/express',
+                                                 leading: IconButton(icon: (Icon(Icons.arrow_back,color: Color(0xff707070))), onPressed: (){
+                                                  Navigator.pushReplacement(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                          builder: (context) => Page4()));
+                                                  
+                                                }),
+                                                 title: Text('React Fullstack with node/express',
                                                  style: TextStyle(fontSize: 26, color: Color(0xff707070)),));
                                              List<Widget> appBarIcons = [
                                                Padding(

@@ -182,7 +182,7 @@ onclick9(String sText) { print(sText); }
             fillColor: Colors.white, 
             counterText: "", 
             border: OutlineInputBorder( 
-            borderRadius: BorderRadius.circular(20), 
+            borderRadius: BorderRadius.circular(30), 
             borderSide: BorderSide( color: Colors.white70)), 
             ), 
             cursorColor: Colors.black, 
@@ -210,7 +210,7 @@ onclick9(String sText) { print(sText); }
             fillColor: Colors.white, 
             counterText: "", 
             border: OutlineInputBorder( 
-            borderRadius: BorderRadius.circular(20), 
+            borderRadius: BorderRadius.circular(30), 
             borderSide: BorderSide( color: Colors.white70)), 
             ), 
             cursorColor: Colors.black, 
@@ -241,7 +241,7 @@ onclick9(String sText) { print(sText); }
           hoverColor: Colors.pink,
           width: 274,
           focusColor: Colors.pink,
-          height: 41,
+          height: 50,
           highlightColor: Colors.pink,
           splashColor: Colors.pink
 

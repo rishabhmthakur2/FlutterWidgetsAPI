@@ -36,7 +36,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
             decoration: InputDecoration(
             hintText: '${paramValues.hintText}',
             labelText: '${paramValues.labelText}', 
-            prefixIcon: Icon(Icons.${paramValues.prefixIcon}),
+  
             filled: ${paramValues.filled}, 
             fillColor: Colors.${paramValues.fillColor}, 
             counterText: "", 
@@ -558,7 +558,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
                       cardColor: Colors.white,
                       rightHandWidgets: [
                         Padding(
-                          padding: const EdgeInsets.only(right: 18.0, bottom: 20.5),
+                          padding: const EdgeInsets.only(right: 10.0, bottom: 20.5),
                           child: Column(
                             children: <Widget>[
                               Align(
@@ -570,7 +570,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
                                 height: 41,
                                 width: 123,
                                 child: FlatButton(child: Text('Add to Cart',
-                                  style: TextStyle(color: Colors.white, fontSize: 16, fontFamily: 'Segoe UI'),),
+                                  style: TextStyle(color: Colors.white, fontSize: 13, fontFamily: 'Segoe UI'),),
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(21.0)),
                                   disabledColor: Color(0xffD93954),),
@@ -655,8 +655,8 @@ let getWidgets = (widgetId, paramValues, counter) =>
                 CustomLinearProgressBarParameters linearBarParameters =
                     new CustomLinearProgressBarParameters(
                         value: ${paramValues.linearProgressVal},
-                        backgroundColor: Colors.${paramValues.linearProgressColors2},
-                        valueColor: AlwaysStoppedAnimation<Color>(Colors.${paramValues.linearProgressColor1})));
+                        backgroundColor: Colors.${paramValues.linearProgressColor2},
+                        valueColor: AlwaysStoppedAnimation<Color>(Colors.${paramValues.linearProgressColor1}));
                     callback(dynamic s, int i) {
                     }
                     MaterialCardData data = new MaterialCardData(
@@ -690,7 +690,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
                       id: 201,
                       name: "Solid Card",
                       imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-solid-card.dart';",
-                      call: `customSolidCard${counter}(solidParameters${counter}, callbackSolid${counter}),`,
+                      call: `customSolidCard(solidParameters${counter}, callbackSolid${counter}),`,
                       definitions: `
                       callbackSolid${counter}(dynamic s, int i) {
                           }
@@ -704,7 +704,123 @@ let getWidgets = (widgetId, paramValues, counter) =>
                             containerbgColor: Colors.${paramValues.bgColor}
                           );
                   `
-                    }
+                    },
+             {
+                     id: 300,
+                     name: "Appbar",
+                     imports: "import 'package:rapid_widgets_library/custom-appBar.dart'; \nimport 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-tab-bar.dart';",
+                     call: "appBar:customAppBar(appBarIcons,paramobject),",
+                     definitions: `
+                     onTap(int s) {
+                                             print(s);
+                                           }
+                                           List<TabBarList> tabs = [];
+                                           TabBarList tab1 = new TabBarList(
+
+                                               "e-Books",
+                                               Icon(Icons.fastfood,color: Colors.transparent,size: 0,),
+                                           );
+                     TabBarList tab2 = new TabBarList(
+                                               "Video Course",
+                                               Icon(Icons.fastfood,color: Colors.transparent,size: 0,)
+                                           );
+                     TabBarList tab3 = new TabBarList(
+                                               "Audio Books",
+                                               Icon(Icons.fastfood,color: Colors.transparent,size: 0,)
+                                           );
+                     TabBarList tab4 = new TabBarList(
+                                               "My Course",
+                                               Icon(Icons.fastfood,color: Colors.transparent,size: 0,)
+                                           );
+                                           tabs.add(tab1);
+                                           tabs.add(tab2);
+                                           tabs.add(tab3);
+                                           tabs.add(tab4);
+                     AppBarParameters paramobject = new AppBarParameters(
+                           backgroundColor: Colors.white,
+                             elevation: 0,
+                             bottomOpacity: 1.0,
+                             toolbarOpacity: 1.0,
+                             titleSpacing: 1.0,
+                             centerTitle: false,
+                             automaticallyImplyLeading: true,
+                             bottom: PreferredSize(preferredSize:Size.fromHeight(80),child: Container(height:75,child:showTabBar(TabBarParameters(tablist: tabs,backgroundColor: Colors.white,labelColor: Color(0xff707070),boxColor: Colors.white,borderColor: Color(0xffD93954),unselectedLabelColor: Color(0xff707070),boxShadowColor: Colors.white,),onTap,)),),
+                             leading: Icon(Icons.arrow_back, color: Color(0xff707070),),
+                             title: Text('Featured',
+                             style: TextStyle(fontSize: 26, color: Color(0xff707070)),));
+                         List<Widget> appBarIcons = [
+                           IconButton(
+                             icon: Image.network('http://104.40.75.137:9003/assets/cms/cart.png',width: 20,height: 14,),
+                             onPressed: () {},
+                           ),
+                           Padding(
+                             padding: const EdgeInsets.only(right: 30.0),
+                             child: IconButton(
+                               icon: Image.network('http://104.40.75.137:9003/assets/cms/drawer_icon.png',width: 20,height: 14,),
+                               onPressed: () {},
+                             ),
+                           )];
+              `
+                   },
+         {
+                              id: 301,
+                              name: "Appbar",
+                              imports: "import 'package:rapid_widgets_library/custom-appBar.dart';",
+                              call: "appBar:customAppBar(appBarIcons,paramobject),",
+                              definitions: `
+                              AppBarParameters paramobject = new AppBarParameters(
+                                    backgroundColor: Colors.white,
+                                      elevation: 0,
+                                      bottomOpacity: 1.0,
+                                      toolbarOpacity: 1.0,
+                                      titleSpacing: 1.0,
+                                      centerTitle: false,
+                                      automaticallyImplyLeading: true,
+                                      leading: Icon(Icons.arrow_back, color: Color(0xff707070),),
+                                      title: Text('Featured',
+                                      style: TextStyle(fontSize: 26, color: Color(0xff707070)),));
+                                  List<Widget> appBarIcons = [
+                                    IconButton(
+                                      icon: Image.network('http://104.40.75.137:9003/assets/cms/cart.png',width: 20,height: 14,),
+                                      onPressed: () {},
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(right: 30.0),
+                                      child: IconButton(
+                                        icon: Image.network('http://104.40.75.137:9003/assets/cms/drawer_icon.png',width: 20,height: 14,),
+                                        onPressed: () {},
+                                      ),
+                                    )];
+                       `
+                            },
+                            {
+                                         id: 302,
+                                         name: "Appbar",
+                                         imports: "import 'package:rapid_widgets_library/custom-appBar.dart';",
+                                         call: "appBar:customAppBar(appBarIcons,paramobject),",
+                                         definitions: `
+                                         AppBarParameters paramobject = new AppBarParameters(
+                                               backgroundColor: Colors.white,
+                                                 elevation: 0,
+                                                 bottomOpacity: 1.0,
+                                                 toolbarOpacity: 1.0,
+                                                 titleSpacing: 1.0,
+                                                 centerTitle: false,
+                                                 automaticallyImplyLeading: true,
+                                                 leading: Icon(Icons.arrow_back, color: Color(0xff707070),),
+                                                 title: Text('React Fullstack with\nnode/express',
+                                                 style: TextStyle(fontSize: 26, color: Color(0xff707070)),));
+                                             List<Widget> appBarIcons = [
+                                               Padding(
+                                                 padding: const EdgeInsets.only(right: 30.0),
+                                                 child: IconButton(
+                                                   icon: Image.network('http://104.40.75.137:9003/assets/cms/drawer_icon.png',width: 20,height: 14,),
+                                                   onPressed: () {},
+                                                 ),
+                                               )];
+                                  `
+                                       },
+
 ];
     for (i of widgetList) {
       if (i.id == widgetId) {

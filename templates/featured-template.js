@@ -62,7 +62,7 @@ let featuredTemplate = req =>
         drawerCall +
         "\n" +
         bottomNavBarCall +
-        "\nbackgroundColor: Colors.white,\nbody: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.only(left:20.0,right:20),\nchild: Row(children: [";
+        "\nbackgroundColor: Colors.white,\nbody: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.only(left:30.0,right:30),\nchild: Row(children: [";
       //const data6 = '\n ],),)),),),);}}  '
 
     
@@ -188,16 +188,16 @@ let featuredTemplate = req =>
         dataMap.then(() => {
       
           let data7 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:33.0,top:30),\nchild: Row(children: [";
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:30.0,top:30),\nchild: Row(children: [";
           let data8 = "\nExpanded(flex: 1,child:" + card1 + "),";
           let data9 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:33.0),\nchild: Row(children: ["; //Widget2 call
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:30.0),\nchild: Row(children: ["; //Widget2 call
           let data10 = "\nExpanded(flex: 1,child:" + card2 + "),";
           let data11 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:33.0),\nchild: Row(children: ["; //Widget2 call
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:30.0),\nchild: Row(children: ["; //Widget2 call
           let data12 = "\nExpanded(flex: 1,child:" + card3 + "),";
           let data13 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:33.0),\nchild: Row(children: ["; //Widget2 call
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:30.0),\nchild: Row(children: ["; //Widget2 call
           let data14 = "\nExpanded(flex: 1,child:" + card4 + "),";
           let data15 =
             "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(0.0),\nchild: Row(children: ["; //Widget2 call

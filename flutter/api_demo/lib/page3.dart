@@ -156,7 +156,7 @@ class _BoilerPlate extends State<BoilerPlate> {
                               Container(
                                 height: 41,
                                 width: 123,
-                                child: FlatButton(child: Text('Add to Cart',
+                                child: FlatButton(color: Color(0xffD93954),child: Text('View',
                                   style: TextStyle(color: Colors.white, fontSize: 13, fontFamily: 'Segoe UI'),),
                                   onPressed: (){ Navigator.pushReplacement(
                                     context,
@@ -180,16 +180,16 @@ class _BoilerPlate extends State<BoilerPlate> {
                               SizedBox(height: 4,),
                               Align(
                                 alignment: Alignment.centerLeft,
-                                child: Text('By Zak Rukavacus',
+                                child: Text('By Zak Ruvacaba',
                                   style: TextStyle(fontSize: 14.0,color: Color(0xff707070)),),
                               ),
                               SizedBox(height: 46,),
                               Row(
                                 children: <Widget>[
-                                  Text('4.25',
+                                  Text('USD 4.25',
                                   style: TextStyle(fontSize: 20.0, color: Color(0xff707070)),),
                                   SizedBox(width: 10,),
-                                  Text('5',
+                                  Text('USD 5.00',
                                   style: TextStyle(color: Color(0xffD93954), decoration: TextDecoration.lineThrough,fontSize: 20.0),),
                                 ],
                               )
@@ -219,7 +219,7 @@ class _BoilerPlate extends State<BoilerPlate> {
                               Container(
                                 height: 41,
                                 width: 123,
-                                child: FlatButton(child: Text('Add to Cart',
+                                child: FlatButton(color: Color(0xffD93954),child: Text('View',
                                   style: TextStyle(color: Colors.white, fontSize: 13, fontFamily: 'Segoe UI'),),
                                   onPressed: (){ Navigator.pushReplacement(
                                     context,
@@ -243,16 +243,16 @@ class _BoilerPlate extends State<BoilerPlate> {
                               SizedBox(height: 4,),
                               Align(
                                 alignment: Alignment.centerLeft,
-                                child: Text('By Mohammed Iqbal',
+                                child: Text('By Mohammad Iqbal',
                                   style: TextStyle(fontSize: 14.0,color: Color(0xff707070)),),
                               ),
                               SizedBox(height: 46,),
                               Row(
                                 children: <Widget>[
-                                  Text('4.25',
+                                  Text('USD 4.25',
                                   style: TextStyle(fontSize: 20.0, color: Color(0xff707070)),),
                                   SizedBox(width: 10,),
-                                  Text('5',
+                                  Text('USD 5.00',
                                   style: TextStyle(color: Color(0xffD93954), decoration: TextDecoration.lineThrough,fontSize: 20.0),),
                                 ],
                               )
@@ -282,7 +282,7 @@ class _BoilerPlate extends State<BoilerPlate> {
                               Container(
                                 height: 41,
                                 width: 123,
-                                child: FlatButton(child: Text('Add to Cart',
+                                child: FlatButton(color: Color(0xffD93954),child: Text('View',
                                   style: TextStyle(color: Colors.white, fontSize: 13, fontFamily: 'Segoe UI'),),
                                   onPressed: (){ Navigator.pushReplacement(
                                     context,
@@ -306,16 +306,16 @@ class _BoilerPlate extends State<BoilerPlate> {
                               SizedBox(height: 4,),
                               Align(
                                 alignment: Alignment.centerLeft,
-                                child: Text('By Emily Scott',
+                                child: Text('By Elvis Graholskis',
                                   style: TextStyle(fontSize: 14.0,color: Color(0xff707070)),),
                               ),
                               SizedBox(height: 46,),
                               Row(
                                 children: <Widget>[
-                                  Text('14.25',
+                                  Text('USD 14.25',
                                   style: TextStyle(fontSize: 20.0, color: Color(0xff707070)),),
                                   SizedBox(width: 10,),
-                                  Text('50',
+                                  Text('USD 50.00',
                                   style: TextStyle(color: Color(0xffD93954), decoration: TextDecoration.lineThrough,fontSize: 20.0),),
                                 ],
                               )
@@ -345,7 +345,7 @@ class _BoilerPlate extends State<BoilerPlate> {
                               Container(
                                 height: 41,
                                 width: 123,
-                                child: FlatButton(child: Text('Add to Cart',
+                                child: FlatButton(color: Color(0xffD93954),child: Text('View',
                                   style: TextStyle(color: Colors.white, fontSize: 13, fontFamily: 'Segoe UI'),),
                                   onPressed: (){ Navigator.pushReplacement(
                                     context,
@@ -364,21 +364,21 @@ class _BoilerPlate extends State<BoilerPlate> {
                           padding: const EdgeInsets.only(left: 13.0, bottom: 20.5),
                           child: Column(
                             children: <Widget>[
-                              Text('React js frontend web',textAlign: TextAlign.left,
+                              Text('React JS Frontend Web Development',textAlign: TextAlign.left,
                               style: TextStyle(fontSize: 20,color: Color(0xff707070)),),
                               SizedBox(height: 4,),
                               Align(
                                 alignment: Alignment.centerLeft,
-                                child: Text('By Ryan Dhangel',
+                                child: Text('By Rhyan Dhungel',
                                   style: TextStyle(fontSize: 14.0,color: Color(0xff707070)),),
                               ),
                               SizedBox(height: 46,),
                               Row(
                                 children: <Widget>[
-                                  Text('12.25',
+                                  Text('USD 12.25',
                                   style: TextStyle(fontSize: 20.0, color: Color(0xff707070)),),
                                   SizedBox(width: 10,),
-                                  Text('50',
+                                  Text('USD 50.00',
                                   style: TextStyle(color: Color(0xffD93954), decoration: TextDecoration.lineThrough,fontSize: 20.0),),
                                 ],
                               )

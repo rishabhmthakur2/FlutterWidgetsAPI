@@ -94,21 +94,21 @@ onclick18(String sText) { print(sText); }
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
-          textAlign: TextAlign.center
+          textAlign: TextAlign.left
         );
          
 
                 CustomLinearProgressBarParameters linearBarParameters =
                     new CustomLinearProgressBarParameters(
                         value: 0.4,
-                        backgroundColor: Colors.grey,
-                        valueColor: AlwaysStoppedAnimation<Color>(Colors.green));
+                        backgroundColor: Colors.green,
+                        valueColor: AlwaysStoppedAnimation<Color>(Colors.red));
                     callback(dynamic s, int i) {
                     }
                     MaterialCardData data = new MaterialCardData(
-                      title: 'Programming with javascript',
-                      subtitle: 'Chapter 3 -The Period',
-                      bodyText: 'JavaScript is a powerful and versatile scripting language used in web applic...',
+                      title: 'Programming with JavaScript',
+                      subtitle: 'Chapter 3 - The Period',
+                      bodyText: 'JavaScript is a powerful and versatile scripting  language used in web applic...',
                       footerText: 'Progress',
                       btnGrpList1: [
                         FlatButton(
@@ -139,7 +139,7 @@ onclick18(String sText) { print(sText); }
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
-          textAlign: TextAlign.center
+          textAlign: TextAlign.left
         );
          
 
@@ -152,7 +152,7 @@ onclick18(String sText) { print(sText); }
                             imgHeight: 145,
                             imgWidth: 145,
                             imgPath: 'http://104.40.75.137:9003/assets/cms/image5.png',
-                            containerbgColor: Colors.orange
+                            containerbgColor: Colors.red
                           );
                   
 
@@ -165,14 +165,14 @@ onclick18(String sText) { print(sText); }
                             imgHeight: 145,
                             imgWidth: 145,
                             imgPath: 'http://104.40.75.137:9003/assets/cms/image5.png',
-                            containerbgColor: Colors.red
+                            containerbgColor: Colors.orange
                           );
                   
 
                       callbackSolid24(dynamic s, int i) {
                           }
                           MaterialCardData solidParameters24 = new MaterialCardData(
-                            title: 'Downloads',
+                            title: 'Audio books',
                             containerHeight: 53,
                             containerWidth: 135,
                             imgHeight: 145,
@@ -185,7 +185,7 @@ onclick18(String sText) { print(sText); }
                       callbackSolid25(dynamic s, int i) {
                           }
                           MaterialCardData solidParameters25 = new MaterialCardData(
-                            title: 'E-books',
+                            title: 'Downloads',
                             containerHeight: 53,
                             containerWidth: 135,
                             imgHeight: 145,

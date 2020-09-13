@@ -81,13 +81,13 @@ onclick0(String sText) { print(sText); }
         src:'http://104.40.75.137:9003/assets/cms/image1.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 170, width: 180);
+         height: 230, width: 300);
          
 
         TextParameters textparam1 = new TextParameters(
           data: 'Web content',
           fontSize: 26,
-          color: Colors.black,
+          color: Colors.grey,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
@@ -96,9 +96,9 @@ onclick0(String sText) { print(sText); }
          
 
         TextParameters textparam2 = new TextParameters(
-          data: 'Web content is the textual, visual, or aural content that is encountered as part of the user experience on websites',
+          data: 'Web content is the textual, visual, or aural  content that is encountered as part of  the user experience on websites',
           fontSize: 16,
-          color: Colors.black,
+          color: Colors.grey,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.normal,
@@ -110,13 +110,13 @@ onclick5(String sText) { print(sText); }
         src:'http://104.40.75.137:9003/assets/cms/image2.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 170, width: 180);
+         height: 300, width: 400);
          
 
         TextParameters textparam6 = new TextParameters(
           data: 'Teacher learning education',
           fontSize: 26,
-          color: Colors.black,
+          color: Colors.grey,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
@@ -127,7 +127,7 @@ onclick5(String sText) { print(sText); }
         TextParameters textparam7 = new TextParameters(
           data: 'Training teacher for the lesson for online student interaction',
           fontSize: 16,
-          color: Colors.black,
+          color: Colors.grey,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.normal,
@@ -151,9 +151,9 @@ onclick5(String sText) { print(sText); }
           color:Colors.pink,
           textColor:Colors.white,
           hoverColor: Colors.pink,
-          width: 150,
+          width: 146,
           focusColor: Colors.pink,
-          height: 40,
+          height: 41,
           highlightColor: Colors.pink,
           splashColor: Colors.pink
 
@@ -164,7 +164,7 @@ onclick9(String sText) { print(sText); }
         src:'http://104.40.75.137:9003/assets/cms/image3.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 302, width: 414);
+         height: 300, width: 400);
          
 
             onTextSubmit10 (String sText) { 
@@ -241,7 +241,7 @@ onclick9(String sText) { print(sText); }
           hoverColor: Colors.pink,
           width: 274,
           focusColor: Colors.pink,
-          height: 50,
+          height: 53,
           highlightColor: Colors.pink,
           splashColor: Colors.pink
 
@@ -249,9 +249,9 @@ onclick9(String sText) { print(sText); }
       
 
         TextParameters textparam13 = new TextParameters(
-          data: 'Forgot Password? /n You can register here',
+          data: 'Forgot Password?\nYou can Register here',
           fontSize: 14,
-          color: Colors.black,
+          color: Colors.grey,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.normal,

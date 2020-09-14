@@ -72,13 +72,13 @@ onclick0(String sText) { print(sText); }
         src:'http://104.40.75.137:9003/assets/cms/image1.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 230, width: 300);
+         height: 150, width: 180);
          
 
         TextParameters textparam1 = new TextParameters(
           data: 'Web content',
           fontSize: 26,
-          color: Colors.grey,
+          color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
@@ -89,10 +89,10 @@ onclick0(String sText) { print(sText); }
         TextParameters textparam2 = new TextParameters(
           data: 'Web content is the textual, visual, or aural  content that is encountered as part of  the user experience on websites',
           fontSize: 16,
-          color: Colors.grey,
+          color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
-          fontWeight: FontWeight.normal,
+          fontWeight: FontWeight.bold,
           textAlign: TextAlign.center
         );
          

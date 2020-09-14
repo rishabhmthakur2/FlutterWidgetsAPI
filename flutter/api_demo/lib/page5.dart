@@ -23,6 +23,11 @@ import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-flatButton.dart';
 import 'page1.dart';
+import 'package:rapid_widgets_library/custom-image.dart';
+import 'package:rapid_widgets_library/custom-text.dart';
+import 'package:rapid_widgets_library/custom-text.dart';
+import 'package:rapid_widgets_library/custom-flatButton.dart';
+import 'page1.dart';
 void main() => runApp(Page5());
 class Page5 extends StatelessWidget {
 @override
@@ -124,13 +129,13 @@ onclick0(String sText) { print(sText); }
         src:'http://104.40.75.137:9003/assets/cms/image1.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 230, width: 300);
+         height: 150, width: 180);
          
 
         TextParameters textparam1 = new TextParameters(
           data: 'Web content',
           fontSize: 26,
-          color: Colors.grey,
+          color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
@@ -141,10 +146,10 @@ onclick0(String sText) { print(sText); }
         TextParameters textparam2 = new TextParameters(
           data: 'Web content is the textual, visual, or aural  content that is encountered as part of  the user experience on websites',
           fontSize: 16,
-          color: Colors.grey,
+          color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
-          fontWeight: FontWeight.normal,
+          fontWeight: FontWeight.bold,
           textAlign: TextAlign.center
         );
          
@@ -153,13 +158,13 @@ onclick5(String sText) { print(sText); }
         src:'http://104.40.75.137:9003/assets/cms/image2.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 300, width: 400);
+         height: 150, width: 180);
          
 
         TextParameters textparam6 = new TextParameters(
           data: 'Teacher learning education',
           fontSize: 26,
-          color: Colors.grey,
+          color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
@@ -170,10 +175,10 @@ onclick5(String sText) { print(sText); }
         TextParameters textparam7 = new TextParameters(
           data: 'Training teacher for the lesson for online student interaction',
           fontSize: 16,
-          color: Colors.grey,
+          color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
-          fontWeight: FontWeight.normal,
+          fontWeight: FontWeight.bold,
           textAlign: TextAlign.center
         );
          
@@ -190,13 +195,13 @@ onclick5(String sText) { print(sText); }
           print(b); 
           } 
           FlatButtonParameters buttonFlatObject8 = FlatButtonParameters(
-          child:Text('Get Started'),
+          child:Text('Get started'),
           color:Colors.pink,
           textColor:Colors.white,
           hoverColor: Colors.pink,
-          width: 146,
+          width: 150,
           focusColor: Colors.pink,
-          height: 41,
+          height: 50,
           highlightColor: Colors.pink,
           splashColor: Colors.pink
 
@@ -207,7 +212,7 @@ onclick9(String sText) { print(sText); }
         src:'http://104.40.75.137:9003/assets/cms/image3.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 300, width: 400);
+         height: 302, width: 414);
          
 
             onTextSubmit10 (String sText) { 
@@ -226,10 +231,10 @@ onclick9(String sText) { print(sText); }
             counterText: "", 
             border: OutlineInputBorder( 
             borderRadius: BorderRadius.circular(30), 
-            borderSide: BorderSide( color: Colors.white70)), 
+            borderSide: BorderSide( color: Colors.grey)), 
             ), 
             cursorColor: Colors.black, 
-            cursorWidth: 2, 
+            cursorWidth: 1, 
             expands: false, 
             maxLines: 1, 
             readOnly: false, 
@@ -254,10 +259,10 @@ onclick9(String sText) { print(sText); }
             counterText: "", 
             border: OutlineInputBorder( 
             borderRadius: BorderRadius.circular(30), 
-            borderSide: BorderSide( color: Colors.white70)), 
+            borderSide: BorderSide( color: Colors.grey)), 
             ), 
             cursorColor: Colors.black, 
-            cursorWidth: 2, 
+            cursorWidth: 1, 
             expands: false, 
             maxLines: 1, 
             readOnly: false, 
@@ -267,24 +272,24 @@ onclick9(String sText) { print(sText); }
         
 
         TextParameters textparam13 = new TextParameters(
-          data: 'Forgot Password?\nYou can Register here',
+          data: 'Forgot password ? \n You can register here',
           fontSize: 14,
-          color: Colors.grey,
+          color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.normal,
           textAlign: TextAlign.center
         );
          
-onclick26(String sText) { print(sText); }
-        CustomImageContents ImageObj126 = new CustomImageContents(
+onclick25(String sText) { print(sText); }
+        CustomImageContents ImageObj125 = new CustomImageContents(
         src:'http://104.40.75.137:9003/assets/cms/Image6.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 158, width: 235);
+         height: 160, width: 180);
          
 
-        TextParameters textparam27 = new TextParameters(
+        TextParameters textparam26 = new TextParameters(
           data: 'Module 1 - Introduction',
           fontSize: 20,
           color: Colors.black,
@@ -295,7 +300,7 @@ onclick26(String sText) { print(sText); }
         );
          
 
-        TextParameters textparam28 = new TextParameters(
+        TextParameters textparam27 = new TextParameters(
           data: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Maecenas aliquam nisl orci. Proin faucibus odio tellus,  ut tincidunt magna dictum id. Integer porttitor eget magna  sit amet feugiat. Ut at ante lobortis, condimentum purus a,  auctor urna. Sed volutpat velit accumsan dolor ullamcorper,  non condimentum est tristique. Sed sit amet imperdiet ipsum.  Nulla ac ante in lorem hendrerit malesuada. Aliquam imperdiet  felis velit, sed feugiat elit blandit sed. Cras eget sagittis  ante. Maecenas pharetra erat non ullamcorper vestibulum. Cras  varius erat tortor, non cursus magna molestie semper. Maecenas  ullamcorper a nisl non iaculis. Duis nibh ipsum.Lorem ipsum dolor  sit amet, consectetur adipiscing elit. Maecenas aliquam nisl orci.  Proin faucibus odio tellus, ut tincidunt magna dictum id. Integer  porttitor eget magna sit amet feugiat. Ut at ante lobortis, condimentum  purus a, auctor urna. Sed volutpat velit accumsan dolor ullamcorper,  non condimentum est tristique. Sed sit amet imperdiet ipsum. Nulla ac  ante in lorem hendrerit malesuada. Aliquam imperdiet felis velit, sed  feugiat elit blandit sed. Cras eget sagittis ante. Maecenas pharetra  erat non ullamcorper vestibulum. Cras varius erat tortor, non cursus  magna molestie semper. Maecenas ullamcorper a nisl non iaculis. Duis  nibh ipsum.',
           fontSize: 16,
           color: Colors.black,
@@ -306,7 +311,7 @@ onclick26(String sText) { print(sText); }
         );
          
 
-          onFlatButtonPress29 (bool b){ 
+          onFlatButtonPress28 (bool b){ 
           print(b); 
           Navigator.pushReplacement(
             context,
@@ -314,17 +319,71 @@ onclick26(String sText) { print(sText); }
                 builder: (context) => Page1()));
 
           } 
-          onFlatButtonLongPress29 (bool b){ 
+          onFlatButtonLongPress28 (bool b){ 
           print(b); 
           } 
-          FlatButtonParameters buttonFlatObject29 = FlatButtonParameters(
+          FlatButtonParameters buttonFlatObject28 = FlatButtonParameters(
+          child:Text('Purchase with USD 4.25 to continue reading.'),
+          color:Colors.pink,
+          textColor:Colors.white,
+          hoverColor: Colors.pink,
+          width: 250,
+          focusColor: Colors.pink,
+          height: 50,
+          highlightColor: Colors.pink,
+          splashColor: Colors.pink
+
+          );
+      
+onclick29(String sText) { print(sText); }
+        CustomImageContents ImageObj129 = new CustomImageContents(
+        src:'http://104.40.75.137:9003/assets/cms/Image6.png',
+         semanticLabel: 'Random Network', 
+         imageType: 'Network', 
+         height: 150, width: 180);
+         
+
+        TextParameters textparam30 = new TextParameters(
+          data: 'Module 1 - Introduction',
+          fontSize: 20,
+          color: Colors.black,
+          fontStyle: FontStyle.normal,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.bold,
+          textAlign: TextAlign.left
+        );
+         
+
+        TextParameters textparam31 = new TextParameters(
+          data: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Maecenas aliquam nisl orci. Proin faucibus odio tellus,  ut tincidunt magna dictum id. Integer porttitor eget magna  sit amet feugiat. Ut at ante lobortis, condimentum purus a,  auctor urna. Sed volutpat velit accumsan dolor ullamcorper,  non condimentum est tristique. Sed sit amet imperdiet ipsum.  Nulla ac ante in lorem hendrerit malesuada. Aliquam imperdiet  felis velit, sed feugiat elit blandit sed. Cras eget sagittis  ante. Maecenas pharetra erat non ullamcorper vestibulum. Cras  varius erat tortor, non cursus magna molestie semper. Maecenas  ullamcorper a nisl non iaculis. Duis nibh ipsum.Lorem ipsum dolor  sit amet, consectetur adipiscing elit. Maecenas aliquam nisl orci.  Proin faucibus odio tellus, ut tincidunt magna dictum id. Integer  porttitor eget magna sit amet feugiat. Ut at ante lobortis, condimentum  purus a, auctor urna. Sed volutpat velit accumsan dolor ullamcorper,  non condimentum est tristique. Sed sit amet imperdiet ipsum. Nulla ac  ante in lorem hendrerit malesuada. Aliquam imperdiet felis velit, sed  feugiat elit blandit sed. Cras eget sagittis ante. Maecenas pharetra  erat non ullamcorper vestibulum. Cras varius erat tortor, non cursus  magna molestie semper. Maecenas ullamcorper a nisl non iaculis. Duis  nibh ipsum.',
+          fontSize: 16,
+          color: Colors.black,
+          fontStyle: FontStyle.normal,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.normal,
+          textAlign: TextAlign.left
+        );
+         
+
+          onFlatButtonPress32 (bool b){ 
+          print(b); 
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+                builder: (context) => Page1()));
+
+          } 
+          onFlatButtonLongPress32 (bool b){ 
+          print(b); 
+          } 
+          FlatButtonParameters buttonFlatObject32 = FlatButtonParameters(
           child:Text('Purchase with USD 4.25 to continue reading.'),
           color:Colors.pink,
           textColor:Colors.white,
           hoverColor: Colors.pink,
           width: 200,
           focusColor: Colors.pink,
-          height: 40,
+          height: 50,
           highlightColor: Colors.pink,
           splashColor: Colors.pink
 
@@ -345,19 +404,19 @@ children: <Widget>[
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:CustomImage(data: ImageObj126),),
+Expanded(flex: 1,child:CustomImage(data: ImageObj129),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.only(top:30,bottom:30),
 child: Row(children: [
-Expanded(flex: 1,child:customText(textparam27)),
+Expanded(flex: 1,child:customText(textparam30)),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.only(bottom:30),
 child: Row(children: [
-Expanded(flex: 1,child:customText(textparam28)),
+Expanded(flex: 1,child:customText(textparam31)),
 ],),
 ),
 Padding(
@@ -368,7 +427,7 @@ child: Row(children: [
 Padding(
 padding: const EdgeInsets.only(bottom:30),
 child: Row(children: [
-Expanded(flex: 1,child:customFlatButton(buttonFlatObject29, onFlatButtonPress29, onFlatButtonLongPress29),),
+Expanded(flex: 1,child:customFlatButton(buttonFlatObject32, onFlatButtonPress32, onFlatButtonLongPress32),),
  ],),
 ),
 ], 

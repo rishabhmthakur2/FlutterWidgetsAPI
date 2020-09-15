@@ -92,7 +92,7 @@ onclick0(String sText) { print(sText); }
           color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.normal,
           textAlign: TextAlign.center
         );
          

@@ -93,7 +93,7 @@ onclick0(String sText) { print(sText); }
           color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.normal,
           textAlign: TextAlign.center
         );
          
@@ -102,7 +102,7 @@ onclick5(String sText) { print(sText); }
         src:'http://104.40.75.137:9003/assets/cms/image2.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 150, width: 180);
+         height: 170, width: 200);
          
 
         TextParameters textparam6 = new TextParameters(
@@ -122,7 +122,7 @@ onclick5(String sText) { print(sText); }
           color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.normal,
           textAlign: TextAlign.center
         );
          
@@ -139,7 +139,7 @@ onclick5(String sText) { print(sText); }
           print(b); 
           } 
           FlatButtonParameters buttonFlatObject8 = FlatButtonParameters(
-          child:Text('Get started'),
+          child:Text('Get Started'),
           color:Colors.pink,
           textColor:Colors.white,
           hoverColor: Colors.pink,

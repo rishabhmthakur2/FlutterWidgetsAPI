@@ -541,50 +541,6 @@ let featuredTemplate = req =>
                   console.log("Data is appended to file successfully.");
                 }
               );
-            // if (outputPlatform == 0) {
-            //   try {
-            //     exec(batMobile, (err, stdout, stderr) => {
-            //       if (err) {
-            //         console.error(err);
-            //         return;
-            //       }
-            //       console.log(stdout);
-            //       let test = pCloudy();
-            //       test.then(data => {
-            //         let submitResponse = {
-            //           status: 200,
-            //           url: data,
-            //           message: "File execution successfull"
-            //         };
-            //         resolve(submitResponse);
-            //       });
-            //     });
-            //   } catch (error) {
-            //     return error;
-            //   }
-            // } else {
-            //   console.log("Executing Bat File");
-            //   try {
-            //     exec(batWeb, (err, stdout, stderr) => {
-            //       if (err) {
-            //         console.error(err);
-            //         return stderr;
-            //       } else {
-            //         resolve("App exec started");
-            //         console.log(stdout, `${stdout}`);
-            //         return stdout;
-            //       }
-            //     });
-            //   } catch (error) {
-            //     return error;
-            //   }
-            // }
-            // resolve({
-            //   status: 200,
-            //   url:
-            //     "https://device.pcloudy.com/device/xf57f8tm4x87y54myfjjf64nt9ys8fxpd74kwctx",
-            //   message: "File execution successfull"
-            // });
           });
         });
       } catch (error) {

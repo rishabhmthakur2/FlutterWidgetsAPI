@@ -11,6 +11,8 @@ const { homeTemplate } = require('./templates/home-template');
 const { getStartedTemplate } = require('./templates/get-started');
 const { featuredTemplate } = require('./templates/featured-template');
 const { deatailsTemplate } = require('./templates/deatails-template');
+const { shoppingCartTemplate } = require('./templates/shoping-cart-template');
+const { paymentTemplate } = require('./templates/payment-template');
 
 var app = express();
 app.use(cors());
@@ -142,6 +144,26 @@ app.post('/submitWidgetParams', async (req, res) => {
   }
   else if (templateHandler == 8) {
     execute = deatailsTemplate(req);
+    try {
+      execute.then((data) => {
+        res.status(200).send(data);
+      });
+    } catch (error) {
+      res.status(400).send(error);
+    }
+  }
+  else if (templateHandler == 9) {
+    execute = shoppingCartTemplate(req);
+    try {
+      execute.then((data) => {
+        res.status(200).send(data);
+      });
+    } catch (error) {
+      res.status(400).send(error);
+    }
+  }
+  else if (templateHandler == 10) {
+    execute = paymentTemplate(req);
     try {
       execute.then((data) => {
         res.status(200).send(data);

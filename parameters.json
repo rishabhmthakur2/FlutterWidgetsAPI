@@ -329,6 +329,29 @@
           "price": "String",
           "btnText": "String"
         }
+      },
+      {
+        "id": 303,
+        "name": "AppBar",
+        "definitions": {
+          "title": "String"
+        }
+      },
+      {
+        "id": 75,
+        "name": "Checkbox",
+        "definitions": {
+          "selectedColor": "Color"
+        }
+      },
+      {
+        "id": 40,
+        "name": "Icon",
+        "definitions": {
+          "icon": "Icon",
+          "color":"Color",
+          "size":"Number"
+        }
       }
     ]
   }

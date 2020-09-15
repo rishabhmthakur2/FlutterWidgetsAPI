@@ -499,8 +499,8 @@ let getWidgets = (widgetId, paramValues, counter) =>
           titleSpacing: ${paramValues.titleSpacing},
           centerTitle: ${paramValues.centerTitle},
           automaticallyImplyLeading: ${paramValues.automaticallyImplyLeading},
-          title: Text('${paramValues.title}'));
-          backgroundColor: Colors.${paramValues.backgroundColor},
+          title: Text('${paramValues.title}'),
+          backgroundColor: Colors.${paramValues.backgroundColor});
           List<Widget> appBarIcons = [
           IconButton(
           icon:

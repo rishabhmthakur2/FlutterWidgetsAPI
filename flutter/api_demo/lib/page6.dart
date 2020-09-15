@@ -31,8 +31,8 @@ class _BoilerPlate extends State<BoilerPlate> {
           titleSpacing: 10,
           centerTitle: false,
           automaticallyImplyLeading: false,
-          title: Text('Title'));
-          backgroundColor: Colors.undefined,
+          title: Text('Title'),
+          backgroundColor: Colors.white);
           List<Widget> appBarIcons = [
           IconButton(
           icon:
@@ -198,7 +198,7 @@ child: Row(children: [
 Padding(
 padding: const EdgeInsets.only(bottom:30.0,top:30),
 child: Row(children: [
-Expanded(flex: 1,child:CustomTextField(params: finalTextObj0, callbackTextfield: onTextSubmit0),),
+Expanded(flex: 1,child:Container()),
 ],),
 ),
 Padding(
@@ -216,8 +216,8 @@ Expanded(flex: 1,child:Container()),
 Padding(
 padding: const EdgeInsets.only(bottom:30.0),
 child: Row(children: [
-Expanded(flex: 1,child:Container()),
 Expanded(flex: 1,child:CustomDropdownButton(dropdownObject2,onSelect2),),
+Expanded(flex: 1,child:CustomTextField(params: finalTextObj0, callbackTextfield: onTextSubmit0),),
 Expanded(flex: 1,child:Container()),
 ],),
 ),

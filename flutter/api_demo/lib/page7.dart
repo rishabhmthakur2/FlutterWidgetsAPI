@@ -31,8 +31,8 @@ class _BoilerPlate extends State<BoilerPlate> {
           titleSpacing: 10,
           centerTitle: false,
           automaticallyImplyLeading: false,
-          title: Text('Title'));
-          backgroundColor: Colors.undefined,
+          title: Text('Title'),
+          backgroundColor: Colors.white);
           List<Widget> appBarIcons = [
           IconButton(
           icon:

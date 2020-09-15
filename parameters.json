@@ -315,6 +315,20 @@
           "bgColor": "Color",
           "imgPath": "String"
         }
+      },
+      {
+        "id": 202,
+        "name": "Borderless Card",
+        "definitions": {
+          "title": "String",
+          "subtitle":"String",
+          "containerHeight": "Number",
+          "containerWidth": "Number",
+          "bgColor": "Color",
+          "imgPath": "String",
+          "price": "String",
+          "btnText": "String"
+        }
       }
     ]
   }

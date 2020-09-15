@@ -690,7 +690,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
                     );
             `
               },
-{
+              {
                       id: 201,
                       name: "Solid Card",
                       imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-solid-card.dart';",
@@ -707,6 +707,22 @@ let getWidgets = (widgetId, paramValues, counter) =>
                             imgPath: '${paramValues.imgPath}',
                             containerbgColor: Colors.${paramValues.bgColor}
                           );
+                  `
+                    },
+                    {
+                      id: 202,
+                      name: "Borderless Card",
+                      imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-borderless-card.dart';",
+                      call: `customBorderlessCard(borderdata${counter},borderlessCallback${counter}),`,
+                      definitions: `
+                      title: '${paramValues.title}',
+                      subtitle: '${paramValues.subtitle}',
+                      containerHeight: ${paramValues.containerHeight},
+                      containerWidth: ${paramValues.containerWidth},
+                      imgPath: '${paramValues.imgPath}',
+                      containerbgColor: Colors.${paramValues.bgColor},
+                      footerText: '${paramValues.price}',
+                      btnText: '${paramValues.btnText}',
                   `
                     },
              {

@@ -24,10 +24,6 @@ import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-flatButton.dart';
 import 'page1.dart';
 import 'package:rapid_widgets_library/custom-image.dart';
-import 'package:rapid_widgets_library/custom-text.dart';
-import 'package:rapid_widgets_library/custom-text.dart';
-import 'package:rapid_widgets_library/custom-flatButton.dart';
-import 'page1.dart';
 void main() => runApp(Page5());
 class Page5 extends StatelessWidget {
 @override
@@ -149,7 +145,7 @@ onclick0(String sText) { print(sText); }
           color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.normal,
           textAlign: TextAlign.center
         );
          
@@ -158,7 +154,7 @@ onclick5(String sText) { print(sText); }
         src:'http://104.40.75.137:9003/assets/cms/image2.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 150, width: 180);
+         height: 170, width: 200);
          
 
         TextParameters textparam6 = new TextParameters(
@@ -178,7 +174,7 @@ onclick5(String sText) { print(sText); }
           color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.normal,
           textAlign: TextAlign.center
         );
          
@@ -195,7 +191,7 @@ onclick5(String sText) { print(sText); }
           print(b); 
           } 
           FlatButtonParameters buttonFlatObject8 = FlatButtonParameters(
-          child:Text('Get started'),
+          child:Text('Get Started'),
           color:Colors.pink,
           textColor:Colors.white,
           hoverColor: Colors.pink,
@@ -212,14 +208,14 @@ onclick9(String sText) { print(sText); }
         src:'http://104.40.75.137:9003/assets/cms/image3.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 302, width: 414);
+         height: 302, width: 400);
          
 
             onTextSubmit10 (String sText) { 
             print(sText); 
             }
             TextFieldParameters finalTextObj10 = new TextFieldParameters( 
-            maxLength: 100, 
+            maxLength: 200, 
             obsecureText: false,
             maxLengthEnforced: true, 
             decoration: InputDecoration(
@@ -247,7 +243,7 @@ onclick9(String sText) { print(sText); }
             print(sText); 
             }
             TextFieldParameters finalTextObj11 = new TextFieldParameters( 
-            maxLength: 100, 
+            maxLength: 200, 
             obsecureText: true,
             maxLengthEnforced: true, 
             decoration: InputDecoration(
@@ -272,8 +268,8 @@ onclick9(String sText) { print(sText); }
         
 
         TextParameters textparam13 = new TextParameters(
-          data: 'Forgot password ? \n You can register here',
-          fontSize: 14,
+          data: 'Forgot Password? \n You can register here',
+          fontSize: 16,
           color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
@@ -281,69 +277,15 @@ onclick9(String sText) { print(sText); }
           textAlign: TextAlign.center
         );
          
-onclick25(String sText) { print(sText); }
-        CustomImageContents ImageObj125 = new CustomImageContents(
+onclick26(String sText) { print(sText); }
+        CustomImageContents ImageObj126 = new CustomImageContents(
         src:'http://104.40.75.137:9003/assets/cms/Image6.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 160, width: 180);
-         
-
-        TextParameters textparam26 = new TextParameters(
-          data: 'Module 1 - Introduction',
-          fontSize: 20,
-          color: Colors.black,
-          fontStyle: FontStyle.normal,
-          fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
-          textAlign: TextAlign.left
-        );
+         height: 302, width: 400);
          
 
         TextParameters textparam27 = new TextParameters(
-          data: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Maecenas aliquam nisl orci. Proin faucibus odio tellus,  ut tincidunt magna dictum id. Integer porttitor eget magna  sit amet feugiat. Ut at ante lobortis, condimentum purus a,  auctor urna. Sed volutpat velit accumsan dolor ullamcorper,  non condimentum est tristique. Sed sit amet imperdiet ipsum.  Nulla ac ante in lorem hendrerit malesuada. Aliquam imperdiet  felis velit, sed feugiat elit blandit sed. Cras eget sagittis  ante. Maecenas pharetra erat non ullamcorper vestibulum. Cras  varius erat tortor, non cursus magna molestie semper. Maecenas  ullamcorper a nisl non iaculis. Duis nibh ipsum.Lorem ipsum dolor  sit amet, consectetur adipiscing elit. Maecenas aliquam nisl orci.  Proin faucibus odio tellus, ut tincidunt magna dictum id. Integer  porttitor eget magna sit amet feugiat. Ut at ante lobortis, condimentum  purus a, auctor urna. Sed volutpat velit accumsan dolor ullamcorper,  non condimentum est tristique. Sed sit amet imperdiet ipsum. Nulla ac  ante in lorem hendrerit malesuada. Aliquam imperdiet felis velit, sed  feugiat elit blandit sed. Cras eget sagittis ante. Maecenas pharetra  erat non ullamcorper vestibulum. Cras varius erat tortor, non cursus  magna molestie semper. Maecenas ullamcorper a nisl non iaculis. Duis  nibh ipsum.',
-          fontSize: 16,
-          color: Colors.black,
-          fontStyle: FontStyle.normal,
-          fontFamily: 'Roboto',
-          fontWeight: FontWeight.normal,
-          textAlign: TextAlign.left
-        );
-         
-
-          onFlatButtonPress28 (bool b){ 
-          print(b); 
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-                builder: (context) => Page1()));
-
-          } 
-          onFlatButtonLongPress28 (bool b){ 
-          print(b); 
-          } 
-          FlatButtonParameters buttonFlatObject28 = FlatButtonParameters(
-          child:Text('Purchase with USD 4.25 to continue reading.'),
-          color:Colors.pink,
-          textColor:Colors.white,
-          hoverColor: Colors.pink,
-          width: 250,
-          focusColor: Colors.pink,
-          height: 50,
-          highlightColor: Colors.pink,
-          splashColor: Colors.pink
-
-          );
-      
-onclick29(String sText) { print(sText); }
-        CustomImageContents ImageObj129 = new CustomImageContents(
-        src:'http://104.40.75.137:9003/assets/cms/Image6.png',
-         semanticLabel: 'Random Network', 
-         imageType: 'Network', 
-         height: 150, width: 180);
-         
-
-        TextParameters textparam30 = new TextParameters(
           data: 'Module 1 - Introduction',
           fontSize: 20,
           color: Colors.black,
@@ -354,7 +296,7 @@ onclick29(String sText) { print(sText); }
         );
          
 
-        TextParameters textparam31 = new TextParameters(
+        TextParameters textparam28 = new TextParameters(
           data: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Maecenas aliquam nisl orci. Proin faucibus odio tellus,  ut tincidunt magna dictum id. Integer porttitor eget magna  sit amet feugiat. Ut at ante lobortis, condimentum purus a,  auctor urna. Sed volutpat velit accumsan dolor ullamcorper,  non condimentum est tristique. Sed sit amet imperdiet ipsum.  Nulla ac ante in lorem hendrerit malesuada. Aliquam imperdiet  felis velit, sed feugiat elit blandit sed. Cras eget sagittis  ante. Maecenas pharetra erat non ullamcorper vestibulum. Cras  varius erat tortor, non cursus magna molestie semper. Maecenas  ullamcorper a nisl non iaculis. Duis nibh ipsum.Lorem ipsum dolor  sit amet, consectetur adipiscing elit. Maecenas aliquam nisl orci.  Proin faucibus odio tellus, ut tincidunt magna dictum id. Integer  porttitor eget magna sit amet feugiat. Ut at ante lobortis, condimentum  purus a, auctor urna. Sed volutpat velit accumsan dolor ullamcorper,  non condimentum est tristique. Sed sit amet imperdiet ipsum. Nulla ac  ante in lorem hendrerit malesuada. Aliquam imperdiet felis velit, sed  feugiat elit blandit sed. Cras eget sagittis ante. Maecenas pharetra  erat non ullamcorper vestibulum. Cras varius erat tortor, non cursus  magna molestie semper. Maecenas ullamcorper a nisl non iaculis. Duis  nibh ipsum.',
           fontSize: 16,
           color: Colors.black,
@@ -365,7 +307,7 @@ onclick29(String sText) { print(sText); }
         );
          
 
-          onFlatButtonPress32 (bool b){ 
+          onFlatButtonPress29 (bool b){ 
           print(b); 
           Navigator.pushReplacement(
             context,
@@ -373,10 +315,10 @@ onclick29(String sText) { print(sText); }
                 builder: (context) => Page1()));
 
           } 
-          onFlatButtonLongPress32 (bool b){ 
+          onFlatButtonLongPress29 (bool b){ 
           print(b); 
           } 
-          FlatButtonParameters buttonFlatObject32 = FlatButtonParameters(
+          FlatButtonParameters buttonFlatObject29 = FlatButtonParameters(
           child:Text('Purchase with USD 4.25 to continue reading.'),
           color:Colors.pink,
           textColor:Colors.white,
@@ -389,6 +331,13 @@ onclick29(String sText) { print(sText); }
 
           );
       
+onclick30(String sText) { print(sText); }
+        CustomImageContents ImageObj130 = new CustomImageContents(
+        src:'http://104.40.75.137:9003/assets/cms/Image6.png',
+         semanticLabel: 'Random Network', 
+         imageType: 'Network', 
+         height: 302, width: 404);
+         
 return MaterialApp(
 debugShowCheckedModeBanner: false,
 home: Scaffold( 
@@ -404,19 +353,19 @@ children: <Widget>[
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:CustomImage(data: ImageObj129),),
+Expanded(flex: 1,child:CustomImage(data: ImageObj130),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.only(top:30,bottom:30),
 child: Row(children: [
-Expanded(flex: 1,child:customText(textparam30)),
+Expanded(flex: 1,child:customText(textparam27)),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.only(bottom:30),
 child: Row(children: [
-Expanded(flex: 1,child:customText(textparam31)),
+Expanded(flex: 1,child:customText(textparam28)),
 ],),
 ),
 Padding(
@@ -427,7 +376,7 @@ child: Row(children: [
 Padding(
 padding: const EdgeInsets.only(bottom:30),
 child: Row(children: [
-Expanded(flex: 1,child:customFlatButton(buttonFlatObject32, onFlatButtonPress32, onFlatButtonLongPress32),),
+Expanded(flex: 1,child:customFlatButton(buttonFlatObject29, onFlatButtonPress29, onFlatButtonLongPress29),),
  ],),
 ),
 ], 

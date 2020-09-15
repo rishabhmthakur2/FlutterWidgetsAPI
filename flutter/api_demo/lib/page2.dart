@@ -101,7 +101,7 @@ onclick0(String sText) { print(sText); }
           color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.normal,
           textAlign: TextAlign.center
         );
          
@@ -110,7 +110,7 @@ onclick5(String sText) { print(sText); }
         src:'http://104.40.75.137:9003/assets/cms/image2.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 150, width: 180);
+         height: 170, width: 200);
          
 
         TextParameters textparam6 = new TextParameters(
@@ -130,7 +130,7 @@ onclick5(String sText) { print(sText); }
           color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.normal,
           textAlign: TextAlign.center
         );
          
@@ -147,7 +147,7 @@ onclick5(String sText) { print(sText); }
           print(b); 
           } 
           FlatButtonParameters buttonFlatObject8 = FlatButtonParameters(
-          child:Text('Get started'),
+          child:Text('Get Started'),
           color:Colors.pink,
           textColor:Colors.white,
           hoverColor: Colors.pink,
@@ -164,14 +164,14 @@ onclick9(String sText) { print(sText); }
         src:'http://104.40.75.137:9003/assets/cms/image3.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 302, width: 414);
+         height: 302, width: 400);
          
 
             onTextSubmit10 (String sText) { 
             print(sText); 
             }
             TextFieldParameters finalTextObj10 = new TextFieldParameters( 
-            maxLength: 100, 
+            maxLength: 200, 
             obsecureText: false,
             maxLengthEnforced: true, 
             decoration: InputDecoration(
@@ -199,7 +199,7 @@ onclick9(String sText) { print(sText); }
             print(sText); 
             }
             TextFieldParameters finalTextObj11 = new TextFieldParameters( 
-            maxLength: 100, 
+            maxLength: 200, 
             obsecureText: true,
             maxLengthEnforced: true, 
             decoration: InputDecoration(
@@ -249,8 +249,8 @@ onclick9(String sText) { print(sText); }
       
 
         TextParameters textparam13 = new TextParameters(
-          data: 'Forgot password ? \n You can register here',
-          fontSize: 14,
+          data: 'Forgot Password? \n You can register here',
+          fontSize: 16,
           color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',

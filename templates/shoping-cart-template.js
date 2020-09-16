@@ -17,12 +17,12 @@ let shoppingCartTemplate = req =>
     let data5 = [];
     try {
       if (!req.body.appbar) {
-        let data = await getWidgets(300, {}, 0);
+        let data = await getWidgets(301, {}, 0);
         data1.push(data.imports);
         data3.push(data.definitions);
         appbarCall = data.call;
       } else {
-        let data = await getWidgets(0, req.body.appbarParams, 0);
+        let data = await getWidgets(303, req.body.appbarParams, 0);
         data1.push(data.imports);
         data3.push(data.definitions);
         appbarCall = data.call;
@@ -54,7 +54,7 @@ let shoppingCartTemplate = req =>
       const data0 =
         "import 'package:flutter/material.dart';\nimport 'package:rapid_widgets_library/widget-classesUsed.dart';\n";
       const data2 =
-        "\nvoid main() => runApp(Page3());\nclass Page3 extends StatelessWidget {\n@override\nWidget build(BuildContext context) {\nreturn MaterialApp(\nhome: BoilerPlate());\n}}\nclass BoilerPlate extends StatefulWidget \n{ \n@override \n_BoilerPlate createState() => _BoilerPlate();\n}\nclass _BoilerPlate extends State<BoilerPlate> {\n @override\n  Widget build(BuildContext context) { \n";
+        "\nvoid main() => runApp(Page6());\nclass Page6 extends StatelessWidget {\n@override\nWidget build(BuildContext context) {\nreturn MaterialApp(\nhome: BoilerPlate());\n}}\nclass BoilerPlate extends StatefulWidget \n{ \n@override \n_BoilerPlate createState() => _BoilerPlate();\n}\nclass _BoilerPlate extends State<BoilerPlate> {\n @override\n  Widget build(BuildContext context) { \n";
       const data4 =
         "\nreturn MaterialApp(\ndebugShowCheckedModeBanner: false,\nhome: Scaffold(\n" +
         appbarCall +

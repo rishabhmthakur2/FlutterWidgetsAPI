@@ -715,8 +715,8 @@ let getWidgets = (widgetId, paramValues, counter) =>
                       imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-borderless-card.dart';",
                       call: `customBorderlessCard(borderdata${counter},borderlessCallback${counter}),`,
                       definitions: `
-                      borderlessCallback(String s, int i){};
-                      MaterialCardData borderdata = new MaterialCardData(
+                      borderlessCallback${counter}(String s, int i){};
+                      MaterialCardData borderdata${counter} = new MaterialCardData(
                         title: '${paramValues.title}',
                         subtitle: '${paramValues.subtitle}',
                         containerHeight: ${paramValues.containerHeight},
@@ -743,11 +743,11 @@ let getWidgets = (widgetId, paramValues, counter) =>
                       id: 40,
                       name: "Icon",
                       imports: "import 'package:rapid_widgets_library/custom-icon.dart'; \nimport 'package:rapid_widgets_library/widget-classesUsed.dart';",
-                      call: `customisedIcon(icon),`,
+                      call: `customisedIcon(icon${counter}),`,
                       definitions: `
-                      IconState icon =new IconState(icon: Icons.Icons.${paramValues.icon},
+                      IconState icon${counter} =new IconState(icon: Icons.${paramValues.icon},
                         color: Colors.${paramValues.color},
-                        size: ${paramValues.size};
+                        size: ${paramValues.size});
                   `
                     },
              {

@@ -3,13 +3,19 @@ import 'package:rapid_widgets_library/widget-classesUsed.dart';
 import 'package:rapid_widgets_library/custom-appBar.dart';
 import 'package:rapid_widgets_library/custom-bottomnavbar.dart';
 import 'package:rapid_widgets_library/custom-drawer.dart';
-import 'dart:ui'; 
-import 'package:rapid_widgets_library/custom-textField.dart';
-import 'dart:ui'; 
-import 'package:rapid_widgets_library/custom-textField.dart';
+import 'package:rapid_widgets_library/custom-text.dart';
+import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-dropdownButton.dart';
-void main() => runApp(Page3());
-class Page3 extends StatelessWidget {
+import 'package:rapid_widgets_library/custom-text.dart';
+import 'dart:ui'; 
+import 'package:rapid_widgets_library/custom-textField.dart';
+import 'package:rapid_widgets_library/custom-image.dart';
+import 'package:rapid_widgets_library/custom-text.dart';
+import 'package:rapid_widgets_library/custom-text.dart';
+import 'dart:ui'; 
+import 'package:rapid_widgets_library/custom-textField.dart';
+void main() => runApp(Page7());
+class Page7 extends StatelessWidget {
 @override
 Widget build(BuildContext context) {
 return MaterialApp(
@@ -24,29 +30,30 @@ class _BoilerPlate extends State<BoilerPlate> {
  @override
   Widget build(BuildContext context) { 
 
-        AppBarParameters paramobject = new AppBarParameters(
-          elevation: 15,
-          bottomOpacity: 10,
-          toolbarOpacity: 10,
-          titleSpacing: 10,
-          centerTitle: false,
-          automaticallyImplyLeading: false,
-          title: Text('Title'),
-          backgroundColor: Colors.white);
-          List<Widget> appBarIcons = [
-          IconButton(
-          icon:
-          Icon(Icons.search),
-          onPressed: () {},
-          ),
-          IconButton(
-          icon:  Icon(Icons.home),
-          onPressed: () {},
-          ),
-          IconButton(
-          icon:  Icon(Icons.list),
-          onPressed: () {}, 
-          ), ];
+                              AppBarParameters paramobject = new AppBarParameters(
+                                    backgroundColor: Colors.white,
+                                      elevation: 0,
+                                      bottomOpacity: 1.0,
+                                      toolbarOpacity: 1.0,
+                                      titleSpacing: 1.0,
+                                      centerTitle: false,
+                                      automaticallyImplyLeading: true,
+                                      leading: Icon(Icons.arrow_back, color: Color(0xff707070),),
+                                      title: Text('Featured',
+                                      style: TextStyle(fontSize: 26, color: Color(0xff707070)),));
+                                  List<Widget> appBarIcons = [
+                                    IconButton(
+                                      icon: Image.network('http://104.40.75.137:9003/assets/cms/cart.png',width: 20,height: 14,),
+                                      onPressed: () {},
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(right: 30.0),
+                                      child: IconButton(
+                                        icon: Image.network('http://104.40.75.137:9003/assets/cms/drawer_icon.png',width: 20,height: 14,),
+                                        onPressed: () {},
+                                      ),
+                                    )];
+                       
 
                   List<BottomNavigationBarItem> bottomnavitems = [];
                   BottomNavigationBarItem bottomnavitem1= new BottomNavigationBarItem(
@@ -102,80 +109,142 @@ class _BoilerPlate extends State<BoilerPlate> {
             }
         
 
-            onTextSubmit0 (String sText) { 
-            print(sText); 
-            }
-            TextFieldParameters finalTextObj0 = new TextFieldParameters( 
-            maxLength: 100, 
-            obsecureText: false,
-            maxLengthEnforced: true, 
-            decoration: InputDecoration(
-            hintText: 'hint',
-            labelText: 'labelText', 
-  
-            filled: true, 
-            fillColor: Colors.white, 
-            counterText: "", 
-            border: OutlineInputBorder( 
-            borderRadius: BorderRadius.circular(20), 
-            borderSide: BorderSide( color: Colors.black)), 
-            ), 
-            cursorColor: Colors.black, 
-            cursorWidth: 2, 
-            expands: false, 
-            maxLines: 1, 
-            readOnly: false, 
-            showCursor: true, 
-            style: TextStyle(color: Colors.black),
-            );
-        
+        TextParameters textparam9 = new TextParameters(
+          data: 'Amount to be paid',
+          fontSize: 12,
+          color: Colors.pink,
+          fontStyle: FontStyle.normal,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.normal,
+          textAlign: TextAlign.left
+        );
+         
 
-            onTextSubmit1 (String sText) { 
-            print(sText); 
-            }
-            TextFieldParameters finalTextObj1 = new TextFieldParameters( 
-            maxLength: 100, 
-            obsecureText: false,
-            maxLengthEnforced: true, 
-            decoration: InputDecoration(
-            hintText: 'hint',
-            labelText: 'labelText', 
-  
-            filled: true, 
-            fillColor: Colors.white, 
-            counterText: "", 
-            border: OutlineInputBorder( 
-            borderRadius: BorderRadius.circular(20), 
-            borderSide: BorderSide( color: Colors.black)), 
-            ), 
-            cursorColor: Colors.black, 
-            cursorWidth: 2, 
-            expands: false, 
-            maxLines: 1, 
-            readOnly: false, 
-            showCursor: true, 
-            style: TextStyle(color: Colors.black),
-            );
-        
+        TextParameters textparam10 = new TextParameters(
+          data: '16.75',
+          fontSize: 12,
+          color: Colors.pink,
+          fontStyle: FontStyle.normal,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.normal,
+          textAlign: TextAlign.right
+        );
+         
 
-              DropDownParameters dropdownObject2 = DropDownParameters(
-              itemsList: ['One', 'Two'],
-              hintText: 'test',
-              listType: 'test',
-              fillColor: Colors.grey,
-              borderRadius: 20,
-              width: 200,
-              textColor: Colors.blue,
-              itemsBgColor: Colors.black,
-              shadowColor: Colors.black,
-              shadowBlurRadius: 10,
-              shadowSpreadRadius: 5,
+              DropDownParameters dropdownObject11 = DropDownParameters(
+              itemsList: ["Choose your payment option"],
+              hintText: 'Choose your payment option',
+              listType: 'Text',
+              fillColor: Colors.white,
+              borderRadius: 30,
+              width: 300,
+              textColor: Colors.black,
+              itemsBgColor: Colors.white,
+              shadowColor: Colors.white,
+              shadowBlurRadius: 2,
+              shadowSpreadRadius: 2,
               ); 
-              onSelect2 (int i,String s){ 
+              onSelect11 (int i,String s){ 
               print(i); 
               print(s); 
               }
           
+
+        TextParameters textparam12 = new TextParameters(
+          data: 'Card Number',
+          fontSize: 12,
+          color: Colors.pink,
+          fontStyle: FontStyle.normal,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.normal,
+          textAlign: TextAlign.left
+        );
+         
+
+            onTextSubmit13 (String sText) { 
+            print(sText); 
+            }
+            TextFieldParameters finalTextObj13 = new TextFieldParameters( 
+            maxLength: 100, 
+            obsecureText: false,
+            maxLengthEnforced: true, 
+            decoration: InputDecoration(
+            hintText: ' ',
+            labelText: ' ', 
+  
+            filled: false, 
+            fillColor: Colors.grey, 
+            counterText: "", 
+            border: OutlineInputBorder( 
+            borderRadius: BorderRadius.circular(30), 
+            borderSide: BorderSide( color: Colors.grey)), 
+            ), 
+            cursorColor: Colors.black, 
+            cursorWidth: 1, 
+            expands: false, 
+            maxLines: 1, 
+            readOnly: false, 
+            showCursor: true, 
+            style: TextStyle(color: Colors.black),
+            );
+        
+onclick14(String sText) { print(sText); }
+        CustomImageContents ImageObj114 = new CustomImageContents(
+        src:'http://104.40.75.137:9003/assets/cms/book4.png',
+         semanticLabel: 'Random Network', 
+         imageType: 'Network', 
+         height: 10, width: 10);
+         
+
+        TextParameters textparam15 = new TextParameters(
+          data: 'Valid Through',
+          fontSize: 12,
+          color: Colors.pink,
+          fontStyle: FontStyle.normal,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.normal,
+          textAlign: TextAlign.left
+        );
+         
+
+        TextParameters textparam16 = new TextParameters(
+          data: 'CVV',
+          fontSize: 12,
+          color: Colors.pink,
+          fontStyle: FontStyle.normal,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.normal,
+          textAlign: TextAlign.left
+        );
+         
+
+            onTextSubmit17 (String sText) { 
+            print(sText); 
+            }
+            TextFieldParameters finalTextObj17 = new TextFieldParameters( 
+            maxLength: 10, 
+            obsecureText: false,
+            maxLengthEnforced: false, 
+            decoration: InputDecoration(
+            hintText: 'MM/YY',
+            labelText: 'MM/YY', 
+  
+            filled: true, 
+            fillColor: Colors.grey, 
+            counterText: "", 
+            border: OutlineInputBorder( 
+            borderRadius: BorderRadius.circular(30), 
+            borderSide: BorderSide( color: Colors.grey)), 
+            ), 
+            cursorColor: Colors.black, 
+            cursorWidth: 1, 
+            expands: false, 
+            maxLines: 1, 
+            readOnly: false, 
+            showCursor: true, 
+            style: TextStyle(color: Colors.black),
+            );
+        
 return MaterialApp(
 debugShowCheckedModeBanner: false,
 home: Scaffold(
@@ -198,59 +267,40 @@ child: Row(children: [
 Padding(
 padding: const EdgeInsets.only(bottom:30.0,top:30),
 child: Row(children: [
-Expanded(flex: 1,child:CustomTextField(params: finalTextObj0, callbackTextfield: onTextSubmit0),),
-Expanded(flex: 1,child:Container()),
+Expanded(flex: 1,child:customText(textparam9)),
+Expanded(flex: 1,child:customText(textparam10)),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.only(bottom:30.0),
 child: Row(children: [
-Expanded(flex: 1,child:Container()),
+Expanded(flex: 1,child:CustomDropdownButton(dropdownObject11,onSelect11),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.only(bottom:30.0),
 child: Row(children: [
-Expanded(flex: 1,child:Container()),
+Expanded(flex: 1,child:customText(textparam12)),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.only(bottom:30.0),
 child: Row(children: [
-Expanded(flex: 1,child:Container()),
-Expanded(flex: 1,child:Container()),
+Expanded(flex: 1,child:CustomTextField(params: finalTextObj13, callbackTextfield: onTextSubmit13),),
+Expanded(flex: 1,child:CustomImage(data: ImageObj114),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(0.0),
 child: Row(children: [
-Expanded(flex: 1,child:Container()),
-Expanded(flex: 1,child:Container()),
+Expanded(flex: 1,child:customText(textparam15)),
+Expanded(flex: 1,child:customText(textparam16)),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:Container()),
-Expanded(flex: 1,child:Container()),
-Expanded(flex: 1,child:Container()),
-],),
-),
-Padding(
-padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-Expanded(flex: 1,child:Container()),
-],),
-),
-Padding(
-padding: const EdgeInsets.all(25.0),
-child: Row(children: [
-Expanded(flex: 1,child:Container()),
-],),
-),
-Padding(
-padding: const EdgeInsets.all(25.0),
-child: Row(children: [
+Expanded(flex: 1,child:CustomTextField(params: finalTextObj17, callbackTextfield: onTextSubmit17),),
 Expanded(flex: 1,child:Container()),
 Expanded(flex: 1,child:Container()),
 ],),
@@ -265,9 +315,13 @@ Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
 Expanded(flex: 1,child:Container()),
+],),
+),
+Padding(
+padding: const EdgeInsets.all(25.0),
+child: Row(children: [
 Expanded(flex: 1,child:Container()),
 Expanded(flex: 1,child:Container()),
-Expanded(flex: 1,child:CustomTextField(params: finalTextObj1, callbackTextfield: onTextSubmit1),),
 ],),
 ),
 Padding(
@@ -279,7 +333,22 @@ Expanded(flex: 1,child:Container()),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:CustomDropdownButton(dropdownObject2,onSelect2),),
+Expanded(flex: 1,child:Container()),
+Expanded(flex: 1,child:Container()),
+Expanded(flex: 1,child:Container()),
+Expanded(flex: 1,child:Container()),
+],),
+),
+Padding(
+padding: const EdgeInsets.all(25.0),
+child: Row(children: [
+Expanded(flex: 1,child:Container()),
+],),
+),
+Padding(
+padding: const EdgeInsets.all(25.0),
+child: Row(children: [
+Expanded(flex: 1,child:Container()),
 ],),
 ),
 Padding(

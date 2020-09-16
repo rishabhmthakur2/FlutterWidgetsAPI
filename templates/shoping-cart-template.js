@@ -62,7 +62,7 @@ let shoppingCartTemplate = req =>
         drawerCall +
         "\n" +
         bottomNavBarCall +
-        "\nbackgroundColor: Colors.white,\nbody: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.only(left:30.0,right:30),\nchild: Row(children: [";
+        "\nbackgroundColor: Colors.white,\nbody: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: Padding(\npadding: const EdgeInsets.only(left: 15.0, right: 15),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.only(left:30.0,right:30),\nchild: Row(children: [";
       //const data6 = '\n ],),)),),),);}}  '
 
     
@@ -167,7 +167,7 @@ let shoppingCartTemplate = req =>
             "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:30.0),\nchild: Row(children: ["; //Widget2 call
           let data14 = "\nExpanded(flex: 1,child:" + card4 + "),";
           let data15 = "\nExpanded(flex: 1,child:" + card5 + "),";
-          let data16 = "\nExpanded(flex: 1,child:" + card6 + "),";
+          let data16 = "\nExpanded(flex: 2,child:Align(alignment: Alignment.centerRight,child:" + card6 + "),";
           let data17 =
             "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(0.0),\nchild: Row(children: ["; //Widget2 call
           let data18 = "\nExpanded(flex: 1,child:" + card7 + "),";

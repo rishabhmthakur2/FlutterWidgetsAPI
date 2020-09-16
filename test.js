@@ -114,7 +114,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
               elevation: 30,
               contentTextStyle: TextStyle( fontSize: 18.0, color: Colors.blueGrey),
               height: 254,
-              width: 354,
+              width: 380,
               titleTextStyle: TextStyle( fontSize: 18.0, color: Colors.white),
             );
             onAlertButtonTap${counter}(String s){

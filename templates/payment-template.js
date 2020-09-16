@@ -62,7 +62,7 @@ let paymentTemplate = req =>
         drawerCall +
         "\n" +
         bottomNavBarCall +
-        "\nbackgroundColor: Colors.white,\nbody: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.only(left:30.0,right:30),\nchild: Row(children: [";
+        "\nbackgroundColor: Colors.white,\nbody: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: Padding(\npadding: const EdgeInsets.only(left: 20, right: 20.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.only(left:30.0,right:30),\nchild: Row(children: [";
       //const data6 = '\n ],),)),),),);}}  '
 
       let container1_1 = "Container()";
@@ -324,48 +324,48 @@ let paymentTemplate = req =>
             "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:30.0),\nchild: Row(children: ["; //Widget2 call
           let data11 = "\nExpanded(flex: 1,child:" + container2 + "),";
           let data12 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:30.0),\nchild: Row(children: ["; //Widget2 call
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:10.0),\nchild: Row(children: ["; //Widget2 call
           let data13 = "\nExpanded(flex: 1,child:" + container3 + "),";
           let data14 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:30.0),\nchild: Row(children: ["; //Widget2 call
-          let data15 = "\nExpanded(flex: 1,child:" + container4_1 + "),";
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom:20.0),\nchild: Row(children: ["; //Widget2 call
+          let data15 = "\nExpanded(flex: 6,child:" + container4_1 + "),Spacer(flex:1),";
           let data16 = "\nExpanded(flex: 1,child:" + container4_2 + "),";
           let data17 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(0.0),\nchild: Row(children: ["; //Widget2 call
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom: 10.0),\nchild: Row(children: ["; //Widget2 call
           let data18 = "\nExpanded(flex: 1,child:" + container5_1 + "),";
           let data19 = "\nExpanded(flex: 1,child:" + container5_2 + "),";
           let data20 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ["; //Widget2 call
-          let data21 = "\nExpanded(flex: 1,child:" + container6_1 + "),";
-          let data22 = "\nExpanded(flex: 1,child:" + container6_2 + "),";
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom: 20.0),\nchild: Row(children: ["; //Widget2 call
+          let data21 = "\nExpanded(flex: 8,child:" + container6_1 + "),Spacer(flex: 1,),";
+          let data22 = "\nExpanded(flex: 8,child:" + container6_2 + "),Spacer(flex: 1,),";
           let data23 = "\nExpanded(flex: 1,child:" + container6_3 + "),";
           let data24 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ["; //Widget2 call
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom: 10.0),\nchild: Row(children: ["; //Widget2 call
           let data25 = "\nExpanded(flex: 1,child:" + container7 + "),";
           let data26 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ["; //Widget2 call
-          let data27 = "\nExpanded(flex: 1,child:" + container8 + "),";
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom: 20.0),\nchild: Row(children: ["; //Widget2 call
+          let data27 = "\nExpanded(flex: 3,child:" + container8 + "),Spacer(flex: 1)";
           let data28 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ["; //Widget2 call
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom: 40.0),\nchild: Row(children: ["; //Widget2 call
           let data29 = "\nExpanded(flex: 1,child:" + container9_1 + "),";
-          let data30 = "\nExpanded(flex: 1,child:" + container9_2 + "),";
+          let data30 = "\nExpanded(flex: 6,child:" + container9_2 + "),Spacer(flex: 3)";
           let data31 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ["; //Widget2 call
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom: 20.0),\nchild: Row(children: ["; //Widget2 call
           let data32 = "\nExpanded(flex: 1,child:" + container10 + "),";
           let data33 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ["; //Widget2 call
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom: 20.0),\nchild: Row(children: ["; //Widget2 call
           let data34 = "\nExpanded(flex: 1,child:" + container11_1 + "),";
           let data35 = "\nExpanded(flex: 1,child:" + container11_2 + "),";
           let data36 = "\nExpanded(flex: 1,child:" + container11_3 + "),";
-          let data37 = "\nExpanded(flex: 1,child:" + container11_4 + "),";
+          let data37 = "\nExpanded(flex: 1,child:" + container11_4 + "),Spacer(flex: 4)";
           let data38 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ["; //Widget2 call
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom: 20.0),\nchild: Row(children: ["; //Widget2 call
           let data39 = "\nExpanded(flex: 1,child:" + container12 + "),";
           let data40 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ["; //Widget2 call
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.only(bottom: 10.0),\nchild: Row(children: ["; //Widget2 call
           let data41 = "\nExpanded(flex: 1,child:" + container13 + "),";
           let data42 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ["; //Widget2 call
+            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(0.0),\nchild: Row(children: ["; //Widget2 call
           let data43 = "\n ],),\n),\n], \n)  \n))))); \n} \n}";
 
           let clearFile = () =>

@@ -80,6 +80,49 @@ let getWidgets = (widgetId, paramValues, counter) =>
           `
       },
       {
+        id: 16,
+        name: "Alert Dialog Box",
+        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom_AlertDialogs.dart';",
+        call: `CustomAlertDialog(dialogContent: alertObj1${counter}, param: alertobj2${counter}, callbackAlert: onAlertButtonTap${counter}),`,
+        definitions: `
+            AlertDialogContents alertObj1${counter} = new AlertDialogContents(
+              <Widget>[
+                Padding(
+                  padding: const EdgeInsets.only(left:30.0, right: 30, top: 25, bottom: 20),
+                  child: Container(
+                    height: 41,
+                    width: 220,
+                    child: FlatButton(
+                      child: Text('${paramValues.btnText}',
+                        style: TextStyle(color: Colors.white),),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(21.0),
+                      ),
+                      color: Colors.${paramValues.btnColor},
+                      onPressed: (){},
+                    ),
+                  ),
+                ),
+              ],"",
+              Text('${paramValues.text}', textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 16, color: Color(0xff707070)),),
+            );
+            AlertDialogParameters alertobj2${counter} = new AlertDialogParameters(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20.0)),
+              backgroundColor: Colors.${paramValues.backgroundColor},
+              elevation: 30,
+              contentTextStyle: TextStyle( fontSize: 18.0, color: Colors.blueGrey),
+              height: 254,
+              width: 354,
+              titleTextStyle: TextStyle( fontSize: 18.0, color: Colors.white),
+            );
+            onAlertButtonTap${counter}(String s){
+              print(s);
+            }
+          `
+      },
+      {
         id: 21,
         name: "CompositeCard",
         imports: "import 'package:rapid_widgets_library/custom-compositeCard.dart';",

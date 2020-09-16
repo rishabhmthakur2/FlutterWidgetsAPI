@@ -28,6 +28,16 @@
       }
     },
     {
+      "id": 16,
+      "name": "Alert Dialog Box",
+      "definitions": {
+        "text": "String",
+        "btnText": "String",
+        "backgroundColor": "Color",
+        "btnColor": "Color"
+      }
+    },
+    {
       "id": 15,
       "name": "Textfield",
       "definitions": {

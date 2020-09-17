@@ -7,23 +7,11 @@ import 'package:rapid_widgets_library/custom-drawer.dart';
 import 'package:rapid_widgets_library/custom-image.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
-import 'package:rapid_widgets_library/custom-image.dart';
-import 'package:rapid_widgets_library/custom-text.dart';
-import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-flatButton.dart';
-import 'page2.dart';
-import 'package:rapid_widgets_library/custom-image.dart';
-import 'dart:ui'; 
-import 'package:rapid_widgets_library/custom-textField.dart';
-import 'dart:ui'; 
-import 'package:rapid_widgets_library/custom-textField.dart';
+import 'page6.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
-import 'package:rapid_widgets_library/custom-image.dart';
-import 'package:rapid_widgets_library/custom-text.dart';
-import 'package:rapid_widgets_library/custom-text.dart';
-import 'package:rapid_widgets_library/custom-flatButton.dart';
-import 'page1.dart';
-import 'package:rapid_widgets_library/custom-image.dart';
+import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
+import 'package:rapid_widgets_library/custom_AlertDialogs.dart';
 void main() => runApp(Page5());
 class Page5 extends StatelessWidget {
 @override
@@ -122,76 +110,47 @@ class _BoilerPlate extends State<BoilerPlate> {
         
 onclick0(String sText) { print(sText); }
         CustomImageContents ImageObj10 = new CustomImageContents(
-        src:'http://104.40.75.137:9003/assets/cms/image1.png',
+        src:'http://104.40.75.137:9003/assets/cms/Image6.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 150, width: 180);
+         height: 133, width: 237);
          
 
         TextParameters textparam1 = new TextParameters(
-          data: 'Web content',
-          fontSize: 26,
+          data: 'Module 1 - Introduction',
+          fontSize: 20,
           color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
-          textAlign: TextAlign.center
+          textAlign: TextAlign.left
         );
          
 
         TextParameters textparam2 = new TextParameters(
-          data: 'Web content is the textual, visual, or aural  content that is encountered as part of  the user experience on websites',
+          data: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Maecenas aliquam nisl orci. Proin faucibus odio tellus,  ut tincidunt magna dictum id. Integer porttitor eget magna  sit amet feugiat. Ut at ante lobortis, condimentum purus a,  auctor urna. Sed volutpat velit accumsan dolor ullamcorper,  non condimentum est tristique. Sed sit amet imperdiet ipsum.  Nulla ac ante in lorem hendrerit malesuada. Aliquam imperdiet  felis velit, sed feugiat elit blandit sed. Cras eget sagittis  ante. Maecenas pharetra erat non ullamcorper vestibulum. Cras  varius erat tortor, non cursus magna molestie semper. Maecenas  ullamcorper a nisl non iaculis. Duis nibh ipsum.Lorem ipsum dolor  sit amet, consectetur adipiscing elit. Maecenas aliquam nisl orci.  Proin faucibus odio tellus, ut tincidunt magna dictum id. Integer  porttitor eget magna sit amet feugiat. Ut at ante lobortis, condimentum  purus a, auctor urna. Sed volutpat velit accumsan dolor ullamcorper,  non condimentum est tristique. Sed sit amet imperdiet ipsum. Nulla ac  ante in lorem hendrerit malesuada. Aliquam imperdiet felis velit, sed  feugiat elit blandit sed. Cras eget sagittis ante. Maecenas pharetra  erat non ullamcorper vestibulum. Cras varius erat tortor, non cursus  magna molestie semper. Maecenas ullamcorper a nisl non iaculis. Duis  nibh ipsum.',
           fontSize: 16,
           color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.normal,
-          textAlign: TextAlign.center
-        );
-         
-onclick5(String sText) { print(sText); }
-        CustomImageContents ImageObj15 = new CustomImageContents(
-        src:'http://104.40.75.137:9003/assets/cms/image2.png',
-         semanticLabel: 'Random Network', 
-         imageType: 'Network', 
-         height: 170, width: 200);
-         
-
-        TextParameters textparam6 = new TextParameters(
-          data: 'Teacher learning education',
-          fontSize: 26,
-          color: Colors.black,
-          fontStyle: FontStyle.normal,
-          fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
-          textAlign: TextAlign.center
+          textAlign: TextAlign.left
         );
          
 
-        TextParameters textparam7 = new TextParameters(
-          data: 'Training teacher for the lesson for online student interaction',
-          fontSize: 16,
-          color: Colors.black,
-          fontStyle: FontStyle.normal,
-          fontFamily: 'Roboto',
-          fontWeight: FontWeight.normal,
-          textAlign: TextAlign.center
-        );
-         
-
-          onFlatButtonPress8 (bool b){ 
+          onFlatButtonPress3 (bool b){ 
           print(b); 
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-                builder: (context) => Page2()));
+                builder: (context) => Page6()));
 
           } 
-          onFlatButtonLongPress8 (bool b){ 
+          onFlatButtonLongPress3 (bool b){ 
           print(b); 
           } 
-          FlatButtonParameters buttonFlatObject8 = FlatButtonParameters(
-          child:Text('Get Started'),
+          FlatButtonParameters buttonFlatObject3 = FlatButtonParameters(
+          child:Text('Purchase with USD 4.25 to continue reading'),
           color:Colors.pink,
           textColor:Colors.white,
           hoverColor: Colors.pink,
@@ -203,141 +162,54 @@ onclick5(String sText) { print(sText); }
 
           );
       
-onclick9(String sText) { print(sText); }
-        CustomImageContents ImageObj19 = new CustomImageContents(
-        src:'http://104.40.75.137:9003/assets/cms/image3.png',
-         semanticLabel: 'Random Network', 
-         imageType: 'Network', 
-         height: 302, width: 400);
-         
 
-            onTextSubmit10 (String sText) { 
-            print(sText); 
-            }
-            TextFieldParameters finalTextObj10 = new TextFieldParameters( 
-            maxLength: 200, 
-            obsecureText: false,
-            maxLengthEnforced: true, 
-            decoration: InputDecoration(
-            hintText: 'Email',
-            labelText: 'Email', 
-  
-            filled: false, 
-            fillColor: Colors.white, 
-            counterText: "", 
-            border: OutlineInputBorder( 
-            borderRadius: BorderRadius.circular(30), 
-            borderSide: BorderSide( color: Colors.grey)), 
-            ), 
-            cursorColor: Colors.black, 
-            cursorWidth: 1, 
-            expands: false, 
-            maxLines: 1, 
-            readOnly: false, 
-            showCursor: true, 
-            style: TextStyle(color: Colors.black),
-            );
-        
-
-            onTextSubmit11 (String sText) { 
-            print(sText); 
-            }
-            TextFieldParameters finalTextObj11 = new TextFieldParameters( 
-            maxLength: 200, 
-            obsecureText: true,
-            maxLengthEnforced: true, 
-            decoration: InputDecoration(
-            hintText: 'Password',
-            labelText: 'Password', 
-  
-            filled: false, 
-            fillColor: Colors.white, 
-            counterText: "", 
-            border: OutlineInputBorder( 
-            borderRadius: BorderRadius.circular(30), 
-            borderSide: BorderSide( color: Colors.grey)), 
-            ), 
-            cursorColor: Colors.black, 
-            cursorWidth: 1, 
-            expands: false, 
-            maxLines: 1, 
-            readOnly: false, 
-            showCursor: true, 
-            style: TextStyle(color: Colors.black),
-            );
-        
-
-        TextParameters textparam13 = new TextParameters(
-          data: 'Forgot Password? \n You can register here',
+        TextParameters textparam34 = new TextParameters(
+          data: 'USD 16.75',
           fontSize: 16,
-          color: Colors.black,
-          fontStyle: FontStyle.normal,
-          fontFamily: 'Roboto',
-          fontWeight: FontWeight.normal,
-          textAlign: TextAlign.center
-        );
-         
-onclick26(String sText) { print(sText); }
-        CustomImageContents ImageObj126 = new CustomImageContents(
-        src:'http://104.40.75.137:9003/assets/cms/Image6.png',
-         semanticLabel: 'Random Network', 
-         imageType: 'Network', 
-         height: 302, width: 400);
-         
-
-        TextParameters textparam27 = new TextParameters(
-          data: 'Module 1 - Introduction',
-          fontSize: 20,
-          color: Colors.black,
+          color: Colors.pink,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
-          textAlign: TextAlign.left
+          textAlign: TextAlign.right
         );
          
 
-        TextParameters textparam28 = new TextParameters(
-          data: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Maecenas aliquam nisl orci. Proin faucibus odio tellus,  ut tincidunt magna dictum id. Integer porttitor eget magna  sit amet feugiat. Ut at ante lobortis, condimentum purus a,  auctor urna. Sed volutpat velit accumsan dolor ullamcorper,  non condimentum est tristique. Sed sit amet imperdiet ipsum.  Nulla ac ante in lorem hendrerit malesuada. Aliquam imperdiet  felis velit, sed feugiat elit blandit sed. Cras eget sagittis  ante. Maecenas pharetra erat non ullamcorper vestibulum. Cras  varius erat tortor, non cursus magna molestie semper. Maecenas  ullamcorper a nisl non iaculis. Duis nibh ipsum.Lorem ipsum dolor  sit amet, consectetur adipiscing elit. Maecenas aliquam nisl orci.  Proin faucibus odio tellus, ut tincidunt magna dictum id. Integer  porttitor eget magna sit amet feugiat. Ut at ante lobortis, condimentum  purus a, auctor urna. Sed volutpat velit accumsan dolor ullamcorper,  non condimentum est tristique. Sed sit amet imperdiet ipsum. Nulla ac  ante in lorem hendrerit malesuada. Aliquam imperdiet felis velit, sed  feugiat elit blandit sed. Cras eget sagittis ante. Maecenas pharetra  erat non ullamcorper vestibulum. Cras varius erat tortor, non cursus  magna molestie semper. Maecenas ullamcorper a nisl non iaculis. Duis  nibh ipsum.',
-          fontSize: 16,
-          color: Colors.black,
-          fontStyle: FontStyle.normal,
-          fontFamily: 'Roboto',
-          fontWeight: FontWeight.normal,
-          textAlign: TextAlign.left
-        );
-         
-
-          onFlatButtonPress29 (bool b){ 
-          print(b); 
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-                builder: (context) => Page1()));
-
-          } 
-          onFlatButtonLongPress29 (bool b){ 
-          print(b); 
-          } 
-          FlatButtonParameters buttonFlatObject29 = FlatButtonParameters(
-          child:Text('Purchase with USD 4.25 to continue reading.'),
-          color:Colors.pink,
-          textColor:Colors.white,
-          hoverColor: Colors.pink,
-          width: 200,
-          focusColor: Colors.pink,
-          height: 50,
-          highlightColor: Colors.pink,
-          splashColor: Colors.pink
-
-          );
-      
-onclick30(String sText) { print(sText); }
-        CustomImageContents ImageObj130 = new CustomImageContents(
-        src:'http://104.40.75.137:9003/assets/cms/Image6.png',
-         semanticLabel: 'Random Network', 
-         imageType: 'Network', 
-         height: 302, width: 404);
-         
+            AlertDialogContents alertObj135 = new AlertDialogContents(
+              <Widget>[
+                Padding(
+                  padding: const EdgeInsets.only(left:30.0, right: 30, top: 25, bottom: 20),
+                  child: Container(
+                    height: 41,
+                    width: 220,
+                    child: FlatButton(
+                      child: Text('Go To My course',
+                        style: TextStyle(color: Colors.white),),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(21.0),
+                      ),
+                      color: Colors.pink,
+                      onPressed: (){},
+                    ),
+                  ),
+                ),
+              ],"",
+              Text('You have successfully purchased. Now you can enjoy the content. Thank You!', textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 16, color: Color(0xff707070)),),
+            );
+            AlertDialogParameters alertobj235 = new AlertDialogParameters(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20.0)),
+              backgroundColor: Colors.white,
+              elevation: 30,
+              contentTextStyle: TextStyle( fontSize: 18.0, color: Colors.blueGrey),
+              height: 254,
+              width: 380,
+              titleTextStyle: TextStyle( fontSize: 18.0, color: Colors.white),
+            );
+            onAlertButtonTap35(String s){
+              print(s);
+            }
+          
 return MaterialApp(
 debugShowCheckedModeBanner: false,
 home: Scaffold( 
@@ -353,19 +225,19 @@ children: <Widget>[
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:CustomImage(data: ImageObj130),),
+Expanded(flex: 1,child:customText(textparam34)),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.only(top:30,bottom:30),
 child: Row(children: [
-Expanded(flex: 1,child:customText(textparam27)),
+Expanded(flex: 1,child:CustomAlertDialog(dialogContent: alertObj135, param: alertobj235, callbackAlert: onAlertButtonTap35),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.only(bottom:30),
 child: Row(children: [
-Expanded(flex: 1,child:customText(textparam28)),
+Expanded(flex: 1,child:customText(textparam2)),
 ],),
 ),
 Padding(
@@ -376,7 +248,7 @@ child: Row(children: [
 Padding(
 padding: const EdgeInsets.only(bottom:30),
 child: Row(children: [
-Expanded(flex: 1,child:customFlatButton(buttonFlatObject29, onFlatButtonPress29, onFlatButtonLongPress29),),
+Expanded(flex: 1,child:customFlatButton(buttonFlatObject3, onFlatButtonPress3, onFlatButtonLongPress3),),
  ],),
 ),
 ], 

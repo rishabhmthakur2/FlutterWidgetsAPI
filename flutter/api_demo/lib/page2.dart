@@ -81,7 +81,7 @@ onclick0(String sText) { print(sText); }
         src:'http://104.40.75.137:9003/assets/cms/image1.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 150, width: 180);
+         height: 225, width: 337);
          
 
         TextParameters textparam1 = new TextParameters(
@@ -101,7 +101,7 @@ onclick0(String sText) { print(sText); }
           color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
-          fontWeight: FontWeight.normal,
+          fontWeight: FontWeight.bold,
           textAlign: TextAlign.center
         );
          
@@ -110,7 +110,7 @@ onclick5(String sText) { print(sText); }
         src:'http://104.40.75.137:9003/assets/cms/image2.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 170, width: 200);
+         height: 282, width: 403);
          
 
         TextParameters textparam6 = new TextParameters(
@@ -164,7 +164,7 @@ onclick9(String sText) { print(sText); }
         src:'http://104.40.75.137:9003/assets/cms/image3.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 302, width: 400);
+         height: 302, width: 414);
          
 
             onTextSubmit10 (String sText) { 
@@ -249,12 +249,12 @@ onclick9(String sText) { print(sText); }
       
 
         TextParameters textparam13 = new TextParameters(
-          data: 'Forgot Password? \n You can register here',
-          fontSize: 16,
+          data: 'forgot Password? \n You can Register here',
+          fontSize: 14,
           color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
-          fontWeight: FontWeight.normal,
+          fontWeight: FontWeight.bold,
           textAlign: TextAlign.center
         );
          

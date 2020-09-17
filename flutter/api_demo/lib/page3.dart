@@ -8,6 +8,15 @@ import 'package:rapid_widgets_library/custom-drawer.dart';
 import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
 import 'package:rapid_widgets_library/custom-compositeCard.dart';
 import 'page5.dart';
+import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
+import 'package:rapid_widgets_library/custom-compositeCard.dart';
+import 'page5.dart';
+import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
+import 'package:rapid_widgets_library/custom-compositeCard.dart';
+import 'page5.dart';
+import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
+import 'package:rapid_widgets_library/custom-compositeCard.dart';
+import 'page5.dart';
 void main() => runApp(Page3());
 class Page3 extends StatelessWidget {
 @override
@@ -129,8 +138,8 @@ class _BoilerPlate extends State<BoilerPlate> {
             }
         
 
-              List<CustomcompositeCardParameters> listcards5 = [];
-                  CustomcompositeCardParameters card15 = new CustomcompositeCardParameters(
+              List<CustomcompositeCardParameters> listcards14 = [];
+                  CustomcompositeCardParameters card114 = new CustomcompositeCardParameters(
                       flexColumn1: 6,
                       flexColumn2: 4,
                       cardColor: Colors.white,
@@ -141,7 +150,7 @@ class _BoilerPlate extends State<BoilerPlate> {
                             children: <Widget>[
                               Align(
                                   alignment: Alignment.centerRight,
-                                  child: Image.network('tf',height: 102,width: 65,)
+                                  child: Image.network('http://104.40.75.137:9003/assets/cms/book1.png',height: 102,width: 65,)
                               ),
                               SizedBox(height: 19,),
                               Container(
@@ -166,21 +175,21 @@ class _BoilerPlate extends State<BoilerPlate> {
                           padding: const EdgeInsets.only(left: 13.0, bottom: 20.5),
                           child: Column(
                             children: <Widget>[
-                              Text('gdfcftcddf',textAlign: TextAlign.left,
+                              Text('Programming with Javascript',textAlign: TextAlign.left,
                               style: TextStyle(fontSize: 20,color: Color(0xff707070)),),
                               SizedBox(height: 4,),
                               Align(
                                 alignment: Alignment.centerLeft,
-                                child: Text('tdft',
+                                child: Text('By Zak Ruvacaba',
                                   style: TextStyle(fontSize: 14.0,color: Color(0xff707070)),),
                               ),
                               SizedBox(height: 46,),
                               Row(
                                 children: <Widget>[
-                                  Text('yft',
+                                  Text('USD 4.25',
                                   style: TextStyle(fontSize: 20.0, color: Color(0xff707070)),),
                                   SizedBox(width: 10,),
-                                  Text('yf',
+                                  Text('USD 5.00',
                                   style: TextStyle(color: Color(0xffD93954), decoration: TextDecoration.lineThrough,fontSize: 20.0),),
                                 ],
                               )
@@ -189,7 +198,196 @@ class _BoilerPlate extends State<BoilerPlate> {
                         ),
                       ],
                   );
-                  listcards5.add(card15);
+                  listcards14.add(card114);
+              
+
+              List<CustomcompositeCardParameters> listcards15 = [];
+                  CustomcompositeCardParameters card115 = new CustomcompositeCardParameters(
+                      flexColumn1: 6,
+                      flexColumn2: 4,
+                      cardColor: Colors.white,
+                      rightHandWidgets: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 10.0, bottom: 20.5),
+                          child: Column(
+                            children: <Widget>[
+                              Align(
+                                  alignment: Alignment.centerRight,
+                                  child: Image.network('http://104.40.75.137:9003/assets/cms/book2.png',height: 102,width: 65,)
+                              ),
+                              SizedBox(height: 19,),
+                              Container(
+                                height: 41,
+                                width: 123,
+                                child: FlatButton(color: Color(0xffD93954),child: Text('View',
+                                  style: TextStyle(color: Colors.white, fontSize: 13, fontFamily: 'Segoe UI'),),
+                                  onPressed: (){ Navigator.pushReplacement(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Page5()));},
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(21.0)),
+                                  disabledColor: Color(0xffD93954),),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                      leftHandWidgets: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 13.0, bottom: 20.5),
+                          child: Column(
+                            children: <Widget>[
+                              Text('React Fullstack with node/express',textAlign: TextAlign.left,
+                              style: TextStyle(fontSize: 20,color: Color(0xff707070)),),
+                              SizedBox(height: 4,),
+                              Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text('By Mohammad Iqbal',
+                                  style: TextStyle(fontSize: 14.0,color: Color(0xff707070)),),
+                              ),
+                              SizedBox(height: 46,),
+                              Row(
+                                children: <Widget>[
+                                  Text('USD 4.25',
+                                  style: TextStyle(fontSize: 20.0, color: Color(0xff707070)),),
+                                  SizedBox(width: 10,),
+                                  Text('USD 5.00',
+                                  style: TextStyle(color: Color(0xffD93954), decoration: TextDecoration.lineThrough,fontSize: 20.0),),
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                  );
+                  listcards15.add(card115);
+              
+
+              List<CustomcompositeCardParameters> listcards16 = [];
+                  CustomcompositeCardParameters card116 = new CustomcompositeCardParameters(
+                      flexColumn1: 6,
+                      flexColumn2: 4,
+                      cardColor: Colors.white,
+                      rightHandWidgets: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 10.0, bottom: 20.5),
+                          child: Column(
+                            children: <Widget>[
+                              Align(
+                                  alignment: Alignment.centerRight,
+                                  child: Image.network('http://104.40.75.137:9003/assets/cms/book3.png',height: 102,width: 65,)
+                              ),
+                              SizedBox(height: 19,),
+                              Container(
+                                height: 41,
+                                width: 123,
+                                child: FlatButton(color: Color(0xffD93954),child: Text('View',
+                                  style: TextStyle(color: Colors.white, fontSize: 13, fontFamily: 'Segoe UI'),),
+                                  onPressed: (){ Navigator.pushReplacement(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Page5()));},
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(21.0)),
+                                  disabledColor: Color(0xffD93954),),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                      leftHandWidgets: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 13.0, bottom: 20.5),
+                          child: Column(
+                            children: <Widget>[
+                              Text(' React Forms Crash Course',textAlign: TextAlign.left,
+                              style: TextStyle(fontSize: 20,color: Color(0xff707070)),),
+                              SizedBox(height: 4,),
+                              Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text('By Elvis Graholskis',
+                                  style: TextStyle(fontSize: 14.0,color: Color(0xff707070)),),
+                              ),
+                              SizedBox(height: 46,),
+                              Row(
+                                children: <Widget>[
+                                  Text('USD 14.25',
+                                  style: TextStyle(fontSize: 20.0, color: Color(0xff707070)),),
+                                  SizedBox(width: 10,),
+                                  Text('USD 50.00',
+                                  style: TextStyle(color: Color(0xffD93954), decoration: TextDecoration.lineThrough,fontSize: 20.0),),
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                  );
+                  listcards16.add(card116);
+              
+
+              List<CustomcompositeCardParameters> listcards17 = [];
+                  CustomcompositeCardParameters card117 = new CustomcompositeCardParameters(
+                      flexColumn1: 6,
+                      flexColumn2: 4,
+                      cardColor: Colors.white,
+                      rightHandWidgets: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 10.0, bottom: 20.5),
+                          child: Column(
+                            children: <Widget>[
+                              Align(
+                                  alignment: Alignment.centerRight,
+                                  child: Image.network('http://104.40.75.137:9003/assets/cms/book4.png',height: 102,width: 65,)
+                              ),
+                              SizedBox(height: 19,),
+                              Container(
+                                height: 41,
+                                width: 123,
+                                child: FlatButton(color: Color(0xffD93954),child: Text('View',
+                                  style: TextStyle(color: Colors.white, fontSize: 13, fontFamily: 'Segoe UI'),),
+                                  onPressed: (){ Navigator.pushReplacement(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Page5()));},
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(21.0)),
+                                  disabledColor: Color(0xffD93954),),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                      leftHandWidgets: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 13.0, bottom: 20.5),
+                          child: Column(
+                            children: <Widget>[
+                              Text('React JS Frontend Web Development',textAlign: TextAlign.left,
+                              style: TextStyle(fontSize: 20,color: Color(0xff707070)),),
+                              SizedBox(height: 4,),
+                              Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text('By Rhyan Dhungel',
+                                  style: TextStyle(fontSize: 14.0,color: Color(0xff707070)),),
+                              ),
+                              SizedBox(height: 46,),
+                              Row(
+                                children: <Widget>[
+                                  Text('USD 12.25',
+                                  style: TextStyle(fontSize: 20.0, color: Color(0xff707070)),),
+                                  SizedBox(width: 10,),
+                                  Text('USD 50.00',
+                                  style: TextStyle(color: Color(0xffD93954), decoration: TextDecoration.lineThrough,fontSize: 20.0),),
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                  );
+                  listcards17.add(card117);
               
 return MaterialApp(
 debugShowCheckedModeBanner: false,
@@ -213,25 +411,25 @@ child: Row(children: [
 Padding(
 padding: const EdgeInsets.only(bottom:30.0,top:30),
 child: Row(children: [
-Expanded(flex: 1,child:Container()),
+Expanded(flex: 1,child:compositeCard(listcards14),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.only(bottom:30.0),
 child: Row(children: [
-Expanded(flex: 1,child:Container()),
+Expanded(flex: 1,child:compositeCard(listcards15),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.only(bottom:30.0),
 child: Row(children: [
-Expanded(flex: 1,child:compositeCard(listcards5),),
+Expanded(flex: 1,child:compositeCard(listcards16),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.only(bottom:30.0),
 child: Row(children: [
-Expanded(flex: 1,child:Container()),
+Expanded(flex: 1,child:compositeCard(listcards17),),
 ],),
 ),
 Padding(

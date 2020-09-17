@@ -169,7 +169,7 @@ let shoppingCartTemplate = req =>
           let data15 = "\nExpanded(flex: 1,child:" + card5 + "),";
           let data16 = "\nExpanded(flex: 2,child:Align(alignment: Alignment.centerRight,child:" + card6 + "),";
           let data17 =
-            "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(0.0),\nchild: Row(children: ["; //Widget2 call
+            "),\n],),\n),\nPadding(\npadding: const EdgeInsets.all(0.0),\nchild: Row(children: ["; //Widget2 call
           let data18 = "\nExpanded(flex: 1,child:" + card7 + "),";
           let data19 =
             "\n],),\n),\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: ["; //Widget2 call

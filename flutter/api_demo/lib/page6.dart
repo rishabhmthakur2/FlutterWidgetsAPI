@@ -3,8 +3,6 @@ import 'package:rapid_widgets_library/widget-classesUsed.dart';
 import 'package:rapid_widgets_library/custom-appBar.dart';
 import 'package:rapid_widgets_library/custom-bottomnavbar.dart';
 import 'package:rapid_widgets_library/custom-drawer.dart';
-import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
-import 'package:rapid_widgets_library/custom-appBar.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
 import 'package:rapid_widgets_library/custom-borderless-card.dart';
@@ -111,72 +109,10 @@ class _BoilerPlate extends State<BoilerPlate> {
             }
         
 
-                                          AppBarParameters paramobject1 = new AppBarParameters(
-                                            backgroundColor: Colors.white,
-                                            elevation: 0,
-                                            bottomOpacity: 1.0,
-                                            toolbarOpacity: 1.0,
-                                            titleSpacing: 1.0,
-                                            centerTitle: false,
-                                            automaticallyImplyLeading: true,
-                                            leading: Icon(Icons.arrow_back, color: Color(0xff707070),),
-                                            title: Text('Cart - 2 item',
-                                              style: TextStyle(fontSize: 26, color: Color(0xff707070)),));
-                                        List<Widget> appBarIcons1 = [
-                                          IconButton(
-                                            icon: Image.network('http://104.40.75.137:9003/assets/cms/cart.png',width: 20,height: 14,),
-                                            onPressed: () {},
-                                          ),
-                                          Padding(
-                                            padding: const EdgeInsets.only(right: 30.0),
-                                            child: IconButton(
-                                              icon: Image.network('http://104.40.75.137:9003/assets/cms/drawer_icon.png',width: 20,height: 14,),
-                                              onPressed: () {},
-                                            ),
-                                          )];
-                                 
-
-        TextParameters textparam2 = new TextParameters(
-          data: 'Order above 80 to save on delivery charges. Free delivery with cart value above 100',
-          fontSize: 20,
-          color: Colors.black,
-          fontStyle: FontStyle.normal,
-          fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
-          textAlign: TextAlign.left
-        );
-         
-
-                      borderlessCallback3(String s, int i){};
-                      MaterialCardData borderdata3 = new MaterialCardData(
-                        title: 'React Fullstack with node/express',
-                        subtitle: 'By Mohammad Iqabal',
-                        containerHeight: 188,
-                        containerWidth: 350,
-                        imgPath: 'http://104.40.75.137:9003/assets/cms/book4.png',
-                        containerbgColor: Colors.white,
-                        footerText: 'http://104.40.75.137:9003/assets/cms/book4.png',
-                        btnText: 'Qty 1',
-                      );
-                  
-
-                      borderlessCallback4(String s, int i){};
-                      MaterialCardData borderdata4 = new MaterialCardData(
-                        title: 'React JS Frontend Web Development',
-                        subtitle: 'By Rhyan Dhungel',
-                        containerHeight: 188,
-                        containerWidth: 360,
-                        imgPath: 'http://104.40.75.137:9003/assets/cms/book4.png',
-                        containerbgColor: Colors.white,
-                        footerText: '12.50',
-                        btnText: 'Qty 1',
-                      );
-                  
-
-        TextParameters textparam5 = new TextParameters(
-          data: 'Add More Items',
-          fontSize: 14,
-          color: Colors.black,
+        TextParameters textparam4 = new TextParameters(
+          data: 'Order above 80 to save on delivery charges. Free delivery with cart value above USD 100',
+          fontSize: 16,
+          color: Colors.pink,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.normal,
@@ -184,15 +120,36 @@ class _BoilerPlate extends State<BoilerPlate> {
         );
          
 
-                      IconState icon6 =new IconState(icon: Icons.list,
-                        color: Colors.black,
-                        size: 14);
+                      borderlessCallback5(String s, int i){};
+                      MaterialCardData borderdata5 = new MaterialCardData(
+                        title: 'React Fullstack with node/express',
+                        subtitle: 'By Mohammad Iqabal',
+                        containerHeight: 188,
+                        containerWidth: 380,
+                        imgPath: 'http://104.40.75.137:9003/assets/cms/book3.png',
+                        containerbgColor: Colors.white,
+                        footerText: 'USD 4,25',
+                        btnText: 'Qty 1',
+                      );
+                  
+
+                      borderlessCallback6(String s, int i){};
+                      MaterialCardData borderdata6 = new MaterialCardData(
+                        title: 'React JS Frontend Web Development',
+                        subtitle: 'By Rhyan Dhungel',
+                        containerHeight: 188,
+                        containerWidth: 380,
+                        imgPath: 'http://104.40.75.137:9003/assets/cms/book3.png',
+                        containerbgColor: Colors.white,
+                        footerText: 'USD 4.25',
+                        btnText: 'Qty 1',
+                      );
                   
 
         TextParameters textparam7 = new TextParameters(
-          data: 'Total 16.75',
-          fontSize: 14,
-          color: Colors.black,
+          data: 'Add More items',
+          fontSize: 16,
+          color: Colors.pink,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
@@ -200,7 +157,23 @@ class _BoilerPlate extends State<BoilerPlate> {
         );
          
 
-          onFlatButtonPress8 (bool b){ 
+                      IconState icon8 =new IconState(icon: Icons.search,
+                        color: Colors.pink,
+                        size: 14);
+                  
+
+        TextParameters textparam9 = new TextParameters(
+          data: 'Total USD 16.75',
+          fontSize: 16,
+          color: Colors.black,
+          fontStyle: FontStyle.normal,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.bold,
+          textAlign: TextAlign.right
+        );
+         
+
+          onFlatButtonPress10 (bool b){ 
           print(b); 
           Navigator.pushReplacement(
             context,
@@ -208,15 +181,15 @@ class _BoilerPlate extends State<BoilerPlate> {
                 builder: (context) => Page7()));
 
           } 
-          onFlatButtonLongPress8 (bool b){ 
+          onFlatButtonLongPress10 (bool b){ 
           print(b); 
           } 
-          FlatButtonParameters buttonFlatObject8 = FlatButtonParameters(
+          FlatButtonParameters buttonFlatObject10 = FlatButtonParameters(
           child:Text('Proceed to payment'),
           color:Colors.pink,
           textColor:Colors.white,
           hoverColor: Colors.pink,
-          width: 150,
+          width: 350,
           focusColor: Colors.pink,
           height: 50,
           highlightColor: Colors.pink,
@@ -234,7 +207,7 @@ backgroundColor: Colors.white,
 body: Padding(
 padding: const EdgeInsets.all(0.0),
 child: Padding(
-padding: const EdgeInsets.all(0.0),
+padding: const EdgeInsets.only(left: 15.0, right: 15),
 child: SingleChildScrollView(
 child: Column(
 children: <Widget>[
@@ -246,33 +219,33 @@ child: Row(children: [
 Padding(
 padding: const EdgeInsets.only(bottom:30.0,top:30),
 child: Row(children: [
-Expanded(flex: 1,child:customText(textparam2)),
+Expanded(flex: 1,child:customText(textparam4)),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.only(bottom:30.0),
 child: Row(children: [
-Expanded(flex: 1,child:customBorderlessCard(borderdata3,borderlessCallback3),),
+Expanded(flex: 1,child:customBorderlessCard(borderdata5,borderlessCallback5),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.only(bottom:30.0),
 child: Row(children: [
-Expanded(flex: 1,child:customBorderlessCard(borderdata4,borderlessCallback4),),
+Expanded(flex: 1,child:customBorderlessCard(borderdata6,borderlessCallback6),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.only(bottom:30.0),
 child: Row(children: [
-Expanded(flex: 1,child:customText(textparam5)),
-Expanded(flex: 1,child:customisedIcon(icon6),),
 Expanded(flex: 1,child:customText(textparam7)),
-],),
+Expanded(flex: 1,child:customisedIcon(icon8),),
+Expanded(flex: 2,child:Align(alignment: Alignment.centerRight,child:customText(textparam9)),
+),],),
 ),
 Padding(
 padding: const EdgeInsets.all(0.0),
 child: Row(children: [
-Expanded(flex: 1,child:customFlatButton(buttonFlatObject8, onFlatButtonPress8, onFlatButtonLongPress8),),
+Expanded(flex: 1,child:customFlatButton(buttonFlatObject10, onFlatButtonPress10, onFlatButtonLongPress10),),
 ],),
 ),
 Padding(

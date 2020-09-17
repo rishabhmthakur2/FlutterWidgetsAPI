@@ -72,7 +72,7 @@ onclick0(String sText) { print(sText); }
         src:'http://104.40.75.137:9003/assets/cms/image1.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 150, width: 180);
+         height: 225, width: 337);
          
 
         TextParameters textparam1 = new TextParameters(

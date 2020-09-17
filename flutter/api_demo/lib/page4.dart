@@ -84,7 +84,7 @@ onclick18(String sText) { print(sText); }
         src:'http://104.40.75.137:9003/assets/cms/image4.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 302, width: 400);
+         height: 158, width: 235);
          
 
         TextParameters textparam19 = new TextParameters(
@@ -106,10 +106,10 @@ onclick18(String sText) { print(sText); }
                     callback(dynamic s, int i) {
                     }
                     MaterialCardData data = new MaterialCardData(
-                      title: 'Programming with JavaScriptProgramming with JavaScript Chapter 3 - The Period',
-                      subtitle: 'JavaScript is a powerful and versatile scripting  language used in web applic...',
-                      bodyText: 'Continue Course(Button Text)',
-                      footerText: 'Learning Type',
+                      title: 'Programming with JavaScript',
+                      subtitle: 'Chapter 3 - The Period',
+                      bodyText: 'JavaScript is a powerful and versatile scripting  language used in web applic...',
+                      footerText: 'Progress',
                       btnGrpList1: [
                         FlatButton(
                           shape: new RoundedRectangleBorder(
@@ -117,7 +117,7 @@ onclick18(String sText) { print(sText); }
                           disabledColor: Color(0xffD93954),
                           color: Color(0xffD93954),
                           child: Text(
-                            'View',
+                            'Continue Course',
                             style: TextStyle(
                                 fontFamily: 'Segoe UI',
                                 fontSize: 12.0,
@@ -133,7 +133,7 @@ onclick18(String sText) { print(sText); }
             
 
         TextParameters textparam21 = new TextParameters(
-          data: 'View',
+          data: 'View ',
           fontSize: 26,
           color: Colors.black,
           fontStyle: FontStyle.normal,
@@ -159,12 +159,12 @@ onclick18(String sText) { print(sText); }
                       callbackSolid23(dynamic s, int i) {
                           }
                           MaterialCardData solidParameters23 = new MaterialCardData(
-                            title: 'Video Course',
+                            title: 'Video course',
                             containerHeight: 53,
                             containerWidth: 135,
                             imgHeight: 145,
                             imgWidth: 145,
-                            imgPath: 'http://104.40.75.137:9003/assets/cms/Image6.png',
+                            imgPath: 'http://104.40.75.137:9003/assets/cms/image5.png',
                             containerbgColor: Colors.yellow
                           );
                   
@@ -172,7 +172,7 @@ onclick18(String sText) { print(sText); }
                       callbackSolid24(dynamic s, int i) {
                           }
                           MaterialCardData solidParameters24 = new MaterialCardData(
-                            title: 'Audio Books',
+                            title: 'Audio Course',
                             containerHeight: 53,
                             containerWidth: 135,
                             imgHeight: 145,

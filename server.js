@@ -13,6 +13,7 @@ const { featuredTemplate } = require('./templates/featured-template');
 const { deatailsTemplate } = require('./templates/deatails-template');
 const { shoppingCartTemplate } = require('./templates/shoping-cart-template');
 const { paymentTemplate } = require('./templates/payment-template');
+const { alertTemplate } = require('./templates/alert-page');
 
 var app = express();
 app.use(cors());

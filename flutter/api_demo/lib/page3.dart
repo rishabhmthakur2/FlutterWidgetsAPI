@@ -10,13 +10,13 @@ import 'package:rapid_widgets_library/custom-compositeCard.dart';
 import 'page5.dart';
 import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
 import 'package:rapid_widgets_library/custom-compositeCard.dart';
-import 'page5.dart';
+
 import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
 import 'package:rapid_widgets_library/custom-compositeCard.dart';
-import 'page5.dart';
+
 import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
 import 'package:rapid_widgets_library/custom-compositeCard.dart';
-import 'page5.dart';
+
 void main() => runApp(Page3());
 class Page3 extends StatelessWidget {
 @override

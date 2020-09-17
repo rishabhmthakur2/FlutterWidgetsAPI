@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rapid_widgets_library/widget-classesUsed.dart';
-import 'package:rapid_widgets_library/custom-appBar.dart';
+import 'package:rapid_widgets_library/custom-appBar.dart'; 
+import 'page3.dart';
 import 'package:rapid_widgets_library/custom-drawer.dart';
 import 'package:rapid_widgets_library/custom-image.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
@@ -40,8 +41,14 @@ class _BoilerPlate extends State<BoilerPlate>{
                                       titleSpacing: 1.0,
                                       centerTitle: false,
                                       automaticallyImplyLeading: true,
-                                      leading: Icon(Icons.arrow_back, color: Color(0xff707070),),
-                                      title: Text('Featured',
+                                      leading: IconButton(icon: (Icon(Icons.arrow_back,color: Color(0xff707070))), onPressed: (){
+                                        Navigator.pushReplacement(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) => Page3()));
+                                        
+                                      }),
+                                      title: Text('Hello Bhaskar!',
                                       style: TextStyle(fontSize: 26, color: Color(0xff707070)),));
                                   List<Widget> appBarIcons = [
                                     IconButton(
@@ -79,15 +86,15 @@ class _BoilerPlate extends State<BoilerPlate>{
             print(nIndex); 
             }
         
-onclick18(String sText) { print(sText); }
-        CustomImageContents ImageObj118 = new CustomImageContents(
+onclick6(String sText) { print(sText); }
+        CustomImageContents ImageObj16 = new CustomImageContents(
         src:'http://104.40.75.137:9003/assets/cms/image4.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 158, width: 235);
+         height: 300, width: 400);
          
 
-        TextParameters textparam19 = new TextParameters(
+        TextParameters textparam7 = new TextParameters(
           data: 'My Course',
           fontSize: 26,
           color: Colors.black,
@@ -132,8 +139,8 @@ onclick18(String sText) { print(sText); }
                     );
             
 
-        TextParameters textparam21 = new TextParameters(
-          data: 'View ',
+        TextParameters textparam9 = new TextParameters(
+          data: 'Learning Type',
           fontSize: 26,
           color: Colors.black,
           fontStyle: FontStyle.normal,
@@ -143,10 +150,23 @@ onclick18(String sText) { print(sText); }
         );
          
 
-                      callbackSolid22(dynamic s, int i) {
+                      callbackSolid10(dynamic s, int i) {
                           }
-                          MaterialCardData solidParameters22 = new MaterialCardData(
-                            title: 'e-Books',
+                          MaterialCardData solidParameters10 = new MaterialCardData(
+                            title: 'E-Books',
+                            containerHeight: 53,
+                            containerWidth: 135,
+                            imgHeight: 145,
+                            imgWidth: 145,
+                            imgPath: 'http://104.40.75.137:9003/assets/cms/image5.png',
+                            containerbgColor: Colors.red
+                          );
+                  
+
+                      callbackSolid11(dynamic s, int i) {
+                          }
+                          MaterialCardData solidParameters11 = new MaterialCardData(
+                            title: 'Video Courses',
                             containerHeight: 53,
                             containerWidth: 135,
                             imgHeight: 145,
@@ -156,42 +176,29 @@ onclick18(String sText) { print(sText); }
                           );
                   
 
-                      callbackSolid23(dynamic s, int i) {
+                      callbackSolid12(dynamic s, int i) {
                           }
-                          MaterialCardData solidParameters23 = new MaterialCardData(
-                            title: 'Video course',
+                          MaterialCardData solidParameters12 = new MaterialCardData(
+                            title: 'Audio Books',
                             containerHeight: 53,
                             containerWidth: 135,
                             imgHeight: 145,
                             imgWidth: 145,
                             imgPath: 'http://104.40.75.137:9003/assets/cms/image5.png',
-                            containerbgColor: Colors.yellow
+                            containerbgColor: Colors.orange
                           );
                   
 
-                      callbackSolid24(dynamic s, int i) {
+                      callbackSolid13(dynamic s, int i) {
                           }
-                          MaterialCardData solidParameters24 = new MaterialCardData(
-                            title: 'Audio Course',
-                            containerHeight: 53,
-                            containerWidth: 135,
-                            imgHeight: 145,
-                            imgWidth: 145,
-                            imgPath: 'http://104.40.75.137:9003/assets/cms/image5.png',
-                            containerbgColor: Colors.yellow
-                          );
-                  
-
-                      callbackSolid25(dynamic s, int i) {
-                          }
-                          MaterialCardData solidParameters25 = new MaterialCardData(
+                          MaterialCardData solidParameters13 = new MaterialCardData(
                             title: 'Downloads',
                             containerHeight: 53,
                             containerWidth: 135,
                             imgHeight: 145,
                             imgWidth: 145,
                             imgPath: 'http://104.40.75.137:9003/assets/cms/image5.png',
-                            containerbgColor: Colors.yellow
+                            containerbgColor: Colors.grey
                           );
                   
 return MaterialApp(
@@ -210,13 +217,13 @@ children: <Widget>[
 Padding(
 padding: const EdgeInsets.all(0.0),
 child: Row(children: [
-Expanded(flex: 1,child:CustomImage(data: ImageObj118),),
+Expanded(flex: 1,child:CustomImage(data: ImageObj16),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(30.0),
 child: Row(children: [
-Expanded(flex: 1,child:customText(textparam19)),
+Expanded(flex: 1,child:customText(textparam7)),
 ],),
 ),
 Padding(
@@ -228,23 +235,23 @@ Expanded(flex: 1,child:customProgressCard(data, callback),),
 Padding(
 padding: const EdgeInsets.only(left:30,right:30,bottom:30),
 child: Row(children: [
-Expanded(flex: 1,child:customText(textparam21)),
+Expanded(flex: 1,child:customText(textparam9)),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.only(left:30,right:30,bottom:30),
 child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: [
-Expanded(flex: 1,child:customSolidCard(solidParameters22, callbackSolid22),),
+Expanded(flex: 1,child:customSolidCard(solidParameters10, callbackSolid10),),
 SizedBox(width:30),
-Expanded(flex: 1,child:customSolidCard(solidParameters23, callbackSolid23),),
+Expanded(flex: 1,child:customSolidCard(solidParameters11, callbackSolid11),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.only(left:30,right:30,bottom:30),
 child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: [
-Expanded(flex: 1,child:customSolidCard(solidParameters24, callbackSolid24),),
+Expanded(flex: 1,child:customSolidCard(solidParameters12, callbackSolid12),),
 SizedBox(width:30),
-Expanded(flex: 1,child:customSolidCard(solidParameters25, callbackSolid25),),
+Expanded(flex: 1,child:customSolidCard(solidParameters13, callbackSolid13),),
  ],),
 ),
 ], 

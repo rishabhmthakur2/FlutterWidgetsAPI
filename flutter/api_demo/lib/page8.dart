@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:rapid_widgets_library/widget-classesUsed.dart';
+import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
 import 'package:rapid_widgets_library/custom-appBar.dart';
 import 'package:rapid_widgets_library/custom-bottomnavbar.dart';
 import 'package:rapid_widgets_library/custom-drawer.dart';
-import 'package:rapid_widgets_library/custom-image.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
+import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
+import 'package:rapid_widgets_library/custom_AlertDialogs.dart';
+import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
+import 'package:rapid_widgets_library/custom-appBar.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
 import 'package:rapid_widgets_library/custom_AlertDialogs.dart';
@@ -24,30 +28,30 @@ class _BoilerPlate extends State<BoilerPlate> {
  @override
   Widget build(BuildContext context) { 
 
-                              AppBarParameters paramobject = new AppBarParameters(
-                                    backgroundColor: Colors.white,
-                                      elevation: 0,
-                                      bottomOpacity: 1.0,
-                                      toolbarOpacity: 1.0,
-                                      titleSpacing: 1.0,
-                                      centerTitle: false,
-                                      automaticallyImplyLeading: true,
-                                      leading: Icon(Icons.arrow_back, color: Color(0xff707070),),
-                                      title: Text('Featured',
-                                      style: TextStyle(fontSize: 26, color: Color(0xff707070)),));
-                                  List<Widget> appBarIcons = [
-                                    IconButton(
-                                      icon: Image.network('http://104.40.75.137:9003/assets/cms/cart.png',width: 20,height: 14,),
-                                      onPressed: () {},
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(right: 30.0),
-                                      child: IconButton(
-                                        icon: Image.network('http://104.40.75.137:9003/assets/cms/drawer_icon.png',width: 20,height: 14,),
-                                        onPressed: () {},
-                                      ),
-                                    )];
-                       
+                                          AppBarParameters paramobject = new AppBarParameters(
+                                            backgroundColor: Colors.white,
+                                            elevation: 0,
+                                            bottomOpacity: 1.0,
+                                            toolbarOpacity: 1.0,
+                                            titleSpacing: 1.0,
+                                            centerTitle: false,
+                                            automaticallyImplyLeading: true,
+                                            leading: Icon(Icons.arrow_back, color: Color(0xff707070),),
+                                            title: Text('undefined',
+                                              style: TextStyle(fontSize: 26, color: Color(0xff707070)),));
+                                        List<Widget> appBarIcons = [
+                                          IconButton(
+                                            icon: Image.network('http://104.40.75.137:9003/assets/cms/cart.png',width: 20,height: 14,),
+                                            onPressed: () {},
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.only(right: 30.0),
+                                            child: IconButton(
+                                              icon: Image.network('http://104.40.75.137:9003/assets/cms/drawer_icon.png',width: 20,height: 14,),
+                                              onPressed: () {},
+                                            ),
+                                          )];
+                                 
 
                   List<BottomNavigationBarItem> bottomnavitems = [];
                   BottomNavigationBarItem bottomnavitem1= new BottomNavigationBarItem(
@@ -102,29 +106,84 @@ class _BoilerPlate extends State<BoilerPlate> {
             print(nIndex); 
             }
         
-onclick0(String sText) { print(sText); }
-        CustomImageContents ImageObj10 = new CustomImageContents(
-        src:'http://104.40.75.137:9003/assets/cms/Image6.png',
-         semanticLabel: 'Random Network', 
-         imageType: 'Network', 
-         height: 150, width: 250);
-         
 
         TextParameters textparam1 = new TextParameters(
-          data: 'Module 1 - Introduction',
-          fontSize: 26,
+          data: 'USD 16.75',
+          fontSize: 14,
           color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
-          textAlign: TextAlign.left
+          fontWeight: FontWeight.normal,
+          textAlign: TextAlign.right
         );
          
 
+            AlertDialogContents alertObj12 = new AlertDialogContents(
+              <Widget>[
+                Padding(
+                  padding: const EdgeInsets.only(left:30.0, right: 30, top: 25, bottom: 20),
+                  child: Container(
+                    height: 41,
+                    width: 220,
+                    child: FlatButton(
+                      child: Text('Go to my course',
+                        style: TextStyle(color: Colors.white),),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(21.0),
+                      ),
+                      color: Colors.pink,
+                      onPressed: (){},
+                    ),
+                  ),
+                ),
+              ],"",
+              Text('You have successfully purchased. Now you can enjoy the content. Thank You!', textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 16, color: Color(0xff707070)),),
+            );
+            AlertDialogParameters alertobj22 = new AlertDialogParameters(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20.0)),
+              backgroundColor: Colors.white,
+              elevation: 30,
+              contentTextStyle: TextStyle( fontSize: 18.0, color: Colors.blueGrey),
+              height: 254,
+              width: 380,
+              titleTextStyle: TextStyle( fontSize: 18.0, color: Colors.white),
+            );
+            onAlertButtonTap2(String s){
+              print(s);
+            }
+          
+
+                                          AppBarParameters paramobject = new AppBarParameters(
+                                            backgroundColor: Colors.white,
+                                            elevation: 0,
+                                            bottomOpacity: 1.0,
+                                            toolbarOpacity: 1.0,
+                                            titleSpacing: 1.0,
+                                            centerTitle: false,
+                                            automaticallyImplyLeading: true,
+                                            leading: Icon(Icons.arrow_back, color: Color(0xff707070),),
+                                            title: Text('Payment Received',
+                                              style: TextStyle(fontSize: 26, color: Color(0xff707070)),));
+                                        List<Widget> appBarIcons = [
+                                          IconButton(
+                                            icon: Image.network('http://104.40.75.137:9003/assets/cms/cart.png',width: 20,height: 14,),
+                                            onPressed: () {},
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.only(right: 30.0),
+                                            child: IconButton(
+                                              icon: Image.network('http://104.40.75.137:9003/assets/cms/drawer_icon.png',width: 20,height: 14,),
+                                              onPressed: () {},
+                                            ),
+                                          )];
+                                 
+
         TextParameters textparam4 = new TextParameters(
           data: 'USD 16.75',
-          fontSize: 16,
-          color: Colors.pink,
+          fontSize: 14,
+          color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.normal,

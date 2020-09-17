@@ -341,13 +341,6 @@
         }
       },
       {
-        "id": 303,
-        "name": "AppBar",
-        "definitions": {
-          "title": "String"
-        }
-      },
-      {
         "id": 75,
         "name": "Checkbox",
         "definitions": {

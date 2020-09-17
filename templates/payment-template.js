@@ -842,20 +842,6 @@ let paymentTemplate = req =>
                 console.log("Data is appended to file successfully.");
               }
             );
-            if (outputPlatform == 0) {
-              try {
-                console.log('Execution Started');
-                exec(batMobile, (err, stdout, stderr) => {
-                  if (err) {
-                    console.error(err);
-                    return;
-                  }
-                  console.log(stdout);
-                });
-              } catch (error) {
-                return error;
-              }
-            } 
           });
         });
       } catch (error) {

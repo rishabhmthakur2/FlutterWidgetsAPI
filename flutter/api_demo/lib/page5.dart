@@ -9,9 +9,6 @@ import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-flatButton.dart';
 import 'page6.dart';
-import 'package:rapid_widgets_library/custom-text.dart';
-import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
-import 'package:rapid_widgets_library/custom_AlertDialogs.dart';
 void main() => runApp(Page5());
 class Page5 extends StatelessWidget {
 @override
@@ -113,12 +110,12 @@ onclick0(String sText) { print(sText); }
         src:'http://104.40.75.137:9003/assets/cms/Image6.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 133, width: 237);
+         height: 150, width: 250);
          
 
         TextParameters textparam1 = new TextParameters(
           data: 'Module 1 - Introduction',
-          fontSize: 20,
+          fontSize: 26,
           color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
@@ -150,66 +147,18 @@ onclick0(String sText) { print(sText); }
           print(b); 
           } 
           FlatButtonParameters buttonFlatObject3 = FlatButtonParameters(
-          child:Text('Purchase with USD 4.25 to continue reading'),
+          child:Text('Purchase with USD 4.25 to continue reading.'),
           color:Colors.pink,
           textColor:Colors.white,
           hoverColor: Colors.pink,
-          width: 150,
+          width: 200,
           focusColor: Colors.pink,
-          height: 50,
+          height: 41,
           highlightColor: Colors.pink,
           splashColor: Colors.pink
 
           );
       
-
-        TextParameters textparam34 = new TextParameters(
-          data: 'USD 16.75',
-          fontSize: 16,
-          color: Colors.pink,
-          fontStyle: FontStyle.normal,
-          fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
-          textAlign: TextAlign.right
-        );
-         
-
-            AlertDialogContents alertObj135 = new AlertDialogContents(
-              <Widget>[
-                Padding(
-                  padding: const EdgeInsets.only(left:30.0, right: 30, top: 25, bottom: 20),
-                  child: Container(
-                    height: 41,
-                    width: 220,
-                    child: FlatButton(
-                      child: Text('Go To My course',
-                        style: TextStyle(color: Colors.white),),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(21.0),
-                      ),
-                      color: Colors.pink,
-                      onPressed: (){},
-                    ),
-                  ),
-                ),
-              ],"",
-              Text('You have successfully purchased. Now you can enjoy the content. Thank You!', textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 16, color: Color(0xff707070)),),
-            );
-            AlertDialogParameters alertobj235 = new AlertDialogParameters(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0)),
-              backgroundColor: Colors.white,
-              elevation: 30,
-              contentTextStyle: TextStyle( fontSize: 18.0, color: Colors.blueGrey),
-              height: 254,
-              width: 380,
-              titleTextStyle: TextStyle( fontSize: 18.0, color: Colors.white),
-            );
-            onAlertButtonTap35(String s){
-              print(s);
-            }
-          
 return MaterialApp(
 debugShowCheckedModeBanner: false,
 home: Scaffold( 
@@ -225,13 +174,13 @@ children: <Widget>[
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Expanded(flex: 1,child:customText(textparam34)),
+Expanded(flex: 1,child:CustomImage(data: ImageObj10),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.only(top:30,bottom:30),
 child: Row(children: [
-Expanded(flex: 1,child:CustomAlertDialog(dialogContent: alertObj135, param: alertobj235, callbackAlert: onAlertButtonTap35),),
+Expanded(flex: 1,child:customText(textparam1)),
 ],),
 ),
 Padding(

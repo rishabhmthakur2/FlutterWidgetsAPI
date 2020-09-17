@@ -3,6 +3,8 @@ import 'package:rapid_widgets_library/widget-classesUsed.dart';
 import 'package:rapid_widgets_library/custom-appBar.dart';
 import 'package:rapid_widgets_library/custom-bottomnavbar.dart';
 import 'package:rapid_widgets_library/custom-drawer.dart';
+import 'package:rapid_widgets_library/custom-image.dart';
+import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
 import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
 import 'package:rapid_widgets_library/custom_AlertDialogs.dart';
@@ -100,19 +102,37 @@ class _BoilerPlate extends State<BoilerPlate> {
             print(nIndex); 
             }
         
+onclick0(String sText) { print(sText); }
+        CustomImageContents ImageObj10 = new CustomImageContents(
+        src:'http://104.40.75.137:9003/assets/cms/Image6.png',
+         semanticLabel: 'Random Network', 
+         imageType: 'Network', 
+         height: 150, width: 250);
+         
 
-        TextParameters textparam0 = new TextParameters(
-          data: 'USD 16.75',
-          fontSize: 14,
-          color: Colors.pink,
+        TextParameters textparam1 = new TextParameters(
+          data: 'Module 1 - Introduction',
+          fontSize: 26,
+          color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.bold,
+          textAlign: TextAlign.left
+        );
+         
+
+        TextParameters textparam4 = new TextParameters(
+          data: 'USD 16.75',
+          fontSize: 16,
+          color: Colors.pink,
+          fontStyle: FontStyle.normal,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.normal,
           textAlign: TextAlign.right
         );
          
 
-            AlertDialogContents alertObj11 = new AlertDialogContents(
+            AlertDialogContents alertObj15 = new AlertDialogContents(
               <Widget>[
                 Padding(
                   padding: const EdgeInsets.only(left:30.0, right: 30, top: 25, bottom: 20),
@@ -120,7 +140,7 @@ class _BoilerPlate extends State<BoilerPlate> {
                     height: 41,
                     width: 220,
                     child: FlatButton(
-                      child: Text('Go To My course',
+                      child: Text('Go to my course',
                         style: TextStyle(color: Colors.white),),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(21.0),
@@ -134,7 +154,7 @@ class _BoilerPlate extends State<BoilerPlate> {
               Text('You have successfully purchased. Now you can enjoy the content. Thank You!', textAlign: TextAlign.center,
               style: TextStyle(fontSize: 16, color: Color(0xff707070)),),
             );
-            AlertDialogParameters alertobj21 = new AlertDialogParameters(
+            AlertDialogParameters alertobj25 = new AlertDialogParameters(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20.0)),
               backgroundColor: Colors.white,
@@ -144,7 +164,7 @@ class _BoilerPlate extends State<BoilerPlate> {
               width: 380,
               titleTextStyle: TextStyle( fontSize: 18.0, color: Colors.white),
             );
-            onAlertButtonTap1(String s){
+            onAlertButtonTap5(String s){
               print(s);
             }
           
@@ -163,11 +183,11 @@ children: <Widget>[
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(children: [
-Row( children: <Widget>[Text('Payment Received'),Spacer(flex: 1,),customText(textparam0)
+Row( children: <Widget>[Text('Payment Received'),Spacer(flex: 1,),customText(textparam4)
 ],),
 Padding(
 padding: const EdgeInsets.only(top:30,bottom:30),
-child:CustomAlertDialog(dialogContent: alertObj11, param: alertobj21, callbackAlert: onAlertButtonTap1),),
+child:CustomAlertDialog(dialogContent: alertObj15, param: alertobj25, callbackAlert: onAlertButtonTap5),),
 ],
  ),
   ),

@@ -172,6 +172,16 @@ app.post('/submitWidgetParams', async (req, res) => {
       res.status(400).send(error);
     }
   }
+  else if (templateHandler == 11) {
+    execute = alertTemplate(req);
+    try {
+      execute.then((data) => {
+        res.status(200).send(data);
+      });
+    } catch (error) {
+      res.status(400).send(error);
+    }
+  }
 });
 
 var server = app.listen(port, () => {

@@ -853,7 +853,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
          {
                               id: 301,
                               name: "Appbar",
-                              imports: "import 'package:rapid_widgets_library/custom-appBar.dart';",
+                              imports: "import 'package:rapid_widgets_library/custom-appBar.dart'; \nimport 'page3.dart';",
                               call: "appBar:customAppBar(appBarIcons,paramobject),",
                               definitions: `
                               AppBarParameters paramobject = new AppBarParameters(
@@ -864,8 +864,14 @@ let getWidgets = (widgetId, paramValues, counter) =>
                                       titleSpacing: 1.0,
                                       centerTitle: false,
                                       automaticallyImplyLeading: true,
-                                      leading: Icon(Icons.arrow_back, color: Color(0xff707070),),
-                                      title: Text('Featured',
+                                      leading: IconButton(icon: (Icon(Icons.arrow_back,color: Color(0xff707070))), onPressed: (){
+                                        Navigator.pushReplacement(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) => Page3()));
+                                        
+                                      }),
+                                      title: Text('Hello Bhaskar!',
                                       style: TextStyle(fontSize: 26, color: Color(0xff707070)),));
                                   List<Widget> appBarIcons = [
                                     IconButton(

@@ -17,13 +17,13 @@ let alertTemplate = req =>
     let data5 = [];
     try {
       if (!req.body.appbar) {
-        let data = await getWidgets(303, {}, 0);
+        let data = await getWidgets(305, {}, 0);
         data1.push(data.imports);
         data3.push(data.definitions);
         appbarCall = data.call;
       }
       if (req.body.appbar) {
-        let data = await getWidgets(303, req.body.appbarParams, 0);
+        let data = await getWidgets(0, req.body.appbarParams, 0);
         data1.push(data.imports);
         data3.push(data.definitions);
         appbarCall = data.call;
@@ -59,7 +59,7 @@ let alertTemplate = req =>
         "\nreturn MaterialApp(\ndebugShowCheckedModeBanner: false,\nhome: Scaffold( \n"+appbarCall +
         
           
-          "\nbackgroundColor: Colors.white,\nbody: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: Padding(\npadding: const EdgeInsets.all(30.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: Row(children: [";
+          "\nbackgroundColor: Colors.white,\nbody: Padding(\npadding: const EdgeInsets.all(0.0),\nchild: Padding(\npadding: const EdgeInsets.all(30.0),\nchild: SingleChildScrollView(\nchild: Column(\nchildren: <Widget>[\nPadding(\npadding: const EdgeInsets.all(25.0),\nchild: ";
 
       let top = "Container()";
       let middle = "Container()";
@@ -94,8 +94,8 @@ let alertTemplate = req =>
         dataMap.then(() => {
           let data6 = "\nRow( children: <Widget>[Text('Payment Received'),Spacer(flex: 1,)," + top; //Widget1 call
           let data7 =
-            "\n],),\nPadding(\npadding: const EdgeInsets.only(top:30,bottom:30),\nchild:" + middle ;
-          let data8 = "),\n],\n ),\n  ),\n],\n),\n),\n),\n),\n),\n); } }";
+            "\n],),),\nPadding(\npadding: const EdgeInsets.only(top:30,bottom:30),\nchild:" + middle ;
+          let data8 = "\n  ),\n],\n),\n),\n),\n),\n),\n); } }";
       
           let clearFile = () =>
             new Promise(async (resolve, reject) => {

@@ -935,7 +935,69 @@ let getWidgets = (widgetId, paramValues, counter) =>
                                             centerTitle: false,
                                             automaticallyImplyLeading: true,
                                             leading: Icon(Icons.arrow_back, color: Color(0xff707070),),
-                                            title: Text('${paramValues.title}',
+                                            title: Text('Cart -2 Item',
+                                              style: TextStyle(fontSize: 26, color: Color(0xff707070)),));
+                                        List<Widget> appBarIcons = [
+                                          IconButton(
+                                            icon: Image.network('http://104.40.75.137:9003/assets/cms/cart.png',width: 20,height: 14,),
+                                            onPressed: () {},
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.only(right: 30.0),
+                                            child: IconButton(
+                                              icon: Image.network('http://104.40.75.137:9003/assets/cms/drawer_icon.png',width: 20,height: 14,),
+                                              onPressed: () {},
+                                            ),
+                                          )];
+                                 `
+                                      },
+                                      {
+                                        id: 304,
+                                        name: "Appbar",
+                                        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-appBar.dart';",
+                                        call: "appBar:customAppBar(appBarIcons,paramobject),",
+                                        definitions: `
+                                          AppBarParameters paramobject = new AppBarParameters(
+                                            backgroundColor: Colors.white,
+                                            elevation: 0,
+                                            bottomOpacity: 1.0,
+                                            toolbarOpacity: 1.0,
+                                            titleSpacing: 1.0,
+                                            centerTitle: false,
+                                            automaticallyImplyLeading: true,
+                                            leading: Icon(Icons.arrow_back, color: Color(0xff707070),),
+                                            title: Text('Payment Option',
+                                              style: TextStyle(fontSize: 26, color: Color(0xff707070)),));
+                                        List<Widget> appBarIcons = [
+                                          IconButton(
+                                            icon: Image.network('http://104.40.75.137:9003/assets/cms/cart.png',width: 20,height: 14,),
+                                            onPressed: () {},
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.only(right: 30.0),
+                                            child: IconButton(
+                                              icon: Image.network('http://104.40.75.137:9003/assets/cms/drawer_icon.png',width: 20,height: 14,),
+                                              onPressed: () {},
+                                            ),
+                                          )];
+                                 `
+                                      },
+                                      {
+                                        id: 305,
+                                        name: "Appbar",
+                                        imports: "import 'package:rapid_widgets_library/widget-classesUsed.dart'; \nimport 'package:rapid_widgets_library/custom-appBar.dart';",
+                                        call: "appBar:customAppBar(appBarIcons,paramobject),",
+                                        definitions: `
+                                          AppBarParameters paramobject = new AppBarParameters(
+                                            backgroundColor: Colors.white,
+                                            elevation: 0,
+                                            bottomOpacity: 1.0,
+                                            toolbarOpacity: 1.0,
+                                            titleSpacing: 1.0,
+                                            centerTitle: false,
+                                            automaticallyImplyLeading: true,
+                                            leading: Icon(Icons.arrow_back, color: Color(0xff707070),),
+                                            title: Text('Payment Successful',
                                               style: TextStyle(fontSize: 26, color: Color(0xff707070)),));
                                         List<Widget> appBarIcons = [
                                           IconButton(

@@ -4,6 +4,9 @@ import 'package:rapid_widgets_library/custom-appBar.dart';
 import 'package:rapid_widgets_library/custom-drawer.dart';
 import 'package:rapid_widgets_library/custom-image.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
+import 'package:rapid_widgets_library/custom-text.dart';
+import 'package:rapid_widgets_library/custom-flatButton.dart';
+import 'page1.dart';
 void main() => runApp(Page1());
 class Page1 extends StatelessWidget {
 @override
@@ -67,19 +70,55 @@ onclick0(String sText) { print(sText); }
         src:'http://104.40.75.137:9003/assets/cms/image2.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 150, width: 350);
+         height: 282, width: 403);
          
 
         TextParameters textparam1 = new TextParameters(
-          data: 'Page 2',
-          fontSize: 12,
-          color: Colors.black,
+          data: 'Get Started',
+          fontSize: 18,
+          color:,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.normal,
           textAlign: TextAlign.center
         );
          
+
+        TextParameters textparam2 = new TextParameters(
+          data: 'Get Started to browse',
+          fontSize: 14,
+          color:Color(0xff000000),
+          fontStyle: FontStyle.normal,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.normal,
+          textAlign: TextAlign.center
+        );
+         
+
+          onFlatButtonPress3 (bool b){ 
+          print(b); 
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+                builder: (context) => Page1()));
+
+          } 
+          onFlatButtonLongPress3 (bool b){ 
+          print(b); 
+          } 
+          FlatButtonParameters buttonFlatObject3 = FlatButtonParameters(
+          child:Text('Click'),
+          color:,
+          textColor:Color(0xfffffee9),
+          hoverColor: ,
+          width: 280,
+          focusColor: ,
+          height: 50,
+          highlightColor: ,
+          splashColor: 
+
+          );
+      
 return MaterialApp(
 debugShowCheckedModeBanner: false,
 home: Scaffold(
@@ -106,7 +145,7 @@ SizedBox(height:20),Expanded(flex: 1,child:customText(textparam1)),
 Padding(
 padding: const EdgeInsets.all(20.0),
 child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
-SizedBox(height:0),Expanded(flex: 1,child:Container()),
+SizedBox(height:0),Expanded(flex: 1,child:customText(textparam2)),
 ],),
 ),
 Padding(
@@ -118,7 +157,7 @@ SizedBox(height:0),Expanded(flex: 1,child:Container()),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
-SizedBox(height:60),Expanded(flex: 1,child:Container()),
+SizedBox(height:60),Expanded(flex: 1,child:customFlatButton(buttonFlatObject3, onFlatButtonPress3, onFlatButtonLongPress3),),
  ],),
 ),
 ], 

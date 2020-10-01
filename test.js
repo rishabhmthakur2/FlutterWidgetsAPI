@@ -12,11 +12,11 @@ let getWidgets = (widgetId, paramValues, counter) =>
                   }
                   Floatingactionbuttonparam btnFloatObject${counter} = Floatingactionbuttonparam(
                   child: Icon(Icons.${paramValues.icon}),
-                  foregroundColor: Colors.${paramValues.foregroundColor},
-                  backgroundColor: Colors.${paramValues.backgroundColor},
+                  foregroundColor: ${paramValues.foregroundColor},
+                  backgroundColor: ${paramValues.backgroundColor},
                   mini: ${paramValues.mini},
                   shape: CircleBorder(),
-                  hoverColor: Colors.${paramValues.hoverColor},
+                  hoverColor: ${paramValues.hoverColor},
                   );
               `
       },
@@ -38,19 +38,19 @@ let getWidgets = (widgetId, paramValues, counter) =>
             labelText: '${paramValues.labelText}', 
   
             filled: ${paramValues.filled}, 
-            fillColor: Colors.${paramValues.fillColor}, 
+            fillColor: ${paramValues.fillColor}, 
             counterText: "", 
             border: OutlineInputBorder( 
             borderRadius: BorderRadius.circular(${paramValues.borderRadius}), 
-            borderSide: BorderSide( color: Colors.${paramValues.borderSide})), 
+            borderSide: BorderSide( color: ${paramValues.borderSide})), 
             ), 
-            cursorColor: Colors.${paramValues.cursorColor}, 
+            cursorColor: ${paramValues.cursorColor}, 
             cursorWidth: ${paramValues.cursorWidth}, 
             expands: ${paramValues.expands}, 
             maxLines: ${paramValues.maxLines}, 
             readOnly: ${paramValues.readOnly}, 
             showCursor: ${paramValues.showCursor}, 
-            style: TextStyle(color: Colors.${paramValues.textColor}),
+            style: TextStyle(color: ${paramValues.textColor}),
             );
         `
       },
@@ -64,12 +64,12 @@ let getWidgets = (widgetId, paramValues, counter) =>
               itemsList: ${paramValues.itemsList},
               hintText: '${paramValues.hintText}',
               listType: '${paramValues.listType}',
-              fillColor: Colors.${paramValues.fillColor},
+              fillColor: ${paramValues.fillColor},
               borderRadius: ${paramValues.borderRadius},
               width: ${paramValues.width},
-              textColor: Colors.${paramValues.textColor},
-              itemsBgColor: Colors.${paramValues.itemsBgColor},
-              shadowColor: Colors.${paramValues.shadowColor},
+              textColor: ${paramValues.textColor},
+              itemsBgColor: ${paramValues.itemsBgColor},
+              shadowColor: ${paramValues.shadowColor},
               shadowBlurRadius: ${paramValues.shadowBlurRadius},
               shadowSpreadRadius: ${paramValues.shadowSpreadRadius},
               ); 
@@ -98,7 +98,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(21.0),
                       ),
-                      color: Colors.${paramValues.btnColor},
+                      color: ${paramValues.btnColor},
                       onPressed: (){},
                     ),
                   ),
@@ -110,7 +110,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
             AlertDialogParameters alertobj2${counter} = new AlertDialogParameters(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20.0)),
-              backgroundColor: Colors.${paramValues.backgroundColor},
+              backgroundColor: ${paramValues.backgroundColor},
               elevation: 30,
               contentTextStyle: TextStyle( fontSize: 18.0, color: Colors.blueGrey),
               height: 254,
@@ -157,27 +157,27 @@ let getWidgets = (widgetId, paramValues, counter) =>
           containerDecoration: BoxDecoration( 
           boxShadow: 
           [ BoxShadow( 
-          color: Colors.${paramValues.shadowColor}, blurRadius: ${paramValues.blurRadius}, 
+          color: ${paramValues.shadowColor}, blurRadius: ${paramValues.blurRadius}, 
           offset: Offset.zero),
           ], 
           borderRadius: BorderRadius.circular(${paramValues.borderRadius}), 
-          color: Colors.${paramValues.backgroundColor}, ), 
+          color: ${paramValues.backgroundColor}, ), 
           textStyle1: TextStyle( 
-          color: Colors.${paramValues.textColor1}, 
+          color: ${paramValues.textColor1}, 
           fontSize:${paramValues.fontSize1}, 
           fontWeight: FontWeight.bold, 
           ), 
           textStyle2: TextStyle( 
-          color: Colors.${paramValues.textColor2}, 
+          color: ${paramValues.textColor2}, 
           fontSize: ${paramValues.fontSize2}, 
           ), 
           textStyle3: TextStyle( 
-          color: Colors.${paramValues.textColor3},
+          color: ${paramValues.textColor3},
           fontSize: ${paramValues.fontSize3}, 
           ), 
           btnText: '${paramValues.btnText}', 
-          btnTextColor: Colors.${paramValues.btnTextColor}, 
-          btnColor: Colors.${paramValues.btnColor}, 
+          btnTextColor: ${paramValues.btnTextColor}, 
+          btnColor: ${paramValues.btnColor}, 
           margin1: ${paramValues.margin1}, 
           padding1: ${paramValues.padding1},
           imgHeight: ${paramValues.imgHeight},
@@ -211,12 +211,12 @@ let getWidgets = (widgetId, paramValues, counter) =>
           bottomnavitems.add(bottomnavitem3); 
           BottomNavBarParameters param = new BottomNavBarParameters(
           items: bottomnavitems, 
-          selectedItemColor: Colors.${paramValues.selectedItemColor}, 
-          backgroundColor: Colors.${paramValues.backgroundColor}, 
-          unselectedItemColor: Colors.${paramValues.unselectedItemColor}, 
+          selectedItemColor: ${paramValues.selectedItemColor}, 
+          backgroundColor:${paramValues.backgroundColor}, 
+          unselectedItemColor: ${paramValues.unselectedItemColor}, 
           showUnselectedLabels: ${paramValues.showUnselectedLabels}, 
           showSelectedLabels: ${paramValues.showSelectedLabels}, 
-          selectedIconTheme: IconThemeData(color: Colors.${paramValues.selectedIconTheme}));
+          selectedIconTheme: IconThemeData(color: ${paramValues.selectedIconTheme}));
       `
       },
 
@@ -228,7 +228,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
         definitions: `
             SliverAppBarParameters params = new SliverAppBarParameters(
             automaticallyImplyLeading: ${paramValues.automaticallyImplyLeading}, 
-            backgroundColor: Colors.${paramValues.backgroundColor}, 
+            backgroundColor: ${paramValues.backgroundColor}, 
             expandedHeight: ${paramValues.expandedHeight}, 
             elevation: ${paramValues.elevation}, 
             titleSpacing: ${paramValues.titleSpacing}, 
@@ -271,14 +271,14 @@ let getWidgets = (widgetId, paramValues, counter) =>
           } 
           FlatButtonParameters buttonFlatObject${counter} = FlatButtonParameters(
           child:Text('${paramValues.text}'),
-          color:Colors.${paramValues.btnColor},
-          textColor:Colors.${paramValues.textColor},
-          hoverColor: Colors.${paramValues.hoverColor},
+          color:${paramValues.btnColor},
+          textColor:${paramValues.textColor},
+          hoverColor: ${paramValues.hoverColor},
           width: ${paramValues.width},
-          focusColor: Colors.${paramValues.focusColor},
+          focusColor: ${paramValues.focusColor},
           height: ${paramValues.height},
-          highlightColor: Colors.${paramValues.highlightColor},
-          splashColor: Colors.${paramValues.splashColor}
+          highlightColor: ${paramValues.highlightColor},
+          splashColor: ${paramValues.splashColor}
 
           );
       `
@@ -293,9 +293,9 @@ let getWidgets = (widgetId, paramValues, counter) =>
         print(sBool); 
         } 
         SwitchParameters finalSwitchObj${counter} = new SwitchParameters(
-        inactiveTrackColor: Colors.${paramValues.inactiveTrackColor}, 
-        activeColor: Colors.${paramValues.activeColor}, 
-        activeTrackColor: Colors.${paramValues.activeTrackColor}
+        inactiveTrackColor: ${paramValues.inactiveTrackColor}, 
+        activeColor: ${paramValues.activeColor}, 
+        activeTrackColor: ${paramValues.activeTrackColor}
         );
     `
       },
@@ -314,12 +314,12 @@ let getWidgets = (widgetId, paramValues, counter) =>
       subtitle: '${paramValues.subtitle}', 
       containerHeight: ${paramValues.containerHeight},
       textStyle1: TextStyle( 
-      color: Colors.${paramValues.textcolor1}, 
+      color: ${paramValues.textcolor1}, 
       fontSize: ${paramValues.fontSize1}, 
       fontWeight: FontWeight.bold, 
       ), 
       textStyle2: TextStyle( 
-      color: Colors.${paramValues.textcolor2}, 
+      color: ${paramValues.textcolor2}, 
       fontSize: ${paramValues.fontSize2}, 
       ), 
       imgHeight: ${paramValues.imgHeight}, 
@@ -338,7 +338,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
         TextParameters textparam${counter} = new TextParameters(
           data: '${paramValues.data}',
           fontSize: ${paramValues.fontSize},
-          color: Colors.${paramValues.color},
+          color:${paramValues.color},
           fontStyle: FontStyle.normal,
           fontFamily: '${paramValues.fontFamily}',
           fontWeight: FontWeight.${paramValues.fontWeight},
@@ -517,14 +517,14 @@ let getWidgets = (widgetId, paramValues, counter) =>
           } 
           FlatButtonParameters buttonFlatObject${counter} = FlatButtonParameters(
           child:Text('${paramValues.text}'),
-          color:Colors.${paramValues.btnColor},
-          textColor:Colors.${paramValues.textColor},
-          hoverColor: Colors.${paramValues.hoverColor},
+          color:${paramValues.btnColor},
+          textColor:${paramValues.textColor},
+          hoverColor: ${paramValues.hoverColor},
           width: ${paramValues.width},
-          focusColor: Colors.${paramValues.focusColor},
+          focusColor: ${paramValues.focusColor},
           height: ${paramValues.height},
-          highlightColor: Colors.${paramValues.highlightColor},
-          splashColor: Colors.${paramValues.splashColor}
+          highlightColor: ${paramValues.highlightColor},
+          splashColor: ${paramValues.splashColor}
 
           );
       `
@@ -543,7 +543,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
           centerTitle: ${paramValues.centerTitle},
           automaticallyImplyLeading: ${paramValues.automaticallyImplyLeading},
           title: Text('${paramValues.title}'),
-          backgroundColor: Colors.${paramValues.backgroundColor});
+          backgroundColor: ${paramValues.backgroundColor});
           List<Widget> appBarIcons = [
           IconButton(
           icon:
@@ -580,7 +580,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
         title: '${paramValues.title}',
         imageType: \"Network\",
         imagepath: '${paramValues.imagepath}',
-        headerColor:Colors.${paramValues.headerColor},
+        headerColor:${paramValues.headerColor},
         ); 
         onclickDrawer(int nIndex) 
         { 
@@ -702,8 +702,8 @@ let getWidgets = (widgetId, paramValues, counter) =>
                 CustomLinearProgressBarParameters linearBarParameters =
                     new CustomLinearProgressBarParameters(
                         value: ${paramValues.linearProgressVal},
-                        backgroundColor: Colors.${paramValues.linearProgressColor2},
-                        valueColor: AlwaysStoppedAnimation<Color>(Colors.${paramValues.linearProgressColor1}));
+                        backgroundColor: ${paramValues.linearProgressColor2},
+                        valueColor: AlwaysStoppedAnimation<Color>(${paramValues.linearProgressColor1}));
                     callback(dynamic s, int i) {
                     }
                     MaterialCardData data = new MaterialCardData(
@@ -748,7 +748,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
                             imgHeight: ${paramValues.imgHeight},
                             imgWidth: ${paramValues.imgWidth},
                             imgPath: '${paramValues.imgPath}',
-                            containerbgColor: Colors.${paramValues.bgColor}
+                            containerbgColor: ${paramValues.bgColor}
                           );
                   `
                     },
@@ -765,7 +765,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
                         containerHeight: ${paramValues.containerHeight},
                         containerWidth: ${paramValues.containerWidth},
                         imgPath: '${paramValues.imgPath}',
-                        containerbgColor: Colors.${paramValues.bgColor},
+                        containerbgColor: ${paramValues.bgColor},
                         footerText: '${paramValues.price}',
                         btnText: '${paramValues.btnText}',
                       );
@@ -778,7 +778,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
                       call: `CustomCheckBox(checkparam)`,
                       definitions: `
                       CheckBoxParameters checkparam = new CheckBoxParameters(
-                        activeColor: Colors.${paramValues.selectedColor},
+                        activeColor: ${paramValues.selectedColor},
                       );
                   `
                     },
@@ -789,7 +789,7 @@ let getWidgets = (widgetId, paramValues, counter) =>
                       call: `customisedIcon(icon${counter}),`,
                       definitions: `
                       IconState icon${counter} =new IconState(icon: Icons.${paramValues.icon},
-                        color: Colors.${paramValues.color},
+                        color: ${paramValues.color},
                         size: ${paramValues.size});
                   `
                     },

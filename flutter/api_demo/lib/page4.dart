@@ -3,20 +3,7 @@ import 'package:rapid_widgets_library/widget-classesUsed.dart';
 import 'package:rapid_widgets_library/custom-appBar.dart'; 
 import 'page3.dart';
 import 'package:rapid_widgets_library/custom-drawer.dart';
-import 'package:rapid_widgets_library/custom-image.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
-import 'package:rapid_widgets_library/custom-linearProgressIndicator.dart'; 
-import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
-import 'package:rapid_widgets_library/custom-progress-card.dart';
-import 'package:rapid_widgets_library/custom-text.dart';
-import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
-import 'package:rapid_widgets_library/custom-solid-card.dart';
-import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
-import 'package:rapid_widgets_library/custom-solid-card.dart';
-import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
-import 'package:rapid_widgets_library/custom-solid-card.dart';
-import 'package:rapid_widgets_library/widget-classesUsed.dart'; 
-import 'package:rapid_widgets_library/custom-solid-card.dart';
 void main() => runApp(Page4());
 class Page4 extends StatelessWidget {
 @override
@@ -86,121 +73,17 @@ class _BoilerPlate extends State<BoilerPlate>{
             print(nIndex); 
             }
         
-onclick6(String sText) { print(sText); }
-        CustomImageContents ImageObj16 = new CustomImageContents(
-        src:'http://104.40.75.137:9003/assets/cms/image4.png',
-         semanticLabel: 'Random Network', 
-         imageType: 'Network', 
-         height: 300, width: 400);
-         
 
-        TextParameters textparam7 = new TextParameters(
-          data: 'My Course',
-          fontSize: 26,
+        TextParameters textparam0 = new TextParameters(
+          data: 'hi',
+          fontSize: 20,
           color: Colors.black,
           fontStyle: FontStyle.normal,
-          fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
-          textAlign: TextAlign.left
+          fontFamily: 'roboto',
+          fontWeight: FontWeight.normal,
+          textAlign: TextAlign.right
         );
          
-
-                CustomLinearProgressBarParameters linearBarParameters =
-                    new CustomLinearProgressBarParameters(
-                        value: 0.4,
-                        backgroundColor: Colors.grey,
-                        valueColor: AlwaysStoppedAnimation<Color>(Colors.green));
-                    callback(dynamic s, int i) {
-                    }
-                    MaterialCardData data = new MaterialCardData(
-                      title: 'Programming with JavaScript',
-                      subtitle: 'Chapter 3 - The Period',
-                      bodyText: 'JavaScript is a powerful and versatile scripting  language used in web applic...',
-                      footerText: 'Progress',
-                      btnGrpList1: [
-                        FlatButton(
-                          shape: new RoundedRectangleBorder(
-                              borderRadius: new BorderRadius.circular(30.0)),
-                          disabledColor: Color(0xffD93954),
-                          color: Color(0xffD93954),
-                          child: Text(
-                            'Continue Course',
-                            style: TextStyle(
-                                fontFamily: 'Segoe UI',
-                                fontSize: 12.0,
-                                color: Colors.white),
-                          ),
-                          onPressed: () {},
-                        )
-                      ],
-                      btnGrpList2: [
-                        customLinearProgressBarIndicator(linearBarParameters),
-                      ]
-                    );
-            
-
-        TextParameters textparam9 = new TextParameters(
-          data: 'Learning Type',
-          fontSize: 26,
-          color: Colors.black,
-          fontStyle: FontStyle.normal,
-          fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
-          textAlign: TextAlign.left
-        );
-         
-
-                      callbackSolid10(dynamic s, int i) {
-                          }
-                          MaterialCardData solidParameters10 = new MaterialCardData(
-                            title: 'E-Books',
-                            containerHeight: 53,
-                            containerWidth: 135,
-                            imgHeight: 145,
-                            imgWidth: 145,
-                            imgPath: 'http://104.40.75.137:9003/assets/cms/image5.png',
-                            containerbgColor: Colors.red
-                          );
-                  
-
-                      callbackSolid11(dynamic s, int i) {
-                          }
-                          MaterialCardData solidParameters11 = new MaterialCardData(
-                            title: 'Video Courses',
-                            containerHeight: 53,
-                            containerWidth: 135,
-                            imgHeight: 145,
-                            imgWidth: 145,
-                            imgPath: 'http://104.40.75.137:9003/assets/cms/image5.png',
-                            containerbgColor: Colors.yellow
-                          );
-                  
-
-                      callbackSolid12(dynamic s, int i) {
-                          }
-                          MaterialCardData solidParameters12 = new MaterialCardData(
-                            title: 'Audio Books',
-                            containerHeight: 53,
-                            containerWidth: 135,
-                            imgHeight: 145,
-                            imgWidth: 145,
-                            imgPath: 'http://104.40.75.137:9003/assets/cms/image5.png',
-                            containerbgColor: Colors.orange
-                          );
-                  
-
-                      callbackSolid13(dynamic s, int i) {
-                          }
-                          MaterialCardData solidParameters13 = new MaterialCardData(
-                            title: 'Downloads',
-                            containerHeight: 53,
-                            containerWidth: 135,
-                            imgHeight: 145,
-                            imgWidth: 145,
-                            imgPath: 'http://104.40.75.137:9003/assets/cms/image5.png',
-                            containerbgColor: Colors.grey
-                          );
-                  
 return MaterialApp(
 debugShowCheckedModeBanner: false,
 home: Scaffold(
@@ -217,41 +100,41 @@ children: <Widget>[
 Padding(
 padding: const EdgeInsets.all(0.0),
 child: Row(children: [
-Expanded(flex: 1,child:CustomImage(data: ImageObj16),),
+Expanded(flex: 1,child:Container()),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(30.0),
 child: Row(children: [
-Expanded(flex: 1,child:customText(textparam7)),
+Expanded(flex: 1,child:customText(textparam0)),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.only(left:30,right:30,bottom:30),
 child: Row(children: [
-Expanded(flex: 1,child:customProgressCard(data, callback),),
+Expanded(flex: 1,child:Container()),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.only(left:30,right:30,bottom:30),
 child: Row(children: [
-Expanded(flex: 1,child:customText(textparam9)),
+Expanded(flex: 1,child:Container()),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.only(left:30,right:30,bottom:30),
 child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: [
-Expanded(flex: 1,child:customSolidCard(solidParameters10, callbackSolid10),),
+Expanded(flex: 1,child:Container()),
 SizedBox(width:30),
-Expanded(flex: 1,child:customSolidCard(solidParameters11, callbackSolid11),),
+Expanded(flex: 1,child:Container()),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.only(left:30,right:30,bottom:30),
 child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: [
-Expanded(flex: 1,child:customSolidCard(solidParameters12, callbackSolid12),),
+Expanded(flex: 1,child:Container()),
 SizedBox(width:30),
-Expanded(flex: 1,child:customSolidCard(solidParameters13, callbackSolid13),),
+Expanded(flex: 1,child:Container()),
  ],),
 ),
 ], 

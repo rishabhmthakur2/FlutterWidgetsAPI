@@ -4,12 +4,6 @@ import 'package:rapid_widgets_library/custom-appBar.dart';
 import 'package:rapid_widgets_library/custom-drawer.dart';
 import 'package:rapid_widgets_library/custom-image.dart';
 import 'package:rapid_widgets_library/custom-text.dart';
-import 'package:rapid_widgets_library/custom-text.dart';
-import 'package:rapid_widgets_library/custom-image.dart';
-import 'package:rapid_widgets_library/custom-text.dart';
-import 'package:rapid_widgets_library/custom-text.dart';
-import 'package:rapid_widgets_library/custom-flatButton.dart';
-import 'page2.dart';
 void main() => runApp(Page1());
 class Page1 extends StatelessWidget {
 @override
@@ -70,55 +64,15 @@ class _BoilerPlate extends State<BoilerPlate> {
         
 onclick0(String sText) { print(sText); }
         CustomImageContents ImageObj10 = new CustomImageContents(
-        src:'http://104.40.75.137:9003/assets/cms/image1.png',
-         semanticLabel: 'Random Network', 
-         imageType: 'Network', 
-         height: 225, width: 337);
-         
-
-        TextParameters textparam1 = new TextParameters(
-          data: 'Web content',
-          fontSize: 26,
-          color: Colors.black,
-          fontStyle: FontStyle.normal,
-          fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
-          textAlign: TextAlign.center
-        );
-         
-
-        TextParameters textparam2 = new TextParameters(
-          data: 'Web content is the textual, visual, or aural  content that is encountered as part of  the user experience on websites',
-          fontSize: 16,
-          color: Colors.black,
-          fontStyle: FontStyle.normal,
-          fontFamily: 'Roboto',
-          fontWeight: FontWeight.normal,
-          textAlign: TextAlign.center
-        );
-         
-onclick5(String sText) { print(sText); }
-        CustomImageContents ImageObj15 = new CustomImageContents(
         src:'http://104.40.75.137:9003/assets/cms/image2.png',
          semanticLabel: 'Random Network', 
          imageType: 'Network', 
-         height: 282, width: 403);
+         height: 150, width: 350);
          
 
-        TextParameters textparam6 = new TextParameters(
-          data: 'Teacher learning education',
-          fontSize: 26,
-          color: Colors.black,
-          fontStyle: FontStyle.normal,
-          fontFamily: 'Roboto',
-          fontWeight: FontWeight.bold,
-          textAlign: TextAlign.center
-        );
-         
-
-        TextParameters textparam7 = new TextParameters(
-          data: 'Training teacher for the lesson for online student interaction',
-          fontSize: 16,
+        TextParameters textparam1 = new TextParameters(
+          data: 'Page 2',
+          fontSize: 12,
           color: Colors.black,
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
@@ -126,31 +80,6 @@ onclick5(String sText) { print(sText); }
           textAlign: TextAlign.center
         );
          
-
-          onFlatButtonPress8 (bool b){ 
-          print(b); 
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-                builder: (context) => Page2()));
-
-          } 
-          onFlatButtonLongPress8 (bool b){ 
-          print(b); 
-          } 
-          FlatButtonParameters buttonFlatObject8 = FlatButtonParameters(
-          child:Text('Get Started'),
-          color:Colors.pink,
-          textColor:Colors.white,
-          hoverColor: Colors.pink,
-          width: 150,
-          focusColor: Colors.pink,
-          height: 50,
-          highlightColor: Colors.pink,
-          splashColor: Colors.pink
-
-          );
-      
 return MaterialApp(
 debugShowCheckedModeBanner: false,
 home: Scaffold(
@@ -165,19 +94,19 @@ children: <Widget>[
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
-SizedBox(height:0),Expanded(flex: 1,child:CustomImage(data: ImageObj15),),
+SizedBox(height:0),Expanded(flex: 1,child:CustomImage(data: ImageObj10),),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(20.0),
 child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
-SizedBox(height:20),Expanded(flex: 1,child:customText(textparam6)),
+SizedBox(height:20),Expanded(flex: 1,child:customText(textparam1)),
 ],),
 ),
 Padding(
 padding: const EdgeInsets.all(20.0),
 child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
-SizedBox(height:0),Expanded(flex: 1,child:customText(textparam7)),
+SizedBox(height:0),Expanded(flex: 1,child:Container()),
 ],),
 ),
 Padding(
@@ -189,7 +118,7 @@ SizedBox(height:0),Expanded(flex: 1,child:Container()),
 Padding(
 padding: const EdgeInsets.all(25.0),
 child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
-SizedBox(height:60),Expanded(flex: 1,child:customFlatButton(buttonFlatObject8, onFlatButtonPress8, onFlatButtonLongPress8),),
+SizedBox(height:60),Expanded(flex: 1,child:Container()),
  ],),
 ),
 ], 

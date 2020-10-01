@@ -1,6 +1,7 @@
 const getWidgets = require("../test");
 const fs = require("fs");
 const batMobile = require.resolve("../flutter-batch-mobile.bat");
+const batMobile8 = require.resolve("../flutter-batch-mobile-page8.bat");
 const batWeb = require.resolve("../flutter-batch-web.bat");
 const { pCloudy } = require("../pcloudy");
 const { exec, execSync } = require("child_process");
@@ -8,6 +9,7 @@ const { exec, execSync } = require("child_process");
 let alertTemplate = req =>
   new Promise(async (resolve, reject) => {
     let outputPlatform = req.body.outputPlatform;
+    let pageBuild = req.body.pageBuild;
     let widgetsObject = req.body.widgets;
     let appbarCall;
     let drawerCall;
@@ -198,6 +200,21 @@ let alertTemplate = req =>
               }
             );
             if (outputPlatform == 0) {
+              if(pageBuild==1){
+              try {
+                console.log('Execution Started');
+                exec(batMobile8, (err, stdout, stderr) => {
+                  if (err) {
+                    console.error(err);
+                    return;
+                  }
+                  console.log(stdout);
+                });
+              } catch (error) {
+                return error;
+              }
+            }
+            else{
               try {
                 console.log('Execution Started');
                 exec(batMobile, (err, stdout, stderr) => {
@@ -210,7 +227,10 @@ let alertTemplate = req =>
               } catch (error) {
                 return error;
               }
+            }
             } 
+
+
           });
         });
       } catch (error) {

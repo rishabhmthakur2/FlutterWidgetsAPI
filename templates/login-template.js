@@ -1,6 +1,6 @@
 const getWidgets = require('../test');
 const fs = require('fs');
-const batMobile = require.resolve('../flutter-batch-mobile.bat');
+const batMobile = require.resolve('../flutter-batch-mobile-page2.bat');
 const batWeb = require.resolve('../flutter-batch-web.bat');
 const { pCloudy } = require('../pcloudy');
 const {
@@ -277,6 +277,20 @@ let loginTemplate = (req) => new Promise(async (resolve, reject) => {
               console.log('Data is appended to file successfully.')
             },
           );
+          if (outputPlatform == 0) {
+            try {
+              console.log('Execution Started');
+              exec(batMobile, (err, stdout, stderr) => {
+                if (err) {
+                  console.error(err);
+                  return;
+                }
+                console.log(stdout);
+              });
+            } catch (error) {
+              return error;
+            }
+          } 
         });
       });
     } catch (error) {

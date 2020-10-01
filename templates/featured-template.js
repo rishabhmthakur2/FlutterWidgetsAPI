@@ -1,6 +1,6 @@
 const getWidgets = require("../test");
 const fs = require("fs");
-const batMobile = require.resolve("../flutter-batch-mobile.bat");
+const batMobile = require.resolve("../flutter-batch-mobile-page3.bat");
 const batWeb = require.resolve("../flutter-batch-web.bat");
 const { exec } = require("child_process");
 const { pCloudy } = require("../pcloudy");
@@ -541,6 +541,20 @@ let featuredTemplate = req =>
                   console.log("Data is appended to file successfully.");
                 }
               );
+              if (outputPlatform == 0) {
+                try {
+                  console.log('Execution Started');
+                  exec(batMobile, (err, stdout, stderr) => {
+                    if (err) {
+                      console.error(err);
+                      return;
+                    }
+                    console.log(stdout);
+                  });
+                } catch (error) {
+                  return error;
+                }
+              } 
           });
         });
       } catch (error) {

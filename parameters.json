@@ -229,8 +229,8 @@
         "data": "String",
         "fontSize": "Number",
         "color": "Color",
-        "fontFamily": "String",
-        "fontWeight": "String",
+        "fontFamily": "fontFamily",
+        "fontWeight": "fontWeight",
         "textAlign" :"String"
       }
     },

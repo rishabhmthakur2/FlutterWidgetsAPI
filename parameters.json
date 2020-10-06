@@ -84,11 +84,11 @@
         "borderRadius": "Number",
         "backgroundColor": "Color",
         "textColor1": "Color",
-        "fontSize1": "Number",
+        "fontSize1": "Font",
         "textColor2": "Color",
-        "fontSize2": "Number",
+        "fontSize2": "Font",
         "textColor3": "Color",
-        "fontSize3": "Number",
+        "fontSize3": "Font",
         "btnText": "String",
         "btnTextColor": "Color",
         "btnColor": "Color",
@@ -205,9 +205,9 @@
         "subtitle": "String",
         "containerHeight": "Number",
         "textcolor1": "Color",
-        "fontSize1": "Number",
+        "fontSize1": "Font",
         "textcolor2": "Color",
-        "fontSize2": "Number",
+        "fontSize2": "Font",
         "imgHeight": "Number",
         "imgWidth": "Number",
         "imgPath": "String"
@@ -227,7 +227,7 @@
       "name": "Text",
       "definitions": {
         "data": "String",
-        "fontSize": "Number",
+        "fontSize": "Font",
         "color": "Color",
         "fontFamily": "fontFamily",
         "fontWeight": "fontWeight",
@@ -275,7 +275,7 @@
         "selected3": "Boolean",
         "dense": "Boolean",
         "isThreeLine": "Boolean",
-        "fontSize": "Number"
+        "fontSize": "Font"
       }
     },
     {

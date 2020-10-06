@@ -74,9 +74,9 @@ onclick0(String sText) { print(sText); }
          
 
         TextParameters textparam1 = new TextParameters(
-          data: 'Get Started',
-          fontSize: 18,
-          color:,
+          data: 'Teacher learning education',
+          fontSize: 16,
+          color:Color(0xff000000),
           fontStyle: FontStyle.normal,
           fontFamily: 'Roboto',
           fontWeight: FontWeight.normal,
@@ -85,7 +85,7 @@ onclick0(String sText) { print(sText); }
          
 
         TextParameters textparam2 = new TextParameters(
-          data: 'Get Started to browse',
+          data: 'Training teacher for the lesson for online student interaction',
           fontSize: 14,
           color:Color(0xff000000),
           fontStyle: FontStyle.normal,
@@ -107,15 +107,15 @@ onclick0(String sText) { print(sText); }
           print(b); 
           } 
           FlatButtonParameters buttonFlatObject3 = FlatButtonParameters(
-          child:Text('Click'),
-          color:,
-          textColor:Color(0xfffffee9),
-          hoverColor: ,
-          width: 280,
-          focusColor: ,
+          child:Text('Get Started'),
+          color:Color(0xff000000),
+          textColor:Color(0xffffffff),
+          hoverColor: Color(0xff000000),
+          width: 141,
+          focusColor: Color(0xff000000),
           height: 50,
-          highlightColor: ,
-          splashColor: 
+          highlightColor: Color(0xff000000),
+          splashColor: Color(0xff000000)
 
           );
       

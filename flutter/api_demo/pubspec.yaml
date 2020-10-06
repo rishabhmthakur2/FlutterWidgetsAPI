@@ -57,6 +57,21 @@ flutter:
       - family:  Piazzolla
         fonts:
           - asset: fonts/Piazzolla-VariableFont_opsz,wght.ttf
+      - family:  Meddon
+        fonts:
+          - asset: fonts/Meddon-Regular.ttf
+      - family:  Epilogue
+        fonts:
+          - asset: fonts/Epilogue-VariableFont_wght.ttf
+      - family:  Tulpen One
+        fonts:
+          - asset: fonts/TulpenOne-Regular.ttf
+      - family:  New Rocker
+        fonts:
+          - asset: fonts/NewRocker-Regular.ttf
+      - family:  Ubuntu
+        fonts:
+          - asset: fonts/Ubuntu-MediumItalic.ttf
       - family:  Segoe Ui
         fonts:
           - asset: fonts/segoe-ui.ttf
